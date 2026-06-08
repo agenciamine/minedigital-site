@@ -1,9 +1,9 @@
 ﻿{
-    "updated":  "2026-06-08T11:32:41",
+    "updated":  "2026-06-08T14:41:57",
     "accounts":  {
                      "996138788068033":  {
                                              "ig":  {
-                                                        "followers":  8368,
+                                                        "followers":  8371,
                                                         "series":  [
                                                                        {
                                                                            "d":  "2026-06-07",
@@ -11,7 +11,7 @@
                                                                        },
                                                                        {
                                                                            "d":  "2026-06-08",
-                                                                           "v":  8368
+                                                                           "v":  8371
                                                                        }
                                                                    ],
                                                         "reach_30d":  60802,
@@ -141,7 +141,7 @@
                                                                              },
                                                                              {
                                                                                  "d":  "2026-06-08",
-                                                                                 "v":  288
+                                                                                 "v":  638
                                                                              }
                                                                          ],
                                                         "reach_30d_prev":  105989,
@@ -267,30 +267,30 @@
                                                                                "v":  0
                                                                            }
                                                                        ],
-                                                        "accounts_engaged_7d":  385,
-                                                        "accounts_engaged_30d":  1880,
+                                                        "accounts_engaged_7d":  390,
+                                                        "accounts_engaged_30d":  1885,
                                                         "accounts_engaged_30d_prev":  3216,
-                                                        "total_interactions_7d":  697,
-                                                        "total_interactions_30d":  3767,
+                                                        "total_interactions_7d":  711,
+                                                        "total_interactions_30d":  3781,
                                                         "total_interactions_30d_prev":  6747,
-                                                        "likes_7d":  280,
-                                                        "likes_30d":  1401,
+                                                        "likes_7d":  281,
+                                                        "likes_30d":  1402,
                                                         "likes_30d_prev":  2672,
                                                         "comments_7d":  2,
                                                         "comments_30d":  46,
                                                         "comments_30d_prev":  83,
-                                                        "shares_7d":  171,
-                                                        "shares_30d":  947,
+                                                        "shares_7d":  177,
+                                                        "shares_30d":  953,
                                                         "shares_30d_prev":  1641,
-                                                        "saves_7d":  69,
-                                                        "saves_30d":  392,
+                                                        "saves_7d":  70,
+                                                        "saves_30d":  393,
                                                         "saves_30d_prev":  611,
                                                         "top_posts":  [
                                                                           {
                                                                               "id":  "17923778238124655",
                                                                               "caption":  "Delicado, sofisticado e cheio de personalidade… ✨\n\nO Cosmopolitan da noiva trouxe o equilíbrio perfeito entre elegância,",
                                                                               "type":  "VIDEO",
-                                                                              "img":  "https://scontent.cdninstagram.com/v/t51.71878-15/696789302_1359214869358005_1069740487537612567_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=111\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D\u0026_nc_ohc=S60aTVEAkV4Q7kNvwEPgzvh\u0026_nc_oc=Adpm4xqA_-ERBjHHoxiJynKXGvJmiZKzI0SNEwPyKtGQYqyHKiYu93udox1XWql_JjlCh4bG3w5Hmc7ukzZZZqJy\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=p8bxTiWTd5T1tDlpHbDDvA\u0026_nc_tpa=Q5bMBQF_9bzE5pll-dCxuFjAiQj4LhHgoo6V0K-YXFLvw6LEKrrZmhlEE4BhlC2Xn9EdaORnL5rk3kfRwA\u0026oh=00_Af9no9n33hlaTHqB8gbBv5loQr9U4U4s6G4AZQXE6Vme1g\u0026oe=6A2CAA5A",
+                                                                              "img":  "https://scontent.cdninstagram.com/v/t51.71878-15/696789302_1359214869358005_1069740487537612567_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=111\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D\u0026_nc_ohc=S60aTVEAkV4Q7kNvwEPgzvh\u0026_nc_oc=Adpm4xqA_-ERBjHHoxiJynKXGvJmiZKzI0SNEwPyKtGQYqyHKiYu93udox1XWql_JjlCh4bG3w5Hmc7ukzZZZqJy\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=mrh5WmRkzrw0sH01Olru0w\u0026_nc_tpa=Q5bMBQHqJcWdFNEXGvcljmkOyctdzKKVu911Q9WVrOO-44A-j1NkruaVohbddMhFYnX8GrYKA1lqNTUNGA\u0026oh=00_Af-uvpTUcqQtr-U0iv6wgK-yFVeaN_JGLFJ7rJZcLKL4Hw\u0026oe=6A2CE29A",
                                                                               "url":  "https://www.instagram.com/reel/DYNyoyOP7td/",
                                                                               "date":  "2026-05-11",
                                                                               "likes":  126,
@@ -301,7 +301,7 @@
                                                                               "id":  "18105800533945557",
                                                                               "caption":  "Tem bar que entrega drink…\nNós entregamos experiência com a sua identidade.” 🍸✨\n\nNa Life Drink Bar, cada detalhe pode s",
                                                                               "type":  "VIDEO",
-                                                                              "img":  "https://scontent.cdninstagram.com/v/t51.71878-15/705312798_1033744722944163_4238699770677875656_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=104\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D\u0026_nc_ohc=OHvmIxmYEzoQ7kNvwGc8BBy\u0026_nc_oc=Adr0LVS48cRRXLRcqX-wcNMzUZQGAkg7urTtITocPbjezu-3veL9taw6vBb_07JJjn7xAQnrIC_Np-usr9_fZ21G\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=p8bxTiWTd5T1tDlpHbDDvA\u0026_nc_tpa=Q5bMBQESi7D4qK5GyEYXpDpR6HrjZgbUqjJrjeOxaQ3zKkX2gAPX0CiLjhTKakpGlqiiZPJf2TQR9fqUuw\u0026oh=00_Af_y8flH1kTn2NHw0vZrGopFxOCikBCcqxI1nfDJWojsNg\u0026oe=6A2C9F9E",
+                                                                              "img":  "https://scontent.cdninstagram.com/v/t51.71878-15/705312798_1033744722944163_4238699770677875656_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=104\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D\u0026_nc_ohc=OHvmIxmYEzoQ7kNvwGc8BBy\u0026_nc_oc=Adr0LVS48cRRXLRcqX-wcNMzUZQGAkg7urTtITocPbjezu-3veL9taw6vBb_07JJjn7xAQnrIC_Np-usr9_fZ21G\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=mrh5WmRkzrw0sH01Olru0w\u0026_nc_tpa=Q5bMBQG9Tmg8G4p8xN5NrTXKtOcr225z5jkkzhQYSAcGt1mHPD19vgjKTWc4KWrXTMHAXbWSOvjmZ1niPg\u0026oh=00_Af88-mIRZ-rgMNDFyKkrTLTNKfWXD_NndGryF-vShN57nw\u0026oe=6A2CD7DE",
                                                                               "url":  "https://www.instagram.com/reel/DYqBmfmBqMT/",
                                                                               "date":  "2026-05-22",
                                                                               "likes":  46,
@@ -312,7 +312,7 @@
                                                                               "id":  "18132438502605124",
                                                                               "caption":  "✨ Fernanda \u0026 Leonardo viveram uma experiência marcada pela leveza, sofisticação e pelos detalhes que transformam momento",
                                                                               "type":  "VIDEO",
-                                                                              "img":  "https://scontent.cdninstagram.com/v/t51.71878-15/709844014_791543997257519_3368499254676035784_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=100\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D\u0026_nc_ohc=XrmH6GVKI5kQ7kNvwGMjR_1\u0026_nc_oc=AdrKY0T9YPcDkhpk16BoZFrPgBsZXkXCgkCFuOqBVDgG3mZXglFM3jIM2q_ZBymlAdes3GyJNoPTMMaJASW6WB9f\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=p8bxTiWTd5T1tDlpHbDDvA\u0026_nc_tpa=Q5bMBQFz4_nASfMU8j_ksu7L2KClZGj00bwOGA7t6RSMPcnEtk-gfhfqQE91yfnMfDj2v7OopQaC1BduZw\u0026oh=00_Af8-vb0lLE4KNr-Mlx0D5skfvfYjDH6Tdu8wemZsZb-XGQ\u0026oe=6A2C9F41",
+                                                                              "img":  "https://scontent.cdninstagram.com/v/t51.71878-15/709844014_791543997257519_3368499254676035784_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=100\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D\u0026_nc_ohc=XrmH6GVKI5kQ7kNvwGMjR_1\u0026_nc_oc=AdrKY0T9YPcDkhpk16BoZFrPgBsZXkXCgkCFuOqBVDgG3mZXglFM3jIM2q_ZBymlAdes3GyJNoPTMMaJASW6WB9f\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=mrh5WmRkzrw0sH01Olru0w\u0026_nc_tpa=Q5bMBQHi5FZ1kOXmzTl-FFjGfeiVOSJEw9lHKyyeORwqHVWegTHBSi-IPaCY6OADDvoYl97xe2sPnxsbhA\u0026oh=00_Af82j93bKiMlkHGOyFuFW3U6qH7WMzM8olx_BAX3bPwH_A\u0026oe=6A2CD781",
                                                                               "url":  "https://www.instagram.com/reel/DY0ajDNumP5/",
                                                                               "date":  "2026-05-26",
                                                                               "likes":  35,
@@ -477,7 +477,7 @@
                                          },
                      "787633890652103":  {
                                              "ig":  {
-                                                        "followers":  8401,
+                                                        "followers":  8398,
                                                         "series":  [
                                                                        {
                                                                            "d":  "2026-06-07",
@@ -485,7 +485,7 @@
                                                                        },
                                                                        {
                                                                            "d":  "2026-06-08",
-                                                                           "v":  8401
+                                                                           "v":  8398
                                                                        }
                                                                    ],
                                                         "reach_30d":  19718,
@@ -615,7 +615,7 @@
                                                                              },
                                                                              {
                                                                                  "d":  "2026-06-08",
-                                                                                 "v":  39
+                                                                                 "v":  79
                                                                              }
                                                                          ],
                                                         "reach_30d_prev":  9270,
@@ -741,11 +741,11 @@
                                                                                "v":  0
                                                                            }
                                                                        ],
-                                                        "accounts_engaged_7d":  154,
-                                                        "accounts_engaged_30d":  397,
+                                                        "accounts_engaged_7d":  156,
+                                                        "accounts_engaged_30d":  398,
                                                         "accounts_engaged_30d_prev":  93,
-                                                        "total_interactions_7d":  407,
-                                                        "total_interactions_30d":  1107,
+                                                        "total_interactions_7d":  415,
+                                                        "total_interactions_30d":  1115,
                                                         "total_interactions_30d_prev":  312,
                                                         "likes_7d":  162,
                                                         "likes_30d":  568,
@@ -753,8 +753,8 @@
                                                         "comments_7d":  1,
                                                         "comments_30d":  10,
                                                         "comments_30d_prev":  0,
-                                                        "shares_7d":  113,
-                                                        "shares_30d":  248,
+                                                        "shares_7d":  117,
+                                                        "shares_30d":  252,
                                                         "shares_30d_prev":  72,
                                                         "saves_7d":  5,
                                                         "saves_30d":  9,
@@ -764,7 +764,7 @@
                                                                               "id":  "17957058005962135",
                                                                               "caption":  "“Ninguém se mexe senão eu levo o patrão!“\n\nOs funcionários da Village: 🕺💃😂\n\n#VillageSteakHouse #HumorVillage #ReelsDe",
                                                                               "type":  "VIDEO",
-                                                                              "img":  "https://scontent.cdninstagram.com/v/t51.71878-15/707454315_26820936407575447_5722919320825360305_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=100\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D\u0026_nc_ohc=yMJOseTlKg8Q7kNvwHoK2Bo\u0026_nc_oc=Adr0_uOHdKR6RxFtapl4TjrnND2onM_vXqk8GbJm8kPBVdE7RrfvMP34xXNPWouVdfrvbw087Bhr6xokF9NVGBd4\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=P9UFf-iDqS_4NKaFd5-SDw\u0026_nc_tpa=Q5bMBQHf3FkVMwpYglpX8WVOg_JG91SD0RJrEzf2Vf6n4_Qa6fh4Mc9IBrLrFIq2g4Xc7VvXiIeJg-W5Vg\u0026oh=00_Af805UY7fZxzC4uxj0dPx8UXo4BVz4EPb-KTv_EXOsmyHg\u0026oe=6A2CAC07",
+                                                                              "img":  "https://scontent.cdninstagram.com/v/t51.71878-15/707454315_26820936407575447_5722919320825360305_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=100\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D\u0026_nc_ohc=yMJOseTlKg8Q7kNvwHoK2Bo\u0026_nc_oc=Adr0_uOHdKR6RxFtapl4TjrnND2onM_vXqk8GbJm8kPBVdE7RrfvMP34xXNPWouVdfrvbw087Bhr6xokF9NVGBd4\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=6TrQQOhMzu44RqgiL9iDoQ\u0026_nc_tpa=Q5bMBQHsOgNHmCcCxcD-uxUQzpbqBLZDHbbe0s3MzJRDgAMhFaqPPOaoUBs8yRe4qOUcszf1X3JPBH0pNA\u0026oh=00_Af_oyW2AiQePOf1h7wmRrtnw5Q7Jm7c6-PWM3qlsQLkb9w\u0026oe=6A2CE447",
                                                                               "url":  "https://www.instagram.com/reel/DY70U4vp59X/",
                                                                               "date":  "2026-05-29",
                                                                               "likes":  142,
@@ -775,7 +775,7 @@
                                                                               "id":  "18072665633441952",
                                                                               "caption":  "Crosta dourada, carne suculenta, molho intenso e queijo derretendo. 🔥🥩🧀\nA nova parmegiana da Village chega para trans",
                                                                               "type":  "VIDEO",
-                                                                              "img":  "https://scontent.cdninstagram.com/v/t51.82787-15/713943618_18414033340194561_3620710203918314778_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=102\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D\u0026_nc_ohc=mzpeJ93D4tEQ7kNvwGFSsEq\u0026_nc_oc=Adrxlwb23SFP1Auuve-LsFKwt4DccIaRpArxWz6Key9fFg9jTRlk0BjCLH91SkcIMmdkGJ1UNakaKg4xbILf9brN\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=P9UFf-iDqS_4NKaFd5-SDw\u0026_nc_tpa=Q5bMBQEV2zKS0TlQ-WrxDlcr8s_vIBkl4IzA2C3QROGllC4rCZxyEeRNO--OITyoaU89VwYgUmsdCcmiRw\u0026oh=00_Af9npiOCu1qz4-SPEEM_tJCWt1j61ucMLovDxtHL4ysE_A\u0026oe=6A2CBFD2",
+                                                                              "img":  "https://scontent.cdninstagram.com/v/t51.82787-15/713943618_18414033340194561_3620710203918314778_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=102\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D\u0026_nc_ohc=mzpeJ93D4tEQ7kNvwGFSsEq\u0026_nc_oc=Adrxlwb23SFP1Auuve-LsFKwt4DccIaRpArxWz6Key9fFg9jTRlk0BjCLH91SkcIMmdkGJ1UNakaKg4xbILf9brN\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=6TrQQOhMzu44RqgiL9iDoQ\u0026_nc_tpa=Q5bMBQFeU9K-GkZd9krNUiK_GXgAS7EgUGrdtyy4757DXinB64n2VNvIEgEk0YHLCrOlJH5eh0_m7lAWtg\u0026oh=00_Af_mIqdLszBBeI6DEwLaXrn4hbljJCFLkxlI8aVoI0DxAQ\u0026oe=6A2CBFD2",
                                                                               "url":  "https://www.instagram.com/reel/DYpy_d0DM_K/",
                                                                               "date":  "2026-05-22",
                                                                               "likes":  51,
@@ -786,7 +786,7 @@
                                                                               "id":  "18093926219262378",
                                                                               "caption":  "❤️🥂 O melhor do Dia dos Namorados não está apenas no que é servido à mesa.\n\nEstá no brinde que marca o início da noite.",
                                                                               "type":  "CAROUSEL_ALBUM",
-                                                                              "img":  "https://scontent.cdninstagram.com/v/t51.82787-15/718043601_18414349912194561_4117790298991386300_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=107\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9\u0026_nc_ohc=yrIl6be6FNAQ7kNvwEFFOYz\u0026_nc_oc=AdoQfqrk4Vc4HA39P6y_GbBwPFe3zAkvDFjr1-NHTHeS86x1ustZIo3slUhpg8YNbcDeTpBdcppfbRkJHIV1MR3s\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=P9UFf-iDqS_4NKaFd5-SDw\u0026oh=00_Af88VwKS0DdYJ8aSS-K2cyTfFr573AOGLmnCGmhpoF8RNQ\u0026oe=6A2C8BFB",
+                                                                              "img":  "https://scontent.cdninstagram.com/v/t51.82787-15/718043601_18414349912194561_4117790298991386300_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=107\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9\u0026_nc_ohc=yrIl6be6FNAQ7kNvwEFFOYz\u0026_nc_oc=AdoQfqrk4Vc4HA39P6y_GbBwPFe3zAkvDFjr1-NHTHeS86x1ustZIo3slUhpg8YNbcDeTpBdcppfbRkJHIV1MR3s\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=6TrQQOhMzu44RqgiL9iDoQ\u0026oh=00_Af8c1Hh1N-2m821d1J6AZoTe3XR416A6K-qGCE_pIzCpmw\u0026oe=6A2CC43B",
                                                                               "url":  "https://www.instagram.com/p/DZNSa96kcgz/",
                                                                               "date":  "2026-06-05",
                                                                               "likes":  35,
@@ -797,7 +797,7 @@
                                                                               "id":  "18084187802168006",
                                                                               "caption":  "🍸✨Apresentamos a nossa Torre de Drinks: uma nova forma de brindar, compartilhar e experimentar sabores que já conquista",
                                                                               "type":  "VIDEO",
-                                                                              "img":  "https://scontent.cdninstagram.com/v/t51.71878-15/714104266_2104485143450855_3330290862711441212_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=111\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D\u0026_nc_ohc=yfbSjlmh70cQ7kNvwHOT7Oy\u0026_nc_oc=AdomESSwHSqR3J5iGd2RoVcarSV6ADOU855Er4B22vRC2uJKqBnu7BBV1oSq5nf1wlcrkR7gp5Nd24mnlQk9d06o\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=P9UFf-iDqS_4NKaFd5-SDw\u0026_nc_tpa=Q5bMBQEi6MBE_cevhR_zRBXg6rCWAVj9WyhzuBG-j8veIo-W2SKTiWuPL7DJAdvvCwdwWI_PYuh9HUdtYA\u0026oh=00_Af9_q64VnSe51iqbWP8jmpiKjLGN2CU9r66NLjI_iiOinA\u0026oe=6A2C88E5",
+                                                                              "img":  "https://scontent.cdninstagram.com/v/t51.71878-15/714104266_2104485143450855_3330290862711441212_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=111\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D\u0026_nc_ohc=yfbSjlmh70cQ7kNvwHOT7Oy\u0026_nc_oc=AdomESSwHSqR3J5iGd2RoVcarSV6ADOU855Er4B22vRC2uJKqBnu7BBV1oSq5nf1wlcrkR7gp5Nd24mnlQk9d06o\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=6TrQQOhMzu44RqgiL9iDoQ\u0026_nc_tpa=Q5bMBQHorzwHoU8aPtD_Hg-boSBqkMSJnrJ-rYvDDSKhMojZtlZ4QYtMOaJui8VGkZesm_N2sYCX33MRgQ\u0026oh=00_Af_u4sG1uQ8y3MbsCpz5MGY_QENrGM0OMNWeo6_JLj90Nw\u0026oe=6A2CC125",
                                                                               "url":  "https://www.instagram.com/reel/DZItdeiBlY1/",
                                                                               "date":  "2026-06-03",
                                                                               "likes":  24,
@@ -808,7 +808,7 @@
                                                                               "id":  "17882822337590293",
                                                                               "caption":  "❤️✨ Alguns momentos merecem mais do que um presente. Merecem ser vividos.\n\nO Dia dos Namorados da Village é uma experiên",
                                                                               "type":  "VIDEO",
-                                                                              "img":  "https://scontent.cdninstagram.com/v/t51.82787-15/716450750_18414419473194561_3412646282195111805_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=101\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D\u0026_nc_ohc=XNIlnb4V460Q7kNvwH267oF\u0026_nc_oc=AdojT9vlm1E5nUEnlzLyMZDMsvSKpi5z_h8RL8Agk6fmpq4Srxu3skaKI-gJXwmkS1F7t8cjsyJx3Wmj0sT3FUxh\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=P9UFf-iDqS_4NKaFd5-SDw\u0026_nc_tpa=Q5bMBQE1SV34uIzULzhhSAkpXAnRMTqs1xFW9TFRlCftXOF3lI6R7qAA3P3BsZlg1M-aK8i0_WjafnpaJw\u0026oh=00_Af_tQYEXqb2xr04IIkf8grJbMrKMSjAh-gzfB8iXVqPsjw\u0026oe=6A2C8C3B",
+                                                                              "img":  "https://scontent.cdninstagram.com/v/t51.82787-15/716450750_18414419473194561_3412646282195111805_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=101\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D\u0026_nc_ohc=XNIlnb4V460Q7kNvwH267oF\u0026_nc_oc=AdojT9vlm1E5nUEnlzLyMZDMsvSKpi5z_h8RL8Agk6fmpq4Srxu3skaKI-gJXwmkS1F7t8cjsyJx3Wmj0sT3FUxh\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=6TrQQOhMzu44RqgiL9iDoQ\u0026_nc_tpa=Q5bMBQFciuBTc89Bt0iUigYvdtQt0qx8fCEyCBL0CJd4t00YCkLXvtuFVudRaYaBsadjnRD2WvMRbuuyMw\u0026oh=00_Af99VLH3DXMY8zGfplCuvDtY5FcA_BnTeNA6U5gM6fq_Wg\u0026oe=6A2CC47B",
                                                                               "url":  "https://www.instagram.com/reel/DZPzzAVpGLE/",
                                                                               "date":  "2026-06-06",
                                                                               "likes":  23,
@@ -819,7 +819,7 @@
                                                                               "id":  "18118716397672627",
                                                                               "caption":  "Suculência servida na mesa.\nNo ponto certo, preparada com técnica e finalizada para transformar qualquer momento em expe",
                                                                               "type":  "VIDEO",
-                                                                              "img":  "https://scontent.cdninstagram.com/v/t51.71878-15/698751441_1344258024182415_3704813792831188719_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=100\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D\u0026_nc_ohc=G9nTWVk-j68Q7kNvwHnTnfH\u0026_nc_oc=AdoqEbUGSM8C0r_Qw3Uk_fLk-n3V29ImGjFwHz0BCkRGiEZFPx_eq0fOujDi_2WBtra9vgtbb3ovYz8bZIDCOA_D\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=P9UFf-iDqS_4NKaFd5-SDw\u0026_nc_tpa=Q5bMBQFX0rS0_cdke8hnVSO7bqe8db7PU5vXPjeMDTOezA_fWECjbrJMt8LwlTR3WTxxRr5iLGFebKHZzQ\u0026oh=00_Af-DKVt4dgWQSIwRV8Ar7KTgCJlpQfPQ5O7hpxH_ai_yzg\u0026oe=6A2C9BBF",
+                                                                              "img":  "https://scontent.cdninstagram.com/v/t51.71878-15/698751441_1344258024182415_3704813792831188719_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=100\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D\u0026_nc_ohc=G9nTWVk-j68Q7kNvwHnTnfH\u0026_nc_oc=AdoqEbUGSM8C0r_Qw3Uk_fLk-n3V29ImGjFwHz0BCkRGiEZFPx_eq0fOujDi_2WBtra9vgtbb3ovYz8bZIDCOA_D\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=6TrQQOhMzu44RqgiL9iDoQ\u0026_nc_tpa=Q5bMBQGQV_hGnLJtZhpgJbZ9sFq5GEAf0qlEZNPjBHPPGcz9uYZJowBS7Ri0X3jJ351x0eL9wwNm5OryBA\u0026oh=00_Af-3IOe3LUo4MSdR7DyQ9AZC5SrcHfhdBNl-kaLejbUKQQ\u0026oe=6A2CD3FF",
                                                                               "url":  "https://www.instagram.com/reel/DYVMWGKJfS_/",
                                                                               "date":  "2026-05-14",
                                                                               "likes":  22,
@@ -830,7 +830,7 @@
                                                                               "id":  "18121856563654702",
                                                                               "caption":  "Leve, macio e cheio de sabor, o palmito pupunha é o acompanhamento que equilibra perfeitamente a intensidade da carne. �",
                                                                               "type":  "CAROUSEL_ALBUM",
-                                                                              "img":  "https://scontent.cdninstagram.com/v/t51.82787-15/703924492_18411826519194561_771476219504420021_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=110\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9\u0026_nc_ohc=wbcOztvOsuMQ7kNvwFrRWca\u0026_nc_oc=AdoqyrZFH4q6euRAar0QYzF-bzS_jXOaXG5dJEwr8pj5-jUlXpj8fV0BOpOKQAO9AZOfW4mQKLu2f4rDZadovDRi\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=P9UFf-iDqS_4NKaFd5-SDw\u0026oh=00_Af_REpW738VIisrl38itIpHscuZNNdn-n6R_b-MDtJvP0g\u0026oe=6A2CA25D",
+                                                                              "img":  "https://scontent.cdninstagram.com/v/t51.82787-15/703924492_18411826519194561_771476219504420021_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=110\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9\u0026_nc_ohc=wbcOztvOsuMQ7kNvwFrRWca\u0026_nc_oc=AdoqyrZFH4q6euRAar0QYzF-bzS_jXOaXG5dJEwr8pj5-jUlXpj8fV0BOpOKQAO9AZOfW4mQKLu2f4rDZadovDRi\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=6TrQQOhMzu44RqgiL9iDoQ\u0026oh=00_Af8NhivF_Yg6qjs4lLvNmlhNJfZdfjEP-KKLknuvosNONA\u0026oe=6A2CDA9D",
                                                                               "url":  "https://www.instagram.com/p/DYnOlfYEfZV/",
                                                                               "date":  "2026-05-21",
                                                                               "likes":  19,
@@ -841,7 +841,7 @@
                                                                               "id":  "17939664564229182",
                                                                               "caption":  "🔥 ELE ESTÁ DE VOLTA 🔥\nOSSOBUCO COM POLENTA\n\nIntenso e marcante!\nAcompanhado de uma polenta cremosa e um molho encorpad",
                                                                               "type":  "CAROUSEL_ALBUM",
-                                                                              "img":  "https://scontent.cdninstagram.com/v/t51.82787-15/706744418_18412716217194561_3387852722600495807_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=108\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9\u0026_nc_ohc=U4t599wObFcQ7kNvwGQ4VAk\u0026_nc_oc=Adoq56o4Y7JVx9atQw8wlGPJdv-DH9vani-NqMlIYxUitX3tZTN_Uv0mjHbyVn4Fi33Qiqa1S3F-CNyAaWh6WXNc\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=P9UFf-iDqS_4NKaFd5-SDw\u0026oh=00_Af9KjShXjPR72ssl7fhxztTRQCVd_vIkmfzw_MrHNpe_cQ\u0026oe=6A2C9200",
+                                                                              "img":  "https://scontent.cdninstagram.com/v/t51.82787-15/706744418_18412716217194561_3387852722600495807_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=108\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9\u0026_nc_ohc=U4t599wObFcQ7kNvwGQ4VAk\u0026_nc_oc=Adoq56o4Y7JVx9atQw8wlGPJdv-DH9vani-NqMlIYxUitX3tZTN_Uv0mjHbyVn4Fi33Qiqa1S3F-CNyAaWh6WXNc\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=6TrQQOhMzu44RqgiL9iDoQ\u0026oh=00_Af-8MgdrtwveQTChLb8PM9H_tGozGkJcQDTZFngUZv1jMg\u0026oe=6A2CCA40",
                                                                               "url":  "https://www.instagram.com/p/DY0IOqUGje4/",
                                                                               "date":  "2026-05-26",
                                                                               "likes":  15,
@@ -852,7 +852,7 @@
                                                                               "id":  "17857494570649539",
                                                                               "caption":  "Quando a carne está no ponto… a dúvida é só uma:\nqual acompanhamento escolher? 😏\n\nArroz, salada, mandioca… cada um comp",
                                                                               "type":  "VIDEO",
-                                                                              "img":  "https://scontent.cdninstagram.com/v/t51.71878-15/696641872_2022901338604336_6704910024116063222_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=103\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D\u0026_nc_ohc=HFigmYd2XpoQ7kNvwFK0oP9\u0026_nc_oc=AdqEx8Hbch2w0hGABbFLPwd9gnQxYoSJLYOJ4DG2o8Vjo_EpHjpuv-QMfXOVTSVO8MWAKGEo55bHtMPeEQjw_FgF\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=P9UFf-iDqS_4NKaFd5-SDw\u0026_nc_tpa=Q5bMBQGh7mHxT-CgSor_UqW22Y_g_iRSRrC70EOy16COEyS_xJ-gIdF_NVE7lSqJOAkgxp40aUKdB-MAmw\u0026oh=00_Af-YMnVh5_wjOIpFd4Dhx_mYDSxVfjSS3iTXqUUlULaB8g\u0026oe=6A2CBDBB",
+                                                                              "img":  "https://scontent.cdninstagram.com/v/t51.71878-15/696641872_2022901338604336_6704910024116063222_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=103\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D\u0026_nc_ohc=HFigmYd2XpoQ7kNvwFK0oP9\u0026_nc_oc=AdqEx8Hbch2w0hGABbFLPwd9gnQxYoSJLYOJ4DG2o8Vjo_EpHjpuv-QMfXOVTSVO8MWAKGEo55bHtMPeEQjw_FgF\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=6TrQQOhMzu44RqgiL9iDoQ\u0026_nc_tpa=Q5bMBQHo87br2o3W6M6OGJvNC3C3in32xeMDO1A7exDl1SduA2sfkwzEZqAmVhhbYP53UQUJZuVaG4Y2Mw\u0026oh=00_Af9Cy4IvDpnOA-QWiI04dnQWzaPIYrlloSo9PXJUwTJz-w\u0026oe=6A2CBDBB",
                                                                               "url":  "https://www.instagram.com/reel/DYXxMbNpHB8/",
                                                                               "date":  "2026-05-15",
                                                                               "likes":  12,
@@ -1017,7 +1017,7 @@
                                          },
                      "3890380901253199":  {
                                               "ig":  {
-                                                         "followers":  12748,
+                                                         "followers":  12747,
                                                          "series":  [
                                                                         {
                                                                             "d":  "2026-06-07",
@@ -1025,7 +1025,7 @@
                                                                         },
                                                                         {
                                                                             "d":  "2026-06-08",
-                                                                            "v":  12748
+                                                                            "v":  12747
                                                                         }
                                                                     ],
                                                          "reach_30d":  29685,
@@ -1155,7 +1155,7 @@
                                                                               },
                                                                               {
                                                                                   "d":  "2026-06-08",
-                                                                                  "v":  86
+                                                                                  "v":  312
                                                                               }
                                                                           ],
                                                          "reach_30d_prev":  39238,
@@ -1281,14 +1281,14 @@
                                                                                 "v":  0
                                                                             }
                                                                         ],
-                                                         "accounts_engaged_7d":  119,
-                                                         "accounts_engaged_30d":  520,
+                                                         "accounts_engaged_7d":  120,
+                                                         "accounts_engaged_30d":  521,
                                                          "accounts_engaged_30d_prev":  368,
-                                                         "total_interactions_7d":  189,
-                                                         "total_interactions_30d":  927,
+                                                         "total_interactions_7d":  191,
+                                                         "total_interactions_30d":  929,
                                                          "total_interactions_30d_prev":  847,
-                                                         "likes_7d":  97,
-                                                         "likes_30d":  559,
+                                                         "likes_7d":  99,
+                                                         "likes_30d":  561,
                                                          "likes_30d_prev":  538,
                                                          "comments_7d":  0,
                                                          "comments_30d":  10,
@@ -1304,7 +1304,7 @@
                                                                                "id":  "18047031182773381",
                                                                                "caption":  "🍱 Quando você já tá na última entrega…\ne o endereço resolve virar mistério de novo. 😅\n\nCalma que no Kyōkai a gente gar",
                                                                                "type":  "VIDEO",
-                                                                               "img":  "https://scontent.cdninstagram.com/v/t51.82787-15/701717562_18088194107605458_8888675244248305486_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=103\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D\u0026_nc_ohc=rZl6CLon9P4Q7kNvwH_qsHL\u0026_nc_oc=AdpV8Mz2qGaLtj8QPUPDEZS8OS28XzVRojEn0ZhY3y2VYHzRRU06LIy0zSWbJbTdhVkdmIiuozyZ6R3sEVV290Ka\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=Ko-xo_XM3cp3APRDuB5xjg\u0026_nc_tpa=Q5bMBQHd4YMwK-w8si1_eN8_-le9s_iW2XZ8Ute-y_6tLeT9dvBYxzZ5QK8TdmkcgjJH5Ck603Rd2R7k_w\u0026oh=00_Af_bF1tLwzcAdZ2VdP5UqFKfRHE3FWDg9ULslH2QUq9QkQ\u0026oe=6A2CBA86",
+                                                                               "img":  "https://scontent.cdninstagram.com/v/t51.82787-15/701717562_18088194107605458_8888675244248305486_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=103\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D\u0026_nc_ohc=rZl6CLon9P4Q7kNvwH_qsHL\u0026_nc_oc=AdpV8Mz2qGaLtj8QPUPDEZS8OS28XzVRojEn0ZhY3y2VYHzRRU06LIy0zSWbJbTdhVkdmIiuozyZ6R3sEVV290Ka\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=gY0LZ4DfHyz9l5E86JO1wQ\u0026_nc_tpa=Q5bMBQGGs2XAzkR06yGVOb-6zzF5CZyXWvt8syydXftEADzYoLI9TF1ZdfrYyeA-RjvPd7LfUehbdj6J5g\u0026oh=00_Af9uRecDONxhLwPPxd_ADPpoJAZlARS9e_AjaBP-WRDYSg\u0026oe=6A2CBA86",
                                                                                "url":  "https://www.instagram.com/reel/DYXwqezj7Tq/",
                                                                                "date":  "2026-05-15",
                                                                                "likes":  155,
@@ -1315,7 +1315,7 @@
                                                                                "id":  "18102876248079454",
                                                                                "caption":  "🍣🔥 Temaki Hot no ponto perfeito.\n\nCrocância por fora, cremosidade por dentro e um sabor que domina a primeira mordida.",
                                                                                "type":  "CAROUSEL_ALBUM",
-                                                                               "img":  "https://scontent.cdninstagram.com/v/t51.82787-15/708194196_18089791412605458_2145356760255984643_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=101\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9\u0026_nc_ohc=vIPud1tfJTYQ7kNvwFH06Gu\u0026_nc_oc=AdryrQFhcEBppV1JuU1etQb7PzNGKrBORtn8x7T2P54CBODwIjNLrIqXaW8OIycPbwJpmawSWfv-cJyHd5DwuTLw\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=Ko-xo_XM3cp3APRDuB5xjg\u0026oh=00_Af-gL-Iw-TZHan3NzT6O0Yrb34Cnzi7tZqqkMTBQV9mPww\u0026oe=6A2C9D0B",
+                                                                               "img":  "https://scontent.cdninstagram.com/v/t51.82787-15/708194196_18089791412605458_2145356760255984643_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=101\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9\u0026_nc_ohc=vIPud1tfJTYQ7kNvwFH06Gu\u0026_nc_oc=AdryrQFhcEBppV1JuU1etQb7PzNGKrBORtn8x7T2P54CBODwIjNLrIqXaW8OIycPbwJpmawSWfv-cJyHd5DwuTLw\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=gY0LZ4DfHyz9l5E86JO1wQ\u0026oh=00_Af-SGi-JYu4nIfL79vExBeFhE4w7LqKacPvkb1FhHaaH0w\u0026oe=6A2CD54B",
                                                                                "url":  "https://www.instagram.com/p/DY7yp-cCZ7X/",
                                                                                "date":  "2026-05-29",
                                                                                "likes":  101,
@@ -1326,7 +1326,7 @@
                                                                                "id":  "17880618675437918",
                                                                                "caption":  "🍣 O garçom fez a apresentação perfeita…\nexplicou textura, sabor, preparo e convenceu a mesa inteira mas no final, você ",
                                                                                "type":  "VIDEO",
-                                                                               "img":  "https://scontent.cdninstagram.com/v/t51.82787-15/705429027_18089099414605458_2278903862842567569_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=102\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D\u0026_nc_ohc=FJdNBQwf94kQ7kNvwEBTM6X\u0026_nc_oc=AdqEJQl4DJwRAnITcNVM2ZLwnu_QmQ4rnjTGUcXg6R6D1c_N8PWODOfgdatK7VLgFm5B0Yfa55Jgo2njF3DXCYBn\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=Ko-xo_XM3cp3APRDuB5xjg\u0026_nc_tpa=Q5bMBQG9Y6eVhWPY3rKYFCWiZpo-L9XNzOtTGBqtXECkvo82Yipq4--1RI9jMlkcszZhese3It08PJrcLQ\u0026oh=00_Af9PeD3fedCs7XeQYKwZU3-BxdbyvKFXeGZpVhOR_qFy2Q\u0026oe=6A2CB5D0",
+                                                                               "img":  "https://scontent.cdninstagram.com/v/t51.82787-15/705429027_18089099414605458_2278903862842567569_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=102\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D\u0026_nc_ohc=FJdNBQwf94kQ7kNvwEBTM6X\u0026_nc_oc=AdqEJQl4DJwRAnITcNVM2ZLwnu_QmQ4rnjTGUcXg6R6D1c_N8PWODOfgdatK7VLgFm5B0Yfa55Jgo2njF3DXCYBn\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=gY0LZ4DfHyz9l5E86JO1wQ\u0026_nc_tpa=Q5bMBQHapyzLQjqgbjRmquhqUMCzreflUpc0Fef7cmsjvjQAvfhve_54MlO4XJTp9JwrpHo313nmhxCi6A\u0026oh=00_Af_ce5Rhlxjk2ZFhZTyQgmUrwrKb-YlYQsHi7rCuu4IryA\u0026oe=6A2CB5D0",
                                                                                "url":  "https://www.instagram.com/reel/DYpuTttnNlZ/",
                                                                                "date":  "2026-05-22",
                                                                                "likes":  72,
@@ -1337,7 +1337,7 @@
                                                                                "id":  "18132952774574806",
                                                                                "caption":  "🍱 O melhor do Kyōkai, pronto para chegar até você.\n\nDentro da sacola, não vai só sushi.\nVai frescor, cuidado e uma expe",
                                                                                "type":  "IMAGE",
-                                                                               "img":  "https://scontent.cdninstagram.com/v/t51.82787-15/713763901_18090690086605458_8990891505894667624_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=103\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9\u0026_nc_ohc=yJ5a_jPEV4UQ7kNvwGPHaSY\u0026_nc_oc=Adpj9oczG9HONN4r__PkHipUKEY6Y1FTzfGS_2kNjyvNp_Flb3sgAvYQR9gVV3IYUiWHYw5d--phSRw8oyy5WEGo\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=Ko-xo_XM3cp3APRDuB5xjg\u0026oh=00_Af9_i4vsa0NHvzFOFYgUItiTuzisr8X2pi8Me1wn3E1OpQ\u0026oe=6A2CBD5C",
+                                                                               "img":  "https://scontent.cdninstagram.com/v/t51.82787-15/713763901_18090690086605458_8990891505894667624_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=103\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9\u0026_nc_ohc=yJ5a_jPEV4UQ7kNvwGPHaSY\u0026_nc_oc=Adpj9oczG9HONN4r__PkHipUKEY6Y1FTzfGS_2kNjyvNp_Flb3sgAvYQR9gVV3IYUiWHYw5d--phSRw8oyy5WEGo\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=gY0LZ4DfHyz9l5E86JO1wQ\u0026oh=00_Af82YZLw2j7ubFa-dOnEjGMIf-ypobt3qW7y2Y-sTfEJ7g\u0026oe=6A2CBD5C",
                                                                                "url":  "https://www.instagram.com/p/DZIruOalUfV/",
                                                                                "date":  "2026-06-03",
                                                                                "likes":  38,
@@ -1348,7 +1348,7 @@
                                                                                "id":  "18339736231216562",
                                                                                "caption":  "🍣 “Por que você está tão quieto?”\n\nEu: tentando decidir qual desses pratos pedir primeiro…\n\nTem pensamentos que não são",
                                                                                "type":  "VIDEO",
-                                                                               "img":  "https://scontent.cdninstagram.com/v/t51.71878-15/687788614_2072003340326409_6661575633972266146_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=111\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D\u0026_nc_ohc=20YSbJ4Pcl4Q7kNvwFiFx2N\u0026_nc_oc=AdqGk4kL_fUy4iyHp4LroWsRqON0l59ryLINyRyaO6uXdt54YU2RZ-glKt23Z-Qutp_6lOE-Ur0R_CIC1F-wE6Cf\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=Ko-xo_XM3cp3APRDuB5xjg\u0026_nc_tpa=Q5bMBQE4JaeKgq4b91ehBQidPbEZrnJLW0Xn3wc722zKaUn9nMNkTAHViUK7tOMoISuGeXwUuXTTm25-_Q\u0026oh=00_Af_hlyefH1Px9aIriDZH1DnKx6d2KH1kA3vMMYAPJfNjXA\u0026oe=6A2C941C",
+                                                                               "img":  "https://scontent.cdninstagram.com/v/t51.71878-15/687788614_2072003340326409_6661575633972266146_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=111\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D\u0026_nc_ohc=20YSbJ4Pcl4Q7kNvwFiFx2N\u0026_nc_oc=AdqGk4kL_fUy4iyHp4LroWsRqON0l59ryLINyRyaO6uXdt54YU2RZ-glKt23Z-Qutp_6lOE-Ur0R_CIC1F-wE6Cf\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=gY0LZ4DfHyz9l5E86JO1wQ\u0026_nc_tpa=Q5bMBQGEogBowsOVmxP3uij5Z3QxjGtZfCYTaYNUwYJiBIjirF7curmKVCYoTSy6Tkd98YtXhBHHFVZ7xg\u0026oh=00_Af8orhKqV-72z0D6NshfOSwSTaHP-DJdiiwcS0b7PlzvRg\u0026oe=6A2CCC5C",
                                                                                "url":  "https://www.instagram.com/reel/DYSmc7tBP2u/",
                                                                                "date":  "2026-05-13",
                                                                                "likes":  27,
@@ -1359,7 +1359,7 @@
                                                                                "id":  "17905829625424402",
                                                                                "caption":  "🍸 O drink certo muda a noite inteira.\n\nEquilíbrio, apresentação e aquele sabor que surpreende no primeiro gole.\nNo Kyōk",
                                                                                "type":  "VIDEO",
-                                                                               "img":  "https://scontent.cdninstagram.com/v/t51.71878-15/707509678_996056253074095_1544451845415885945_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=109\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D\u0026_nc_ohc=3R2stMsYO0kQ7kNvwHoFbl6\u0026_nc_oc=Adp-2eRe6VoyoIIMq9PK1RLhOlcMvQHa5bEdQCZsD3yPqGPH97lHi95JZdSy0wZpSS6mEYnAWmEm6ORa68IOuOga\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=Ko-xo_XM3cp3APRDuB5xjg\u0026_nc_tpa=Q5bMBQG7QtP80EHZ1zMmeWRuxP2t5D_nK4bLUsZe95QFAcCQATDf9eu8KbJ1CJ1dxW8mJ_7FgEZkPzb4ng\u0026oh=00_Af-ZP3hiNpqUzrVQ7leWjkPc6zVlLXTINVqxlXZX4bKC-g\u0026oe=6A2C98B1",
+                                                                               "img":  "https://scontent.cdninstagram.com/v/t51.71878-15/707509678_996056253074095_1544451845415885945_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=109\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D\u0026_nc_ohc=3R2stMsYO0kQ7kNvwHoFbl6\u0026_nc_oc=Adp-2eRe6VoyoIIMq9PK1RLhOlcMvQHa5bEdQCZsD3yPqGPH97lHi95JZdSy0wZpSS6mEYnAWmEm6ORa68IOuOga\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=gY0LZ4DfHyz9l5E86JO1wQ\u0026_nc_tpa=Q5bMBQG0JumlR1TpPYwD4KZEf-WBKH4-LsBZph-sa2DooyrQOjbqeUAbq3_k6MyXFXEX5WJ47zG872Sdvg\u0026oh=00_Af97osdXn8XUL1uuyl36CDm4DJpf_LwcbjyON6q3toK_-w\u0026oe=6A2CD0F1",
                                                                                "url":  "https://www.instagram.com/reel/DY2reCKJPxU/",
                                                                                "date":  "2026-05-27",
                                                                                "likes":  13,
@@ -1370,7 +1370,7 @@
                                                                                "id":  "18026341325824844",
                                                                                "caption":  "🍣 Cada prato revela um detalhe diferente do padrão Kyōkai.\n\nTexturas impecáveis, finalizações precisas e combinações pe",
                                                                                "type":  "CAROUSEL_ALBUM",
-                                                                               "img":  "https://scontent.cdninstagram.com/v/t51.82787-15/713783284_18090691718605458_7268285363456884274_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=106\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9\u0026_nc_ohc=3H5VuWgO11UQ7kNvwFVKdiu\u0026_nc_oc=AdrG1Eyuq2yJQiyTiXteklfBgT3Ya_AJp5ZSxDki1jCwTMA2tcQZaxhIA4Q0u2VIxXnhiMgu7gNNzASwUsvNS6Dr\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=Ko-xo_XM3cp3APRDuB5xjg\u0026oh=00_Af9oU2TYb1PNeCUj6dmbTNKjrpLiMfUNAp7zk4ftYmxTyg\u0026oe=6A2C8E62",
+                                                                               "img":  "https://scontent.cdninstagram.com/v/t51.82787-15/713783284_18090691718605458_7268285363456884274_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=106\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9\u0026_nc_ohc=3H5VuWgO11UQ7kNvwFVKdiu\u0026_nc_oc=AdrG1Eyuq2yJQiyTiXteklfBgT3Ya_AJp5ZSxDki1jCwTMA2tcQZaxhIA4Q0u2VIxXnhiMgu7gNNzASwUsvNS6Dr\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=gY0LZ4DfHyz9l5E86JO1wQ\u0026oh=00_Af8OjR0uf1SBgzqZJORI6kQGnI_KLYNKTQyFFoPTX18rtg\u0026oe=6A2CC6A2",
                                                                                "url":  "https://www.instagram.com/p/DZN0xHtleaJ/",
                                                                                "date":  "2026-06-05",
                                                                                "likes":  11,
@@ -1381,7 +1381,7 @@
                                                                                "id":  "18125935582617098",
                                                                                "caption":  "🍣 Ceviche de salmão no padrão Kyōkai.\n\nFrescor marcante, equilíbrio cítrico e uma combinação que desperta o paladar na ",
                                                                                "type":  "CAROUSEL_ALBUM",
-                                                                               "img":  "https://scontent.cdninstagram.com/v/t51.82787-15/703014636_18088802714605458_2414717525464818400_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=102\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9\u0026_nc_ohc=xEb8fMcYSWQQ7kNvwHjtIgC\u0026_nc_oc=Adr_g-2vXVKBb-sCt-bhPWSGnilobstU_kgXe-ciDJch6z5ls4WjyKz3nGbtz5buofxa9kVrNZMuQq-pAnTir467\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=Ko-xo_XM3cp3APRDuB5xjg\u0026oh=00_Af-wGGU9RcKKClCJsXe523AjO6fVK5EqRAz3oqCK4ToFqg\u0026oe=6A2CB684",
+                                                                               "img":  "https://scontent.cdninstagram.com/v/t51.82787-15/703014636_18088802714605458_2414717525464818400_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=102\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9\u0026_nc_ohc=xEb8fMcYSWQQ7kNvwHjtIgC\u0026_nc_oc=Adr_g-2vXVKBb-sCt-bhPWSGnilobstU_kgXe-ciDJch6z5ls4WjyKz3nGbtz5buofxa9kVrNZMuQq-pAnTir467\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=gY0LZ4DfHyz9l5E86JO1wQ\u0026oh=00_Af-6IBwaN1M5nKlj2pKLxzkhGHc3lYzMUbY5USmEvholhg\u0026oe=6A2CB684",
                                                                                "url":  "https://www.instagram.com/p/DYkpKrTlckF/",
                                                                                "date":  "2026-05-20",
                                                                                "likes":  11,
@@ -1684,7 +1684,7 @@
                                                                              },
                                                                              {
                                                                                  "d":  "2026-06-08",
-                                                                                 "v":  14
+                                                                                 "v":  25
                                                                              }
                                                                          ],
                                                         "reach_30d_prev":  20198,
@@ -1833,7 +1833,7 @@
                                                                               "id":  "18137693134544385",
                                                                               "caption":  "😂👓 Gerente da Ótica Aliança… ou praticamente multi funções?\n\nAqui não é só sobre óculos 😅\nTem dia que resolve interne",
                                                                               "type":  "VIDEO",
-                                                                              "img":  "https://scontent.cdninstagram.com/v/t51.71878-15/713403370_4455203114809355_413270164852568273_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=107\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D\u0026_nc_ohc=6PSzEdGcGtwQ7kNvwFVCtpt\u0026_nc_oc=Adpu_mWtVifNw3xzAi6mojGUues0U5HOncaNBvAqO6sVITRnnE9OeXCew_rSHybXERaEQ8vCtMWawChnNXXQyfE7\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=zp0ORaSTgF3SakIHd6ZjBQ\u0026_nc_tpa=Q5bMBQFRXN1CRYjQK6EWNqP_CRzAdSPCMmENS1ssMP5zv5EGZO0L6WSLLcz-UrJjeFTb-QbInDJeVVQjZw\u0026oh=00_Af8WfOBkuf-7f9-rAbK2uiUdNSNmvl0FNtPe7RDVKSw2wQ\u0026oe=6A2C9FA8",
+                                                                              "img":  "https://scontent.cdninstagram.com/v/t51.71878-15/713403370_4455203114809355_413270164852568273_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=107\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D\u0026_nc_ohc=6PSzEdGcGtwQ7kNvwFVCtpt\u0026_nc_oc=Adpu_mWtVifNw3xzAi6mojGUues0U5HOncaNBvAqO6sVITRnnE9OeXCew_rSHybXERaEQ8vCtMWawChnNXXQyfE7\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=qUud415f2vPmhspMrl6n9g\u0026_nc_tpa=Q5bMBQE2AIiknA8xx0-2Pjzgvtit9q7gM0DzBxrSKMDql1_Tr4BWsEsu38jASzxI21GHxg49vJx5ARcwLw\u0026oh=00_Af_9Vl1BqvwQndlbGOrBsr_DtUuSxEtMfAeSbO-rvmrfjw\u0026oe=6A2CD7E8",
                                                                               "url":  "https://www.instagram.com/reel/DZFZsqWB0mb/",
                                                                               "date":  "2026-06-02",
                                                                               "likes":  26,
@@ -1844,7 +1844,7 @@
                                                                               "id":  "17967712074101071",
                                                                               "caption":  "😎✨ Tem estilos que não pedem aprovação… inspiram.\n\nEla entrou com presença.\nO óculos fez o resto.\n\nE quando o visual é ",
                                                                               "type":  "VIDEO",
-                                                                              "img":  "https://scontent.cdninstagram.com/v/t51.71878-15/708192650_869668912171665_5960161435824187662_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=108\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D\u0026_nc_ohc=FL2aptv9o8QQ7kNvwFt9u1I\u0026_nc_oc=AdouU4mTfcZavVawbrtHyQIyeCv4LLYDw0Vh8n3q05nH-gYFMCjhCk27s_dpayltSXgc9CDeqDF5MbmTlkpC5Pmh\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=zp0ORaSTgF3SakIHd6ZjBQ\u0026_nc_tpa=Q5bMBQHxvd1v_7ap8WnSRNrH5a9aKJ01SJgVOJxoPqdfw3X1QgWYWeqomGPWeZVjqj3tbV0i9dc-yvN2XQ\u0026oh=00_Af8C39T-LFIt2dMRT-y2ebWMlfmJwZ8R-yFQgw_MFWBAaw\u0026oe=6A2CAE05",
+                                                                              "img":  "https://scontent.cdninstagram.com/v/t51.71878-15/708192650_869668912171665_5960161435824187662_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=108\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D\u0026_nc_ohc=FL2aptv9o8QQ7kNvwFt9u1I\u0026_nc_oc=AdouU4mTfcZavVawbrtHyQIyeCv4LLYDw0Vh8n3q05nH-gYFMCjhCk27s_dpayltSXgc9CDeqDF5MbmTlkpC5Pmh\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=qUud415f2vPmhspMrl6n9g\u0026_nc_tpa=Q5bMBQHYymubbGPva6ArAM14ltmUtn3qU0aDKm4JskylkozWGwp1ZAaxKDs3w-D71Ou7mPWgfWg_waWNbw\u0026oh=00_Af_Z2ZlVNnh4QKgV4IqvnF72YzX-ljsjtFxcS4SyeWO02A\u0026oe=6A2CE645",
                                                                               "url":  "https://www.instagram.com/reel/DYzmQLpOzRt/",
                                                                               "date":  "2026-05-26",
                                                                               "likes":  20,
@@ -1855,7 +1855,7 @@
                                                                               "id":  "17946527007187444",
                                                                               "caption":  "👓✨ Elegância que nunca passa despercebida.\n\nAs armações Vogue unem estilo, sofisticação e personalidade em cada detalhe",
                                                                               "type":  "CAROUSEL_ALBUM",
-                                                                              "img":  "https://scontent.cdninstagram.com/v/t51.82787-15/702200477_18589278523035959_3722108508333597765_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=104\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9\u0026_nc_ohc=RtL-_1LVtWkQ7kNvwEYE3Z8\u0026_nc_oc=Adp-5s7puFECvQqk4OcM7_2mTxpPOdLgGVbGCuotyrXvPd71AdPmrnSBdWcbSc7Z9tfKevWb5GdUpGzn2Qjzstng\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=zp0ORaSTgF3SakIHd6ZjBQ\u0026oh=00_Af_PGJUKR6J3IVhFDPOfOigNGbIXNcjvb6bzIHPIWekp8A\u0026oe=6A2CA234",
+                                                                              "img":  "https://scontent.cdninstagram.com/v/t51.82787-15/702200477_18589278523035959_3722108508333597765_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=104\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9\u0026_nc_ohc=RtL-_1LVtWkQ7kNvwEYE3Z8\u0026_nc_oc=Adp-5s7puFECvQqk4OcM7_2mTxpPOdLgGVbGCuotyrXvPd71AdPmrnSBdWcbSc7Z9tfKevWb5GdUpGzn2Qjzstng\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=qUud415f2vPmhspMrl6n9g\u0026oh=00_Af_d9TA5px5isDPnVnutogdaUSxlpRCLtcydzjlv49L81Q\u0026oe=6A2CDA74",
                                                                               "url":  "https://www.instagram.com/p/DYkAgTBDnR0/",
                                                                               "date":  "2026-05-20",
                                                                               "likes":  9,
@@ -1866,7 +1866,7 @@
                                                                               "id":  "18047063846534947",
                                                                               "caption":  "👓✨ Quando o assunto é bem-estar visual, a lente faz toda a diferença.\n\nA armação chama atenção, mas é a lente certa que",
                                                                               "type":  "CAROUSEL_ALBUM",
-                                                                              "img":  "https://scontent.cdninstagram.com/v/t51.82787-15/702589014_18589286941035959_1530707116472711622_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=104\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9\u0026_nc_ohc=1wgwPk2loUAQ7kNvwGPcdQS\u0026_nc_oc=AdoM4XNDSo33SX502a_uxn9u-lcMO8E-x1nzsDipPZt3EDcyPZckzi2CMI-RhYOI9xGKTwJDvrVP6cOFwfu76aCV\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=zp0ORaSTgF3SakIHd6ZjBQ\u0026oh=00_Af_D-1lI1VJbTPW_Eq9tjele-yy6VIRdZeAMN9VdH1s2ww\u0026oe=6A2C9A67",
+                                                                              "img":  "https://scontent.cdninstagram.com/v/t51.82787-15/702589014_18589286941035959_1530707116472711622_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=104\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9\u0026_nc_ohc=1wgwPk2loUAQ7kNvwGPcdQS\u0026_nc_oc=AdoM4XNDSo33SX502a_uxn9u-lcMO8E-x1nzsDipPZt3EDcyPZckzi2CMI-RhYOI9xGKTwJDvrVP6cOFwfu76aCV\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=qUud415f2vPmhspMrl6n9g\u0026oh=00_Af9rqulg-g1LQi2riU7l0luufCklGZZyafAsL9lQgs1sZg\u0026oe=6A2CD2A7",
                                                                               "url":  "https://www.instagram.com/p/DYmnFkSjuqc/",
                                                                               "date":  "2026-05-21",
                                                                               "likes":  9,
@@ -1877,7 +1877,7 @@
                                                                               "id":  "18371034496200394",
                                                                               "caption":  "❤️👓 O presente perfeito existe. E ele pode estar aqui.\n\nNeste Dia dos Namorados, surpreenda quem faz parte da sua histó",
                                                                               "type":  "CAROUSEL_ALBUM",
-                                                                              "img":  "https://scontent.cdninstagram.com/v/t51.82787-15/709735802_18593705974035959_6316408096339622999_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=111\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9\u0026_nc_ohc=L_pxoErkBWkQ7kNvwGsxb79\u0026_nc_oc=AdqDkdR4BpuC068QrA8llZoQ7dusDC41j0Uyi1R1LmjG9urYPKN-I6I5q5JKFVbw5VWz19Kjk2441dQJdHIB1LLB\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=zp0ORaSTgF3SakIHd6ZjBQ\u0026oh=00_Af9xC_RW-OWrttlNB0zcguVFu6ime8ABX48eoQpMqp8Vmg\u0026oe=6A2CBBA8",
+                                                                              "img":  "https://scontent.cdninstagram.com/v/t51.82787-15/709735802_18593705974035959_6316408096339622999_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=111\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9\u0026_nc_ohc=L_pxoErkBWkQ7kNvwGsxb79\u0026_nc_oc=AdqDkdR4BpuC068QrA8llZoQ7dusDC41j0Uyi1R1LmjG9urYPKN-I6I5q5JKFVbw5VWz19Kjk2441dQJdHIB1LLB\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=qUud415f2vPmhspMrl6n9g\u0026oh=00_Af8zC_qCiBkRMe-QDbHOmMyLs3BLDz1SxfDcUBofWK5Hdg\u0026oe=6A2CBBA8",
                                                                               "url":  "https://www.instagram.com/p/DZNNRESmAUF/",
                                                                               "date":  "2026-06-05",
                                                                               "likes":  9,
@@ -1888,7 +1888,7 @@
                                                                               "id":  "18136048618481749",
                                                                               "caption":  "👓☀️🌙 Um óculos que acompanha o seu dia, do claro ao escuro, sem trocar.\n\nAs lentes Transitions se adaptam à luz, escur",
                                                                               "type":  "CAROUSEL_ALBUM",
-                                                                              "img":  "https://scontent.cdninstagram.com/v/t51.82787-15/671800356_18587649073035959_5622704437263357008_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=105\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9\u0026_nc_ohc=jj33J6vT9OgQ7kNvwGg9Ob_\u0026_nc_oc=AdoazUTz6dwOpNTLFKFcE-zjf_UMHh2Dao8CD_iSxYYsiyp0peDIQZyid0RcFXq6xRI1TIdBeSliSnYUTUCY1Et_\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=zp0ORaSTgF3SakIHd6ZjBQ\u0026oh=00_Af-459JHWB7ocz7mjwt37u_O4Lp1_NQ-ivhL12QDhFqDVA\u0026oe=6A2C8D8D",
+                                                                              "img":  "https://scontent.cdninstagram.com/v/t51.82787-15/671800356_18587649073035959_5622704437263357008_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=105\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9\u0026_nc_ohc=jj33J6vT9OgQ7kNvwGg9Ob_\u0026_nc_oc=AdoazUTz6dwOpNTLFKFcE-zjf_UMHh2Dao8CD_iSxYYsiyp0peDIQZyid0RcFXq6xRI1TIdBeSliSnYUTUCY1Et_\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=qUud415f2vPmhspMrl6n9g\u0026oh=00_Af9Ze17C9LVxO1KqEbxmrHlI5yDyv_wWMYiAnIRJV9wX0Q\u0026oe=6A2CC5CD",
                                                                               "url":  "https://www.instagram.com/p/DYVBhinFvL4/",
                                                                               "date":  "2026-05-14",
                                                                               "likes":  9,
@@ -1899,7 +1899,7 @@
                                                                               "id":  "18117127300835785",
                                                                               "caption":  "❤️👓 Amor em Dobro chegou à Ótica Aliança!\n\nNeste Dia dos Namorados, comprar seu novo óculos pode render um presente esp",
                                                                               "type":  "CAROUSEL_ALBUM",
-                                                                              "img":  "https://scontent.cdninstagram.com/v/t51.82787-15/709769623_18593702629035959_3055528655747454893_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=111\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9\u0026_nc_ohc=axMaca_We_gQ7kNvwG3J62j\u0026_nc_oc=AdrizMhYkYtta7Q5Sb1PU2FQG2ayM45oPOA4YD5Q64lueVduhcJx5O0uXsjD3WFYymN1Pw3Hjp84i-LxCz_iyjLA\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=zp0ORaSTgF3SakIHd6ZjBQ\u0026oh=00_Af9ID4ZPovFErEk8mPt4viI7MT7iWKVOhH0ftqSvlkFzNQ\u0026oe=6A2C9056",
+                                                                              "img":  "https://scontent.cdninstagram.com/v/t51.82787-15/709769623_18593702629035959_3055528655747454893_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=111\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9\u0026_nc_ohc=axMaca_We_gQ7kNvwG3J62j\u0026_nc_oc=AdrizMhYkYtta7Q5Sb1PU2FQG2ayM45oPOA4YD5Q64lueVduhcJx5O0uXsjD3WFYymN1Pw3Hjp84i-LxCz_iyjLA\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=qUud415f2vPmhspMrl6n9g\u0026oh=00_Af_HAxe3zPdIVw0BbgOIyA53aJMz2vId1rVtoGpoXUqFuQ\u0026oe=6A2CC896",
                                                                               "url":  "https://www.instagram.com/p/DZIoUZnGDt9/",
                                                                               "date":  "2026-06-03",
                                                                               "likes":  7,
@@ -1910,7 +1910,7 @@
                                                                               "id":  "18090989786582189",
                                                                               "caption":  "Sorteio especial dia das Mães Ótica aliança em parceria com a VCTY EYEWEAR!!!\n\nParabéns a ganhadora Vanessa Alonso de Ar",
                                                                               "type":  "VIDEO",
-                                                                              "img":  "https://scontent.cdninstagram.com/v/t51.82787-15/711494007_18592022968035959_8854688364370425250_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=103\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D\u0026_nc_ohc=c6Zsb4olXagQ7kNvwHfL9c4\u0026_nc_oc=Adp9J-8EyrIKTkcjVq2ftCC_jJlom1gAItd9QzkEnNx8i8CRJKQJzMuaWXo9gcfEcWxz14FeSpPoLXTBKepWYyDb\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=zp0ORaSTgF3SakIHd6ZjBQ\u0026_nc_tpa=Q5bMBQHSWcU0I-PXERI1_lJ89btiXYXjPdyTzuhHAsQWhkkdYII_WP63zi32aHgJfSNvO9JZvb3IOIGJcg\u0026oh=00_Af8-9Y4PPW5LmiD0GRZiBsAwKi64GKoWle6yDmWMYQNo6A\u0026oe=6A2CB37F",
+                                                                              "img":  "https://scontent.cdninstagram.com/v/t51.82787-15/711494007_18592022968035959_8854688364370425250_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=103\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D\u0026_nc_ohc=c6Zsb4olXagQ7kNvwHfL9c4\u0026_nc_oc=Adp9J-8EyrIKTkcjVq2ftCC_jJlom1gAItd9QzkEnNx8i8CRJKQJzMuaWXo9gcfEcWxz14FeSpPoLXTBKepWYyDb\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=qUud415f2vPmhspMrl6n9g\u0026_nc_tpa=Q5bMBQEqwkdOW-W2OJreSFMcO0bdx3UjtTAV9rOUKS3tIHKZpixjLkdDeTc4VR6r1HeJOuZ5mpivMUO4Ag\u0026oh=00_Af8Hxezfw8rF1UoqUT2lEYSwwODH8sQUCy6XVxSE7fMavA\u0026oe=6A2CEBBF",
                                                                               "url":  "https://www.instagram.com/reel/DY7KgDrOGOJ/",
                                                                               "date":  "2026-05-29",
                                                                               "likes":  7,
@@ -1921,7 +1921,7 @@
                                                                               "id":  "18002210069923632",
                                                                               "caption":  "A gente sabe… no dia a dia vale tudo 😅\n\nMas esses “pequenos hábitos” podem riscar as lentes, desalinha a armação e dimi",
                                                                               "type":  "VIDEO",
-                                                                              "img":  "https://scontent.cdninstagram.com/v/t51.71878-15/696499421_949321907861168_4500369466277425633_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=111\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D\u0026_nc_ohc=hfxbEcGLsgIQ7kNvwEkiQF6\u0026_nc_oc=Ado84l4arVD4a6PfVW6ShyAN05lfKQ6hMyfdY_HQqko85HVwohyv2tSMN6ed1JkBgVSzzxePc_vr2wA0QblwohoX\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=zp0ORaSTgF3SakIHd6ZjBQ\u0026_nc_tpa=Q5bMBQGYZYMUyhegZQfitv6lmLg0188blgNlI2APM2nzUDnuMdKLk_oDcXWrHacSIRUgHLHMxzl4FWxoTA\u0026oh=00_Af_1QJvTlmSQfc6jS7MRAeomO2YBLTPPfmqVpgweYN2H7g\u0026oe=6A2CBD59",
+                                                                              "img":  "https://scontent.cdninstagram.com/v/t51.71878-15/696499421_949321907861168_4500369466277425633_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=111\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D\u0026_nc_ohc=hfxbEcGLsgIQ7kNvwEkiQF6\u0026_nc_oc=Ado84l4arVD4a6PfVW6ShyAN05lfKQ6hMyfdY_HQqko85HVwohyv2tSMN6ed1JkBgVSzzxePc_vr2wA0QblwohoX\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=qUud415f2vPmhspMrl6n9g\u0026_nc_tpa=Q5bMBQHcH_Tqos6vnLWffjPtwolEIcGLRJUxG2QtEKpehL_DTOwtwO1vSnQyhJ579j4NEox_1COT9hMiKg\u0026oh=00_Af_Pdvua3jmTKpGQpqQF08IaPw-LYH0hFzU4klQElXU2pA\u0026oe=6A2CBD59",
                                                                               "url":  "https://www.instagram.com/reel/DYPU5hiOO0h/",
                                                                               "date":  "2026-05-12",
                                                                               "likes":  7,
@@ -1932,7 +1932,7 @@
                                                                               "id":  "18105790660984022",
                                                                               "caption":  "☀️🕶️ Mais do que estilo, proteção para os seus olhos.\n\nA exposição ao sol sem a proteção certa pode causar desconforto ",
                                                                               "type":  "IMAGE",
-                                                                              "img":  "https://scontent.cdninstagram.com/v/t51.82787-15/706417320_18591775957035959_530223292332766291_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=101\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9\u0026_nc_ohc=D3bK_XmBw8MQ7kNvwF0Sjn1\u0026_nc_oc=AdrFJ_Vh80-5SlEilPWib1D38DVBXDdOVEaL8_R1dSac1qDAHjWCtwJfQQyFTpRBNtQiax6XRTzKkOzxtFEezPml\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=zp0ORaSTgF3SakIHd6ZjBQ\u0026oh=00_Af-N7RHy-5JFgZZvUEPPJ0MvZ19S7O7yRHZ-J2zLvB0gQg\u0026oe=6A2CBF20",
+                                                                              "img":  "https://scontent.cdninstagram.com/v/t51.82787-15/706417320_18591775957035959_530223292332766291_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=101\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9\u0026_nc_ohc=D3bK_XmBw8MQ7kNvwF0Sjn1\u0026_nc_oc=AdrFJ_Vh80-5SlEilPWib1D38DVBXDdOVEaL8_R1dSac1qDAHjWCtwJfQQyFTpRBNtQiax6XRTzKkOzxtFEezPml\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=qUud415f2vPmhspMrl6n9g\u0026oh=00_Af9qbLGVbStKmoivPyDcRkilZ5mEchmBMHw7k5FtGtbx0A\u0026oe=6A2CBF20",
                                                                               "url":  "https://www.instagram.com/p/DY48fyXqZtK/",
                                                                               "date":  "2026-05-28",
                                                                               "likes":  4,
@@ -2225,7 +2225,7 @@
                                                                               },
                                                                               {
                                                                                   "d":  "2026-06-08",
-                                                                                  "v":  129
+                                                                                  "v":  206
                                                                               }
                                                                           ],
                                                          "reach_30d_prev":  8133,
@@ -2351,14 +2351,14 @@
                                                                                 "v":  0
                                                                             }
                                                                         ],
-                                                         "accounts_engaged_7d":  142,
-                                                         "accounts_engaged_30d":  214,
+                                                         "accounts_engaged_7d":  143,
+                                                         "accounts_engaged_30d":  215,
                                                          "accounts_engaged_30d_prev":  170,
-                                                         "total_interactions_7d":  284,
-                                                         "total_interactions_30d":  650,
+                                                         "total_interactions_7d":  286,
+                                                         "total_interactions_30d":  652,
                                                          "total_interactions_30d_prev":  658,
-                                                         "likes_7d":  181,
-                                                         "likes_30d":  393,
+                                                         "likes_7d":  183,
+                                                         "likes_30d":  395,
                                                          "likes_30d_prev":  424,
                                                          "comments_7d":  2,
                                                          "comments_30d":  5,
@@ -2374,7 +2374,7 @@
                                                                                "id":  "18058672031721358",
                                                                                "caption":  "Por trás de cada frasco, existe muito mais do que lubrificante.\n\nExiste tecnologia, controle, padrão e um compromisso re",
                                                                                "type":  "VIDEO",
-                                                                               "img":  "https://scontent.cdninstagram.com/v/t51.82787-15/717257891_18591807715028938_5084955429834687127_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=109\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D\u0026_nc_ohc=9xF1KoLhY1IQ7kNvwHpH_rr\u0026_nc_oc=AdrEw8HXQCcCfPUkpqvaRmdvArHrDufaOqoR_ku4KPyQLPc3y0L05l-IFcVHWBsfklqYC5qw9IXlJZ06AIdjEf6i\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=2hoSRrlUlMSVGxyzvLkj3w\u0026_nc_tpa=Q5bMBQH_lfhxLs0LddGpT2s_WXvkmgqchWhSdJITwokX-oll0lhRCiq8hKE1h1iyMnva-EpkRAzFRMEv9g\u0026oh=00_Af9jhBwi1c9dqcbOhXzRnueUGK4ltoJXtT6o69dTV6aDVQ\u0026oe=6A2C95EF",
+                                                                               "img":  "https://scontent.cdninstagram.com/v/t51.82787-15/717257891_18591807715028938_5084955429834687127_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=109\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D\u0026_nc_ohc=cjZv4vd5GmMQ7kNvwGk9tVC\u0026_nc_oc=Adq8y6u6YuJrkFg-1V8ffYbLSzd4Cifoki11vXctTjzMRklgk3Egv1x4B2oLNgMqsFzbR3HvfIm2s1O69oHjDM_W\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=uGpupcXAyDpm5XezSBOt-A\u0026_nc_tpa=Q5bMBQGa6m3zsUQ0qYIRm0VsLqKrVHdjjFAfyyCpBcza8eP3Gs-zAxtfhOotHmqKDJjYKXvbGx4xeYX_4w\u0026oh=00_Af9dNyLaGDBBqn89Uc7mHIPXab7CcJPXWLQdPDE248UakQ\u0026oe=6A2CCE2F",
                                                                                "url":  "https://www.instagram.com/reel/DZFe3ruxrpU/",
                                                                                "date":  "2026-06-02",
                                                                                "likes":  69,
@@ -2385,7 +2385,7 @@
                                                                                "id":  "17973776757052830",
                                                                                "caption":  "A luz do óleo no painel não é um aviso comum.\nEla indica falha na pressão do óleo, ou seja, o motor pode estar sem lubri",
                                                                                "type":  "VIDEO",
-                                                                               "img":  "https://scontent.cdninstagram.com/v/t51.82787-15/717140608_18591807487028938_8981987150292722778_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=100\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D\u0026_nc_ohc=4WhIoC7AqwgQ7kNvwG2Xew1\u0026_nc_oc=AdqL8VSMpB2DsQoM9GhNhRCJ9nsmqGl5M91mRBtlXCQsW7FYS6csE_qr49leN_vzikrdewN4BKE50fXTkMHm7DYL\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=2hoSRrlUlMSVGxyzvLkj3w\u0026_nc_tpa=Q5bMBQEQ4jF8eM3Rz6kUVkw6zS9DjxyKnQA90AMry7V-IAKpOWb4Ugc_E3y2k3jCIDpZhsRToMX1Kutlkw\u0026oh=00_Af8s4ivHHNQCEmMTIeZ8hV6dzm-2OYj-C7m3M756Ne-slA\u0026oe=6A2C9FDA",
+                                                                               "img":  "https://scontent.cdninstagram.com/v/t51.82787-15/717140608_18591807487028938_8981987150292722778_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=100\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D\u0026_nc_ohc=4WhIoC7AqwgQ7kNvwG2Xew1\u0026_nc_oc=AdqL8VSMpB2DsQoM9GhNhRCJ9nsmqGl5M91mRBtlXCQsW7FYS6csE_qr49leN_vzikrdewN4BKE50fXTkMHm7DYL\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=uGpupcXAyDpm5XezSBOt-A\u0026_nc_tpa=Q5bMBQGi9ft6edyobTDKo9ulMaGEPJGuGQ0yNaLG_DzFzPRQOu5CSU9AlQ_FPZOiO88mY8HyWYcotn63QA\u0026oh=00_Af8pf1xFU_C85trd8yNaUZT0mOGnN9c0IEl11q85JlwQVQ\u0026oe=6A2CD81A",
                                                                                "url":  "https://www.instagram.com/reel/DY7ijlhxPI4/",
                                                                                "date":  "2026-05-29",
                                                                                "likes":  58,
@@ -2396,7 +2396,7 @@
                                                                                "id":  "18117323602702515",
                                                                                "caption":  "Qualidade de verdade sustenta marcas grandes.\nEla cria confiança, constrói reputação e abre mercados.\n\nA TEXSA DO BRASIL",
                                                                                "type":  "VIDEO",
-                                                                               "img":  "https://scontent.cdninstagram.com/v/t51.82787-15/717709166_18591807304028938_9183982175065058399_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=111\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D\u0026_nc_ohc=nsu-groqf_0Q7kNvwHwu6KJ\u0026_nc_oc=AdrVM_kCHaFZjJ6PPmaJ4uxLRiRKswJsTfoV_oScWMqL_zyS8XLFnXVcW7p7DNvWRcPuaX4UcdTZrIooO2v2gn3A\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=2hoSRrlUlMSVGxyzvLkj3w\u0026_nc_tpa=Q5bMBQESQy5M9h8RVbDviXwCFeJXxspevt09NY4sQZ72PEv6J8269hna14ATkV_Wj4TqQYQX8EqR5RZHgw\u0026oh=00_Af9EHf3Snz5qVZ3a05HbNv6xPalLjENm4pfe2xvdCaSSNw\u0026oe=6A2CA268",
+                                                                               "img":  "https://scontent.cdninstagram.com/v/t51.82787-15/717709166_18591807304028938_9183982175065058399_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=111\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D\u0026_nc_ohc=nsu-groqf_0Q7kNvwHwu6KJ\u0026_nc_oc=AdrVM_kCHaFZjJ6PPmaJ4uxLRiRKswJsTfoV_oScWMqL_zyS8XLFnXVcW7p7DNvWRcPuaX4UcdTZrIooO2v2gn3A\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=uGpupcXAyDpm5XezSBOt-A\u0026_nc_tpa=Q5bMBQEFBEDt3Ym_xv4lrr74DRdiKrGvDEdfMXEdH-qP8BKLUVeogtylecRs3qLribFlYGoaDPy70UVAgw\u0026oh=00_Af8eehgmgJqRvhC11w0cs6do_Xi2uobP0JOiZ8ncp1RI9g\u0026oe=6A2CDAA8",
                                                                                "url":  "https://www.instagram.com/reel/DYpSs86xEih/",
                                                                                "date":  "2026-05-22",
                                                                                "likes":  34,
@@ -2407,7 +2407,7 @@
                                                                                "id":  "17917255377379384",
                                                                                "caption":  "Do Brasil para o mundo, a TEXSA se tornou símbolo de qualidade, confiança e performance internacional.\nCom mais de 25 ap",
                                                                                "type":  "VIDEO",
-                                                                               "img":  "https://scontent.cdninstagram.com/v/t51.82787-15/716975169_18591807565028938_6726236910131620260_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=106\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D\u0026_nc_ohc=GucOULaTCpsQ7kNvwF_0ND3\u0026_nc_oc=AdoSt1-Wr5PyRW2rWfKwuV-9MRGw3U9ryoMb0yW12uNZ98xkqo8_jpLdm6C1FLxkbJEo0TBlXuvdsqsL2GLqw5ei\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=2hoSRrlUlMSVGxyzvLkj3w\u0026_nc_tpa=Q5bMBQFLiNgvDIJ-6K8LkR9p-sSUFjapx-VbwiPQ1Cz_pfheoZpu6IJMGSGOSCuCsGsmHcSEAM1Z_DsqEw\u0026oh=00_Af_1Thl02SUh2u4PODAb73nAJxfv_6me-_hl3ox2jd2ccA\u0026oe=6A2C90E5",
+                                                                               "img":  "https://scontent.cdninstagram.com/v/t51.82787-15/716975169_18591807565028938_6726236910131620260_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=106\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D\u0026_nc_ohc=GucOULaTCpsQ7kNvwF_0ND3\u0026_nc_oc=AdoSt1-Wr5PyRW2rWfKwuV-9MRGw3U9ryoMb0yW12uNZ98xkqo8_jpLdm6C1FLxkbJEo0TBlXuvdsqsL2GLqw5ei\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=uGpupcXAyDpm5XezSBOt-A\u0026_nc_tpa=Q5bMBQGuQZ0EMPRK-TKs_7DfhwNAZOZs3hHeFxKXJeAitRxpJGFXuLtXclOdL_sR_RKNIXPkivpfS5FjWw\u0026oh=00_Af_7BlWjmpvHl0fZrrLMEg1OtbtQyC2i62Uaqmv9h0mMdA\u0026oe=6A2CC925",
                                                                                "url":  "https://www.instagram.com/reel/DZNN4Acxo_S/",
                                                                                "date":  "2026-06-05",
                                                                                "likes":  30,
@@ -2418,7 +2418,7 @@
                                                                                "id":  "18044156906788709",
                                                                                "caption":  "Cada gota faz diferença.\n\nEnquanto você vê o óleo sendo aplicado, lá dentro do motor acontece o que realmente importa: r",
                                                                                "type":  "IMAGE",
-                                                                               "img":  "https://scontent.cdninstagram.com/v/t51.82787-15/698425940_18584705332028938_2025128243800484866_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=108\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9\u0026_nc_ohc=9zxnqRwPhRQQ7kNvwEe7Qw-\u0026_nc_oc=AdrcUk7P_XNSyF9zRO6LvOmmwuvAJlqt_rpXWPRzKp_MftRSALJcXWCaLi1sTvrgkkHRdzU1iovyfGNYk94bfivX\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=2hoSRrlUlMSVGxyzvLkj3w\u0026oh=00_Af-yGlPvnlhGYe85j2n9e_yypZ78rZ7xvOeLy9g8Uu6GTA\u0026oe=6A2CA03E",
+                                                                               "img":  "https://scontent.cdninstagram.com/v/t51.82787-15/698425940_18584705332028938_2025128243800484866_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=108\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9\u0026_nc_ohc=9zxnqRwPhRQQ7kNvwEe7Qw-\u0026_nc_oc=AdrcUk7P_XNSyF9zRO6LvOmmwuvAJlqt_rpXWPRzKp_MftRSALJcXWCaLi1sTvrgkkHRdzU1iovyfGNYk94bfivX\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=uGpupcXAyDpm5XezSBOt-A\u0026oh=00_Af9fq_L_4ajF_fSQYm0pZg1ZUdBtPzoBwE3MuFvF6CJDHg\u0026oe=6A2CD87E",
                                                                                "url":  "https://www.instagram.com/p/DYP_B7fRQh1/",
                                                                                "date":  "2026-05-12",
                                                                                "likes":  21,
@@ -2429,7 +2429,7 @@
                                                                                "id":  "18062611583450831",
                                                                                "caption":  "O prejuízo não surge de repente.\nEle é construído ao longo do tempo.\n\nPequenas decisões, quando ignoradas, se transforma",
                                                                                "type":  "CAROUSEL_ALBUM",
-                                                                               "img":  "https://scontent.cdninstagram.com/v/t39.30808-6/699454923_122125743195206477_9139533306868823780_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=102\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9\u0026_nc_ohc=Z9wSfIjPmecQ7kNvwESjrtr\u0026_nc_oc=AdqDjhYTrmltZrRaNsczwQ7uavtmzK2yifYdn6rpi2kuVmOcQqaRKyvphaMeeVP0LC5Yww4HBrvf_kGZXUQdaB3Z\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=2hoSRrlUlMSVGxyzvLkj3w\u0026oh=00_Af9USUjyxwUYfoDiH3B2nndwSrOsXoA1xtrieR-SGwbp2w\u0026oe=6A2CA36B",
+                                                                               "img":  "https://scontent.cdninstagram.com/v/t39.30808-6/699454923_122125743195206477_9139533306868823780_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=102\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9\u0026_nc_ohc=Z9wSfIjPmecQ7kNvwESjrtr\u0026_nc_oc=AdqDjhYTrmltZrRaNsczwQ7uavtmzK2yifYdn6rpi2kuVmOcQqaRKyvphaMeeVP0LC5Yww4HBrvf_kGZXUQdaB3Z\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=uGpupcXAyDpm5XezSBOt-A\u0026oh=00_Af-rH_XgeboGYIwOkmB3LgY3DC7-r_KlsHEsm-vN6LVfVw\u0026oe=6A2CDBAB",
                                                                                "url":  "https://www.instagram.com/p/DYXgY0Qicuu/",
                                                                                "date":  "2026-05-15",
                                                                                "likes":  12,
@@ -2440,7 +2440,7 @@
                                                                                "id":  "18102509684011304",
                                                                                "caption":  "Algumas diferenças você percebe na prática.\n\nUm funcionamento mais suave.\nMais estabilidade no dia a dia.\nMais confiança",
                                                                                "type":  "CAROUSEL_ALBUM",
-                                                                               "img":  "https://scontent.cdninstagram.com/v/t51.82787-15/708049983_18588988648028938_6691700062511106750_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=100\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9\u0026_nc_ohc=0H8kTvSik8kQ7kNvwFoTFFG\u0026_nc_oc=AdrY2_wzl-jyZ-FixmRAfEGsOgdaABGHNw7VYBEn6W48ADeyBtn1gyWrnUd4sV9QSbyWeR6iYOz3XuYq4XtTsFOB\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=2hoSRrlUlMSVGxyzvLkj3w\u0026oh=00_Af-GmkoJvOinWETLgyZqq3-w7OPb3JZ0Z_uGqN6YC6Js6g\u0026oe=6A2CA162",
+                                                                               "img":  "https://scontent.cdninstagram.com/v/t51.82787-15/708049983_18588988648028938_6691700062511106750_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=100\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9\u0026_nc_ohc=0H8kTvSik8kQ7kNvwFoTFFG\u0026_nc_oc=AdrY2_wzl-jyZ-FixmRAfEGsOgdaABGHNw7VYBEn6W48ADeyBtn1gyWrnUd4sV9QSbyWeR6iYOz3XuYq4XtTsFOB\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=uGpupcXAyDpm5XezSBOt-A\u0026oh=00_Af-8Kbc6Zrkw4LbSr40nCziD8phYtuoWHRaZ2nDOSBFLCg\u0026oe=6A2CD9A2",
                                                                                "url":  "https://www.instagram.com/p/DY2X5wakVa_/",
                                                                                "date":  "2026-05-27",
                                                                                "likes":  11,
@@ -2451,7 +2451,7 @@
                                                                                "id":  "18101387855045771",
                                                                                "caption":  "🔔 Notificação importante:\nSeu motor precisa de atenção hoje.\n\nManutenção não é sobre lembrar quando dá problema.\nÉ sobr",
                                                                                "type":  "IMAGE",
-                                                                               "img":  "https://scontent.cdninstagram.com/v/t51.82787-15/703906925_18586672507028938_4497706707383965641_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=110\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9\u0026_nc_ohc=tb4KDRc-pzIQ7kNvwEMUXuF\u0026_nc_oc=AdoiPol93PeB4Et3Y0f9-jnIJVWkBakErYlOivKy3EquZ52XMqyevjXGtggTs3pjehuZoks3auMVe3Pras5mnXhN\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=2hoSRrlUlMSVGxyzvLkj3w\u0026oh=00_Af9YObz5popjLncEwQyf-7oldw5ZVN98fLz2SEZtteN6tg\u0026oe=6A2C8EEE",
+                                                                               "img":  "https://scontent.cdninstagram.com/v/t51.82787-15/703906925_18586672507028938_4497706707383965641_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=110\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9\u0026_nc_ohc=tb4KDRc-pzIQ7kNvwEMUXuF\u0026_nc_oc=AdoiPol93PeB4Et3Y0f9-jnIJVWkBakErYlOivKy3EquZ52XMqyevjXGtggTs3pjehuZoks3auMVe3Pras5mnXhN\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=uGpupcXAyDpm5XezSBOt-A\u0026oh=00_Af_paecQoTWkF4_SZZyawGDSUgJE09Oo7BkcnRCCkNwHCw\u0026oe=6A2CC72E",
                                                                                "url":  "https://www.instagram.com/p/DYh9KBPx1kA/",
                                                                                "date":  "2026-05-19",
                                                                                "likes":  7,
@@ -2616,7 +2616,7 @@
                                           },
                      "1422408889638342":  {
                                               "ig":  {
-                                                         "followers":  10727,
+                                                         "followers":  10726,
                                                          "series":  [
                                                                         {
                                                                             "d":  "2026-06-07",
@@ -2624,7 +2624,7 @@
                                                                         },
                                                                         {
                                                                             "d":  "2026-06-08",
-                                                                            "v":  10727
+                                                                            "v":  10726
                                                                         }
                                                                     ],
                                                          "reach_30d":  110473,
@@ -2754,7 +2754,7 @@
                                                                               },
                                                                               {
                                                                                   "d":  "2026-06-08",
-                                                                                  "v":  324
+                                                                                  "v":  535
                                                                               }
                                                                           ],
                                                          "reach_30d_prev":  176225,
@@ -2880,20 +2880,20 @@
                                                                                 "v":  0
                                                                             }
                                                                         ],
-                                                         "accounts_engaged_7d":  214,
-                                                         "accounts_engaged_30d":  945,
+                                                         "accounts_engaged_7d":  215,
+                                                         "accounts_engaged_30d":  947,
                                                          "accounts_engaged_30d_prev":  2291,
-                                                         "total_interactions_7d":  492,
-                                                         "total_interactions_30d":  2664,
+                                                         "total_interactions_7d":  513,
+                                                         "total_interactions_30d":  2685,
                                                          "total_interactions_30d_prev":  6639,
-                                                         "likes_7d":  274,
-                                                         "likes_30d":  1515,
+                                                         "likes_7d":  292,
+                                                         "likes_30d":  1533,
                                                          "likes_30d_prev":  3994,
                                                          "comments_7d":  68,
                                                          "comments_30d":  162,
                                                          "comments_30d_prev":  665,
-                                                         "shares_7d":  68,
-                                                         "shares_30d":  444,
+                                                         "shares_7d":  69,
+                                                         "shares_30d":  445,
                                                          "shares_30d_prev":  879,
                                                          "saves_7d":  2,
                                                          "saves_30d":  20,
@@ -2903,7 +2903,7 @@
                                                                                "id":  "17982552807008090",
                                                                                "caption":  "O que eu mais quero é ver a Gabi cada vez mais confiante, forte, saudável e feliz com ela mesma, e eu já vejo isso. 👊🏽",
                                                                                "type":  "VIDEO",
-                                                                               "img":  "https://scontent.cdninstagram.com/v/t51.71878-15/712563374_1496531311303634_8517149622251524282_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=102\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D\u0026_nc_ohc=NM71xCOcu3QQ7kNvwHPR64R\u0026_nc_oc=AdqquO3siVR2ZWvQuVmJOBD4en970upiBOpcrZ35GZjsgChEZLiXj2ee0FU_eGNNjg5paLvw6q6al4076Fbkzh5G\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=Js3kZN3D2Or7eE_HEUJ6mw\u0026_nc_tpa=Q5bMBQEnzia_fEWkE1s1kkvdrCTe-OpwyQhV2sdYfvU5P_VouczOrY1Rcv3kSW5PV-MB4h_oLnh_RVyifg\u0026oh=00_Af-lVbmb-2pooA1j6QCO6dxMz6s8g6QHQcDnaB95OCumog\u0026oe=6A2CA41E",
+                                                                               "img":  "https://scontent.cdninstagram.com/v/t51.71878-15/712563374_1496531311303634_8517149622251524282_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=102\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D\u0026_nc_ohc=NM71xCOcu3QQ7kNvwHPR64R\u0026_nc_oc=AdqquO3siVR2ZWvQuVmJOBD4en970upiBOpcrZ35GZjsgChEZLiXj2ee0FU_eGNNjg5paLvw6q6al4076Fbkzh5G\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=GF5f4UbJS6VNyTLrtHCagA\u0026_nc_tpa=Q5bMBQGJfSZz99j4GwKD4gOpoinxuMnLckioPMKhZJrFlg-tuUWgwDbocAMpS6VqkMGFOZ5ngPddUAP97A\u0026oh=00_Af-wuC2FBd1WBymK3p5lkaipDpIROWn8NDod366YbLYKzg\u0026oe=6A2CDC5E",
                                                                                "url":  "https://www.instagram.com/reel/DZDuK57xZWk/",
                                                                                "date":  "2026-06-01",
                                                                                "likes":  244,
@@ -2914,7 +2914,7 @@
                                                                                "id":  "17920463967142526",
                                                                                "caption":  "Se liga como foi esse sábado aqui na @armsgymumuarama!!!\n\n#academia #musculação #treino #gym #bodybuilding",
                                                                                "type":  "VIDEO",
-                                                                               "img":  "https://scontent.cdninstagram.com/v/t51.71878-15/695786649_2185798912267571_5791989543898169941_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=102\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D\u0026_nc_ohc=Jbo4P-SrFfgQ7kNvwE1lMvn\u0026_nc_oc=AdooXN-E40a-tgqvoLHIPBYnKJWPgUE1CidbdAK_DSmyLOL2KgtCMoTAN9pVznJ5hpMaQLL5gnscQTNHNFxHzMZO\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=Js3kZN3D2Or7eE_HEUJ6mw\u0026_nc_tpa=Q5bMBQHCKegsATpz90lX6eJUfgWMN0HbPe7ANMmEDXaIWoUDqhKlwHad9XJZ7OWM4ceXAFhfrCp-kDGuaA\u0026oh=00_Af-OM3NuPxP-ndztIitABm5QfUVwLqO5kwT6VYVUvvVzDA\u0026oe=6A2CB4ED",
+                                                                               "img":  "https://scontent.cdninstagram.com/v/t51.71878-15/695786649_2185798912267571_5791989543898169941_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=102\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D\u0026_nc_ohc=Jbo4P-SrFfgQ7kNvwE1lMvn\u0026_nc_oc=AdooXN-E40a-tgqvoLHIPBYnKJWPgUE1CidbdAK_DSmyLOL2KgtCMoTAN9pVznJ5hpMaQLL5gnscQTNHNFxHzMZO\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=GF5f4UbJS6VNyTLrtHCagA\u0026_nc_tpa=Q5bMBQGIGSAXqWAHPs8GGEItgbTYKnLdz-E2PSwnvBTdKuNKMzFMxascYwy9JId1lTs7FubsSd0NaTOD0w\u0026oh=00_Af9ERSpXs85uhLx0V1FGDhtsh1JtMOQM7ReLakfKQPjoKA\u0026oe=6A2CED2D",
                                                                                "url":  "https://www.instagram.com/reel/DYZv3HRR2nn/",
                                                                                "date":  "2026-05-16",
                                                                                "likes":  218,
@@ -2925,7 +2925,7 @@
                                                                                "id":  "18102885043923249",
                                                                                "caption":  "Ela é demais, né?\n\nTem pessoas que acabam virando parte da nossa história, a @marcinhaalmeida__ é uma delas. 🫶🏽\n\nHá ma",
                                                                                "type":  "VIDEO",
-                                                                               "img":  "https://scontent.cdninstagram.com/v/t51.71878-15/714716637_1431077202110933_4207079875998747446_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=111\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D\u0026_nc_ohc=F9MR5iyf3q4Q7kNvwFWOjFD\u0026_nc_oc=AdpntMVr7o36RIVxaJv0o-tuPYgD6o95KGVMLpul6azinC7MriKAYalrq5rw8j_o3Ji7mIPFGxGAl2cut5O_soAz\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=Js3kZN3D2Or7eE_HEUJ6mw\u0026_nc_tpa=Q5bMBQFDvznve6-Upycb49Ulfmf52ORIA-VS7HrYKEnO4njtKH6dNA6Irx_7lL82uQC_P8xM3CacgIrlIQ\u0026oh=00_Af-yBi4cZ8djK2jesf9IgFyWC6HaHJdPIu5pwTLrQubFXw\u0026oe=6A2CAE23",
+                                                                               "img":  "https://scontent.cdninstagram.com/v/t51.71878-15/714716637_1431077202110933_4207079875998747446_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=111\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D\u0026_nc_ohc=F9MR5iyf3q4Q7kNvwFWOjFD\u0026_nc_oc=AdpntMVr7o36RIVxaJv0o-tuPYgD6o95KGVMLpul6azinC7MriKAYalrq5rw8j_o3Ji7mIPFGxGAl2cut5O_soAz\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=GF5f4UbJS6VNyTLrtHCagA\u0026_nc_tpa=Q5bMBQEluUq8DCcJjaFNRiJyc6aAckIH3Vh0s2ykiWpEFhbywYZRrIVlZk8iSdy_gXHLay_LWcI9q-D3gw\u0026oh=00_Af9UBsj-gZcmQFntagvTY9rp9DnkwAlT53ZuQ_nhovlPig\u0026oe=6A2CE663",
                                                                                "url":  "https://www.instagram.com/reel/DZGVW6oRxSh/",
                                                                                "date":  "2026-06-02",
                                                                                "likes":  52,
@@ -2936,7 +2936,7 @@
                                                                                "id":  "18120657994671159",
                                                                                "caption":  "“Acredite é a mesma pessoa.”\n\nE sabe por que eu sei que vou chegar onde eu quero chegar? \nPor que eu trabalho duro todos",
                                                                                "type":  "VIDEO",
-                                                                               "img":  "https://scontent.cdninstagram.com/v/t51.71878-15/714805717_1346170694105465_7593660299344563196_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=104\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D\u0026_nc_ohc=-qg61ldCbrwQ7kNvwGpKBe8\u0026_nc_oc=Adp-lm_NlfWrTaA8TUOlKvjPos5ZJjlm1h3UoRd5ITRdlzEEmAzHJdK_h1sPUTMwYXo2Q1DoH9b70CTtibeTIqg5\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=Js3kZN3D2Or7eE_HEUJ6mw\u0026_nc_tpa=Q5bMBQE0VnAlC3N1_hPURJYQMiW1uqc8swHa0OwSpdU9ATTNPDRZW4x5hdlSBMv2LCdKE-hnP1g_Dl898Q\u0026oh=00_Af-RtwHIvl7PPo-Q_dOp3Ir8nxrzSWYwCeof41B_rDF4IQ\u0026oe=6A2CA342",
+                                                                               "img":  "https://scontent.cdninstagram.com/v/t51.71878-15/714805717_1346170694105465_7593660299344563196_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=104\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D\u0026_nc_ohc=-qg61ldCbrwQ7kNvwGpKBe8\u0026_nc_oc=Adp-lm_NlfWrTaA8TUOlKvjPos5ZJjlm1h3UoRd5ITRdlzEEmAzHJdK_h1sPUTMwYXo2Q1DoH9b70CTtibeTIqg5\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=GF5f4UbJS6VNyTLrtHCagA\u0026_nc_tpa=Q5bMBQHRX2-ldUj7WDDUxNVoxD_y4q6tKxdVZ3B7yVLyStXJt5pC4igcHfkyDJz3l9dvvYT_HPMINQn8ig\u0026oh=00_Af_5KcXwIG_Qfufa3h2gp7eLN4ju1scQPSa78Kcv7Ze8PQ\u0026oe=6A2CDB82",
                                                                                "url":  "https://www.instagram.com/reel/DZI2ECQxw71/",
                                                                                "date":  "2026-06-03",
                                                                                "likes":  52,
@@ -2947,7 +2947,7 @@
                                                                                "id":  "18443019286184124",
                                                                                "caption":  "Mais um sábado vencido, com essa companhia boa ❤️",
                                                                                "type":  "IMAGE",
-                                                                               "img":  "https://scontent.cdninstagram.com/v/t51.82787-15/701509808_18103908425296288_2255770731826459180_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=109\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9\u0026_nc_ohc=33iyE10Mf_cQ7kNvwG81Nur\u0026_nc_oc=Adonvp1tzPLkUqE-iz0Jo1wIPBLGvW-_8sbNiIGd8-1J3QP0wN3ibUteZ1AuMl0C2sO1_y1VT2VUnxrPrB68P58B\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=Js3kZN3D2Or7eE_HEUJ6mw\u0026oh=00_Af-vtix9_jLqkrxygWETWmXKpmAFWPfsU7Rgkm85UAC91A\u0026oe=6A2C8C23",
+                                                                               "img":  "https://scontent.cdninstagram.com/v/t51.82787-15/701509808_18103908425296288_2255770731826459180_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=109\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9\u0026_nc_ohc=33iyE10Mf_cQ7kNvwG81Nur\u0026_nc_oc=Adonvp1tzPLkUqE-iz0Jo1wIPBLGvW-_8sbNiIGd8-1J3QP0wN3ibUteZ1AuMl0C2sO1_y1VT2VUnxrPrB68P58B\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=GF5f4UbJS6VNyTLrtHCagA\u0026oh=00_Af8EwU0IknbwqnH_s6P3FKMz2mYjQ8MHuEF_ZTu88FUZZQ\u0026oe=6A2CC463",
                                                                                "url":  "https://www.instagram.com/p/DYagnNCxboV/",
                                                                                "date":  "2026-05-16",
                                                                                "likes":  61,
@@ -2958,7 +2958,7 @@
                                                                                "id":  "17926109904323590",
                                                                                "caption":  "Bi Set de bíceps martelo com o BIG @wilsinhoalija 👊🏽🏆 \n\nNo vídeo mostramos como gostamos de aplicar esse método no tr",
                                                                                "type":  "VIDEO",
-                                                                               "img":  "https://scontent.cdninstagram.com/v/t51.71878-15/704688788_981720384790333_5450004423603339458_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=103\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D\u0026_nc_ohc=fvC5Pudjz3IQ7kNvwEyTrYS\u0026_nc_oc=AdqvveIWmi5OJX7N_OS7g_C-CIs2KXq-nk1VTi-PRWmH7KP94HIzyGQdyJI9gcfPzWl8VHDGNwqoOkJNT0F481JT\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=Js3kZN3D2Or7eE_HEUJ6mw\u0026_nc_tpa=Q5bMBQG3M1lwuRe_wGzu3kpwJ7LaEGbk0XSvsRGd0p_jQUCZYEI4Lzt4ZL5fw22O8lFnJivdsPza2-ws2w\u0026oh=00_Af9T2z70LP4SciGAVYSv-ZEF0ARm89lFFOTa2PWM-spa-w\u0026oe=6A2C9818",
+                                                                               "img":  "https://scontent.cdninstagram.com/v/t51.71878-15/704688788_981720384790333_5450004423603339458_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=103\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D\u0026_nc_ohc=fvC5Pudjz3IQ7kNvwEyTrYS\u0026_nc_oc=AdqvveIWmi5OJX7N_OS7g_C-CIs2KXq-nk1VTi-PRWmH7KP94HIzyGQdyJI9gcfPzWl8VHDGNwqoOkJNT0F481JT\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=GF5f4UbJS6VNyTLrtHCagA\u0026_nc_tpa=Q5bMBQHRG03aj4Znal8mMFw3BlCsXp8jdLDkvmQLBf6MoINvEE0KgsG_cVgrHKKW6csp_jZ5C2zdTr7o6Q\u0026oh=00_Af8I2FtWrGQuZ3Bni2yaTaOOplmOPvva1tKwSV7D0cdPSw\u0026oe=6A2CD058",
                                                                                "url":  "https://www.instagram.com/reel/DYqLPtGBmGT/",
                                                                                "date":  "2026-05-22",
                                                                                "likes":  55,
@@ -2969,7 +2969,7 @@
                                                                                "id":  "18103241702008106",
                                                                                "caption":  "Fala galera, desculpa aí o erro de gravação! A gente pensou que o microfone tava pegando, mas acabou não gravando o áudi",
                                                                                "type":  "VIDEO",
-                                                                               "img":  "https://scontent.cdninstagram.com/v/t51.82787-15/708939079_18105299111296288_3478838725753568318_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=110\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D\u0026_nc_ohc=z-lWdjRkw_QQ7kNvwHv-qvI\u0026_nc_oc=Adqi9NZI-ffqCwrIyIaTy1KkUPi_8vG6-4reCaF_o2V7Ob2hKKOs-3dti2nKDYb-Ht0hQzpYbL3cslzjp8RNVWQ-\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=Js3kZN3D2Or7eE_HEUJ6mw\u0026_nc_tpa=Q5bMBQFK24AhtpGPto6agGV7MDHUmbVb3yb-AuICLK2W8oL-Cx30M1vSf9yVUD4tMttahZ_xo8AHZme7mA\u0026oh=00_Af_5qYEdMAldQX3xEu7M96rYaniShqFhjugfXkgR8vCPGA\u0026oe=6A2C9915",
+                                                                               "img":  "https://scontent.cdninstagram.com/v/t51.82787-15/708939079_18105299111296288_3478838725753568318_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=110\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D\u0026_nc_ohc=z-lWdjRkw_QQ7kNvwHv-qvI\u0026_nc_oc=Adqi9NZI-ffqCwrIyIaTy1KkUPi_8vG6-4reCaF_o2V7Ob2hKKOs-3dti2nKDYb-Ht0hQzpYbL3cslzjp8RNVWQ-\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=GF5f4UbJS6VNyTLrtHCagA\u0026_nc_tpa=Q5bMBQEGkyCClMb1DAczv5yRQ2oStwl8tYeNLHUSbiiqfqny_iUVpxPKRx-t5WeEMNV5En8x4sU5m2eiuw\u0026oh=00_Af8E4qADpu7_11y9C0Zdu234F3o1LI0Tv9N-mVDWXvH1aw\u0026oe=6A2CD155",
                                                                                "url":  "https://www.instagram.com/reel/DY5Yh0HRvm3/",
                                                                                "date":  "2026-05-28",
                                                                                "likes":  47,
@@ -2980,7 +2980,7 @@
                                                                                "id":  "17927517621298455",
                                                                                "caption":  "Um dos métodos que utilizamos aqui na GB é o Strip Set.\n\nE vou mostrar pra vocês como gostamos de aplicar esse método no",
                                                                                "type":  "VIDEO",
-                                                                               "img":  "https://scontent.cdninstagram.com/v/t51.71878-15/702716557_2049993439274814_5000663864741965631_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=100\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D\u0026_nc_ohc=O6sUnh7IqQ0Q7kNvwF0gsdF\u0026_nc_oc=AdomB_iu2PMCSCv8oSTA_R9WRve0WyT8h4omtRxW5fo2I71-DTvU1U3FMMLDsFiGaiEcZwBdrsm3dq0QB-Aluh0t\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=Js3kZN3D2Or7eE_HEUJ6mw\u0026_nc_tpa=Q5bMBQEzxr9PuD7qD09FSG9Wv297u_XrgeCo3vVNuFctVBMjlLmk8Z4si6HqdUouh2pHeUMhbRmbmzOx5Q\u0026oh=00_Af_KUkzybVuEDrvAUJEMe5SxA8No5CU_1A0tCV4kKhPMng\u0026oe=6A2CBD29",
+                                                                               "img":  "https://scontent.cdninstagram.com/v/t51.71878-15/702716557_2049993439274814_5000663864741965631_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=100\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D\u0026_nc_ohc=O6sUnh7IqQ0Q7kNvwF0gsdF\u0026_nc_oc=AdomB_iu2PMCSCv8oSTA_R9WRve0WyT8h4omtRxW5fo2I71-DTvU1U3FMMLDsFiGaiEcZwBdrsm3dq0QB-Aluh0t\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=GF5f4UbJS6VNyTLrtHCagA\u0026_nc_tpa=Q5bMBQF-ku7l6RIzAJ69i-gr5yxrIbDHk8w2OCuuVSLvSFifazl7zteeeUA-aDuhTL21SqBbn8tMgifx0g\u0026oh=00_Af-uinrhzeMIk3Ehd9fQYD3eQz6wBEuXOm3OFrXCHChTqw\u0026oe=6A2CBD29",
                                                                                "url":  "https://www.instagram.com/reel/DYk8CozRP_L/",
                                                                                "date":  "2026-05-20",
                                                                                "likes":  47,
@@ -2991,7 +2991,7 @@
                                                                                "id":  "18013164410698416",
                                                                                "caption":  "O processo é demorado… mas com constância e o método de treino certo, você consegue \n\nTransformando mais uma vida.\n\nA Si",
                                                                                "type":  "IMAGE",
-                                                                               "img":  "https://scontent.cdninstagram.com/v/t51.82787-15/691741722_18103098158296288_6250833351425702430_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=105\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9\u0026_nc_ohc=-QDy47vUAaQQ7kNvwGFhN2w\u0026_nc_oc=AdqcfZ2AsR6PpEQhTu5zdursO8JCc9v7hUde8JvInQDY_cbjdpwee6SM69GqnkzjFvRpeGjzaAxBeBVac2WZGp3m\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=Js3kZN3D2Or7eE_HEUJ6mw\u0026oh=00_Af_MF_fEZSKwqlrpjW37GIeSqdxcl3r8mTfZc1NZa6wTTg\u0026oe=6A2C9808",
+                                                                               "img":  "https://scontent.cdninstagram.com/v/t51.82787-15/691741722_18103098158296288_6250833351425702430_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=105\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9\u0026_nc_ohc=-QDy47vUAaQQ7kNvwGFhN2w\u0026_nc_oc=AdqcfZ2AsR6PpEQhTu5zdursO8JCc9v7hUde8JvInQDY_cbjdpwee6SM69GqnkzjFvRpeGjzaAxBeBVac2WZGp3m\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=GF5f4UbJS6VNyTLrtHCagA\u0026oh=00_Af9lcNImF1lE5LjEaDcTdN_7V32xnhuFHqnKU-DYwm4KAA\u0026oe=6A2CD048",
                                                                                "url":  "https://www.instagram.com/p/DYIeyk_kWQ8/",
                                                                                "date":  "2026-05-09",
                                                                                "likes":  46,
@@ -3002,7 +3002,7 @@
                                                                                "id":  "18117454711692788",
                                                                                "caption":  "30 segundos com @marimanfrinato 💪🏽🔥",
                                                                                "type":  "VIDEO",
-                                                                               "img":  "https://scontent.cdninstagram.com/v/t51.82787-15/710192804_18105264533296288_8110957136606497726_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=110\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D\u0026_nc_ohc=n8jk8Onr3acQ7kNvwHKbWN-\u0026_nc_oc=Adp5rQ7SzODqD5ncE91WctZpCYMnHJqIVvap2jECXKV4n8y_fpuzhsip2tV3OWZlP3jVSkZuSHfAhAE3LLWqTssK\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=Js3kZN3D2Or7eE_HEUJ6mw\u0026_nc_tpa=Q5bMBQFYJM0sWxJopev_FMP9h__WN-LkCNvGCzaAUJ4CjRK2vhvSxKtmydpZ0K5spSjXH4GGJaxU_bjCjQ\u0026oh=00_Af_5t8u6aeIb95l2LkZC3-jW0cmJ0cIfMoSpH_fCkVmB1Q\u0026oe=6A2C980F",
+                                                                               "img":  "https://scontent.cdninstagram.com/v/t51.82787-15/710192804_18105264533296288_8110957136606497726_n.jpg?stp=dst-jpg_e35_tt6\u0026_nc_cat=110\u0026ccb=7-5\u0026_nc_sid=18de74\u0026efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D\u0026_nc_ohc=n8jk8Onr3acQ7kNvwHKbWN-\u0026_nc_oc=Adp5rQ7SzODqD5ncE91WctZpCYMnHJqIVvap2jECXKV4n8y_fpuzhsip2tV3OWZlP3jVSkZuSHfAhAE3LLWqTssK\u0026_nc_zt=23\u0026_nc_ht=scontent.cdninstagram.com\u0026edm=AM6HXa8EAAAA\u0026_nc_gid=GF5f4UbJS6VNyTLrtHCagA\u0026_nc_tpa=Q5bMBQGLkVlckPLVEUtHvy5ZxQL-c6AT5o_EnPSTnuY13iqEa1MBlw4VSEJdL6j4S4h_YKXdNXmJ4gc_8Q\u0026oh=00_Af-nAc-rBHkEZGaaXZnw6QxGX3lC02GcUgaKGRFJhPVZHA\u0026oe=6A2CD04F",
                                                                                "url":  "https://www.instagram.com/reel/DY4ubuFR0sb/",
                                                                                "date":  "2026-05-28",
                                                                                "likes":  36,
@@ -3164,6 +3164,11 @@
                                                      },
                                               "username":  "treinadoresgb",
                                               "media":  655
-                                          }
+                                          },
+                     "26505177645746881":  {
+                                               "ig":  null,
+                                               "username":  null,
+                                               "media":  null
+                                           }
                  }
 }
