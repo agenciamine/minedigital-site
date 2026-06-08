@@ -19,8 +19,16 @@
 
   var SESSION_KEY = "mine_auth_v1";
 
+  // Redireciona para HTTPS se estiver em HTTP (crypto.subtle exige contexto seguro)
+  if(location.protocol === "http:" && location.hostname !== "localhost" && location.hostname !== "127.0.0.1"){
+    location.replace("https:" + location.href.slice(5));
+  }
+
   // SHA-256 via Web Crypto API (nativo no browser, retorna Promise)
   function sha256(msg){
+    if(!window.crypto || !window.crypto.subtle){
+      return Promise.reject(new Error("HTTPS necessario para autenticacao segura."));
+    }
     return crypto.subtle.digest("SHA-256", new TextEncoder().encode(msg))
       .then(function(buf){
         return Array.from(new Uint8Array(buf))
