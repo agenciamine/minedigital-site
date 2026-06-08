@@ -31,7 +31,7 @@
     "853572560704252":  {name:"Ótica Aliança",        short:"Ótica",       seg:"Varejo / Ótica",      status:"active", city:"Paraná"},
     "1018517297786259": {name:"Texsa do Brasil",      short:"Texsa",       seg:"Indústria / B2B",     status:"active", city:"São Paulo"},
     "1422408889638342": {name:"Treinadores GB",       short:"Treinadores", seg:"Educação / Esporte",  status:"active", city:"PR / SP"},
-    "1239539613309782": {name:"Mine Digital",         short:"Mine",        seg:"Agência",             status:"dormant", lifetime:{spend:670.91,impr:271792,clicks:1420,since:"2023-05-06"}},
+    "1239539613309782": {name:"Mine Digital",         short:"Mine",        seg:"Agência",             status:"active", city:"Umuarama-PR"},
     "614549147474977":  {name:"Lonardoni Engenharia", short:"Lonardoni",   seg:"Engenharia",          status:"dormant", lifetime:{spend:3526.95,impr:244272,clicks:10990,since:"2023-08-03"}},
     "26505177645746881":{name:"Recanto da Pizza",     short:"Recanto",     seg:"Restaurante / Pizzaria", status:"active", city:"Umuarama-PR"},
   };
