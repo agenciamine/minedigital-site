@@ -14,7 +14,8 @@
     { user:"kyokai",  hash:"e0daf4557b6357d51fb3cad2f3cf1433b67610d9f080d7fe95b3c136771c20c0", role:"client", accountId:"3890380901253199", name:"Kyokai Sushi Bar" },
     { user:"otica",   hash:"5c63a76f51dddd0159b2a9ca82b7c1eadd231d032f93ec22e26843a70049785a", role:"client", accountId:"853572560704252",  name:"Ótica Aliança" },
     { user:"texsa",   hash:"14b4c159d516ee4700108e514283108915a7ec95dadd75ad54029e67b6f1a735", role:"client", accountId:"1018517297786259", name:"Texsa Lubrificante" },
-    { user:"treina",  hash:"e7c71db3b3b2bfd78750a6e1a9c91b21c895963123f7dc11d497a9abdf2443a8", role:"client", accountId:"1422408889638342", name:"Treinadores GB" }
+    { user:"treina",  hash:"e7c71db3b3b2bfd78750a6e1a9c91b21c895963123f7dc11d497a9abdf2443a8", role:"client", accountId:"1422408889638342", name:"Treinadores GB" },
+    { user:"recanto", hash:"b5c6cbfd70c8e9407763b9efe39c22bcd3315c32c4edf4250d855e9841dfa5b5", role:"client", accountId:"26505177645746881",  name:"Recanto da Pizza" }
   ];
 
   var SESSION_KEY = "mine_auth_v1";

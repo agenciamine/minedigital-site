@@ -33,7 +33,7 @@
     "1422408889638342": {name:"Treinadores GB",       short:"Treinadores", seg:"Educação / Esporte",  status:"active", city:"PR / SP"},
     "1239539613309782": {name:"Mine Digital",         short:"Mine",        seg:"Agência",             status:"dormant", lifetime:{spend:670.91,impr:271792,clicks:1420,since:"2023-05-06"}},
     "614549147474977":  {name:"Lonardoni Engenharia", short:"Lonardoni",   seg:"Engenharia",          status:"dormant", lifetime:{spend:3526.95,impr:244272,clicks:10990,since:"2023-08-03"}},
-    "26505177645746881":{name:"Recanto da Pizza",     short:"Recanto",     seg:"Restaurante",         status:"empty"},
+    "26505177645746881":{name:"Recanto da Pizza",     short:"Recanto",     seg:"Restaurante / Pizzaria", status:"empty", city:"Umuarama-PR"},
     "4529196403968760": {name:"Edu Yokomizo",         short:"Edu Yokomizo",seg:"Pessoal / Marca",     status:"empty"}
   };
   var ORDER = ["996138788068033","787633890652103","3890380901253199","853572560704252",
