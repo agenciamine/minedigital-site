@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MINE · Entrar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="login-page">
+
+  <div class="login-wrap">
+
+    <div class="login-brand">
+      <img src="mine_logo.png" alt="Mine Agência Digital" class="login-logo-img"
+           onerror="this.style.display='none';document.getElementById('lbFallback').style.display='grid'">
+      <div class="logo" id="lbFallback" style="display:none">M</div>
+    </div>
+
+    <div class="login-card">
+      <h2>Bem-vindo</h2>
+      <p class="login-sub">Entre com suas credenciais para acessar o painel</p>
+
+      <form id="loginForm" autocomplete="off" novalidate>
+        <div class="lfield">
+          <label for="username">Usuário</label>
+          <input type="text" id="username" autocomplete="username"
+                 placeholder="seu usuário" spellcheck="false" required>
+        </div>
+        <div class="lfield">
+          <label for="password">Senha</label>
+          <input type="password" id="password" autocomplete="current-password"
+                 placeholder="••••••••" required>
+        </div>
+        <div class="login-err" id="loginErr" hidden>
+          Usuário ou senha incorretos. Tente novamente.
+        </div>
+        <button type="submit" class="btn-login" id="loginBtn">Entrar</button>
+      </form>
+    </div>
+
+    <p class="login-foot">Mine Agência Digital · Acesso restrito</p>
+  </div>
+
+  <script src="auth.js"></script>
+  <script>
+    // Se já logado, vai direto pro painel
+    (function(){
+      if(window.AUTH && window.AUTH.getSession()) window.location.replace("index.html");
+    })();
+
+    document.getElementById("loginForm").addEventListener("submit", function(e){
+      e.preventDefault();
+      var btn = document.getElementById("loginBtn");
+      var err = document.getElementById("loginErr");
+      var user = document.getElementById("username").value;
+      var pass = document.getElementById("password").value;
+
+      if(!user || !pass) return;
+
+      btn.disabled = true;
+      btn.textContent = "Verificando...";
+      err.hidden = true;
+
+      window.AUTH.check(user, pass).then(function(found){
+        if(found){
+          window.AUTH.setSession({
+            user:      found.user,
+            role:      found.role,
+            accountId: found.accountId,
+            name:      found.name
+          });
+          window.location.replace("index.html");
+        } else {
+          err.hidden = false;
+          btn.disabled = false;
+          btn.textContent = "Entrar";
+          document.getElementById("password").value = "";
+          document.getElementById("password").focus();
+        }
+      });
+    });
+  </script>
+</body>
+</html>

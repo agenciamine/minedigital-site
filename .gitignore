@@ -1,0 +1,9 @@
+# Nunca versionar tokens ou segredos
+*.txt
+secrets/
+.env
+
+# Sistema
+Thumbs.db
+.DS_Store
+desktop.ini
