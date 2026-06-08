@@ -479,32 +479,39 @@
   function makeAva(accId, ini, extraClass){
     var div=document.createElement("div");
     div.className="acc-ava ava-edit"+(extraClass?" "+extraClass:"");
-    var logo=loadLogo(accId);
-    function applyLogo(dataUrl){
+    div.textContent=ini; // fallback inicial
+
+    var inp=document.createElement("input");
+    inp.type="file";inp.accept="image/png,image/jpeg,image/webp,image/svg+xml";
+    inp.style.display="none";
+    div.appendChild(inp);
+
+    function applyImg(src){
       while(div.firstChild)div.removeChild(div.firstChild);
       var img=document.createElement("img");
-      img.src=dataUrl;img.alt=ini;
+      img.src=src;img.alt=ini;
       img.style.cssText="width:100%;height:100%;object-fit:cover;border-radius:inherit;display:block";
       div.appendChild(img);div.appendChild(inp);
       div.style.background="transparent";
       div.style.border="1px solid rgba(255,255,255,.14)";
     }
-    if(logo){
-      // defer applyLogo until inp is created
-    } else {
-      div.textContent=ini;
-    }
-    var inp=document.createElement("input");
-    inp.type="file";inp.accept="image/png,image/jpeg,image/webp,image/svg+xml";
-    inp.style.display="none";
-    div.appendChild(inp);
-    if(logo) applyLogo(logo); // now inp exists
+
+    // 1º tenta arquivo estático logos/{accId}.png (publicado no servidor)
+    var staticImg=new Image();
+    staticImg.onload=function(){ applyImg("logos/"+accId+".png"); };
+    staticImg.onerror=function(){
+      // 2º fallback: localStorage (upload manual pelo painel)
+      var logo=loadLogo(accId);
+      if(logo) applyImg(logo);
+    };
+    staticImg.src="logos/"+accId+".png";
+
     div.title="Clique para trocar a logo (PNG 512×512 px recomendado)";
     div.addEventListener("click",function(e){e.stopPropagation();inp.click();});
     inp.addEventListener("change",function(){
       var file=inp.files&&inp.files[0];if(!file)return;
       var reader=new FileReader();
-      reader.onload=function(ev){saveLogo(accId,ev.target.result);applyLogo(ev.target.result);};
+      reader.onload=function(ev){saveLogo(accId,ev.target.result);applyImg(ev.target.result);};
       reader.readAsDataURL(file);
     });
     return div;
