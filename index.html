@@ -1,18 +1,327 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="refresh" content="0; url=resultados/">
-<title>Mine Agência Digital</title>
-<style>
-  body{margin:0;background:#0a0a0b;color:#fff;font-family:sans-serif;display:flex;align-items:center;justify-content:center;height:100vh;text-align:center}
-  a{color:#ffd24a;text-decoration:none}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mine — Agência de Conteúdo & Performance</title>
+  <meta name="description" content="A Mine é uma agência de conteúdo e performance. Criamos reels, campanhas e conteúdo que transformam atenção em resultado para marcas que querem crescer." />
+
+  <!-- Open Graph / social -->
+  <meta property="og:title" content="Mine — Agência de Conteúdo & Performance" />
+  <meta property="og:description" content="Conteúdo que para o feed. Reels, campanhas e branding para marcas que querem crescer." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.minedigital.com.br" />
+  <meta property="og:locale" content="pt_BR" />
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://www.minedigital.com.br/" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" media="print" onload="this.media='all'"
+        href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@800&family=Space+Grotesk:wght@400;500;600;700&display=swap" />
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@800&family=Space+Grotesk:wght@400;500;600;700&display=swap" />
+  </noscript>
+
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div>
-    <p>Redirecionando para o painel&hellip;</p>
-    <p><a href="resultados/">Clique aqui se não for redirecionado</a></p>
+
+  <!-- ======================= HEADER ======================= -->
+  <header class="site-header" id="top">
+    <div class="container header__inner">
+      <a class="logo" href="#top" aria-label="Mine — página inicial">
+        <img src="assets/logo/mine-monograma-preto.png" alt="Mine" width="315" height="201" />
+      </a>
+
+      <nav class="nav" aria-label="Navegação principal">
+        <a href="#trabalhos">Trabalhos</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#clientes">Clientes</a>
+        <a href="#estudio">Estúdio</a>
+        <a href="#contato">Contato</a>
+      </nav>
+
+      <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobile-menu" hidden>
+      <a href="#trabalhos">Trabalhos</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#clientes">Clientes</a>
+      <a href="#estudio">Estúdio</a>
+      <a href="#contato">Contato</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- ======================= HERO ======================= -->
+    <section class="hero">
+      <!-- Vinheta da agência — full-bleed (topo inteiro) -->
+      <div class="hero-video reveal">
+        <video class="hero-video__el" autoplay muted loop playsinline preload="auto">
+          <source src="assets/videos/vinheta-mine.mp4" type="video/mp4" />
+        </video>
+        <button class="hero-video__sound" type="button" aria-pressed="false" aria-label="Ativar som">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 9v6h4l5 4V5L8 9H4z" />
+            <path class="ic-x" d="M16 9l5 6M21 9l-5 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            <path class="ic-wave" d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8 8 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          </svg>
+          <span class="hero-video__sound-label">Som</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- ======================= MARQUEE ======================= -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Reels</span><span class="dot">•</span>
+        <span>Social Media</span><span class="dot">•</span>
+        <span>Branding</span><span class="dot">•</span>
+        <span>Performance</span><span class="dot">•</span>
+        <span>Audiovisual</span><span class="dot">•</span>
+        <span>Reels</span><span class="dot">•</span>
+        <span>Social Media</span><span class="dot">•</span>
+        <span>Branding</span><span class="dot">•</span>
+        <span>Performance</span><span class="dot">•</span>
+        <span>Audiovisual</span><span class="dot">•</span>
+      </div>
+    </div>
+
+    <!-- ======================= TRABALHOS / PORTFÓLIO ======================= -->
+    <section class="section works" id="trabalhos">
+      <!--
+        MURAL — COMO ADICIONAR UM REEL REAL em qualquer quadro:
+        1. Coloque o vídeo em assets/videos/ (ex.: projeto-01.mp4)
+        2. (Opcional) Coloque uma capa em assets/posters/ (ex.: projeto-01.jpg)
+        3. No quadro, preencha:
+             data-video="assets/videos/projeto-01.mp4"
+             data-poster="assets/posters/projeto-01.jpg"
+           e ajuste data-cat / data-title / data-sub.
+        O vídeo abre num player vertical (com som) ao clicar. -->
+      <div class="mural">
+        <article class="tile tile--media reveal" tabindex="0" role="button" aria-label="Abrir reel: A pior festa da cidade!" data-cat="Aftermovie" data-title="A pior festa da cidade!" data-sub="Cervejaria 7 Palmos" data-video="assets/videos/projeto-01.mp4" data-poster="assets/posters/projeto-01.jpg">
+          <span class="tile__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          <div class="tile__info"><span class="tile__cat">Aftermovie</span><h3 class="tile__title">A pior festa da cidade!</h3><p class="tile__sub">Cervejaria 7 Palmos</p></div>
+        </article>
+
+        <article class="tile tile--media reveal" tabindex="0" role="button" aria-label="Abrir reel: App Borelli" data-cat="Reels" data-title="App Borelli" data-sub="Gelato Borelli" data-video="assets/videos/projeto-02.mp4" data-poster="assets/posters/projeto-02.jpg">
+          <span class="tile__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          <div class="tile__info"><span class="tile__cat">Reels</span><h3 class="tile__title">App Borelli</h3><p class="tile__sub">Gelato Borelli</p></div>
+        </article>
+
+        <article class="tile tile--media reveal" tabindex="0" role="button" aria-label="Abrir reel: Dia das Mães" data-cat="Campanha" data-title="Dia das Mães" data-sub="Ótica Aliança" data-video="assets/videos/projeto-03.mp4" data-poster="assets/posters/projeto-03.jpg">
+          <span class="tile__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          <div class="tile__info"><span class="tile__cat">Campanha</span><h3 class="tile__title">Dia das Mães</h3><p class="tile__sub">Ótica Aliança</p></div>
+        </article>
+
+        <article class="tile tile--media reveal" tabindex="0" role="button" aria-label="Abrir reel: Aderiu, Reduziu!" data-cat="Campanha" data-title="Aderiu, Reduziu!" data-sub="Redusol Energia" data-video="assets/videos/projeto-04.mp4" data-poster="assets/posters/projeto-04.jpg">
+          <span class="tile__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          <div class="tile__info"><span class="tile__cat">Campanha</span><h3 class="tile__title">Aderiu, Reduziu!</h3><p class="tile__sub">Redusol Energia</p></div>
+        </article>
+
+        <article class="tile tile--media reveal" tabindex="0" role="button" aria-label="Abrir reel: É Guerra!" data-cat="Branding" data-title="É Guerra!" data-sub="Cervejaria 7 Palmos" data-video="assets/videos/projeto-05.mp4" data-poster="assets/posters/projeto-05.jpg">
+          <span class="tile__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          <div class="tile__info"><span class="tile__cat">Branding</span><h3 class="tile__title">É Guerra!</h3><p class="tile__sub">Cervejaria 7 Palmos</p></div>
+        </article>
+
+        <article class="tile tile--media reveal" tabindex="0" role="button" aria-label="Abrir reel: Aderiu, Reduziu!" data-cat="Campanha" data-title="Aderiu, Reduziu!" data-sub="Redusol Energia" data-video="assets/videos/projeto-06.mp4" data-poster="assets/posters/projeto-06.jpg">
+          <span class="tile__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          <div class="tile__info"><span class="tile__cat">Campanha</span><h3 class="tile__title">Aderiu, Reduziu!</h3><p class="tile__sub">Redusol Energia</p></div>
+        </article>
+
+        <article class="tile tile--media reveal" tabindex="0" role="button" aria-label="Abrir reel: Borelli + Arms Gym" data-cat="Ativação" data-title="Borelli + Arms Gym" data-sub="Gelato Borelli" data-video="assets/videos/projeto-07.mp4" data-poster="assets/posters/projeto-07.jpg">
+          <span class="tile__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          <div class="tile__info"><span class="tile__cat">Ativação</span><h3 class="tile__title">Borelli + Arms Gym</h3><p class="tile__sub">Gelato Borelli</p></div>
+        </article>
+
+        <article class="tile tile--media reveal" tabindex="0" role="button" aria-label="Abrir reel: Aderiu, Reduziu!" data-cat="Campanha" data-title="Aderiu, Reduziu!" data-sub="Redusol Energia" data-video="assets/videos/projeto-08.mp4" data-poster="assets/posters/projeto-08.jpg">
+          <span class="tile__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          <div class="tile__info"><span class="tile__cat">Campanha</span><h3 class="tile__title">Aderiu, Reduziu!</h3><p class="tile__sub">Redusol Energia</p></div>
+        </article>
+
+        <article class="tile tile--media reveal" tabindex="0" role="button" aria-label="Abrir reel: Famosos" data-cat="Social" data-title="Famosos" data-sub="Cervejaria 7 Palmos" data-video="assets/videos/projeto-09.mp4" data-poster="assets/posters/projeto-09.jpg">
+          <span class="tile__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          <div class="tile__info"><span class="tile__cat">Social</span><h3 class="tile__title">Famosos</h3><p class="tile__sub">Cervejaria 7 Palmos</p></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ======================= SERVIÇOS ======================= -->
+    <section class="section services" id="servicos">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="eyebrow">O que fazemos</p>
+          <h2 class="section__title">Serviços</h2>
+        </div>
+
+        <ul class="service-list">
+          <li class="service reveal">
+            <span class="service__num">01</span>
+            <h3 class="service__name">Social Media</h3>
+            <p class="service__desc">Gestão de redes, planejamento e linha editorial com identidade.</p>
+          </li>
+          <li class="service reveal">
+            <span class="service__num">02</span>
+            <h3 class="service__name">Branding &amp; Identidade</h3>
+            <p class="service__desc">Marcas com posicionamento, personalidade e consistência visual.</p>
+          </li>
+          <li class="service reveal">
+            <span class="service__num">03</span>
+            <h3 class="service__name">Tráfego &amp; Performance</h3>
+            <p class="service__desc">Mídia paga orientada a dados para transformar alcance em vendas.</p>
+          </li>
+          <li class="service reveal">
+            <span class="service__num">04</span>
+            <h3 class="service__name">Audiovisual &amp; Produção</h3>
+            <p class="service__desc">Produção completa, do conceito à entrega final em alta qualidade.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ======================= ESTÚDIO / SOBRE ======================= -->
+    <section class="section studio" id="estudio">
+      <div class="container">
+        <div class="studio__grid">
+          <div class="studio__text reveal">
+            <p class="eyebrow">Estúdio</p>
+            <h2 class="studio__statement">
+              Somos uma agência movida por <span class="hl">conteúdo</span> que gera atenção
+              e <span class="hl">estratégia</span> que gera resultado.
+            </h2>
+            <p class="studio__p">
+              Da ideia ao post no ar, a Mine cuida de cada detalhe para que a sua marca
+              apareça do jeito certo, na hora certa, para as pessoas certas.
+            </p>
+          </div>
+
+          <div class="stats reveal">
+            <div class="stat"><span class="stat__num" data-count="500" data-prefix="+">+500</span><span class="stat__label">Reels produzidos</span></div>
+            <div class="stat"><span class="stat__num" data-count="80" data-prefix="+" data-suffix="M">+80M</span><span class="stat__label">Views geradas</span></div>
+            <div class="stat"><span class="stat__num" data-count="40" data-prefix="+">+40</span><span class="stat__label">Marcas atendidas</span></div>
+            <div class="stat"><span class="stat__num" data-count="6">6</span><span class="stat__label">Anos de estrada</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= CLIENTES ======================= -->
+    <section class="section clients" id="clientes">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="eyebrow">Confiam na Mine</p>
+          <h2 class="section__title">Clientes</h2>
+        </div>
+
+        <!--
+          COMO ADICIONAR UMA LOGO REAL:
+          1. Coloque o arquivo em assets/clients/ (ex.: cliente-01.svg ou .png — fundo transparente)
+          2. Troque o <span class="client__name"> por:
+             <img src="assets/clients/cliente-01.svg" alt="Nome do Cliente" loading="lazy" />
+        -->
+        <div class="clients-grid reveal">
+          <div class="client"><img src="assets/clients/1.png" alt="Gelato Borelli" loading="lazy" /></div>
+          <div class="client"><img src="assets/clients/2.png" alt="Texsa" loading="lazy" /></div>
+          <div class="client"><img src="assets/clients/3.png" alt="Morena Construtora" loading="lazy" /></div>
+          <div class="client"><img src="assets/clients/4.png" alt="aiqfome" loading="lazy" /></div>
+          <div class="client"><img src="assets/clients/5.png" alt="Life Drink Bar" loading="lazy" /></div>
+          <div class="client"><img src="assets/clients/6.png" alt="Dr. Frederiko K. Agawa" loading="lazy" /></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= CONTATO (CTA) ======================= -->
+    <section class="section contact" id="contato">
+      <div class="container contact__inner">
+        <div class="reveal">
+          <p class="eyebrow">Liderança em Marketing Digital.</p>
+          <h2 class="contact__title">Vamos criar algo<br /><span class="hl">incrível</span> juntos?</h2>
+        </div>
+
+        <div class="contact__links reveal">
+          <a class="contact__row" href="mailto:contato@minedigital.com.br">
+            <span class="contact__label">E-mail</span>
+            <span class="contact__value">contato@minedigital.com.br</span>
+          </a>
+          <a class="contact__row contact__row--cta" href="https://wa.me/5541984299774" target="_blank" rel="noopener">
+            <span class="contact__txt">
+              <span class="contact__label">WhatsApp</span>
+              <span class="contact__value">(41) 98429-9774</span>
+            </span>
+            <span class="contact__btn">
+              Chamar no WhatsApp
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </a>
+          <a class="contact__row contact__row--cta" href="https://www.instagram.com/mine.agencia/" target="_blank" rel="noopener">
+            <span class="contact__txt">
+              <span class="contact__label">Instagram</span>
+              <span class="contact__value">@mine.agencia</span>
+            </span>
+            <span class="contact__btn">
+              Seguir no Instagram
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================= FOOTER ======================= -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="logo logo--light">
+          <img src="assets/logo/mine-monograma-creme.png" alt="Mine" width="315" height="201" />
+        </span>
+        <p class="footer__tag">Agência de conteúdo &amp; performance.</p>
+      </div>
+
+      <nav class="footer__nav" aria-label="Rodapé">
+        <a href="#trabalhos">Trabalhos</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#clientes">Clientes</a>
+        <a href="#contato">Contato</a>
+      </nav>
+
+      <div class="footer__social">
+        <a href="https://www.instagram.com/mine.agencia/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://wa.me/5541984299774" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="mailto:contato@minedigital.com.br">E-mail</a>
+      </div>
+    </div>
+
+    <div class="container footer__bottom">
+      <span>© <span id="year"></span> Mine · Todos os direitos reservados.</span>
+      <span>Criado por Mine Digital.</span>
+    </div>
+  </footer>
+
+  <!-- ======================= MODAL DO REEL ======================= -->
+  <div class="reel-modal" id="reel-modal" role="dialog" aria-modal="true" aria-label="Reel" hidden>
+    <div class="reel-modal__backdrop" data-close></div>
+    <div class="reel-modal__dialog">
+      <button class="reel-modal__close" type="button" data-close aria-label="Fechar">&times;</button>
+      <div class="reel-modal__player">
+        <video class="reel-modal__video" playsinline loop controls hidden></video>
+        <div class="reel-modal__ph">Reel em breve</div>
+      </div>
+      <div class="reel-modal__meta">
+        <span class="reel-modal__cat"></span>
+        <h3 class="reel-modal__title"></h3>
+        <p class="reel-modal__sub"></p>
+      </div>
+    </div>
   </div>
+
+  <script src="main.js" defer></script>
 </body>
 </html>
