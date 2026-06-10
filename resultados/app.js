@@ -13,7 +13,7 @@
   var IS_CLIENT = SESSION.role === "client";
 
   var TODAY = new Date();
-  var STATE = { period: 30, preset: "30d", customFrom: null, customTo: null, view: "overview", metric: "spend" };
+  var STATE = { period: 30, preset: "30d", customFrom: null, customTo: null, igPeriod: 30, view: "overview", metric: "spend" };
   var PAGES_AUTO = { updated: null, accounts: {} }; // alimentado por pages_data.json (robô diário)
   function loadAuto(cb){
     fetch("pages_data.json", { cache: "no-store" })
@@ -564,11 +564,10 @@
   function igAutoSection(ig, username){
     var wrap=document.createElement("div");
 
-    // período selecionado pelo botão 7d / 30d / 90d
-    var P=STATE.period;
-    // API só retorna 30 dias de série diária; 90d mostra os mesmos 30d com nota
-    var pDays=P===90?30:P;
-    var pLabel=P===7?"7d":P===30?"30d":"30d*";
+    // toggle independente do filtro principal — só 7d ou 30d (limites da API)
+    var P=STATE.igPeriod;
+    var pDays=P;
+    var pLabel=P===7?"7d":"30d";
 
     // corte de data para filtrar séries
     var cutoff=new Date(); cutoff.setDate(cutoff.getDate()-pDays);
@@ -642,13 +641,6 @@
         '<div class="foot">'+k.f+'</div>'+mkBar(k.pct)+'</div>';
     }).join("");
     wrap.appendChild(kpis);
-    // nota para 90d (explica limitação da API)
-    if(P===90){
-      var note90=document.createElement("p");note90.className="note";
-      note90.style.marginTop="-4px";
-      note90.textContent="* A API do Instagram disponibiliza no máximo 30 dias de histórico diário. Os dados de alcance e novos seguidores exibem a janela de 30 dias disponível.";
-      wrap.appendChild(note90);
-    }
 
     // Gráfico com tabs: Seguidores / Alcance (período)
     var serFollowers=ser.map(function(p){return {value:p.v,label:fmtDay(p.d),short:fmtDay(p.d)};});
@@ -799,9 +791,21 @@
       var upd = fmtUpdated(PAGES_AUTO.updated);
       var uname = auto.username ? '@'+auto.username : '';
       sec.innerHTML='<div class="sec-head"><h2>Instagram Insights</h2><span class="tag">Automático ●</span>'+
-        '<span class="sub">'+(uname?uname+' · ':'')+'Robô diário'+(upd?' · atualizado '+upd:'')+'</span></div>';
+        '<span class="sub">'+(uname?uname+' · ':'')+'Robô diário'+(upd?' · atualizado '+upd:'')+'</span>'+
+        '<div class="mini-tabs ig-ptabs">'+
+          '<button data-p="7"'+(STATE.igPeriod===7?' class="active"':'')+'>7 dias</button>'+
+          '<button data-p="30"'+(STATE.igPeriod===30?' class="active"':'')+'>30 dias</button>'+
+        '</div></div>';
       sec.appendChild(panel);
       panel.appendChild(igAutoSection(auto.ig, auto.username));
+      sec.querySelectorAll(".ig-ptabs button").forEach(function(b){
+        b.addEventListener("click",function(){
+          STATE.igPeriod=+b.dataset.p;
+          sec.querySelectorAll(".ig-ptabs button").forEach(function(x){x.classList.toggle("active",x===b);});
+          panel.innerHTML="";
+          panel.appendChild(igAutoSection(auto.ig, auto.username));
+        });
+      });
       return sec;
     }
 
