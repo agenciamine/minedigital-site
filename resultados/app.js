@@ -13,7 +13,7 @@
   var IS_CLIENT = SESSION.role === "client";
 
   var TODAY = new Date();
-  var STATE = { period: 30, view: "overview", metric: "spend" };
+  var STATE = { period: 30, preset: "30d", customFrom: null, customTo: null, view: "overview", metric: "spend" };
   var PAGES_AUTO = { updated: null, accounts: {} }; // alimentado por pages_data.json (robô diário)
   function loadAuto(cb){
     fetch("pages_data.json", { cache: "no-store" })
@@ -69,15 +69,39 @@
   function hideTip(){ if(TIP) TIP.style.display="none"; }
 
   // ---- período / agregação ------------------------------------------------
-  function cut(){ var c=new Date(TODAY); c.setDate(c.getDate()-STATE.period); return c; }
+  function activeRange(){
+    if(STATE.preset==="custom" && STATE.customFrom && STATE.customTo){
+      return { from: new Date(STATE.customFrom+"T00:00:00"), to: new Date(STATE.customTo+"T23:59:59") };
+    }
+    if(STATE.preset==="month"){
+      return { from: new Date(TODAY.getFullYear(), TODAY.getMonth(), 1), to: new Date(TODAY) };
+    }
+    if(STATE.preset==="lastmonth"){
+      return {
+        from: new Date(TODAY.getFullYear(), TODAY.getMonth()-1, 1),
+        to:   new Date(TODAY.getFullYear(), TODAY.getMonth(), 0, 23, 59, 59)
+      };
+    }
+    var from=new Date(TODAY); from.setDate(from.getDate()-STATE.period);
+    return { from: from, to: new Date(TODAY) };
+  }
+  function periodLabel(){
+    if(STATE.preset==="custom" && STATE.customFrom && STATE.customTo){
+      var f=STATE.customFrom.slice(5).replace("-","/"), t=STATE.customTo.slice(5).replace("-","/");
+      return f+" – "+t;
+    }
+    if(STATE.preset==="month") return "Este mês";
+    if(STATE.preset==="lastmonth") return "Mês passado";
+    return STATE.period+" dias";
+  }
   function dailyInPeriod(acc){
     var ads=PAGES_AUTO.accounts&&PAGES_AUTO.accounts[acc.id]&&PAGES_AUTO.accounts[acc.id].ads;
     var daily=ads&&ads.daily&&ads.daily.length?
       ads.daily.map(function(r){return {date:r.d,spend:r.spend,impr:r.impr,reach:r.reach,clicks:r.clicks};}):
       acc.daily;
     if(!daily) return [];
-    var c=cut();
-    return daily.filter(function(r){ return new Date(r.date+"T12:00:00") >= c; });
+    var r=activeRange();
+    return daily.filter(function(d){ var dt=new Date(d.date+"T12:00:00"); return dt>=r.from&&dt<=r.to; });
   }
   function sum(rows){
     var o={spend:0,impr:0,reach:0,clicks:0};
@@ -233,7 +257,7 @@
     if(IS_CLIENT){ go(SESSION.accountId); return; }
     var t=totals();
     var kpis=[
-      {l:"Investimento",v:brl.format(t.spend),f:STATE.period+" dias"},
+      {l:"Investimento",v:brl.format(t.spend),f:periodLabel()},
       {l:"Impressões",v:compact(t.impr),f:int.format(t.impr)},
       {l:"Alcance",v:compact(t.reach),f:"acumulado"},
       {l:"Cliques",v:compact(t.clicks),f:int.format(t.clicks)},
@@ -243,7 +267,7 @@
     var html='';
     html+='<section class="sec" style="margin-top:24px"><div class="sec-head">'+
       '<h2>Visão consolidada</h2><span class="tag">Todas as contas</span>'+
-      '<span class="sub">Período: últimos '+STATE.period+' dias</span></div>'+
+      '<span class="sub">Período: '+periodLabel()+'</span></div>'+
       '<div class="kpis">'+kpis.map(function(k){return '<div class="kpi"><div class="lbl"><i></i>'+
         k.l+'</div><div class="val">'+k.v+'</div><div class="foot">'+k.f+'</div></div>';}).join("")+'</div></section>';
 
@@ -326,7 +350,7 @@
     el.innerHTML=head+mh;
     el.querySelector('.ava-slot').replaceWith(makeAva(a.id,ini));
     var tb=document.createElement("div");tb.className="acc-block";
-    tb.innerHTML='<div class="bh">Investimento diário · '+STATE.period+' dias</div>';
+    tb.innerHTML='<div class="bh">Investimento diário · '+periodLabel()+'</div>';
     tb.appendChild(spark(rows.map(function(r){return r.spend;}),560,58));
     el.appendChild(tb);
     var cta=document.createElement("div");cta.className="card-cta";cta.textContent="Ver detalhe completo →";
@@ -382,7 +406,7 @@
       {l:"Resultados",v:a.results?int.format(a.results.value)+" "+a.results.label.toLowerCase():"—"}
     ];
     var sec=document.createElement("section");sec.className="sec";sec.style.marginTop="22px";
-    sec.innerHTML='<div class="sec-head"><h2>Indicadores</h2><span class="tag">'+STATE.period+' dias</span></div>'+
+    sec.innerHTML='<div class="sec-head"><h2>META ADS INSIGHTS</h2><span class="tag">'+periodLabel()+'</span></div>'+
       '<div class="kpis k9">'+kpis.map(function(k){return '<div class="kpi"><div class="lbl"><i></i>'+
         k.l+'</div><div class="val">'+k.v+'</div></div>';}).join("")+'</div>';
     host.appendChild(sec);
@@ -860,9 +884,12 @@
   }
   function rerender(){ STATE.view==="overview"?renderOverview():renderDetail(STATE.view); }
 
-  function setPeriod(p){
+  function setPeriod(p, preset){
     STATE.period=p;
-    [].forEach.call(document.querySelectorAll(".period button"),function(b){b.classList.toggle("active",+b.dataset.p===p);});
+    STATE.preset=preset||(""+p+"d");
+    STATE.customFrom=STATE.customTo=null;
+    var lbl=document.getElementById("dfLabel");
+    if(lbl) lbl.textContent=periodLabel();
     rerender();
   }
 
@@ -897,11 +924,57 @@
       sel.addEventListener("change",function(){go(sel.value);});
     }
 
-    [].forEach.call(document.querySelectorAll(".period button"),function(b){
-      b.addEventListener("click",function(){setPeriod(+b.dataset.p);});});
+    // ---- Date filter wiring -----------------------------------------------
+    (function(){
+      var dfWrap   = document.getElementById("dfWrap");
+      var dfToggle = document.getElementById("dfToggle");
+      var dfPanel  = document.getElementById("dfPanel");
+      var dfLabel  = document.getElementById("dfLabel");
+      var dfFrom   = document.getElementById("dfFrom");
+      var dfTo     = document.getElementById("dfTo");
+      var dfApply  = document.getElementById("dfApply");
+      if(!dfToggle) return;
 
-    STATE.period=30;
-    [].forEach.call(document.querySelectorAll(".period button"),function(b){b.classList.toggle("active",+b.dataset.p===30);});
+      // max = hoje
+      var todayStr=TODAY.toISOString().slice(0,10);
+      dfFrom.max=dfTo.max=todayStr;
+
+      dfToggle.addEventListener("click",function(e){
+        e.stopPropagation();
+        dfPanel.hidden=!dfPanel.hidden;
+        dfWrap.classList.toggle("open",!dfPanel.hidden);
+      });
+      document.addEventListener("click",function(){
+        if(!dfPanel) return;
+        dfPanel.hidden=true; dfWrap.classList.remove("open");
+      });
+      dfPanel.addEventListener("click",function(e){ e.stopPropagation(); });
+
+      document.querySelectorAll(".df-preset").forEach(function(b){
+        b.addEventListener("click",function(){
+          var p=b.dataset.preset;
+          if(p==="7d")        setPeriod(7,"7d");
+          else if(p==="30d")  setPeriod(30,"30d");
+          else if(p==="month")setPeriod(30,"month");
+          else                setPeriod(30,"lastmonth");
+          document.querySelectorAll(".df-preset").forEach(function(x){ x.classList.toggle("active",x===b); });
+          dfPanel.hidden=true; dfWrap.classList.remove("open");
+        });
+      });
+
+      dfApply.addEventListener("click",function(){
+        var f=dfFrom.value, t=dfTo.value;
+        if(!f||!t) return;
+        if(f>t){ var tmp=f; f=t; t=tmp; }
+        STATE.preset="custom"; STATE.customFrom=f; STATE.customTo=t;
+        document.querySelectorAll(".df-preset").forEach(function(b){ b.classList.remove("active"); });
+        dfLabel.textContent=periodLabel();
+        dfPanel.hidden=true; dfWrap.classList.remove("open");
+        rerender();
+      });
+    })();
+
+    STATE.period=30; STATE.preset="30d";
     loadAuto(function(){
       if(IS_CLIENT) go(SESSION.accountId);
       else go("overview");

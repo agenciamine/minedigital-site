@@ -30,10 +30,29 @@
 
     <div class="spacer"></div>
 
-    <div class="period" role="tablist" aria-label="Período">
-      <button data-p="7">7 dias</button>
-      <button data-p="30">30 dias</button>
-      <button data-p="90">90 dias</button>
+    <div class="df-wrap" id="dfWrap">
+      <button class="df-toggle" id="dfToggle" type="button">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x=".7" y="2.1" width="12.6" height="10.5" rx="2" stroke="currentColor" stroke-width="1.3" fill="none"/><path d="M.7 5.25h12.6M4.55 1.05v2.1M9.45 1.05v2.1" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+        <span id="dfLabel">30 dias</span>
+        <svg class="df-caret" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="df-panel" id="dfPanel" hidden>
+        <div class="df-presets">
+          <button class="df-preset" data-preset="7d" type="button">Últimos 7 dias</button>
+          <button class="df-preset active" data-preset="30d" type="button">Últimos 30 dias</button>
+          <button class="df-preset" data-preset="month" type="button">Este mês</button>
+          <button class="df-preset" data-preset="lastmonth" type="button">Mês passado</button>
+        </div>
+        <div class="df-sep"></div>
+        <div class="df-custom">
+          <div class="df-custom-label">Personalizado</div>
+          <div class="df-inputs">
+            <div class="df-date-g"><span>De</span><input type="date" id="dfFrom"></div>
+            <div class="df-date-g"><span>Até</span><input type="date" id="dfTo"></div>
+          </div>
+          <button class="df-apply" id="dfApply" type="button">Aplicar</button>
+        </div>
+      </div>
     </div>
     <div class="meta-date" id="gendate"></div>
     <div class="user-pill" id="userPill"></div>
