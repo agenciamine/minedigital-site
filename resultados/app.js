@@ -444,7 +444,7 @@
     var ageData=(_ads&&_ads.age)?_ads.age:(a.age||[]);
     var genderData=(_ads&&_ads.gender)?_ads.gender:(a.gender||[]);
     var regionData=(_ads&&_ads.region)?_ads.region:(a.region||[]);
-    var pubTag=_ads?"30 dias":"90 dias";
+    var pubTag="90 dias";
     var dsec=document.createElement("section");dsec.className="sec";
     dsec.innerHTML='<div class="sec-head"><h2>Público</h2><span class="tag">'+pubTag+'</span></div>';
     var grid=document.createElement("div");grid.className="demo-grid";
@@ -477,7 +477,7 @@
     var campData=(_ads&&_ads.campaigns&&_ads.campaigns.length)?
       _ads.campaigns.map(function(c){var im=c.impr||0,cl=c.clicks||0;return {name:c.name,objective:c.objective,status:c.status,spend:c.spend,impr:im,reach:c.reach,clicks:cl,ctr:im?cl/im*100:0,resLabel:c.resLabel,resValue:c.resValue};}):
       (a.campaigns||[]);
-    var campTag=(_ads&&_ads.campaigns&&_ads.campaigns.length)?"30 dias · top por gasto":"90 dias · top por gasto";
+    var campTag="90 dias · top por gasto";
     if(campData.length){
       var csec=document.createElement("section");csec.className="sec";
       csec.innerHTML='<div class="sec-head"><h2>Campanhas</h2><span class="tag">'+campTag+'</span></div>';
@@ -494,9 +494,7 @@
       csec.innerHTML+=tbl;host.appendChild(csec);
     }
 
-    var noteText=_ads?
-      'Público e campanhas refletem os últimos <b>30 dias</b> (dados ao vivo). Indicadores e evolução diária seguem o período selecionado. <b>Alcance</b> por período é acumulado (soma diária).':
-      'Público e campanhas refletem a janela de <b>90 dias</b>. Indicadores e evolução diária seguem o período selecionado. <b>Alcance</b> por período é acumulado (soma diária).';
+    var noteText='Público e campanhas refletem os últimos <b>90 dias</b>. Indicadores e evolução diária seguem o período selecionado. <b>Alcance</b> por período é acumulado (soma diária).';
     var note=document.createElement("p");note.className="note";
     note.innerHTML=noteText;
     host.appendChild(note);
