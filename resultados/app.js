@@ -103,6 +103,13 @@
     var r=activeRange();
     return daily.filter(function(d){ var dt=new Date(d.date+"T12:00:00"); return dt>=r.from&&dt<=r.to; });
   }
+  function allDailyForAccount(acc){
+    var ads=PAGES_AUTO.accounts&&PAGES_AUTO.accounts[acc.id]&&PAGES_AUTO.accounts[acc.id].ads;
+    var daily=ads&&ads.daily&&ads.daily.length?
+      ads.daily.map(function(r){return {date:r.d,spend:r.spend,impr:r.impr,reach:r.reach,clicks:r.clicks};}):
+      acc.daily;
+    return daily||[];
+  }
   function sum(rows){
     var o={spend:0,impr:0,reach:0,clicks:0};
     rows.forEach(function(r){o.spend+=r.spend;o.impr+=r.impr;o.reach+=r.reach;o.clicks+=r.clicks;});
@@ -398,17 +405,44 @@
 
     // --- KPIs detalhados ---
     var rows=dailyInPeriod(a), s=sum(rows);
+
+    // Comparativo mês a mês (mês corrente vs mês anterior — fixo, independente do filtro)
+    var allD=allDailyForAccount(a);
+    var mThis=TODAY.getFullYear()+'-'+String(TODAY.getMonth()+1).padStart(2,'0');
+    var lmD=new Date(TODAY.getFullYear(),TODAY.getMonth()-1,1);
+    var mLast=lmD.getFullYear()+'-'+String(lmD.getMonth()+1).padStart(2,'0');
+    var sM=sum(allD.filter(function(r){return r.date.slice(0,7)===mThis;}));
+    var sP=sum(allD.filter(function(r){return r.date.slice(0,7)===mLast;}));
+    function momPct(c,p){return(!p||p<=0)?null:Math.round((c-p)/p*100);}
+    function momTag(d,inv){
+      if(d===null||d===undefined)return '';
+      var up=d>=0; var good=inv?!up:up;
+      return '<div class="mom-d '+(good?'ok':'bad')+'">'+(up?'▲':'▼')+Math.abs(d)+'% vs mês ant.</div>';
+    }
+
+    // CPA: custo por resultado (live, se disponível)
+    var totalRes=0;
+    if(_ads&&_ads.campaigns){_ads.campaigns.forEach(function(c){totalRes+=(c.resValue||0);});}
+    var cpaVal=(totalRes>0&&s.spend>0)?s.spend/totalRes:0;
+
     var kpis=[
-      {l:"Investimento",v:brl.format(s.spend)},{l:"Impressões",v:compact(s.impr)},
-      {l:"Alcance",v:compact(s.reach)},{l:"Cliques",v:int.format(s.clicks)},
-      {l:"CTR",v:pct(s.ctr)},{l:"CPC",v:brl.format(s.cpc)},
-      {l:"CPM",v:brl.format(s.cpm)},{l:"Frequência",v:s.freq.toLocaleString("pt-BR",{maximumFractionDigits:2})},
-      {l:"Resultados",v:a.results?int.format(a.results.value)+" "+a.results.label.toLowerCase():"—"}
+      {l:"Investimento",   v:brl.format(s.spend),  d:momPct(sM.spend,sP.spend),   neutral:true},
+      {l:"Impressões",     v:compact(s.impr),       d:momPct(sM.impr,sP.impr)},
+      {l:"Alcance",        v:compact(s.reach),      d:momPct(sM.reach,sP.reach)},
+      {l:"Cliques",        v:int.format(s.clicks),  d:momPct(sM.clicks,sP.clicks)},
+      {l:"CTR",            v:pct(s.ctr),            d:momPct(sM.ctr,sP.ctr)},
+      {l:"CPC",            v:brl.format(s.cpc),     d:momPct(sM.cpc,sP.cpc),       inv:true},
+      {l:"CPM",            v:brl.format(s.cpm),     d:momPct(sM.cpm,sP.cpm),       inv:true},
+      {l:"Frequência",     v:s.freq.toLocaleString("pt-BR",{maximumFractionDigits:2}), d:momPct(sM.freq,sP.freq), inv:true},
+      {l:cpaVal>0?"Custo/Resultado":"Resultados",
+       v:cpaVal>0?brl.format(cpaVal):(a.results?int.format(a.results.value)+" "+a.results.label.toLowerCase():"—"),
+       d:null}
     ];
     var sec=document.createElement("section");sec.className="sec";sec.style.marginTop="22px";
     sec.innerHTML='<div class="sec-head"><h2>META ADS INSIGHTS</h2><span class="tag">'+periodLabel()+'</span></div>'+
-      '<div class="kpis k9">'+kpis.map(function(k){return '<div class="kpi"><div class="lbl"><i></i>'+
-        k.l+'</div><div class="val">'+k.v+'</div></div>';}).join("")+'</div>';
+      '<div class="kpis k9">'+kpis.map(function(k){
+        return '<div class="kpi"><div class="lbl"><i></i>'+k.l+'</div><div class="val">'+k.v+'</div>'+momTag(k.d,k.inv)+'</div>';
+      }).join("")+'</div>';
     host.appendChild(sec);
 
     // --- Trend com seletor de métrica ---
@@ -450,8 +484,28 @@
     var grid=document.createElement("div");grid.className="demo-grid";
 
     var p1=document.createElement("div");p1.className="panel";
-    p1.innerHTML='<div class="bh">Faixa etária · impressões</div>';
-    p1.appendChild(hbars(ageData.map(function(x){return {k:x.k,value:x.impr};}),compact));
+    var ageUid="ag"+Math.random().toString(36).slice(2,6);
+    p1.innerHTML='<div class="bh-flex"><span class="bh" style="margin:0">Faixa etária</span>'+
+      '<div class="mini-tabs mt-sm" id="'+ageUid+'">'+
+      '<button data-m="impr" class="active">Impr.</button>'+
+      '<button data-m="ctr">CTR</button>'+
+      '<button data-m="cpc">CPC</button>'+
+      '</div></div><div class="age-bars"></div>';
+    function drawAgeBars(metric){
+      var el=p1.querySelector(".age-bars");el.innerHTML="";
+      var mapped,fmt;
+      if(metric==="impr"){mapped=ageData.map(function(x){return{k:x.k,value:x.impr};});fmt=compact;}
+      else if(metric==="ctr"){mapped=ageData.map(function(x){var im=x.impr||0,cl=x.clicks||0;return{k:x.k,value:im?cl/im*100:0};});fmt=function(v){return pct(v);};}
+      else{mapped=ageData.map(function(x){var cl=x.clicks||0;return{k:x.k,value:cl?x.spend/cl:0};});fmt=brl;}
+      el.appendChild(hbars(mapped,fmt));
+    }
+    drawAgeBars("impr");
+    p1.querySelectorAll("#"+ageUid+" button").forEach(function(b){
+      b.addEventListener("click",function(){
+        p1.querySelectorAll("#"+ageUid+" button").forEach(function(x){x.classList.toggle("active",x===b);});
+        drawAgeBars(b.dataset.m);
+      });
+    });
 
     var p2=document.createElement("div");p2.className="panel";
     p2.innerHTML='<div class="bh">Gênero · impressões</div>';
@@ -467,28 +521,56 @@
     gflex.appendChild(leg);p2.appendChild(gflex);
 
     var p3=document.createElement("div");p3.className="panel";
-    p3.innerHTML='<div class="bh">Top regiões · impressões</div>';
-    p3.appendChild(hbars(regionData.slice(0,8).map(function(x){return {k:x.k,value:x.impr};}),compact));
+    var hasRegSpend=regionData.length>0&&regionData[0].spend!==undefined&&regionData[0].spend>0;
+    var regUid="rg"+Math.random().toString(36).slice(2,6);
+    p3.innerHTML='<div class="bh-flex"><span class="bh" style="margin:0">Top regiões</span>'+
+      (hasRegSpend?'<div class="mini-tabs mt-sm" id="'+regUid+'">'+
+      '<button data-m="impr" class="active">Impr.</button>'+
+      '<button data-m="spend">Invest.</button>'+
+      '</div>':'')+'</div><div class="reg-bars"></div>';
+    function drawRegBars(metric){
+      var el=p3.querySelector(".reg-bars");el.innerHTML="";
+      var mapped=regionData.slice(0,8).map(function(x){return{k:x.k,value:metric==="spend"?(x.spend||0):x.impr};});
+      el.appendChild(hbars(mapped,metric==="spend"?brl:compact));
+    }
+    drawRegBars("impr");
+    if(hasRegSpend){
+      p3.querySelectorAll("#"+regUid+" button").forEach(function(b){
+        b.addEventListener("click",function(){
+          p3.querySelectorAll("#"+regUid+" button").forEach(function(x){x.classList.toggle("active",x===b);});
+          drawRegBars(b.dataset.m);
+        });
+      });
+    }
 
     grid.appendChild(p1);grid.appendChild(p2);grid.appendChild(p3);
     dsec.appendChild(grid);host.appendChild(dsec);
 
     // --- Campanhas ---
     var campData=(_ads&&_ads.campaigns&&_ads.campaigns.length)?
-      _ads.campaigns.map(function(c){var im=c.impr||0,cl=c.clicks||0;return {name:c.name,objective:c.objective,status:c.status,spend:c.spend,impr:im,reach:c.reach,clicks:cl,ctr:im?cl/im*100:0,resLabel:c.resLabel,resValue:c.resValue};}):
-      (a.campaigns||[]);
+      _ads.campaigns.map(function(c){
+        var im=c.impr||0,cl=c.clicks||0,rv=c.resValue||0;
+        return {name:c.name,objective:c.objective,status:c.status,spend:c.spend,impr:im,reach:c.reach,
+          clicks:cl,ctr:im?cl/im*100:0,resLabel:c.resLabel,resValue:rv,
+          cpr:(rv>0&&c.spend>0)?c.spend/rv:0};
+      }):(a.campaigns||[]);
     var campTag="90 dias · top por gasto";
+    var hasCpr=campData.some(function(c){return c.cpr>0;});
     if(campData.length){
       var csec=document.createElement("section");csec.className="sec";
       csec.innerHTML='<div class="sec-head"><h2>Campanhas</h2><span class="tag">'+campTag+'</span></div>';
       var tbl='<div class="panel"><table class="ctable"><thead><tr>'+
         '<th>Campanha</th><th>Objetivo</th><th>Status</th><th class="r">Gasto</th>'+
-        '<th class="r">Impr.</th><th class="r">Cliques</th><th class="r">CTR</th><th class="r">Resultado</th></tr></thead><tbody>';
+        '<th class="r">Impr.</th><th class="r">Cliques</th><th class="r">CTR</th>'+
+        '<th class="r">Resultado</th>'+(hasCpr?'<th class="r">Custo/Res.</th>':'')+
+        '</tr></thead><tbody>';
       campData.forEach(function(c){
         tbl+='<tr><td class="cn">'+esc(c.name)+'</td><td>'+objLabel(c.objective)+'</td><td>'+statusBadge(c.status)+
           '</td><td class="r"><b>'+brl.format(c.spend)+'</b></td><td class="r">'+int.format(c.impr)+
           '</td><td class="r">'+int.format(c.clicks)+'</td><td class="r">'+pct(c.ctr)+
-          '</td><td class="r"><b style="color:var(--gold)">'+int.format(c.resValue)+'</b><br><small>'+esc(c.resLabel)+'</small></td></tr>';
+          '</td><td class="r"><b style="color:var(--gold)">'+int.format(c.resValue)+'</b><br><small>'+esc(c.resLabel)+'</small></td>'+
+          (hasCpr?'<td class="r">'+(c.cpr>0?'<b>'+brl.format(c.cpr)+'</b><br><small>por '+esc(c.resLabel.toLowerCase())+'</small>':'—')+'</td>':'')+
+          '</tr>';
       });
       tbl+='</tbody></table></div>';
       csec.innerHTML+=tbl;host.appendChild(csec);
@@ -647,7 +729,7 @@
     var alcTabLabel="Alcance "+pLabel;
     var chartSec=document.createElement("div");chartSec.style.marginTop="18px";
     chartSec.innerHTML='<div class="mini-tabs" id="igtabs'+uid+'">'+
-      '<button class="active" data-tab="seg">Seguidores</button>'+
+      '<button class="active" data-tab="seg">Seguidores · histórico</button>'+
       '<button data-tab="reach">'+alcTabLabel+'</button></div>'+
       '<div id="igchart'+uid+'" style="margin-top:8px"></div>';
     wrap.appendChild(chartSec);
