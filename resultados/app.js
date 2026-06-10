@@ -12,7 +12,7 @@
   if(!SESSION){ window.location.replace("login.html"); return; }
   var IS_CLIENT = SESSION.role === "client";
 
-  var TODAY = new Date(D.generated + "T12:00:00");
+  var TODAY = new Date();
   var STATE = { period: 30, view: "overview", metric: "spend" };
   var PAGES_AUTO = { updated: null, accounts: {} }; // alimentado por pages_data.json (robô diário)
   function loadAuto(cb){
@@ -71,9 +71,13 @@
   // ---- período / agregação ------------------------------------------------
   function cut(){ var c=new Date(TODAY); c.setDate(c.getDate()-STATE.period); return c; }
   function dailyInPeriod(acc){
-    if(!acc.daily) return [];
+    var ads=PAGES_AUTO.accounts&&PAGES_AUTO.accounts[acc.id]&&PAGES_AUTO.accounts[acc.id].ads;
+    var daily=ads&&ads.daily&&ads.daily.length?
+      ads.daily.map(function(r){return {date:r.d,spend:r.spend,impr:r.impr,reach:r.reach,clicks:r.clicks};}):
+      acc.daily;
+    if(!daily) return [];
     var c=cut();
-    return acc.daily.filter(function(r){ return new Date(r.date+"T12:00:00") >= c; });
+    return daily.filter(function(r){ return new Date(r.date+"T12:00:00") >= c; });
   }
   function sum(rows){
     var o={spend:0,impr:0,reach:0,clicks:0};
@@ -336,6 +340,7 @@
      ======================================================================= */
   function renderDetail(id){
     var a=D.accounts.filter(function(x){return x.id===id;})[0];
+    var _ads=PAGES_AUTO.accounts&&PAGES_AUTO.accounts[id]&&PAGES_AUTO.accounts[id].ads;
     var host=document.getElementById("detail");
     var ini=a.short.slice(0,2).toUpperCase();
     var statusTxt=a.status==="active"?'<span class="badge active">Ativa</span>':
@@ -412,17 +417,21 @@
     host.appendChild(pagesSection(a));
 
     // --- Público ---
+    var ageData=(_ads&&_ads.age)?_ads.age:(a.age||[]);
+    var genderData=(_ads&&_ads.gender)?_ads.gender:(a.gender||[]);
+    var regionData=(_ads&&_ads.region)?_ads.region:(a.region||[]);
+    var pubTag=_ads?"30 dias":"90 dias";
     var dsec=document.createElement("section");dsec.className="sec";
-    dsec.innerHTML='<div class="sec-head"><h2>Público</h2><span class="tag">90 dias</span></div>';
+    dsec.innerHTML='<div class="sec-head"><h2>Público</h2><span class="tag">'+pubTag+'</span></div>';
     var grid=document.createElement("div");grid.className="demo-grid";
 
     var p1=document.createElement("div");p1.className="panel";
     p1.innerHTML='<div class="bh">Faixa etária · impressões</div>';
-    p1.appendChild(hbars((a.age||[]).map(function(x){return {k:x.k,value:x.impr};}),compact));
+    p1.appendChild(hbars(ageData.map(function(x){return {k:x.k,value:x.impr};}),compact));
 
     var p2=document.createElement("div");p2.className="panel";
     p2.innerHTML='<div class="bh">Gênero · impressões</div>';
-    var gsegs=(a.gender||[]).map(function(x){
+    var gsegs=genderData.map(function(x){
       return {label:x.k==="female"?"Feminino":x.k==="male"?"Masculino":"Não inform.",
         value:x.impr,color:x.k==="female"?GOLD:x.k==="male"?BLUE:GREY};});
     var gtot=gsegs.reduce(function(a,s){return a+s.value;},0)||1;
@@ -435,19 +444,23 @@
 
     var p3=document.createElement("div");p3.className="panel";
     p3.innerHTML='<div class="bh">Top regiões · impressões</div>';
-    p3.appendChild(hbars((a.region||[]).slice(0,8).map(function(x){return {k:x.k,value:x.impr};}),compact));
+    p3.appendChild(hbars(regionData.slice(0,8).map(function(x){return {k:x.k,value:x.impr};}),compact));
 
     grid.appendChild(p1);grid.appendChild(p2);grid.appendChild(p3);
     dsec.appendChild(grid);host.appendChild(dsec);
 
     // --- Campanhas ---
-    if(a.campaigns&&a.campaigns.length){
+    var campData=(_ads&&_ads.campaigns&&_ads.campaigns.length)?
+      _ads.campaigns.map(function(c){var im=c.impr||0,cl=c.clicks||0;return {name:c.name,objective:c.objective,status:c.status,spend:c.spend,impr:im,reach:c.reach,clicks:cl,ctr:im?cl/im*100:0,resLabel:c.resLabel,resValue:c.resValue};}):
+      (a.campaigns||[]);
+    var campTag=(_ads&&_ads.campaigns&&_ads.campaigns.length)?"30 dias · top por gasto":"90 dias · top por gasto";
+    if(campData.length){
       var csec=document.createElement("section");csec.className="sec";
-      csec.innerHTML='<div class="sec-head"><h2>Campanhas</h2><span class="tag">90 dias · top por gasto</span></div>';
+      csec.innerHTML='<div class="sec-head"><h2>Campanhas</h2><span class="tag">'+campTag+'</span></div>';
       var tbl='<div class="panel"><table class="ctable"><thead><tr>'+
         '<th>Campanha</th><th>Objetivo</th><th>Status</th><th class="r">Gasto</th>'+
         '<th class="r">Impr.</th><th class="r">Cliques</th><th class="r">CTR</th><th class="r">Resultado</th></tr></thead><tbody>';
-      a.campaigns.forEach(function(c){
+      campData.forEach(function(c){
         tbl+='<tr><td class="cn">'+esc(c.name)+'</td><td>'+objLabel(c.objective)+'</td><td>'+statusBadge(c.status)+
           '</td><td class="r"><b>'+brl.format(c.spend)+'</b></td><td class="r">'+int.format(c.impr)+
           '</td><td class="r">'+int.format(c.clicks)+'</td><td class="r">'+pct(c.ctr)+
@@ -457,8 +470,11 @@
       csec.innerHTML+=tbl;host.appendChild(csec);
     }
 
+    var noteText=_ads?
+      'Público e campanhas refletem os últimos <b>30 dias</b> (dados ao vivo). Indicadores e evolução diária seguem o período selecionado. <b>Alcance</b> por período é acumulado (soma diária).':
+      'Público e campanhas refletem a janela de <b>90 dias</b>. Indicadores e evolução diária seguem o período selecionado. <b>Alcance</b> por período é acumulado (soma diária).';
     var note=document.createElement("p");note.className="note";
-    note.innerHTML='Público e campanhas refletem a janela de <b>90 dias</b>. Indicadores e evolução diária seguem o período selecionado. <b>Alcance</b> por período é acumulado (soma diária).';
+    note.innerHTML=noteText;
     host.appendChild(note);
   }
 
