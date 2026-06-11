@@ -36,10 +36,11 @@
     "466200930515969":  {name:"Hana Sushi Bar",       short:"Hana",        seg:"Restaurante / Sushi",  status:"active", city:"Umuarama-PR"},
     "614549147474977":  {name:"Lonardoni Engenharia", short:"Lonardoni",   seg:"Engenharia",          status:"dormant", lifetime:{spend:3526.95,impr:244272,clicks:10990,since:"2023-08-03"}},
     "26505177645746881":{name:"Recanto da Pizza",     short:"Recanto",     seg:"Restaurante / Pizzaria", status:"active", city:"Umuarama-PR"},
+    "1197278010945858": {name:"Intercred Umuarama",  short:"Intercred",   seg:"Financeiro / Crédito",   status:"active", city:"Umuarama-PR"},
   };
   var ORDER = ["996138788068033","787633890652103","3890380901253199","853572560704252",
     "1018517297786259","1422408889638342","26505177645746881","842679138932536",
-    "466200930515969","1239539613309782","614549147474977"];
+    "466200930515969","1239539613309782","1197278010945858","614549147474977"];
 
   // ---- Séries diárias [data, spend, impr, reach, clicks] ------------------
   var DAILY = {
@@ -177,7 +178,8 @@
     "3890380901253199":"867268539792671",
     "853572560704252":"792046037329253",
     "1018517297786259":"910043728865263",
-    "1422408889638342":"110415260752356"
+    "1422408889638342":"110415260752356",
+    "1197278010945858":"108503091763769"
   };
 
   // ---- Campanhas (90 dias) -----------------------------------------------

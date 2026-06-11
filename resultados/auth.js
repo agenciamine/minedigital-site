@@ -17,7 +17,8 @@
     { user:"treina",  hash:"e7c71db3b3b2bfd78750a6e1a9c91b21c895963123f7dc11d497a9abdf2443a8", role:"client", accountId:"1422408889638342", name:"Treinadores GB" },
     { user:"recanto", hash:"b5c6cbfd70c8e9407763b9efe39c22bcd3315c32c4edf4250d855e9841dfa5b5", role:"client", accountId:"26505177645746881",  name:"Recanto da Pizza" },
     { user:"gelato",  hash:"08ff380104019493d5a67a9d62e49af42fa39894d2672add08490b70df480135", role:"client", accountId:"842679138932536",   name:"Gelato Borelli" },
-    { user:"hana",    hash:"2e0ebdaba0e8e726daf3cab3200afa51365d6d2527f4a4847c19ecc91c310608", role:"client", accountId:"466200930515969",   name:"Hana Sushi Bar" }
+    { user:"hana",    hash:"2e0ebdaba0e8e726daf3cab3200afa51365d6d2527f4a4847c19ecc91c310608", role:"client", accountId:"466200930515969",   name:"Hana Sushi Bar" },
+    { user:"intercred", hash:"9276af01bb0c092540651c224f1bf5f28d605833a5f48b37d2245f55ef916d48", role:"client", accountId:"1197278010945858", name:"Intercred Umuarama" }
   ];
 
   var SESSION_KEY = "mine_auth_v1";
