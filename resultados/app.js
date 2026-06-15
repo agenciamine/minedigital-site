@@ -954,6 +954,103 @@
   }
 
   /* =======================================================================
+     METAS INSTAGRAM — painel admin com todos os clientes
+     ======================================================================= */
+  function renderMetasIG(){
+    var host=document.getElementById("metas");
+    if(!host) return;
+
+    function gp(cur,prev){
+      if(cur===null||cur===undefined||!prev||prev<=0) return null;
+      return Math.min(150,Math.round(cur/(prev*1.10)*100));
+    }
+    function mgBar(label,valStr,pct){
+      var bar='';
+      if(pct!==null&&pct!==undefined){
+        var done=pct>=100, col=done?'var(--ok)':'var(--gold)', fill=Math.min(100,pct);
+        bar='<div class="mg-bar-wrap"><div class="mg-bar" style="width:'+fill+'%;background:'+col+'"></div></div>'+
+            '<span class="mg-pct" style="color:'+col+'">'+pct+'%</span>';
+      } else {
+        bar='<div class="mg-bar-wrap"></div><span class="mg-pct" style="color:var(--txt-3)">—</span>';
+      }
+      return '<div class="mg-row"><span class="mg-lbl">'+label+'</span><span class="mg-val">'+valStr+'</span>'+bar+'</div>';
+    }
+
+    var html='<div class="sec-head" style="margin-bottom:20px">'+
+      '<h2>METAS INSTAGRAM</h2>'+
+      '<span class="tag">30 dias · meta = +10% vs período anterior</span></div>';
+
+    var totOk=0, totAll=0;
+    var cards='';
+
+    D.accounts.forEach(function(a){
+      if(a.status==='dormant') return;
+      var acc=PAGES_AUTO.accounts&&PAGES_AUTO.accounts[a.id];
+      var ig=acc&&acc.ig;
+      if(!ig) return;
+
+      var last      =ig.followers||0;
+      var novos     =ig.new_30d||0;
+      var alcance   =ig.reach_30d||0;
+      var engaged   =ig.accounts_engaged_30d||0;
+      var inter     =ig.total_interactions_30d||0;
+      var prevFoll  =(last>novos)?(last-novos):0;
+      var prevAlc   =ig.reach_30d_prev||0;
+      var prevEng   =ig.accounts_engaged_30d_prev||0;
+      var prevInter =ig.total_interactions_30d_prev||0;
+
+      var pFoll =gp(last,prevFoll);
+      var pAlc  =gp(alcance,prevAlc);
+      var pEng  =gp(engaged,prevEng);
+      var pInter=gp(inter,prevInter);
+
+      [pFoll,pAlc,pEng,pInter].forEach(function(p){
+        if(p!==null){ totAll++; if(p>=100) totOk++; }
+      });
+
+      var metasPcts=[pFoll,pAlc,pEng,pInter].filter(function(p){return p!==null;});
+      var avgMeta=metasPcts.length?Math.round(metasPcts.reduce(function(s,p){return s+p;},0)/metasPcts.length):null;
+      var badgeCol=avgMeta===null?'var(--txt-3)':avgMeta>=100?'var(--ok)':'var(--gold)';
+      var badgeTxt=avgMeta===null?'—':avgMeta+'%';
+      var username=acc.username||'';
+
+      cards+='<div class="mg-card" data-go="'+a.id+'">';
+      cards+='<div class="mg-card-top">';
+      cards+='<div class="ava-slot" data-id="'+a.id+'" data-ini="'+a.short.slice(0,2).toUpperCase()+'"></div>';
+      cards+='<div class="mg-info">'+
+        '<div class="mg-name">'+esc(a.name)+'</div>'+
+        '<div class="mg-handle">'+esc(username)+'</div>'+
+        '<div class="mg-foll"><b>'+int.format(last)+'</b> seg. · <span style="color:var(--ok)">+'+int.format(novos)+' novos</span></div>'+
+        '</div>';
+      cards+='<div class="mg-badge" style="color:'+badgeCol+'">'+badgeTxt+'</div>';
+      cards+='</div>';
+      cards+='<div class="mg-metrics">';
+      cards+=mgBar('Seguidores', int.format(last), pFoll);
+      cards+=mgBar('Alcance 30d', compact(alcance), pAlc);
+      cards+=mgBar('Engajam. 30d', int.format(engaged), pEng);
+      cards+=mgBar('Interações', int.format(inter), pInter);
+      cards+='</div>';
+      cards+='</div>';
+    });
+
+    var sumHtml=totAll?
+      '<div class="mg-summary">'+
+      '<span>'+totOk+' de '+totAll+' metas atingidas</span>'+
+      '<div class="mg-sum-bar-wrap"><div class="mg-sum-bar" style="width:'+Math.round(totOk/totAll*100)+'%"></div></div>'+
+      '<b style="color:var(--gold)">'+Math.round(totOk/totAll*100)+'%</b></div>':'';
+
+    host.innerHTML=html+sumHtml+'<div class="mg-grid">'+cards+'</div>';
+
+    host.querySelectorAll('.ava-slot[data-id]').forEach(function(slot){
+      slot.replaceWith(makeAva(slot.dataset.id, slot.dataset.ini));
+    });
+    host.querySelectorAll('.mg-card[data-go]').forEach(function(el){
+      el.style.cursor='pointer';
+      el.addEventListener('click',function(){ go(el.dataset.go); });
+    });
+  }
+
+  /* =======================================================================
      ROUTER
      ======================================================================= */
   function go(view){
@@ -961,12 +1058,21 @@
     STATE.view=view;
     var sel=document.getElementById("viewSel");
     if(sel&&!IS_CLIENT) sel.value=view;
-    var ov=document.getElementById("overview"), dt=document.getElementById("detail");
-    if(view==="overview"){ov.hidden=false;dt.hidden=true;renderOverview();}
-    else{ov.hidden=true;dt.hidden=false;STATE.metric="spend";renderDetail(view);}
+    var ov=document.getElementById("overview"), dt=document.getElementById("detail"), mt=document.getElementById("metas");
+    if(view==="overview"){
+      ov.hidden=false;dt.hidden=true;if(mt)mt.hidden=true;renderOverview();
+    } else if(view==="metas-ig"){
+      ov.hidden=true;dt.hidden=true;if(mt)mt.hidden=false;renderMetasIG();
+    } else {
+      ov.hidden=true;dt.hidden=false;if(mt)mt.hidden=true;STATE.metric="spend";renderDetail(view);
+    }
     window.scrollTo(0,0);
   }
-  function rerender(){ STATE.view==="overview"?renderOverview():renderDetail(STATE.view); }
+  function rerender(){
+    if(STATE.view==="overview") renderOverview();
+    else if(STATE.view==="metas-ig") renderMetasIG();
+    else renderDetail(STATE.view);
+  }
 
   function setPeriod(p, preset){
     STATE.period=p;
@@ -1003,6 +1109,7 @@
       if(vsEl) vsEl.style.display="none";
     } else {
       sel.innerHTML='<option value="overview">📊 Visão Geral</option>'+
+        '<option value="metas-ig">🎯 Metas Instagram</option>'+
         D.accounts.map(function(a){var dot=a.status==="active"?"🟢":a.status==="dormant"?"🌙":"⚪";
           return '<option value="'+a.id+'">'+dot+' '+esc(a.name)+'</option>';}).join("");
       sel.addEventListener("change",function(){go(sel.value);});
