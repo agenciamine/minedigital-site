@@ -1,5 +1,7 @@
 # Nunca versionar tokens ou segredos
 *.txt
+# excecao: robots.txt precisa ir pro ar (SEO)
+!robots.txt
 secrets/
 .env
 

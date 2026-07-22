@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Painel de clientes — não deve aparecer em buscas
+Disallow: /resultados/
+
+Sitemap: https://www.minedigital.com.br/sitemap.xml
