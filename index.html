@@ -3,6 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Detecção de idioma: visitante com navegador em espanhol cai na versão /es/.
+       Só acontece na 1ª visita — se a pessoa escolher no botão PT|ES, a escolha
+       dela passa a valer sempre. -->
+  <script>
+    (function () {
+      try {
+        var escolha = localStorage.getItem("mine_lang");
+        if (escolha) { if (escolha === "es") location.replace("es/index.html"); return; }
+        var idiomas = navigator.languages || [navigator.language || ""];
+        for (var i = 0; i < idiomas.length; i++) {
+          if (/^es/i.test(idiomas[i])) { location.replace("es/index.html"); return; }
+        }
+      } catch (e) {}
+    })();
+  </script>
+
   <title>Mine — Agência de Conteúdo & Performance</title>
   <meta name="description" content="A Mine é uma agência de conteúdo e performance. Criamos reels, campanhas e conteúdo que transformam atenção em resultado para marcas que querem crescer." />
 
@@ -15,6 +32,11 @@
 
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="canonical" href="https://www.minedigital.com.br/" />
+
+  <!-- Versões por idioma (SEO) -->
+  <link rel="alternate" hreflang="pt-BR" href="https://www.minedigital.com.br/" />
+  <link rel="alternate" hreflang="es-PY" href="https://www.minedigital.com.br/es/" />
+  <link rel="alternate" hreflang="x-default" href="https://www.minedigital.com.br/" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -44,9 +66,18 @@
         <a href="#contato">Contato</a>
       </nav>
 
-      <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="header__actions">
+        <!-- Seletor de idioma -->
+        <div class="lang" role="group" aria-label="Idioma / Idioma">
+          <span class="lang__opt is-active" aria-current="true">PT</span>
+          <span class="lang__sep" aria-hidden="true">|</span>
+          <a class="lang__opt" href="es/index.html" hreflang="es-PY" lang="es">ES</a>
+        </div>
+
+        <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
 
     <!-- Mobile menu -->
@@ -111,9 +142,9 @@
           <div class="tile__info"><span class="tile__cat">Aftermovie</span><h3 class="tile__title">A pior festa da cidade!</h3><p class="tile__sub">Cervejaria 7 Palmos</p></div>
         </article>
 
-        <article class="tile tile--media reveal" tabindex="0" role="button" aria-label="Abrir reel: App Borelli" data-cat="Reels" data-title="App Borelli" data-sub="Gelato Borelli" data-video="assets/videos/projeto-02.mp4" data-poster="assets/posters/projeto-02.jpg">
+        <article class="tile tile--media reveal" tabindex="0" role="button" aria-label="Abrir reel: BKSTG" data-cat="Fashion Film" data-title="BKSTG" data-sub="Básica Clothes" data-video="assets/videos/projeto-02.mp4" data-poster="assets/posters/projeto-02.jpg">
           <span class="tile__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
-          <div class="tile__info"><span class="tile__cat">Reels</span><h3 class="tile__title">App Borelli</h3><p class="tile__sub">Gelato Borelli</p></div>
+          <div class="tile__info"><span class="tile__cat">Fashion Film</span><h3 class="tile__title">BKSTG</h3><p class="tile__sub">Básica Clothes</p></div>
         </article>
 
         <article class="tile tile--media reveal" tabindex="0" role="button" aria-label="Abrir reel: Dia das Mães" data-cat="Campanha" data-title="Dia das Mães" data-sub="Ótica Aliança" data-video="assets/videos/projeto-03.mp4" data-poster="assets/posters/projeto-03.jpg">
@@ -121,9 +152,9 @@
           <div class="tile__info"><span class="tile__cat">Campanha</span><h3 class="tile__title">Dia das Mães</h3><p class="tile__sub">Ótica Aliança</p></div>
         </article>
 
-        <article class="tile tile--media reveal" tabindex="0" role="button" aria-label="Abrir reel: Aderiu, Reduziu!" data-cat="Campanha" data-title="Aderiu, Reduziu!" data-sub="Redusol Energia" data-video="assets/videos/projeto-04.mp4" data-poster="assets/posters/projeto-04.jpg">
+        <article class="tile tile--media reveal" tabindex="0" role="button" aria-label="Abrir reel: Grandeza se constrói" data-cat="Reels" data-title="Grandeza se constrói" data-sub="Texsa" data-video="assets/videos/projeto-04.mp4" data-poster="assets/posters/projeto-04.jpg">
           <span class="tile__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
-          <div class="tile__info"><span class="tile__cat">Campanha</span><h3 class="tile__title">Aderiu, Reduziu!</h3><p class="tile__sub">Redusol Energia</p></div>
+          <div class="tile__info"><span class="tile__cat">Reels</span><h3 class="tile__title">Grandeza se constrói</h3><p class="tile__sub">Texsa</p></div>
         </article>
 
         <article class="tile tile--media reveal" tabindex="0" role="button" aria-label="Abrir reel: É Guerra!" data-cat="Branding" data-title="É Guerra!" data-sub="Cervejaria 7 Palmos" data-video="assets/videos/projeto-05.mp4" data-poster="assets/posters/projeto-05.jpg">
@@ -146,9 +177,9 @@
           <div class="tile__info"><span class="tile__cat">Campanha</span><h3 class="tile__title">Aderiu, Reduziu!</h3><p class="tile__sub">Redusol Energia</p></div>
         </article>
 
-        <article class="tile tile--media reveal" tabindex="0" role="button" aria-label="Abrir reel: Famosos" data-cat="Social" data-title="Famosos" data-sub="Cervejaria 7 Palmos" data-video="assets/videos/projeto-09.mp4" data-poster="assets/posters/projeto-09.jpg">
+        <article class="tile tile--media reveal" tabindex="0" role="button" aria-label="Abrir reel: Enfermagem" data-cat="Campanha" data-title="Enfermagem" data-sub="UniCesumar" data-video="assets/videos/projeto-09.mp4" data-poster="assets/posters/projeto-09.jpg">
           <span class="tile__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
-          <div class="tile__info"><span class="tile__cat">Social</span><h3 class="tile__title">Famosos</h3><p class="tile__sub">Cervejaria 7 Palmos</p></div>
+          <div class="tile__info"><span class="tile__cat">Campanha</span><h3 class="tile__title">Enfermagem</h3><p class="tile__sub">UniCesumar</p></div>
         </article>
       </div>
     </section>

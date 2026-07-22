@@ -24,7 +24,9 @@
     var setMenu = function (open) {
       toggle.setAttribute("aria-expanded", String(open));
       mobileMenu.hidden = !open;
-      toggle.setAttribute("aria-label", open ? "Fechar menu" : "Abrir menu");
+      toggle.setAttribute("aria-label", open
+        ? (toggle.getAttribute("data-aria-close") || "Fechar menu")
+        : (toggle.getAttribute("data-aria-open")  || "Abrir menu"));
     };
     toggle.addEventListener("click", function () {
       setMenu(toggle.getAttribute("aria-expanded") !== "true");
@@ -60,11 +62,26 @@
       heroVideo.muted = !heroVideo.muted;
       var on = !heroVideo.muted;
       soundBtn.setAttribute("aria-pressed", String(on));
-      soundBtn.setAttribute("aria-label", on ? "Desativar som" : "Ativar som");
-      if (label) label.textContent = on ? "Som ligado" : "Som";
+      // textos vindos do HTML (permite versao PT e ES)
+      var txtOn  = soundBtn.getAttribute("data-label-on")  || "Som ligado";
+      var txtOff = soundBtn.getAttribute("data-label-off") || "Som";
+      var ariaOn  = soundBtn.getAttribute("data-aria-on")  || "Desativar som";
+      var ariaOff = soundBtn.getAttribute("data-aria-off") || "Ativar som";
+      soundBtn.setAttribute("aria-label", on ? ariaOn : ariaOff);
+      if (label) label.textContent = on ? txtOn : txtOff;
       if (on) { var p = heroVideo.play(); if (p && p.catch) p.catch(function () {}); }
     });
   }
+
+  /* ---------- Seletor de idioma: grava a escolha do usuário ----------
+     Assim a detecção automática (no <head> da home) passa a respeitar
+     o idioma que a pessoa escolheu manualmente.                        */
+  document.querySelectorAll(".lang a.lang__opt").forEach(function (link) {
+    link.addEventListener("click", function () {
+      var ehEspanhol = (link.getAttribute("lang") || "").toLowerCase().indexOf("es") === 0;
+      try { localStorage.setItem("mine_lang", ehEspanhol ? "es" : "pt"); } catch (e) {}
+    });
+  });
 
   /* ---------- Contadores animados (estatísticas) ---------- */
   var counters = document.querySelectorAll(".stat__num[data-count]");

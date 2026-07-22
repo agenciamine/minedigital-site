@@ -146,6 +146,16 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 .nav__cta:hover { background: var(--yellow); color: var(--ink); transform: translateY(-1px); }
 
+/* Bloco de acoes do header (idioma + menu mobile) */
+.header__actions { display: flex; align-items: center; gap: 12px; }
+
+/* Seletor de idioma — discreto, canto superior */
+.lang { display: inline-flex; align-items: center; gap: 5px; font-size: .7rem; font-weight: 700; letter-spacing: .1em; }
+.lang__opt { color: var(--muted); padding: 3px 4px; line-height: 1; transition: color .2s ease; }
+a.lang__opt:hover { color: var(--ink); }
+.lang__opt.is-active { color: var(--ink); border-bottom: 2px solid var(--yellow); }
+.lang__sep { color: var(--line); font-weight: 400; }
+
 .menu-toggle { display: none; width: 44px; height: 44px; flex-direction: column; justify-content: center; gap: 5px; }
 .menu-toggle span { display: block; width: 24px; height: 2px; background: var(--ink); margin: 0 auto; transition: transform .3s ease, opacity .3s ease; }
 .menu-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
@@ -269,7 +279,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   position: absolute; inset: 0;
   background: var(--tile-bg, radial-gradient(120% 80% at 30% 0%, rgba(243,206,23,.16), transparent 60%), linear-gradient(160deg, #1c1c1c, #0b0b0b 72%));
   background-size: cover;
-  background-position: center;
+  /* capa vertical (9:16) num quadro 1:1 -> corta em cima/embaixo.
+     Padrao puxa pro topo pra o rosto aparecer. Ajuste por quadro com --tile-pos. */
+  background-position: var(--tile-pos, center 22%);
   transition: transform .6s cubic-bezier(.2,.8,.2,1);
 }
 .tile--media:hover::before,
