@@ -30,19 +30,15 @@
     "3890380901253199": {name:"Kyokai Sushi Bar",     short:"Kyokai",      seg:"Restaurante / Sushi", status:"active", city:"Maringá-PR"},
     "853572560704252":  {name:"Ótica Aliança",        short:"Ótica",       seg:"Varejo / Ótica",      status:"active", city:"Paraná"},
     "1018517297786259": {name:"Texsa do Brasil",      short:"Texsa",       seg:"Indústria / B2B",     status:"active", city:"São Paulo"},
-    "1422408889638342": {name:"Treinadores GB",       short:"Treinadores", seg:"Educação / Esporte",  status:"active", city:"PR / SP"},
     "1239539613309782": {name:"Mine Digital",         short:"Mine",        seg:"Agência",             status:"active", city:"Umuarama-PR"},
     "842679138932536":  {name:"Gelato Borelli",       short:"Gelato",      seg:"Alimentação / Gelato", status:"active", city:"Umuarama-PR"},
-    "466200930515969":  {name:"Hana Sushi Bar",       short:"Hana",        seg:"Restaurante / Sushi",  status:"active", city:"Umuarama-PR"},
-    "614549147474977":  {name:"Lonardoni Engenharia", short:"Lonardoni",   seg:"Engenharia",          status:"dormant", lifetime:{spend:3526.95,impr:244272,clicks:10990,since:"2023-08-03"}},
     "26505177645746881":{name:"Recanto da Pizza",     short:"Recanto",     seg:"Restaurante / Pizzaria", status:"active", city:"Umuarama-PR"},
-    "1197278010945858": {name:"Intercred Umuarama",  short:"Intercred",   seg:"Financeiro / Crédito",   status:"active", city:"Umuarama-PR"},
     "1207971065732558": {name:"Frederiko Ken",        short:"Frederiko",   seg:"Médico",                 status:"active", city:"Umuarama-PR"},
     "1776775276699457": {name:"Base Boteco",           short:"Base Boteco", seg:"Choperia",               status:"active", city:"Umuarama-PR"},
   };
   var ORDER = ["996138788068033","787633890652103","3890380901253199","853572560704252",
-    "1018517297786259","1422408889638342","26505177645746881","842679138932536",
-    "466200930515969","1239539613309782","1197278010945858","1207971065732558","1776775276699457","614549147474977"];
+    "1018517297786259","26505177645746881","842679138932536",
+    "1239539613309782","1207971065732558","1776775276699457"];
 
   // ---- Séries diárias [data, spend, impr, reach, clicks] ------------------
   var DAILY = {
