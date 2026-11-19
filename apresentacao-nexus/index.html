@@ -353,6 +353,10 @@ em.hl .wd{background:none}
 @media(max-width:900px){.th-grid{grid-template-columns:1fr}.orb{width:100%}}
 @keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(255,210,0,.18)}50%{box-shadow:0 0 0 26px rgba(255,210,0,0)}}
 
+/* ---------- filme ---------- */
+.film .fwrap{max-width:calc((100vh - 300px) * 16 / 9);margin-inline:auto;margin-top:clamp(24px,3vw,44px);border-radius:var(--r2);overflow:hidden;background:#000;aspect-ratio:16/9;box-shadow:0 30px 80px rgba(0,0,0,.35)}
+.film video{display:block;width:100%;height:100%;object-fit:contain;background:#000}
+
 /* ---------- pergunta ---------- */
 .join-next{border-bottom-left-radius:0;border-bottom-right-radius:0}
 .join-next+.ask{border-radius:0 0 var(--r) var(--r);overflow:clip}
@@ -513,11 +517,7 @@ footer .bot{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;p
 <!-- ================= HERO ================= -->
 <section class="intro" id="topo" data-intro data-stop data-notes="Deixe o vídeo rodando enquanto o público se acomoda. Apresente-se e agradeça a presença. Quando for começar, avance: o texto entra sobre o vídeo.">
   <div class="pin">
-    <div class="vwrap" id="vwrap">
-      <video id="iv" src="video/abertura.mp4" autoplay muted loop playsinline preload="auto"></video>
-      <button class="vfs" id="vfs" type="button" aria-label="Assistir o vídeo em tela cheia"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Tela cheia</button>
-      <button class="vclose" id="vclose" type="button" aria-label="Fechar tela cheia">✕</button>
-    </div>
+    <img class="sbg" src="img/noite-v.jpg" alt="Nexus Studios à noite" style="object-position:center 30%">
     <div class="ivl"></div>
     <div class="glass" id="glass">
       <div class="gtop">
@@ -1062,6 +1062,19 @@ footer .bot{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;p
 </section>
 
 <div class="sp"></div>
+
+<section class="box dark sec film" data-stop data-notes="Feche com o filme do Nexus. Dê play e deixe rodar com som (1 min 51). Depois abra para perguntas.">
+  <div class="between">
+    <h2 class="h-l" data-split>Veja o Nexus <em class="hl">em movimento.</em></h2>
+    <span class="eyebrow rv">O filme</span>
+  </div>
+  <div class="fwrap rv">
+    <video id="iv" src="video/filme.mp4" controls playsinline preload="metadata" poster="img/voo.jpg"></video>
+  </div>
+  <p class="legal" style="margin-top:18px">Imagens meramente ilustrativas.</p>
+</section>
+
+<div class="sp"></div>
 </main>
 
 <footer data-stop data-notes="Encerramento. Apresente quem fez o projeto: AAJ Construtora na realização, B&amp;CO no projeto arquitetônico e Mine no marketing e comunicação. Agradeça. Última frase: “Alguns esperam a cidade mudar. Vocês acabaram de ver o momento exato em que ela muda.”">
@@ -1131,7 +1144,7 @@ $$('.rv,[data-split],.mask,em.hl,.orb').filter(el=>!el.closest('[data-intro]')).
 
 /* --- abertura: vídeo + vidro --- */
 const intros=$$('[data-intro]').map(s=>({s,els:$$('[data-split],em.hl',s)}));
-const iv=$('#iv'); if(iv){ iv.muted=true; const pl=()=>{const r=iv.play(); if(r&&r.catch) r.catch(()=>{});}; pl(); addEventListener('click',pl,{once:true}); }
+const iv=$('#iv'); const pl=()=>{};
 /* vídeo em tela cheia: modo dentro da página (funciona em qualquer celular) + tela cheia nativa quando o aparelho permitir */
 const vw=$('#vwrap');
 function vOpen(){ document.body.classList.add('vfull'); pl2();
