@@ -435,6 +435,8 @@ html,body{cursor:none}
 #qrend p{margin-top:26px;font-size:clamp(16px,1.3vw,24px);color:rgba(255,255,255,.65)}
 #qrend .lg{width:clamp(160px,13vw,240px);margin-bottom:40px;display:block}
 body.qr-off #qrmini{opacity:0}
+.addr .img img{position:absolute;inset:0}
+.film .fwrap{max-width:calc((100vh - 420px) * 16 / 9)}
 </style>
 </head>
 <body>
@@ -584,7 +586,7 @@ body.qr-off #qrmini{opacity:0}
     <div class="n rv">02</div>
     <div>
       <span class="eyebrow rv">O endereço</span>
-      <h2 class="h-l" data-split style="margin-top:22px">Em imóvel, a localização não se reforma depois. <em class="hl">Ela é escolhida uma vez.</em></h2>
+      <h2 class="h-l" data-split style="margin-top:22px">Em imóvel, a localização não se decide depois. <em class="hl">Ela vem antes de tudo.</em></h2>
     </div>
   </div>
 </section>
@@ -620,7 +622,7 @@ body.qr-off #qrmini{opacity:0}
       <h3 class="h-m" data-split>Tudo o que a cidade oferece, <em class="hl">a poucos minutos.</em></h3>
       <ul class="ls rv d2">
         <li><i>EDU</i><span>Universidade Sudamericana, Leonardo da Vinci e Unasur</span></li>
-        <li><i>COM</i><span>Shopping China, Shopping Salto e Shopping Mall</span></li>
+        <li><i>COM</i><span>Shopping China, Shopping Salto, Shopping Mall e Queen Anne</span></li>
         <li><i>SER</i><span>Prefeitura e Av. Paraguay</span></li>
         <li><i>ACE</i><span>Ponte Ayrton Senna e Porto de Salto del Guairá</span></li>
       </ul>
@@ -1190,22 +1192,30 @@ const wait=ms=>new Promise(r=>setTimeout(r,ms/SP));
 function glide(Y,dur){ return new Promise(res=>{ const y0=scrollY,d=Y-y0,t0=performance.now();
   dur/=SP; const st=t=>{ const k=clamp((t-t0)/dur); const e=k<.5?2*k*k:1-Math.pow(-2*k+2,2)/2; scrollTo(0,y0+d*e); if(k<1) requestAnimationFrame(st); else res(); };
   requestAnimationFrame(st); }); }
+function isTall(el){ return !el.matches('[data-intro],[data-scrub],[data-ask],[data-grow],.st,.mk') && !el.closest('[data-hz]'); }
 function holdFor(el){
   if(el.matches('[data-scrub],[data-ask]')) return 4000;
   if(el.matches('[data-grow]')) return 3500;
   if(el.matches('.tp')) return 12000;
-  if(el.tagName==='FOOTER') return 7000;
   if(el.matches('#contato')) return 12000;
+  const n=el.innerText.replace(/\s+/g,' ').length;
+  if(n>=260) return 14000;   /* telas com mais texto: o dobro do tempo */
   return 7000; }
+/* telas mais altas que o telão: reduz para caber inteira */
+function fitAll(){ const vh=innerHeight;
+  stops.forEach(el=>{ if(!isTall(el) || el.querySelector('.lz')) return; el.style.zoom='';
+    const h=el.offsetHeight; if(h>vh-24) el.style.zoom=((vh-24)/h).toFixed(3); }); }
 async function playFilm(){ const v=$('#iv'); if(!v) return; document.body.classList.add('qr-off');
   try{ v.muted=true; v.currentTime=0; await v.play(); }catch(e){ await wait(4000); document.body.classList.remove('qr-off'); return; }
   await Promise.race([new Promise(r=>v.addEventListener('ended',r,{once:true})), wait(130000)]);
   document.body.classList.remove('qr-off'); }
 async function autopilot(){
-  scrollTo(0,0); await wait(6000);
+  fitAll(); scrollTo(0,0); await wait(6000);
   for(let i=1;i<stops.length;i++){ const el=stops[i]; const Y=Math.max(0,stopY(el)); const d=Math.abs(Y-scrollY);
     await glide(Y, Math.min(9000, Math.max(1800, d/0.32)));
     if(el.matches('.film')){ await wait(1500); await playFilm(); continue; }
+    if(el.querySelector('.lz')){ await wait(3000); const top=el.getBoundingClientRect().top+scrollY;
+      const end=top+el.offsetHeight-innerHeight+24; await glide(Math.max(scrollY,end), 22000); await wait(5000); continue; }
     if(el.matches('.tp')){ await wait(5500); const b=$('#tabs [data-t="1"]'); if(b) b.click(); await wait(6500); continue; }
     await wait(holdFor(el)); }
   document.body.classList.add('qr-off'); $('#qrend').classList.add('on');
