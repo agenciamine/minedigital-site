@@ -1,0 +1,1278 @@
+<!DOCTYPE html>
+<!-- Nexus Studios · apresentação para investidores em formato landing page · fonte de edição (build gera arquivo único offline) -->
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:title" content="Nexus Studios · Salto del Guairá">
+<meta property="og:image" content="https://minedigital.com.br/nexus-slide/img/voo.jpg">
+<link rel="icon" href="img/logo-nexus-w.png">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nexus Studios · Slides</title>
+<style>
+@font-face{font-family:'Manrope';font-style:normal;font-weight:200 800;font-display:block;src:url('fonts/manrope-latin.woff2') format('woff2');}
+:root{
+  --bg:#ECEBE7; --card:#F7F6F3; --line:rgba(25,25,25,.12);
+  --ink:#191919; --ink2:#232322; --mut:#77766F; --soft:#C9C7C0;
+  --gold:#FFCE00;
+  --r:34px; --r2:22px; --gut:clamp(12px,1.4vw,22px);
+  --pad:clamp(28px,5.2vw,100px);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:auto;background:var(--bg)}
+body{font-family:'Manrope',system-ui,sans-serif;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+::selection{background:var(--gold);color:var(--ink)}
+
+/* ---------- tipografia ---------- */
+.eyebrow{display:inline-flex;align-items:center;gap:12px;font-size:clamp(11px,.78vw,14px);letter-spacing:.28em;text-transform:uppercase;font-weight:700;color:var(--mut)}
+.eyebrow::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--gold)}
+.dark .eyebrow{color:rgba(255,255,255,.6)}
+.h-xxl{font-size:clamp(54px,8.6vw,168px);line-height:.94;letter-spacing:-.055em;font-weight:500}
+.h-xl{font-size:clamp(44px,6.2vw,118px);line-height:.98;letter-spacing:-.05em;font-weight:500}
+.h-l{font-size:clamp(36px,4.4vw,84px);line-height:1.02;letter-spacing:-.045em;font-weight:500}
+.h-m{font-size:clamp(28px,2.9vw,54px);line-height:1.08;letter-spacing:-.035em;font-weight:500}
+.h-s{font-size:clamp(22px,1.75vw,32px);line-height:1.2;letter-spacing:-.02em;font-weight:600}
+.lead{font-size:clamp(17px,1.32vw,24px);line-height:1.55;color:#4d4c47;font-weight:400;max-width:44ch}
+.dark .lead{color:rgba(255,255,255,.72)}
+.small{font-size:clamp(13px,.9vw,16px);line-height:1.55;color:var(--mut)}
+.mut{color:var(--mut)} .dark .mut{color:rgba(255,255,255,.45)}
+em.hl{font-style:normal;background:linear-gradient(var(--gold),var(--gold)) no-repeat 0 84%/0% .24em;-webkit-box-decoration-break:clone;box-decoration-break:clone;transition:background-size 1.3s cubic-bezier(.7,0,.2,1) .55s}
+em.hl.in{background-size:100% .24em}
+em.hl .wd{background:none}
+.dark em.hl{color:var(--gold);background:none}
+.legal{font-size:11px;letter-spacing:.04em;color:var(--mut);opacity:.85}
+.dark .legal{color:rgba(255,255,255,.4)}
+
+/* ---------- layout ---------- */
+.wrap{padding:0 var(--gut)}
+.sec{position:relative}
+.box{background:var(--card);border-radius:var(--r);padding:var(--pad);position:relative;overflow:hidden}
+.dark{background:var(--ink);color:#F2F1EE}
+.box.dark{background:var(--ink)}
+.sp{height:var(--gut)}
+.row{display:flex;gap:clamp(24px,4vw,80px)}
+.between{display:flex;justify-content:space-between;align-items:flex-end;gap:40px}
+.between>*{min-width:0}
+.between>h2{flex:1 1 auto}
+.between>.lead{flex:0 0 min(34ch,32%)}
+@media(max-width:900px){.between{flex-wrap:wrap}.between>.lead{flex:1 1 100%}}
+.pill{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--line);border-radius:999px;padding:12px 22px;font-size:clamp(12px,.82vw,15px);font-weight:600;letter-spacing:.02em;background:transparent;color:inherit;text-decoration:none;cursor:pointer;transition:background .3s,color .3s,border-color .3s}
+.pill.solid{background:var(--ink);color:#fff;border-color:var(--ink)}
+.pill.gold{background:var(--gold);color:var(--ink);border-color:var(--gold)}
+.pill:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+.dark .pill{border-color:rgba(255,255,255,.22)}
+.dark .pill:hover{background:#fff;color:var(--ink)}
+.chip{display:inline-flex;border:1px solid var(--line);border-radius:999px;padding:10px 18px;font-size:clamp(13px,.95vw,17px);font-weight:500;background:rgba(255,255,255,.5)}
+.dark .chip{border-color:rgba(255,255,255,.18);background:rgba(255,255,255,.04)}
+.img{border-radius:var(--r2);overflow:hidden;position:relative;background:#d8d6cf}
+.img img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s cubic-bezier(.2,.7,.2,1)}
+.img:hover img{transform:scale(1.04)}
+.tag{position:absolute;left:16px;top:16px;background:rgba(247,246,243,.92);color:var(--ink);border-radius:999px;padding:8px 14px;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;z-index:2}
+
+/* ---------- nav ---------- */
+.nav{position:fixed;left:50%;top:14px;transform:translateX(-50%);z-index:50;width:min(1180px,calc(100% - 28px));display:flex;align-items:center;justify-content:space-between;background:rgba(247,246,243,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(25,25,25,.07);border-radius:999px;padding:9px 10px 9px 24px;transition:transform .5s cubic-bezier(.2,.7,.2,1),opacity .5s}
+.nav.hide{transform:translate(-50%,-140%);opacity:0}
+.nav .lg{height:26px}
+.nav ul{display:flex;gap:6px;list-style:none}
+.nav li a{display:block;padding:9px 16px;border-radius:999px;font-size:13px;font-weight:600;color:var(--mut);text-decoration:none;transition:.3s}
+.nav li a.on{background:var(--ink);color:#fff}
+.nav li a:hover{color:var(--ink)}
+.nav li a.on:hover{color:#fff}
+.prog{position:fixed;left:0;top:0;height:3px;background:var(--gold);z-index:60;width:100%;transform-origin:left;transform:scaleX(0)}
+@media(max-width:900px){.nav ul{display:none}}
+
+/* ---------- animações de entrada ---------- */
+.rv{opacity:0;transform:translateY(46px);transition:opacity 1.1s cubic-bezier(.2,.7,.2,1),transform 1.1s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+.rv.d1{transition-delay:.12s}.rv.d2{transition-delay:.24s}.rv.d3{transition-delay:.36s}.rv.d4{transition-delay:.48s}
+[data-split] .ln{display:block;overflow:hidden;padding-bottom:.08em;margin-bottom:-.08em}
+[data-split] .wd{display:inline-block;transform:translateY(105%) rotate(4deg);transform-origin:left bottom;transition:transform 1.15s cubic-bezier(.16,.84,.24,1)}
+[data-split].in .wd{transform:none}
+.mask{clip-path:inset(18% 10% 18% 10% round 40px);transition:clip-path 1.6s cubic-bezier(.7,0,.2,1)}
+.mask.in{clip-path:inset(0 0 0 0 round var(--r2))}
+.mask img{transform:scale(1.25);transition:transform 2s cubic-bezier(.2,.7,.2,1)}
+.mask.in img{transform:scale(1)}
+
+/* ---------- hero ---------- */
+.hero{min-height:100vh;padding-top:var(--gut);display:grid;grid-template-columns:1.05fr .95fr;gap:var(--gut)}
+.hero .l{display:flex;flex-direction:column;justify-content:space-between;min-height:calc(100vh - 2*var(--gut))}
+.hero .logo{width:clamp(200px,17vw,330px)}
+.hero .r{min-height:calc(100vh - 2*var(--gut))}
+.hero .r .img{height:100%}
+.hero .meta{display:flex;gap:28px;flex-wrap:wrap;align-items:center}
+@media(max-width:900px){.hero{grid-template-columns:1fr}.hero .r{min-height:70vh}}
+
+/* ---------- abertura com vídeo ---------- */
+.intro{position:relative;height:230vh;margin:0 calc(-1*var(--gut))}
+.intro .pin{position:sticky;top:0;height:100vh;overflow:hidden;background:var(--ink)}
+.intro video,.intro .sbg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(calc(1 + var(--ip,0)*.06))}
+.intro .ivl.r{background:linear-gradient(270deg,rgba(10,10,10,.6),rgba(10,10,10,.1) 70%)}
+.intro .glass.r{left:auto;right:clamp(16px,4vw,80px);width:min(660px,calc(100% - 32px))}
+.intro .glass .ls,.intro .glass .ls li{border-color:rgba(255,255,255,.2)}
+.intro .glass .ls li{color:rgba(255,255,255,.9)}
+.intro .glass .ls li b{color:#fff}
+.intro .glass .ls li i{color:var(--ink)}
+.intro .glass .stat span{color:rgba(255,255,255,.85)}
+.intro .ivl{position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,10,10,.55),rgba(10,10,10,.1) 70%);opacity:var(--gi,0)}
+.intro .glass{position:absolute;left:clamp(16px,4vw,80px);top:50%;width:min(860px,calc(100% - 32px));
+  transform:translateY(calc(-50% + (1 - var(--gi,0))*70px));opacity:var(--gi,0);
+  padding:clamp(28px,3.4vw,60px);border-radius:var(--r);color:#fff;
+  background:linear-gradient(135deg,rgba(255,255,255,.16),rgba(255,255,255,.05));
+  backdrop-filter:blur(22px) saturate(1.3);-webkit-backdrop-filter:blur(22px) saturate(1.3);
+  border:1px solid rgba(255,255,255,.22);box-shadow:0 30px 80px rgba(0,0,0,.28),inset 0 1px 0 rgba(255,255,255,.25)}
+.intro .glass .lead{color:rgba(255,255,255,.86)}
+.intro .glass .eyebrow{color:rgba(255,255,255,.75)}
+.intro .glass .small{color:rgba(255,255,255,.6)}
+.intro .glass .legal{color:rgba(255,255,255,.5)}
+.intro .glass em.hl{color:#fff;background-position:0 70%;transition:background-size 1.1s cubic-bezier(.7,0,.2,1) .7s,color .5s 1.1s}
+.intro .glass em.hl.in{background-size:100% .9em;color:var(--ink)}
+.intro .gtop{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.intro .logo{width:clamp(170px,14vw,260px)}
+.intro .gbot{display:flex;align-items:center;gap:18px;margin-top:clamp(28px,4vh,50px);padding-top:24px;border-top:1px solid rgba(255,255,255,.18);flex-wrap:wrap}
+.scrollhint{position:absolute;left:50%;bottom:34px;transform:translateX(-50%);color:#fff;font-size:12px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;display:flex;flex-direction:column;align-items:center;gap:14px;opacity:calc(1 - var(--gi,0)*2);text-shadow:0 2px 12px rgba(0,0,0,.5)}
+.scrollhint i{width:1.5px;height:44px;background:linear-gradient(#fff,transparent);animation:sh 1.8s ease-in-out infinite;transform-origin:top}
+@keyframes sh{0%{transform:scaleY(0)}50%{transform:scaleY(1)}100%{transform:scaleY(1);opacity:0}}
+.intro .mk{position:absolute;left:0;top:78vh;width:1px;height:1px}
+
+/* capa dividida: foto inteira à direita, texto em vidro à esquerda */
+#topo .sbg-blur{filter:blur(42px) brightness(.5) saturate(1.25);transform:scale(1.25)}
+#topo .cover-img{position:absolute;z-index:1;right:var(--gut);top:50%;aspect-ratio:1;
+  width:min(calc(50vw - 1.5*var(--gut)),calc(100vh - 2*var(--gut)));
+  transform:translateY(-50%) scale(calc(1 - var(--gi,0)*.015));border-radius:var(--r);overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.45)}
+#topo .cover-img img{width:100%;height:100%;object-fit:cover;display:block}
+#topo .ivl{background:linear-gradient(90deg,rgba(10,10,10,.35),rgba(10,10,10,0) 60%)}
+#topo .glass{width:min(760px,calc(50vw - 2*clamp(16px,4vw,80px)))}
+#topo .glass h1{font-size:clamp(40px,4.2vw,84px)!important}
+#topo .scrollhint{left:25%}
+
+/* ---------- seção crescente (imagem expande) ---------- */
+.grow{height:240vh}
+.grow .pin{position:sticky;top:0;height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.grow .frame{position:absolute;inset:0;clip-path:inset(var(--i,16%) var(--j,22%) var(--i,16%) var(--j,22%) round var(--rr,34px));will-change:clip-path}
+.grow .frame img{width:100%;height:100%;object-fit:cover;transform:scale(var(--sc,1.18))}
+.grow .frame::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(15,15,15,.75),rgba(15,15,15,.08) 60%);opacity:var(--ov,0)}
+.grow .cap{position:absolute;left:var(--pad);right:var(--pad);bottom:clamp(40px,7vh,90px);color:#fff;z-index:3;opacity:var(--co,0);transform:translateY(calc((1 - var(--co,0))*40px))}
+
+/* ---------- scrub de palavras (texto que trava) ---------- */
+.scrub{height:300vh}
+.scrub .pin{position:sticky;top:0;height:100vh;display:flex;align-items:center;padding:0 var(--pad)}
+.scrub .txt{max-width:22ch}
+.scrub .w{color:rgba(25,25,25,.13);transition:color .25s}
+.scrub .w.on{color:var(--ink)}
+.scrub.dk{background:var(--ink)}
+.scrub.dk .w{color:rgba(255,255,255,.12)}
+.scrub.dk .w.on{color:#F2F1EE}
+.scrub .w.g{background:linear-gradient(var(--gold),var(--gold)) no-repeat 0 84%/0% .26em;transition:color .25s,background-size .45s cubic-bezier(.7,0,.2,1)}
+.scrub .w.g.on{color:var(--ink);background-size:100% .26em}
+.scrub.dk .w.g{background:none}
+.scrub.dk .w.g.on{color:var(--gold)}
+.scrub .side{position:absolute;right:var(--pad);bottom:var(--pad);text-align:right}
+
+/* ---------- capítulos ---------- */
+.chap{display:grid;grid-template-columns:auto 1fr;gap:clamp(30px,5vw,100px);align-items:end}
+.chap .n{font-size:clamp(120px,17vw,330px);line-height:.78;font-weight:200;letter-spacing:-.07em;color:transparent;-webkit-text-stroke:1.5px var(--ink)}
+.dark .chap .n{-webkit-text-stroke:1.5px var(--gold)}
+.idx{list-style:none;border-top:1px solid var(--line)}
+.idx li{display:grid;grid-template-columns:90px 1fr auto;align-items:center;padding:clamp(12px,1.9vh,26px) 0;border-bottom:1px solid var(--line);transition:padding .4s}
+.idx li:hover{padding-left:16px}
+.idx .k{font-size:14px;font-weight:700;color:var(--mut);letter-spacing:.1em}
+.idx .t{font-size:clamp(24px,2.4vw,46px);letter-spacing:-.035em;font-weight:500}
+.idx .t span{color:var(--mut);font-weight:400}
+
+/* ---------- cards da cidade ---------- */
+.g4c{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--gut);margin-top:clamp(40px,5vw,80px)}
+.g4c .img{height:clamp(240px,40vh,520px)}
+.g4c h4{font-size:clamp(18px,1.3vw,24px);font-weight:600;letter-spacing:-.02em;margin-top:20px}
+.g4c p{margin-top:8px}
+@media(max-width:900px){.g4c{grid-template-columns:1fr 1fr}}
+
+/* ---------- horizontal fixado ---------- */
+.hz{height:calc(var(--n,3) * 100vh)}
+.hz .pin{position:sticky;top:0;height:100vh;overflow:hidden;display:flex;align-items:center}
+.hz .track{display:flex;gap:var(--gut);padding:0 var(--gut);will-change:transform}
+.hz .panel{flex:0 0 calc(100vw - 2*var(--gut));height:calc(100vh - 2*var(--gut));border-radius:var(--r);overflow:hidden;position:relative;display:grid;grid-template-columns:1fr 1fr;background:var(--card)}
+.hz .panel .img{border-radius:0;height:100%}
+.hz .panel .tx{padding:var(--pad);display:flex;flex-direction:column;justify-content:space-between}
+.hz .panel.dark{background:var(--ink)}
+.hz .count{font-size:14px;font-weight:700;letter-spacing:.2em;color:var(--mut)}
+
+/* ---------- colunas ---------- */
+.c3{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);margin-top:clamp(40px,5vw,80px)}
+.c4{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);margin-top:clamp(40px,5vw,80px)}
+.c3>div,.c4>div{padding:clamp(24px,2.4vw,44px) clamp(20px,2.2vw,40px) 0 0;border-right:1px solid var(--line);margin-right:clamp(20px,2.2vw,40px)}
+.c3>div:last-child,.c4>div:last-child{border-right:0;margin-right:0}
+.dark .c3,.dark .c4,.dark .c3>div,.dark .c4>div{border-color:rgba(255,255,255,.12)}
+.num-k{display:inline-block;font-size:13px;font-weight:800;letter-spacing:.24em;color:var(--ink);text-transform:uppercase;padding-bottom:6px;border-bottom:3px solid var(--gold)}
+.dark .num-k{color:var(--gold)}
+.c3 h4,.c4 h4{font-size:clamp(20px,1.7vw,32px);font-weight:500;letter-spacing:-.03em;line-height:1.15;margin:16px 0 14px}
+@media(max-width:900px){.c3,.c4{grid-template-columns:1fr}.c3>div,.c4>div{border-right:0;margin:0 0 30px}}
+
+/* ---------- endereço ---------- */
+.addr{display:grid;grid-template-columns:1fr 1fr;gap:var(--gut)}
+.addr .img{min-height:80vh}
+.stat{display:flex;align-items:baseline;gap:10px}
+.stat b{font-size:clamp(64px,7.4vw,140px);font-weight:300;letter-spacing:-.06em;line-height:.9}
+.stat span{font-size:clamp(18px,1.4vw,26px);font-weight:500}
+.ls{list-style:none;border-top:1px solid var(--line);margin-top:30px}
+.ls li{display:flex;gap:20px;align-items:baseline;padding:16px 0;border-bottom:1px solid var(--line);font-size:clamp(16px,1.15vw,21px);line-height:1.45}
+.ls li i{font-style:normal;font-size:12px;font-weight:800;letter-spacing:.14em;color:var(--ink);min-width:44px;text-align:center;background:var(--gold);border-radius:999px;padding:4px 8px;align-self:center}
+.dark .ls,.dark .ls li{border-color:rgba(255,255,255,.12)} .dark .ls li i{color:var(--ink)}
+@media(max-width:900px){.addr{grid-template-columns:1fr}}
+
+/* ---------- fachada fixa com troca ---------- */
+.stk{display:grid;grid-template-columns:1fr 1fr;gap:var(--gut)}
+.stk .stick{position:sticky;top:var(--gut);height:calc(100vh - 2*var(--gut));border-radius:var(--r);overflow:hidden}
+.stk .stick{background:transparent;overflow:visible}
+.stk .stick .sl{position:absolute;inset:0;opacity:0;transform:scale(1.04);transition:opacity 1.1s,transform 2.2s cubic-bezier(.2,.7,.2,1);border-radius:var(--r);overflow:hidden}
+.stk .stick .sl.on{opacity:1;transform:scale(1)}
+.stk .stick .sl img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.stk .stick .sl.fit{overflow:visible;display:flex;align-items:center;justify-content:center}
+.stk .stick .sl.fit figure{position:relative;height:100%;display:flex;flex-direction:column;align-items:center}
+.stk .stick .sl.fit img{position:static;height:calc(100% - 44px);width:auto;max-width:100%;object-fit:cover;border-radius:var(--r);box-shadow:0 30px 70px rgba(25,25,25,.18)}
+.stk .stick .sl.fit.sq figure{width:100%;justify-content:center}
+.stk .stick .sl.fit.sq img{width:100%;height:auto;max-height:calc(100% - 44px);object-fit:contain;background:#E1E1E1}
+.stk .stick .sl.fit figcaption{margin-top:18px;font-size:12px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--mut);display:flex;align-items:center;gap:10px}
+.stk .stick .sl.fit figcaption::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--gold)}
+.stk .steps .st{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:0 var(--pad)}
+.stk .st .lead{max-width:36ch}
+@media(max-width:900px){.stk{grid-template-columns:1fr}.stk .stick{height:60vh;top:80px}}
+
+/* ---------- números ---------- */
+.nums{display:grid;grid-template-columns:repeat(3,1fr);margin-top:clamp(40px,5vw,80px);border-top:1px solid rgba(255,255,255,.14)}
+.nums>div{padding:clamp(26px,3vw,50px) 0;border-bottom:1px solid rgba(255,255,255,.14)}
+.nums b{display:block;font-size:clamp(56px,7vw,132px);font-weight:200;letter-spacing:-.06em;line-height:.9}
+.nums b small{font-size:.36em;font-weight:400;letter-spacing:-.02em;margin-left:.15em}
+.nums b span{display:inline;margin:0;font:inherit;letter-spacing:inherit;color:inherit;text-transform:none}
+.nums>div>span{display:block;margin-top:16px;font-size:13px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.5)}
+@media(max-width:900px){.nums{grid-template-columns:1fr 1fr}}
+
+/* ---------- lazer ---------- */
+.lz{display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gut);margin-top:clamp(40px,5vw,80px)}
+.lz .img{height:clamp(260px,34vw,620px)}
+.lz .a{grid-column:span 7}.lz .b{grid-column:span 5}.lz .c{grid-column:span 5}.lz .d{grid-column:span 7}
+@media(max-width:900px){.lz .a,.lz .b,.lz .c,.lz .d{grid-column:span 12}}
+
+/* ---------- marquee ---------- */
+.mq{overflow:hidden;margin-top:clamp(40px,5vw,70px)}
+.mq .tr{display:flex;gap:var(--gut);width:max-content;animation:mq 60s linear infinite}
+.mq:hover .tr{animation-play-state:paused}
+.mq .img{width:clamp(320px,34vw,640px);aspect-ratio:16/10;flex:0 0 auto}
+@keyframes mq{to{transform:translateX(-50%)}}
+.mqtxt{overflow:hidden;white-space:nowrap;margin:clamp(30px,4vw,60px) 0}
+.mqtxt .tr{display:inline-flex;gap:60px;animation:mq 40s linear infinite;font-size:clamp(60px,9vw,180px);font-weight:500;letter-spacing:-.05em}
+.mqtxt .tr span{display:inline-flex;align-items:center;gap:60px}
+.mqtxt .tr span::after{content:"";width:.28em;height:.28em;border-radius:50%;background:var(--gold)}
+.mqtxt .o{color:transparent;-webkit-text-stroke:1.5px var(--ink)}
+
+/* ---------- tipologias ---------- */
+.tp{display:grid;grid-template-columns:.9fr 1.1fr;gap:var(--gut)}
+.tp .tabs{display:inline-flex;background:var(--bg);border-radius:999px;padding:6px;gap:4px;margin-top:34px}
+.tp .tabs button{border:0;background:transparent;font:inherit;font-weight:700;font-size:15px;padding:12px 24px;border-radius:999px;cursor:pointer;color:var(--mut);transition:.3s}
+.tp .tabs button.on{background:var(--ink);color:#fff}
+.tp .big{font-size:clamp(90px,11vw,210px);font-weight:200;letter-spacing:-.07em;line-height:.85;margin-top:30px}
+.tp .big small{font-size:.32em;font-weight:500;letter-spacing:-.02em}
+.tp .plan{background:#E9E8E3;border-radius:var(--r);display:flex;align-items:center;justify-content:center;padding:clamp(20px,3vw,50px);min-height:80vh;position:relative}
+.tp .plan img{max-height:74vh;object-fit:contain;transition:opacity .5s,transform .7s cubic-bezier(.2,.7,.2,1)}
+.tp .plan img.out{opacity:0;transform:scale(.96)}
+.tp .pv{transition:opacity .4s}
+.tp .pv.out{opacity:0}
+@media(max-width:900px){.tp{grid-template-columns:1fr}}
+
+/* ---------- linha do tempo ---------- */
+.tl{position:relative;display:grid;grid-template-columns:repeat(3,1fr);margin-top:clamp(50px,7vw,110px)}
+.tl .bar{position:absolute;left:0;right:0;top:14px;height:2px;background:rgba(255,255,255,.14)}
+.tl .bar i{position:absolute;inset:0;background:var(--gold);transform-origin:left;transform:scaleX(var(--p,0))}
+.tl .it{position:relative;padding-right:40px}
+.tl .dot{width:30px;height:30px;border-radius:50%;border:2px solid var(--gold);background:var(--ink);position:relative;z-index:2}
+.tl .it.now .dot{background:var(--gold)}
+.tl .w{font-size:13px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-top:34px}
+.tl .d{font-size:clamp(34px,3.8vw,72px);font-weight:300;letter-spacing:-.05em;margin-top:12px;line-height:1}
+
+/* ---------- públicos ---------- */
+.pubs{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);margin-top:clamp(40px,5vw,80px)}
+.pubs>div{padding:34px 34px 0 0;margin-right:34px;border-right:1px solid var(--line)}
+.pubs>div:last-child{border:0;margin:0}
+.av{display:flex;align-items:center;gap:16px}
+.av img{width:62px;height:62px;border-radius:50%;object-fit:cover}
+.av b{font-size:20px;font-weight:700;letter-spacing:-.02em}
+.pubs q{display:block;font-size:clamp(20px,1.65vw,30px);line-height:1.25;letter-spacing:-.03em;font-weight:500;margin:26px 0 16px;quotes:none}
+.pr{display:grid;grid-template-columns:minmax(260px,32%) 1fr;gap:clamp(24px,3vw,60px);padding:var(--gut);background:var(--card);border-radius:var(--r);align-items:stretch}
+.pr .img{min-height:clamp(320px,38vw,640px)}
+.pr .tx{padding:clamp(10px,2vw,40px) clamp(10px,2vw,40px) clamp(10px,2vw,40px) 0;display:flex;flex-direction:column;justify-content:space-between;gap:30px}
+.pr dl{display:grid;grid-template-columns:150px 1fr;row-gap:16px;column-gap:24px;border-top:1px solid var(--line);padding-top:24px}
+.pr dt{font-size:12px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--ink);padding-top:5px;border-left:3px solid var(--gold);padding-left:12px}
+.pr dd{font-size:clamp(15px,1.12vw,20px);line-height:1.5;color:#3e3d39}
+@media(max-width:900px){.pubs{grid-template-columns:1fr}.pubs>div{border:0;margin:0 0 20px}.pr{grid-template-columns:1fr}}
+
+/* ---------- tese ---------- */
+.dem{display:grid;grid-template-columns:1fr auto 1.1fr auto 1fr;align-items:center;gap:clamp(14px,2vw,40px);margin-top:clamp(50px,6vw,100px)}
+.dem .c{aspect-ratio:1;border-radius:50%;border:1px solid rgba(255,255,255,.22);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:12%}
+.dem .c b{font-size:clamp(20px,1.8vw,34px);font-weight:600;letter-spacing:-.03em}
+.dem .c span{font-size:clamp(13px,1vw,18px);color:rgba(255,255,255,.55);margin-top:10px;line-height:1.4}
+.dem .core{border:1.5px solid var(--gold);background:radial-gradient(circle,rgba(255,210,0,.10),rgba(255,210,0,0) 70%);animation:pulse 3.2s ease-in-out infinite}
+.dem .core img{width:62%}
+.dem .core span{color:var(--gold);font-weight:800;letter-spacing:.22em;text-transform:uppercase;font-size:12px;margin-top:20px}
+.dem .ar{font-size:clamp(28px,3vw,56px);color:var(--gold);font-weight:200}
+
+/* ---------- tese em órbita ---------- */
+.thesis{overflow:hidden}
+.thesis::before{content:"";position:absolute;right:-10%;top:50%;width:70vw;height:70vw;transform:translateY(-50%);background:radial-gradient(circle,rgba(255,206,0,.10),rgba(255,206,0,0) 60%);pointer-events:none}
+.th-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(30px,4vw,80px);align-items:center;position:relative}
+.th-keys{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:34px}
+.th-keys li{border:1px solid rgba(255,255,255,.14);border-radius:var(--r2);padding:20px 22px;background:rgba(255,255,255,.03)}
+.th-keys b{display:block;font-size:clamp(44px,4vw,72px);font-weight:200;letter-spacing:-.05em;line-height:1;color:var(--gold)}
+.th-keys span{display:block;margin-top:10px;font-size:15px;line-height:1.45;color:rgba(255,255,255,.7)}
+.thesis{padding-top:clamp(28px,6vh,80px);padding-bottom:clamp(28px,6vh,80px)}
+.orb{position:relative;width:min(100%,calc(100vh - 12vh - 2*var(--gut)));aspect-ratio:1;justify-self:center}
+.orb .ring{position:absolute;border-radius:50%;left:50%;top:50%;transform:translate(-50%,-50%)}
+.orb .r1{width:44%;height:44%;border:1px solid rgba(255,206,0,.35)}
+.orb .r2{width:70%;height:70%;border:1px dashed rgba(255,255,255,.22);animation:spin 60s linear infinite}
+.orb .r2 i{position:absolute;width:9px;height:9px;border-radius:50%;background:var(--gold);box-shadow:0 0 16px var(--gold);left:50%;top:-5px;margin-left:-4.5px}
+.orb .r2 i:last-child{top:auto;bottom:-5px}
+.orb .r3{width:100%;height:100%;border:1px solid rgba(255,255,255,.08);background:radial-gradient(circle,rgba(255,255,255,.035),rgba(255,255,255,0) 65%)}
+@keyframes spin{to{transform:translate(-50%,-50%) rotate(360deg)}}
+.orb .lines{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.orb .lines line{stroke:var(--gold);stroke-width:.25;stroke-dasharray:1 1.4;opacity:0;transition:opacity 1s .4s;animation:flow 2.4s linear infinite}
+.orb.in .lines line{opacity:.75}
+@keyframes flow{to{stroke-dashoffset:-4.8}}
+.orb .core{position:absolute;left:50%;top:50%;width:36%;aspect-ratio:1;transform:translate(-50%,-50%) scale(.6);opacity:0;border-radius:50%;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;
+  background:radial-gradient(circle at 50% 35%,#2c2c2b,#161616 70%);border:1.5px solid var(--gold);
+  box-shadow:0 0 0 10px rgba(255,206,0,.06),0 0 60px rgba(255,206,0,.25),inset 0 1px 0 rgba(255,255,255,.12);
+  transition:transform 1.2s cubic-bezier(.16,.84,.24,1),opacity 1s}
+.orb.in .core{transform:translate(-50%,-50%) scale(1);opacity:1;animation:pulse 3.2s ease-in-out 1.4s infinite}
+.orb .core img{width:64%}
+.orb .core span{font-size:clamp(9px,.7vw,12px);font-weight:800;letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
+.orb .node{position:absolute;left:var(--x);top:var(--y);width:clamp(170px,15vw,250px);transform:translate(-50%,-50%) scale(.85);opacity:0;
+  padding:18px 20px;border-radius:var(--r2);background:rgba(30,30,30,.72);border:1px solid rgba(255,255,255,.14);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 20px 50px rgba(0,0,0,.35);
+  transition:transform 1s cubic-bezier(.16,.84,.24,1),opacity .9s,border-color .4s}
+.orb.in .node{transform:translate(-50%,-50%) scale(1);opacity:1}
+.orb .node:hover{border-color:var(--gold)}
+.orb.in .n1{transition-delay:.6s}.orb.in .n2{transition-delay:.75s}.orb.in .n3{transition-delay:.9s}.orb.in .n4{transition-delay:1.05s}
+.orb .node em{font-style:normal;display:inline-block;font-size:11px;font-weight:800;letter-spacing:.14em;color:var(--ink);background:var(--gold);border-radius:999px;padding:3px 9px}
+.orb .node b{display:block;font-size:clamp(17px,1.35vw,24px);font-weight:600;letter-spacing:-.02em;margin-top:10px}
+.orb .node span{display:block;font-size:clamp(12px,.85vw,14px);line-height:1.45;color:rgba(255,255,255,.62);margin-top:6px}
+@media(max-width:900px){.th-grid{grid-template-columns:1fr}.orb{width:100%}}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(255,210,0,.18)}50%{box-shadow:0 0 0 26px rgba(255,210,0,0)}}
+
+/* ---------- filme ---------- */
+.film .fwrap{max-width:calc((100vh - 300px) * 16 / 9);margin-inline:auto;margin-top:clamp(24px,3vw,44px);border-radius:var(--r2);overflow:hidden;background:#000;aspect-ratio:16/9;box-shadow:0 30px 80px rgba(0,0,0,.35)}
+.film video{display:block;width:100%;height:100%;object-fit:contain;background:#000}
+
+/* ---------- pergunta ---------- */
+.join-next{border-bottom-left-radius:0;border-bottom-right-radius:0}
+.join-next+.ask{border-radius:0 0 var(--r) var(--r);overflow:clip}
+
+.ask{height:260vh;background:var(--ink)}
+.ask .pin{position:sticky;top:0;height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 var(--pad);color:#fff}
+.ask .q{font-size:clamp(56px,9.4vw,190px);line-height:.95;letter-spacing:-.06em;font-weight:500;transform:scale(var(--s,.7));
+  background:linear-gradient(90deg,var(--gold) 0 var(--f,0%),rgba(255,255,255,.12) var(--f,0%) 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.ask .sub{margin-top:50px;opacity:var(--o,0)}
+
+/* ---------- condições ---------- */
+.cond{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--gut);margin-top:clamp(40px,5vw,80px)}
+.cond>div{border:1px solid var(--line);border-top:4px solid var(--gold);border-radius:var(--r2);padding:clamp(22px,2.2vw,40px);min-height:240px;display:flex;flex-direction:column;justify-content:space-between;gap:18px;background:#fff}
+.cond .num-k{border-bottom:0;padding-bottom:0}
+.cond .v{font-size:clamp(34px,3.4vw,64px);font-weight:600;letter-spacing:-.045em;line-height:1;color:var(--ink);font-variant-numeric:tabular-nums}
+.cond .v small{font-size:.42em;font-weight:600;letter-spacing:0;color:var(--mut);margin-right:2px}
+.cond .cd{font-size:clamp(13px,.95vw,16px);color:var(--mut);line-height:1.4}
+.cond-ban{display:flex;align-items:center;gap:14px;margin-top:var(--gut);background:var(--ink);color:#F2F1EE;border-radius:999px;padding:16px 26px;font-size:clamp(14px,1.1vw,19px)}
+.cond-ban b{color:var(--gold);font-weight:700}
+.cond-ban i{flex:0 0 10px;height:10px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 6px rgba(255,206,0,.18)}
+@media(max-width:700px){.cond-ban{border-radius:var(--r2);align-items:flex-start}.cond-ban i{margin-top:6px}}
+@media(max-width:900px){.cond{grid-template-columns:1fr 1fr}}
+
+/* ---------- CTA / rodapé ---------- */
+.cta{border-radius:var(--r);overflow:hidden;position:relative;min-height:92vh;display:flex;align-items:flex-end;color:#fff}
+.cta>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.cta::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(15,15,15,.88),rgba(15,15,15,.45) 55%,rgba(15,15,15,.1));z-index:1}
+.cta .in2{position:relative;z-index:2;padding:var(--pad);width:100%}
+.cta em.hl{background:none}
+.phone{white-space:nowrap;font-size:clamp(40px,4.4vw,90px);font-weight:500;letter-spacing:-.05em;line-height:1;margin-top:18px}
+footer{background:var(--ink);color:#F2F1EE;border-radius:var(--r) var(--r) 0 0;padding:var(--pad) var(--pad) 40px}
+footer .top{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;flex-wrap:wrap;padding-bottom:50px;border-bottom:1px solid rgba(255,255,255,.12)}
+footer .cr.sec2{opacity:.75;justify-content:flex-end}
+footer .cr.sec2 span{color:rgba(255,255,255,.5);font-size:11px}
+footer .credits{display:grid;grid-template-columns:2fr 1fr 1fr;border-bottom:1px solid rgba(255,255,255,.12)}
+footer .cr{display:flex;flex-direction:column;justify-content:space-between;gap:30px;min-height:190px;padding:40px 40px 40px 0;margin-right:40px;border-right:1px solid rgba(255,255,255,.12)}
+footer .cr:last-child{border-right:0;margin-right:0}
+footer .cr span{font-size:12px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
+footer .cr img{width:auto;max-width:100%;object-fit:contain;align-self:flex-start}
+@media(max-width:900px){footer .credits{grid-template-columns:1fr}footer .cr{border-right:0;margin:0;min-height:0}}
+footer .bot{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;padding-top:26px}
+
+/* ---------- parallax ---------- */
+[data-par]{will-change:transform}
+
+/* ---------- roteiro do apresentador ---------- */
+#notes{position:fixed;left:50%;bottom:16px;transform:translate(-50%,140%);width:min(1100px,calc(100% - 32px));background:rgba(25,25,25,.96);color:#eee;border-radius:24px;padding:22px 30px 24px;z-index:80;font-size:17px;line-height:1.55;transition:transform .45s cubic-bezier(.2,.7,.2,1);border:1px solid rgba(255,210,0,.4)}
+#notes.show{transform:translate(-50%,0)}
+#notes h6{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;display:flex;justify-content:space-between}
+#hint{position:fixed;right:16px;bottom:14px;z-index:70;font-size:11px;font-weight:700;letter-spacing:.16em;color:rgba(25,25,25,.35);text-transform:uppercase;pointer-events:none;mix-blend-mode:difference;color:rgba(255,255,255,.45)}
+
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}.rv,[data-split] .wd{opacity:1;transform:none}}
+
+/* ---------- slides automáticos (telão) ---------- */
+html,body{cursor:none}
+#notes,#hint,.scrollhint{display:none!important}
+.cond.c3{grid-template-columns:repeat(3,1fr)}
+.cond.c3 .v{font-size:clamp(30px,2.8vw,54px)}
+.qrbig{display:flex;align-items:center;gap:clamp(20px,2.4vw,44px);border-left:2px solid var(--gold);padding-left:clamp(20px,2.4vw,40px)}
+.qrcard{background:#fff;border-radius:22px;padding:18px;width:clamp(200px,17vw,320px);flex:0 0 auto}
+.qrcard img{display:block;width:100%;height:auto}
+#qrmini{position:fixed;right:22px;bottom:22px;z-index:90;display:flex;align-items:center;gap:12px;background:rgba(255,255,255,.96);border-radius:18px;padding:10px 14px 10px 10px;box-shadow:0 12px 40px rgba(0,0,0,.25);transition:opacity .6s}
+#qrmini img{width:96px;height:96px;display:block}
+#qrmini span{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#191919;line-height:1.5}
+#qrmini span b{display:block;color:#8a8a8a;font-weight:700}
+#qrend{position:fixed;inset:0;z-index:100;background:#191919;color:#F2F1EE;display:flex;align-items:center;justify-content:center;gap:clamp(40px,6vw,120px);padding:0 6vw;opacity:0;visibility:hidden;transition:opacity 1.2s,visibility 1.2s}
+#qrend.on{opacity:1;visibility:visible}
+#qrend .qrcard{width:min(42vh,520px);padding:26px;border-radius:30px}
+#qrend h2{font-size:clamp(40px,4.4vw,88px);font-weight:500;letter-spacing:-.045em;line-height:1.02;max-width:12ch}
+#qrend h2 em{font-style:normal;color:var(--gold)}
+#qrend p{margin-top:26px;font-size:clamp(16px,1.3vw,24px);color:rgba(255,255,255,.65)}
+#qrend .lg{width:clamp(160px,13vw,240px);margin-bottom:40px;display:block}
+body.qr-off #qrmini{opacity:0}
+</style>
+</head>
+<body>
+
+<div class="prog" id="prog"></div>
+
+
+<main class="wrap">
+
+<!-- ================= HERO ================= -->
+<section class="intro" id="topo" data-intro data-stop data-notes="Deixe o vídeo rodando enquanto o público se acomoda. Apresente-se e agradeça a presença. Quando for começar, avance: o texto entra sobre o vídeo.">
+  <div class="pin">
+    <img class="sbg sbg-blur" src="img/noturna.jpg" alt="">
+    <div class="cover-img"><img src="img/noturna.jpg" alt="Nexus Studios à noite"></div>
+    <div class="ivl"></div>
+    <div class="glass" id="glass">
+      <div class="gtop">
+        <img class="logo" src="img/logo-nexus-w.png" alt="Nexus Studios">
+        <span class="eyebrow">Salto del Guairá · Paraguai</span>
+      </div>
+      <h1 class="h-xl" data-split style="font-size:clamp(44px,5.4vw,104px);margin-top:clamp(30px,5vh,60px)">Um ponto de encontro com <em class="hl">o novo.</em></h1>
+      <p class="lead" style="margin-top:28px">145 lofts no centro de uma cidade em transformação. Um novo endereço para quem estuda, trabalha, investe ou escolhe estar onde a cidade acontece.</p>
+      <div class="gbot">
+        <span class="small">Um empreendimento</span>
+        <img src="img/logo-aaj-w.png" alt="AAJ Construtora" style="height:46px">
+      </div>
+    </div>
+    <div class="scrollhint" id="shint">Role para começar<i></i></div>
+  </div>
+  <div class="mk" data-stop data-notes="Frase de entrada: “Nos próximos 40 minutos eu não vou falar só de um prédio. Vou falar de um momento. O momento de uma cidade.” Depois avance: o vídeo sobe junto com o texto. (1 min)"></div>
+</section>
+
+<!-- ================= ABERTURA: IMAGEM CRESCE ================= -->
+<section class="grow sec" id="abertura" data-grow data-stop data-notes="A imagem da cidade se abre. Pergunte à plateia: “Quantos aqui conheceram cidades que mudaram de patamar em poucos anos? E quantos gostariam de ter estado lá antes?” (1 min)">
+  <div class="pin">
+    <div class="frame"><img src="img/voo.jpg" alt="Vista aérea de Salto del Guairá com o Nexus"></div>
+    <div class="cap">
+      <div class="eyebrow" style="color:rgba(255,255,255,.75)">Salto del Guairá</div>
+      <h2 class="h-xl" style="margin-top:20px;max-width:16ch">Toda cidade tem um antes e um depois.</h2>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONCEITO: TEXTO QUE TRAVA ================= -->
+<section class="scrub sec" data-scrub data-stop data-notes="O conceito que sustenta todo o Nexus. Deixe o texto se completar com a rolagem e leia em voz alta, devagar. A ideia é comportamento, não pressa. Diga que a noite vai mostrar três coisas: por que a cidade, por que este endereço e por que agora. (1 min 30)">
+  <div class="pin">
+    <p class="h-xl txt">Salto del Guairá está exatamente no meio dos dois. Alguns esperam a cidade mudar. <span data-g>Outros escolhem o momento exato em que ela muda.</span></p>
+    <div class="side"><span class="eyebrow">O conceito</span></div>
+  </div>
+</section>
+
+<!-- ================= ÍNDICE ================= -->
+<section class="box sec" data-stop data-notes="Roteiro da conversa em cinco capítulos. Passe rápido, uns 30 segundos. Avise que no final haverá espaço para perguntas e para conhecer as condições de lançamento.">
+  <div class="between">
+    <h2 class="h-l" data-split>Cinco capítulos.<br>Uma decisão.</h2>
+    <span class="eyebrow rv">O que vamos ver</span>
+  </div>
+  <ul class="idx" style="margin-top:clamp(40px,5vw,80px)">
+    <li class="rv"><span class="k">01</span><span class="t">A cidade. <span>Por que Salto del Guairá.</span></span><a class="pill" href="#cidade" data-go>↓</a></li>
+    <li class="rv d1"><span class="k">02</span><span class="t">O endereço. <span>Por que o centro importa.</span></span><a class="pill" href="#endereco" data-go>↓</a></li>
+    <li class="rv d2"><span class="k">03</span><span class="t">O produto. <span>Arquitetura, lazer e os lofts.</span></span><a class="pill" href="#produto" data-go>↓</a></li>
+    <li class="rv d3"><span class="k">04</span><span class="t">Três públicos. <span>Quem vai querer viver ali.</span></span><a class="pill" href="#publicos" data-go>↓</a></li>
+    <li class="rv d4"><span class="k">05</span><span class="t">O momento. <span>Quem espera e quem chega antes.</span></span><a class="pill" href="#momento" data-go>↓</a></li>
+  </ul>
+</section>
+
+<div class="sp"></div>
+
+<!-- ================= 01 A CIDADE ================= -->
+<section class="box sec" id="cidade" data-stop data-notes="Capítulo 1. O Nexus não se vende sozinho, ele se vende junto com Salto del Guairá. Quatro forças já trazem gente para a cidade todos os dias: comércio, turismo, fronteira e educação. Cada uma vai virar um público para o Nexus mais adiante. (1 min 30)">
+  <div class="chap">
+    <div class="n rv">01</div>
+    <div>
+      <span class="eyebrow rv">A cidade</span>
+      <h2 class="h-l" data-split style="margin-top:22px">Uma cidade com vocação para <em class="hl">receber pessoas.</em></h2>
+    </div>
+  </div>
+  <div class="g4c">
+    <div class="rv"><div class="img"><img src="img/comercio-loja.jpg" alt=""></div><h4>Comércio</h4><p class="small">Fronteira comercial consolidada, com fluxo constante de compradores do Brasil.</p></div>
+    <div class="rv d1"><div class="img"><img src="img/costanera.jpg" alt=""></div><h4>Turismo</h4><p class="small">Rio Paraná, natureza e mais de 3 km de Costanera.</p></div>
+    <div class="rv d2"><div class="img"><img src="img/ponte.jpg" alt=""></div><h4>Fronteira</h4><p class="small">Ligação direta com o Paraná e o Mato Grosso do Sul.</p></div>
+    <div class="rv d3"><div class="img"><img src="img/faculdade.jpg" alt=""></div><h4>Educação</h4><p class="small">Faculdades de Medicina que atraem estudantes de fora.</p></div>
+  </div>
+</section>
+
+<!-- horizontal fixado: três forças -->
+<section class="hz sec" data-hz style="--n:3.2">
+  <div class="pin">
+    <div class="track">
+      <article class="panel" data-stop data-notes="Comércio e fronteira. Lojas, shoppings e filas de carros nos fins de semana. Muita gente volta várias vezes por ano e hoje se hospeda em hotel ou faz bate e volta. (1 min 30)">
+        <div class="img"><img src="img/comercio-loja.jpg" alt="" data-par="-.06"></div>
+        <div class="tx">
+          <span class="count">01 / 03 · Comércio e fronteira</span>
+          <div><h3 class="h-l">Gente chega <em class="hl">todos os dias.</em></h3>
+          <p class="lead" style="margin-top:28px">Destino de compras para quem vem do Brasil, ligado ao Paraná e ao Mato Grosso do Sul pela Ponte Ayrton Senna. O fluxo já existe. O que falta é onde ficar.</p></div>
+          <span class="legal">Foto de referência.</span>
+        </div>
+      </article>
+      <article class="panel dark" data-stop data-notes="A Costanera é o cartão postal e transforma a cidade em destino de lazer. Destaque a proximidade: quem morar no Nexus terá a orla a poucos minutos a pé. (1 min)">
+        <div class="img"><img src="img/rio.jpg" alt=""></div>
+        <div class="tx">
+          <span class="count">02 / 03 · Turismo e lazer</span>
+          <div><h3 class="h-l">Costanera. <em class="hl">Um paraíso ao lado do Rio Paraná.</em></h3>
+          <p class="lead" style="margin-top:28px">Mais de 3 km de orla com ciclovia, gastronomia, esportes aquáticos e praia. A cerca de 300 metros do Nexus Studios.</p></div>
+          <span class="legal">Distância aproximada.</span>
+        </div>
+      </article>
+      <article class="panel" data-stop data-notes="Um dos pontos mais fortes para quem investe. O estudante de Medicina fica seis anos na cidade, muitas vezes com a família pagando a moradia. Busca segurança, praticidade e proximidade. (1 min 30)">
+        <div class="img"><img src="img/faculdade.jpg" alt=""></div>
+        <div class="tx">
+          <span class="count">03 / 03 · Educação</span>
+          <div><h3 class="h-l">Todo semestre, <em class="hl">uma nova turma chega.</em></h3>
+          <p class="lead" style="margin-top:28px">Universidades com cursos de Medicina, como a Sudamericana, a Leonardo da Vinci e a Unasur, trazem estudantes de várias regiões. Eles chegam para ficar anos. E precisam de um endereço.</p></div>
+          <span class="legal">Foto de referência.</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- pergunta pivô -->
+<section class="scrub dk sec" data-scrub data-stop data-notes="A pergunta que vira a chave da apresentação. Deixe o texto acender e faça um silêncio depois. (45 s)">
+  <div class="pin">
+    <p class="h-xl txt" style="max-width:20ch">A cidade está ampliando os motivos para ser visitada. E se ela também tivesse mais motivos <span data-g>para ser vivida?</span></p>
+  </div>
+</section>
+
+<div class="sp"></div>
+
+<section class="box sec" data-stop data-notes="A tese em três frases: existe fluxo, existe pouca oferta moderna e central, e a curta permanência já acontece. É contexto de mercado. Não prometa ocupação nem renda a ninguém. (1 min 30)">
+  <div class="between">
+    <h2 class="h-l" data-split style="max-width:18ch">As pessoas já chegam. Algumas delas <em class="hl">precisam de um endereço.</em></h2>
+    <span class="eyebrow rv">A leitura</span>
+  </div>
+  <div class="c3">
+    <div class="rv"><span class="num-k">O fluxo</span><h4>Para estudar, trabalhar, comprar, investir e viver.</h4><p class="small">A cidade recebe gente o ano todo, por motivos diferentes.</p></div>
+    <div class="rv d1"><span class="num-k">A lacuna</span><h4>Pouca oferta de moradia moderna e central.</h4><p class="small">Quem chega encontra opções antigas, afastadas ou sem estrutura.</p></div>
+    <div class="rv d2"><span class="num-k">O sinal</span><h4>Hospedagem de curta permanência já ativa.</h4><p class="small">Inclusive em plataformas como Airbnb. O mercado já se movimenta.</p></div>
+  </div>
+</section>
+
+<div class="sp"></div>
+
+<!-- ================= 02 O ENDEREÇO ================= -->
+<section class="box dark sec" id="endereco" data-stop data-notes="Capítulo 2. Localização é o único atributo que não se muda depois de construído. (20 s)">
+  <div class="chap">
+    <div class="n rv">02</div>
+    <div>
+      <span class="eyebrow rv">O endereço</span>
+      <h2 class="h-l" data-split style="margin-top:22px">Em imóvel, a localização não se reforma depois. <em class="hl">Ela é escolhida uma vez.</em></h2>
+    </div>
+  </div>
+</section>
+
+<div class="sp"></div>
+
+<section class="intro sec" data-intro data-stop data-notes="Deixe a imagem aérea respirar por alguns segundos. Aponte a torre no meio da cidade. Depois avance: o texto entra.">
+  <div class="pin">
+    <img class="sbg" src="img/aerea-t1.jpg" alt="Fotomontagem aérea do Nexus Studios no centro de Salto del Guairá">
+    <div class="ivl r"></div>
+    <div class="glass r">
+      <span class="eyebrow">Localização</span>
+      <div class="stat" style="margin-top:clamp(20px,3vh,34px)"><b>70</b><span>metros da Av. Paraguay</span></div>
+      <h3 class="h-l" data-split style="margin-top:14px">No centro <em class="hl">de tudo.</em></h3>
+      <ul class="ls">
+        <li><i>01</i><span>Calle Defensores del Chaco, <b>centro</b></span></li>
+        <li><i>02</i><span>Av. Paraguay, a principal avenida do <b>comércio internacional</b></span></li>
+        <li><i>03</i><span>Ao lado da <b>Municipalidad</b> de Salto del Guairá</span></li>
+        <li><i>04</i><span>Cerca de <b>300 m</b> da Costanera</span></li>
+      </ul>
+      <p class="legal" style="margin-top:20px">Fotomontagem ilustrativa.</p>
+    </div>
+  </div>
+  <div class="mk" data-stop data-notes="Tudo se faz a pé: comércio, prefeitura, orla. Para o estudante e o visitante, isso significa não depender de carro. Para quem investe, um endereço fácil de explicar e de desejar. (1 min 30)"></div>
+</section>
+
+<div class="sp"></div>
+
+<section class="addr sec" data-stop data-notes="O Nexus está no meio de tudo o que gera movimento: faculdades, comércio, serviços e acessos. Cada ponto é um motivo para alguém querer morar ali. (1 min)">
+  <div class="box" style="display:flex;flex-direction:column;justify-content:space-between">
+    <span class="eyebrow rv">No entorno</span>
+    <div>
+      <h3 class="h-m" data-split>Tudo o que a cidade oferece, <em class="hl">a poucos minutos.</em></h3>
+      <ul class="ls rv d2">
+        <li><i>EDU</i><span>Universidade Sudamericana, Leonardo da Vinci e Unasur</span></li>
+        <li><i>COM</i><span>Shopping China, Shopping Salto e Shopping Mall</span></li>
+        <li><i>SER</i><span>Prefeitura e Av. Paraguay</span></li>
+        <li><i>ACE</i><span>Ponte Ayrton Senna e Porto de Salto del Guairá</span></li>
+      </ul>
+    </div>
+    <span class="legal">Imagem ilustrativa.</span>
+  </div>
+  <div class="img mask"><img src="img/entorno.jpg" alt="Nexus Studios e pontos de interesse de Salto del Guairá" style="object-position:center 60%"></div>
+</section>
+
+<div class="sp"></div>
+
+<!-- ================= 03 O PRODUTO ================= -->
+<section class="grow sec" id="produto" data-grow data-stop data-notes="Capítulo 3. Agora sim, o prédio. Deixe a fachada abrir na tela. (30 s)">
+  <div class="pin">
+    <div class="frame"><img src="img/int1.jpg" alt="Interior de um studio do Nexus" style="object-position:center 50%"></div>
+    <div class="cap">
+      <div class="eyebrow" style="color:rgba(255,255,255,.75)">03 · O produto</div>
+      <h2 class="h-xl" style="margin-top:20px;max-width:15ch">Um novo endereço para o próximo momento da cidade.</h2>
+    </div>
+  </div>
+</section>
+
+<section class="box dark sec" data-stop data-notes="Leia os números com calma. 145 lofts em 17 pavimentos, mais de 7 mil metros quadrados construídos. Um empreendimento que muda o horizonte do centro. Destaque as 90 vagas de moto: conversam direto com o estudante. (1 min 30)">
+  <div class="between">
+    <h2 class="h-l" data-split style="max-width:15ch">Escala de grande empreendimento. <em class="hl">No coração da cidade.</em></h2>
+    <span class="eyebrow rv">O projeto em números</span>
+  </div>
+  <div class="nums">
+    <div class="rv"><b><span data-count="145">0</span></b><span>Lofts</span></div>
+    <div class="rv d1"><b><span data-count="17">0</span></b><span>Pavimentos</span></div>
+    <div class="rv d2"><b><span data-count="7165.30" data-dec="2">0</span><small>m²</small></b><span>Área construída</span></div>
+    <div class="rv"><b><span data-count="1300">0</span><small>m²</small></b><span>De terreno</span></div>
+    <div class="rv d1"><b>28<small>e</small>31<small>m²</small></b><span>Duas tipologias de loft</span></div>
+    <div class="rv d2"><b><span data-count="126">0</span></b><span>Vagas · 36 carros e 90 motos</span></div>
+  </div>
+  <p class="legal" style="margin-top:30px">Metragens e informações sujeitas a confirmação e a alterações do projeto legal aprovado.</p>
+</section>
+
+<div class="sp"></div>
+
+<!-- fachada fixa com troca -->
+<section class="stk sec" data-stk>
+  <div class="stick">
+    <div class="sl fit on"><figure><img src="img/diurna-v.jpg" alt="Fachada do Nexus Studios de dia"><figcaption>Fachada · dia</figcaption></figure></div>
+    <div class="sl fit"><figure><img src="img/noite-v.jpg" alt="Fachada do Nexus Studios à noite"><figcaption>Fachada · noite</figcaption></figure></div>
+    <div class="sl"><img src="img/acesso.jpg" alt="" style="object-position:center 75%"></div>
+    <div class="sl fit sq"><figure><img src="img/estrutura.jpg" alt="Perspectiva isométrica do Nexus Studios com a lista de diferenciais"><figcaption>Estrutura e diferenciais</figcaption></figure></div>
+  </div>
+  <div class="steps">
+    <div class="st" data-i="0" data-stop data-notes="A arquitetura como argumento de desejo e de permanência. Fachada pensada para ser reconhecida de longe e envelhecer bem. (1 min)">
+      <span class="eyebrow">A arquitetura</span>
+      <h3 class="h-l" data-split style="margin-top:24px">Conectado. Atemporal. <em class="hl">Elegante.</em></h3>
+      <p class="lead rv" style="margin-top:28px">Uma torre de 17 pavimentos com frisos de luz que marcam a fachada de dia e de noite.</p>
+    </div>
+    <div class="st" data-i="1" data-stop data-notes="À noite o prédio vira referência na paisagem do centro. (30 s)">
+      <span class="eyebrow">À noite</span>
+      <h3 class="h-l" data-split style="margin-top:24px">Um prédio que vira <em class="hl">referência.</em></h3>
+      <p class="lead rv" style="margin-top:28px">Iluminação vertical que desenha a torre e a coloca no horizonte da cidade.</p>
+    </div>
+    <div class="st" data-i="2" data-stop data-notes="Fale do Nexus como parte da modernização do centro: arquitetura contemporânea, térreo com espaço comercial que valoriza a calçada e conveniência para quem mora. (45 s)">
+      <span class="eyebrow">O térreo</span>
+      <h3 class="h-l" data-split style="margin-top:24px">Arquitetura a favor de uma <em class="hl">cidade que se moderniza.</em></h3>
+      <p class="lead rv" style="margin-top:28px">Fachada contemporânea, hall e recepção, acesso controlado e espaço comercial no térreo. Um endereço que eleva o padrão do centro de Salto del Guairá.</p>
+    </div>
+    <div class="st" data-i="3" data-stop data-notes="Passe pela lista sem ler item por item: tudo o que um morador de hoje espera, no mesmo prédio. (45 s)">
+      <span class="eyebrow">Estrutura e diferenciais</span>
+      <h3 class="h-m" data-split style="margin-top:24px">A conexão perfeita entre localização, arquitetura e <em class="hl">estilo de vida.</em></h3>
+      <div class="rv" style="display:flex;flex-wrap:wrap;gap:10px;margin-top:30px;max-width:620px">
+        <span class="chip">Piscina com deck</span><span class="chip">Academia</span><span class="chip">Coworking</span><span class="chip">Salão gourmet</span><span class="chip">Áreas de convivência</span><span class="chip">Lavanderia</span><span class="chip">Hall e recepção</span><span class="chip">Elevadores</span><span class="chip">Espaço comercial</span><span class="chip">Sanitários acessíveis</span><span class="chip">36 vagas para carros</span><span class="chip">90 vagas para motos</span>
+      </div>
+      <p class="legal" style="margin-top:30px">Imagens meramente ilustrativas.</p>
+    </div>
+  </div>
+</section>
+
+<div class="sp"></div>
+
+<section class="box sec" data-stop data-notes="O loft é compacto por escolha porque a vida se expande para as áreas comuns. Coworking para o estudante e para quem trabalha remoto, academia, salão gourmet para receber e piscina. (1 min 30)">
+  <div class="between">
+    <h2 class="h-l" data-split style="max-width:16ch">Tudo o que você precisa. <em class="hl">No lugar onde tudo acontece.</em></h2>
+    <p class="lead rv">Um pavimento inteiro de convivência. Trabalhar, treinar, receber e relaxar sem sair de casa.</p>
+  </div>
+  <div class="lz">
+    <div class="img mask a"><span class="tag">Piscina</span><img src="img/piscina.jpg" alt=""></div>
+    <div class="img mask b"><span class="tag">Academia</span><img src="img/academia.jpg" alt=""></div>
+    <div class="img mask c"><span class="tag">Coworking</span><img src="img/coworking.jpg" alt=""></div>
+    <div class="img mask d"><span class="tag">Salão gourmet</span><img src="img/gourmet.jpg" alt=""></div>
+  </div>
+  <p class="legal" style="margin-top:20px">Imagens meramente ilustrativas.</p>
+</section>
+
+<div class="mqtxt" aria-hidden="true"><div class="tr">
+  <span>Compacto no tamanho</span><span class="o">Amplo nas possibilidades</span><span>Compacto no tamanho</span><span class="o">Amplo nas possibilidades</span>
+  <span>Compacto no tamanho</span><span class="o">Amplo nas possibilidades</span><span>Compacto no tamanho</span><span class="o">Amplo nas possibilidades</span>
+</div></div>
+
+<section class="box sec" data-stop data-notes="Nunca diga “apenas” ou “só” antes da metragem. O tamanho é característica, não limitação. Traduza em benefício: menos custo, menos manutenção, endereço central. (1 min)">
+  <div class="between">
+    <h2 class="h-l" data-split style="max-width:15ch">Cada metro pensado <em class="hl">para ser vivido.</em></h2>
+    <p class="lead rv">Estar, dormir e cozinhar no mesmo espaço, com acabamento de alto padrão. Menos manutenção, menos custo fixo, mais liberdade.</p>
+  </div>
+  <div class="mq"><div class="tr">
+    <div class="img"><img src="img/int1.jpg" alt=""></div><div class="img"><img src="img/sofa.jpg" alt=""></div><div class="img"><img src="img/int2.jpg" alt=""></div><div class="img"><img src="img/cama.jpg" alt=""></div><div class="img"><img src="img/int3.jpg" alt=""></div><div class="img"><img src="img/cozinha.jpg" alt=""></div><div class="img"><img src="img/int5.jpg" alt=""></div>
+    <div class="img"><img src="img/int1.jpg" alt=""></div><div class="img"><img src="img/sofa.jpg" alt=""></div><div class="img"><img src="img/int2.jpg" alt=""></div><div class="img"><img src="img/cama.jpg" alt=""></div><div class="img"><img src="img/int3.jpg" alt=""></div><div class="img"><img src="img/cozinha.jpg" alt=""></div><div class="img"><img src="img/int5.jpg" alt=""></div>
+  </div></div>
+  <p class="legal" style="margin-top:20px">Imagens meramente ilustrativas.</p>
+</section>
+
+<div class="sp"></div>
+
+<!-- tipologias -->
+<section class="tp sec" data-stop data-notes="Mostre as duas plantas trocando entre 28 e 31 m² nos botões. Percorra com o cursor: entrada, cozinha, bancada, sofá, cama e mesa de trabalho. A de 31 m² é boa para casais ou para quem vai morar mais tempo. (2 min)">
+  <div class="box" style="display:flex;flex-direction:column;justify-content:space-between">
+    <span class="eyebrow rv">Tipologias</span>
+    <div>
+      <div class="tabs rv" id="tabs"><button class="on" data-t="0">Loft Tipo 01</button><button data-t="1">Loft Tipo 02</button></div>
+      <div class="pv" id="tpv">
+        <div class="big"><span id="tpm">28</span><small> m²</small></div>
+        <h3 class="h-m" id="tph" style="margin-top:30px">Um só espaço. Infinitas possibilidades.</h3>
+        <p class="lead" id="tpd" style="margin-top:20px">Cozinha linear, bancada de refeição, estar e dormitório integrados, e área de trabalho junto à janela.</p>
+      </div>
+    </div>
+    <span class="legal">Plantas ilustrativas. Metragens sujeitas a alterações do projeto legal aprovado.</span>
+  </div>
+  <div class="plan"><img id="tpi" src="img/planta28.jpg" alt="Planta do loft"></div>
+</section>
+
+<div class="sp"></div>
+
+<!-- cronograma -->
+<section class="box dark sec" data-tl data-stop data-notes="Quem entra hoje acompanha toda a jornada, do lançamento à entrega. A evolução da obra será mostrada publicamente, e isso responde à pergunta “e se atrasar?”. (1 min)">
+  <div class="between">
+    <h2 class="h-l" data-split>Veja o Nexus <em class="hl">nascer.</em></h2>
+    <span class="eyebrow rv">Cronograma</span>
+  </div>
+  <div class="tl">
+    <div class="bar"><i></i></div>
+    <div class="it now"><div class="dot"></div><div class="w">Hoje</div><div class="d">Lançamento</div><p class="lead" style="margin-top:14px">As primeiras escolhas de unidade.</p></div>
+    <div class="it"><div class="dot"></div><div class="w">Início das obras</div><div class="d">Março 2027</div><p class="lead" style="margin-top:14px">A obra começa e vira conteúdo, etapa por etapa.</p></div>
+    <div class="it"><div class="dot"></div><div class="w">Entrega final</div><div class="d">Novembro 2029</div><p class="lead" style="margin-top:14px">O Nexus pronto, no centro de Salto del Guairá.</p></div>
+  </div>
+  <p class="legal" style="margin-top:40px">Datas previstas, sujeitas ao cronograma da construtora.</p>
+</section>
+
+<div class="sp"></div>
+
+<!-- ================= 04 PÚBLICOS ================= -->
+<section class="box sec" id="publicos" data-stop data-notes="Capítulo 4, o coração comercial. Apresente os três públicos que a estratégia do Nexus definiu. Cada um tem uma história de compra diferente, e o produto responde aos três. Pergunte: “Com qual desses vocês se identificam?” (1 min 30)">
+  <div class="chap">
+    <div class="n rv">04</div>
+    <div>
+      <span class="eyebrow rv">Três públicos</span>
+      <h2 class="h-l" data-split style="margin-top:22px">Um produto. <em class="hl">Três histórias de compra.</em></h2>
+    </div>
+  </div>
+  <div class="pubs">
+    <div class="rv"><div class="av"><img src="img/int5.jpg" alt=""><b>Estudante</b></div><q>“Seu primeiro endereço pode ser o começo da sua independência.”</q><p class="small">Vem de fora para estudar ou trabalhar. Busca independência, segurança e praticidade.</p></div>
+    <div class="rv d1"><div class="av"><img src="img/diurna-sq.jpg" alt=""><b>Investidor</b></div><q>“Alguns investem quando todo mundo já percebeu. Outros percebem primeiro.”</q><p class="small">Quer diversificar patrimônio e entrar no momento certo, com possibilidades de uso.</p></div>
+    <div class="rv d2"><div class="av"><img src="img/costanera.jpg" alt=""><b>Visitante</b></div><q>“E se o seu destino também tivesse um endereço para você?”</q><p class="small">Já frequenta a cidade por compras, lazer ou negócios. Quer deixar de depender de hotel.</p></div>
+  </div>
+</section>
+
+<div class="sp"></div>
+
+<section class="pr sec rv" data-stop data-notes="Estudante. Fale também com os pais na plateia: comprar o endereço do filho durante a faculdade é decisão de patrimônio, não só de aluguel. (1 min 30)">
+  <div class="img"><span class="tag">Público 01</span><img src="img/int3.jpg" alt=""></div>
+  <div class="tx">
+    <div class="between" style="align-items:center"><span class="eyebrow">Estudante e jovem profissional</span><span class="pill">Independência</span></div>
+    <h3 class="h-l">Seu primeiro endereço pode ser <em class="hl">o começo da sua independência.</em></h3>
+    <dl>
+      <dt>Quem é</dt><dd>Vem de fora para estudar Medicina e outros cursos, ou para trabalhar. Muitas vezes a família decide e paga.</dd>
+      <dt>O que quer</dt><dd>Independência, segurança, proximidade e praticidade.</dd>
+      <dt>Por que o Nexus</dt><dd>Centro, acesso controlado, coworking para estudar, academia e vagas de moto. Endereço próprio em vez de aluguel eterno.</dd>
+    </dl>
+  </div>
+</section>
+
+<div class="sp"></div>
+
+<section class="pr sec rv" data-stop data-notes="Investidor. Fale direto com a sala. Não prometa retorno, valorização ou percentual. O argumento é racional: localização, pouca oferta moderna no centro e flexibilidade de uso. (1 min 30)">
+  <div class="img"><span class="tag">Público 02</span><img src="img/aerea-t2.jpg" alt=""></div>
+  <div class="tx">
+    <div class="between" style="align-items:center"><span class="eyebrow">Investidor</span><span class="pill">Patrimônio</span></div>
+    <h3 class="h-l">Alguns investem quando todo mundo já percebeu. <em class="hl">Outros percebem primeiro.</em></h3>
+    <dl>
+      <dt>Quem é</dt><dd>Busca diversificar patrimônio. Muitas vezes é brasileiro de olho no Paraguai. Racional, compara e pesquisa.</dd>
+      <dt>O que quer</dt><dd>Um ativo com várias possibilidades de uso e entrada no momento certo.</dd>
+      <dt>Por que o Nexus</dt><dd>Cidade em transformação, oferta escassa de moradia moderna e central, e um produto que serve a mais de um tipo de morador.</dd>
+    </dl>
+  </div>
+</section>
+
+<div class="sp"></div>
+
+<section class="pr sec rv" data-stop data-notes="Visitante frequente. Pense no comerciante brasileiro que cruza a ponte toda semana, ou na família que passa os feriados na Costanera. Para eles, o Nexus é a própria casa na cidade que já frequentam. (1 min 30)">
+  <div class="img"><span class="tag">Público 03</span><img src="img/costanera.jpg" alt=""></div>
+  <div class="tx">
+    <div class="between" style="align-items:center"><span class="eyebrow">Visitante e comprador frequente</span><span class="pill">Conveniência</span></div>
+    <h3 class="h-l">E se o seu destino também tivesse <em class="hl">um endereço para você?</em></h3>
+    <dl>
+      <dt>Quem é</dt><dd>Já vai a Salto del Guairá com regularidade, por compras, lazer ou negócios. Hoje se hospeda.</dd>
+      <dt>O que quer</dt><dd>Conveniência e uma base própria na cidade.</dd>
+      <dt>Por que o Nexus</dt><dd>A 70 metros da Av. Paraguay e perto da Costanera. Chegar, deixar as coisas e viver a cidade, sem depender de hotel.</dd>
+    </dl>
+  </div>
+</section>
+
+<div class="sp"></div>
+
+<section class="box dark sec thesis" data-stop data-notes="O slide mais importante para investidores. A cidade já gera demanda todos os dias: estudantes, profissionais, visitantes e moradores. O Nexus nasce exatamente no centro desse movimento. Quem investe escolhe um imóvel que conversa com mais de uma dessas demandas. Repita: possibilidade de uso, não garantia de renda. (2 min)">
+  <div class="th-grid">
+    <div class="th-tx">
+      <span class="eyebrow rv">A tese</span>
+      <h2 class="h-l" data-split style="margin-top:24px;font-size:clamp(32px,3.5vw,66px)">Para quem investe, o Nexus está no centro <em class="hl">da demanda da cidade.</em></h2>
+      <p class="lead rv d2" style="margin-top:30px">Salto del Guairá já recebe gente todos os dias, por motivos diferentes. O Nexus nasce no ponto onde todas essas demandas se encontram, no momento em que a cidade se transforma.</p>
+      <ul class="th-keys rv d3">
+        <li><b>4</b><span>perfis de demanda que já existem na cidade</span></li>
+        <li><b>1</b><span>endereço moderno e central para atendê-los</span></li>
+      </ul>
+      <p class="legal" style="margin-top:28px">As possibilidades de uso apresentadas não constituem promessa ou garantia de rentabilidade.</p>
+    </div>
+    <div class="orb" id="orb">
+      <div class="ring r3"></div>
+      <div class="ring r2"><i></i><i></i></div>
+      <div class="ring r1"></div>
+      <svg class="lines" viewBox="0 0 100 100" aria-hidden="true">
+        <line x1="50" y1="50" x2="16" y2="18"/><line x1="50" y1="50" x2="84" y2="18"/>
+        <line x1="50" y1="50" x2="84" y2="82"/><line x1="50" y1="50" x2="16" y2="82"/>
+      </svg>
+      <div class="core"><img src="img/logo-nexus-w.png" alt="Nexus Studios"><span>No centro da cidade</span></div>
+      <div class="node n1" style="--x:16%;--y:18%"><em>01</em><b>Estudantes</b><span>Medicina e ensino superior. Uma nova turma todo semestre.</span></div>
+      <div class="node n2" style="--x:84%;--y:18%"><em>02</em><b>Visitantes</b><span>Compras, turismo e negócios ao longo do ano.</span></div>
+      <div class="node n3" style="--x:84%;--y:82%"><em>03</em><b>Profissionais</b><span>Quem chega para trabalhar no comércio e nos serviços.</span></div>
+      <div class="node n4" style="--x:16%;--y:82%"><em>04</em><b>Moradores</b><span>Quem quer viver no centro, com estrutura completa.</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="sp"></div>
+
+<section class="box sec" data-stop data-notes="Feche o capítulo com as quatro formas de uso. O comprador escolhe a sua, e pode mudar de estratégia ao longo do tempo. (1 min)">
+  <div class="between">
+    <h2 class="h-l" data-split>Um imóvel. <em class="hl">Diferentes possibilidades.</em></h2>
+    <span class="eyebrow rv">O produto por trás do produto</span>
+  </div>
+  <div class="c4">
+    <div class="rv"><span class="num-k">01</span><h4>Moradia</h4><p class="small">Para viver no centro, com estrutura completa e baixo custo fixo.</p></div>
+    <div class="rv d1"><span class="num-k">02</span><h4>Locação</h4><p class="small">Para estudantes e profissionais que chegam à cidade.</p></div>
+    <div class="rv d2"><span class="num-k">03</span><h4>Curta permanência</h4><p class="small">Para visitantes, num mercado que já existe na cidade.</p></div>
+    <div class="rv d3"><span class="num-k">04</span><h4>Patrimônio</h4><p class="small">Um ativo em localização central de uma cidade em transformação.</p></div>
+  </div>
+  <p class="legal" style="margin-top:40px">As possibilidades de uso apresentadas não constituem promessa ou garantia de rentabilidade.</p>
+</section>
+
+<div class="sp"></div>
+
+<!-- ================= 05 O MOMENTO ================= -->
+<section class="grow sec" id="momento" data-grow data-stop data-notes="Capítulo 5. Agora a conversa vira decisão. (20 s)">
+  <div class="pin">
+    <div class="frame"><img src="img/aerea-t3.jpg" alt="Fotomontagem aérea com o Nexus"></div>
+    <div class="cap">
+      <div class="eyebrow" style="color:rgba(255,255,255,.75)">05 · O momento</div>
+      <h2 class="h-xl" style="margin-top:20px;max-width:17ch">A oportunidade está no momento em que ele nasce.</h2>
+    </div>
+  </div>
+</section>
+
+<section class="scrub sec" data-scrub data-stop data-notes="O verdadeiro concorrente é a decisão de esperar. Sem pressão artificial: nada de “últimas unidades” ou “corra”. Fale de comportamento. (45 s)">
+  <div class="pin">
+    <p class="h-xl txt" style="max-width:19ch">O Nexus não compete com outros imóveis. Ele compete com <span data-g>a decisão de esperar.</span></p>
+  </div>
+</section>
+
+<section class="box dark sec join-next" data-stop data-notes="Fale direto com a sala: quem está aqui hoje é quem chega primeiro. Quem escolhe no lançamento tem mais opções de andar, posição e tipologia. (1 min)">
+  <div class="row" style="align-items:flex-end;flex-wrap:wrap">
+    <div style="flex:1 1 520px">
+      <span class="eyebrow rv">Quem chega antes</span>
+      <h2 class="h-l" data-split style="margin-top:24px">Quem sai ganhando é quem chega primeiro e <em class="hl">não espera a fila se formar.</em></h2>
+    </div>
+    <div style="flex:1 1 420px">
+      <ul class="ls rv d2">
+        <li><i>01</i><span>Escolhe <b>primeiro.</b></span></li>
+        <li><i>02</i><span>Escolhe <b>melhor.</b> Andar, posição e tipologia.</span></li>
+        <li><i>03</i><span>Escolhe pelas <b>condições de lançamento.</b></span></li>
+      </ul>
+      <p class="lead rv d3" style="margin-top:26px">E, quando todo mundo percebe, já está lá dentro.</p>
+    </div>
+  </div>
+</section>
+
+<section class="ask sec" data-ask data-stop data-notes="Pausa longa. Deixe a frase acender. Depois: “Hoje vocês estão do lado de quem não vai precisar fazer essa pergunta.” (45 s)">
+  <div class="pin">
+    <div class="q">“E se eu tivesse entrado antes?”</div>
+    <p class="lead sub" style="max-width:none">É a pergunta que muita gente vai se fazer daqui a alguns anos.</p>
+  </div>
+</section>
+
+<div class="sp"></div>
+
+<section class="addr sec" data-stop data-notes="Responda às objeções antes que apareçam: é seguro comprar no Paraguai? E se atrasar? A resposta é construtora, projeto, localização concreta e obra visível. Não afirme nada jurídico ou tributário sem validação da construtora. (1 min 30)">
+  <div class="box" style="display:flex;flex-direction:column;justify-content:space-between">
+    <span class="eyebrow rv">Por que confiar</span>
+    <div>
+      <h3 class="h-m" data-split>Um projeto concreto, <em class="hl">com nome, endereço e cronograma.</em></h3>
+      <ul class="ls rv d2">
+        <li><i>01</i><span><b>AAJ Construtora</b> responde pela incorporação e pela construção</span></li>
+        <li><i>02</i><span><b>Projeto arquitetônico</b> completo, com plantas e quadro de áreas</span></li>
+        <li><i>03</i><span><b>Localização real</b> no centro, ao lado da Municipalidad</span></li>
+        <li><i>04</i><span><b>Cronograma público:</b> obras em março de 2027, entrega em novembro de 2029</span></li>
+        <li><i>05</i><span><b>Obra acompanhada</b> com conteúdo de evolução em todas as etapas</span></li>
+      </ul>
+    </div>
+    <img src="img/logo-aaj-d.png" alt="AAJ Construtora" style="height:40px;width:auto;align-self:center;margin-top:26px" class="rv">
+  </div>
+  <div class="img mask"><img src="img/noite-v.jpg" alt="" style="object-position:center 25%"></div>
+</section>
+
+<div class="sp"></div>
+
+<section class="box sec" data-stop data-notes="Mostre aos investidores que o lançamento terá força: divulgação constante em todos os canais, conteúdo de alto nível em cada fase da obra e um time completo de marketing, engenharia, arquitetura e comercial. Isso gera procura pelo Nexus do início ao fim. (1 min 30)">
+  <div class="between">
+    <h2 class="h-l" data-split style="max-width:17ch">O Nexus não vai ser só lançado. <em class="hl">Vai ser assunto na cidade.</em></h2>
+    <span class="eyebrow rv">O lançamento</span>
+  </div>
+  <div class="c3">
+    <div class="rv"><span class="num-k">01</span><h4>Presença em todos os canais</h4><p class="small">Redes sociais, mídia paga, portais e influenciadores colocando o Nexus em evidência todos os dias.</p></div>
+    <div class="rv d1"><span class="num-k">02</span><h4>Conteúdo de alto nível</h4><p class="small">Produção audiovisual premium acompanhando cada fase da obra, do lançamento à entrega das chaves.</p></div>
+    <div class="rv d2"><span class="num-k">03</span><h4>Um time completo por trás</h4><p class="small">Marketing, engenharia, arquitetura e comercial trabalhando juntos por um lançamento à altura do Nexus.</p></div>
+  </div>
+</section>
+
+<div class="sp"></div>
+
+<section class="box sec" data-stop data-notes="Apresente as condições com clareza: a partir de US$ 60 mil, US$ 10 mil de entrada, 36 parcelas de US$ 815 durante a obra a partir de março e US$ 20 mil na entrega. Reforce que é condição exclusiva do evento, para negócios fechados até 01/12. Convide para a conversa com o plantão de vendas. (2 min)">
+  <div class="between">
+    <h2 class="h-l" data-split>Condições para quem <em class="hl">decide hoje.</em></h2>
+    <span class="eyebrow rv">Condições de lançamento</span>
+  </div>
+  <div class="cond c3">
+    <div class="rv"><span class="num-k">01</span><span class="v">Entrada facilitada</span><span class="cd">No fechamento do negócio</span></div>
+    <div class="rv d1"><span class="num-k">02</span><span class="v">Parcelas mensais</span><span class="cd">Durante a obra, a partir de março de 2027</span></div>
+    <div class="rv d2"><span class="num-k">03</span><span class="v">Saldo na entrega</span><span class="cd">Na entrega das chaves</span></div>
+  </div>
+  <div class="cond-ban rv"><i></i><span><b>Condição exclusiva do evento.</b> Válida para negócios fechados até 01/12.</span></div>
+  <p class="legal" style="margin-top:18px">Condições sujeitas à disponibilidade de unidades e à confirmação da construtora.</p>
+</section>
+
+<div class="sp"></div>
+
+<section class="cta sec" id="contato" data-stop data-notes="Chamada clara para a ação. Informe onde estão os corretores no evento e como agendar a escolha de unidade. Abra para perguntas. (5 min)">
+  <img src="img/voo.jpg" alt="" data-par=".08">
+  <div class="in2">
+    <div class="between">
+      <div>
+        <span class="eyebrow" style="color:rgba(255,255,255,.7)">Próximo passo</span>
+        <h2 class="h-xl" data-split style="margin-top:24px;max-width:13ch">O endereço de quem <em class="hl" style="color:var(--gold)">chega antes.</em></h2>
+      </div>
+      <div class="rv qrbig">
+        <div class="qrcard"><img src="img/qr-apresentacao.svg" alt="QR Code da apresentação"></div>
+        <div><span class="eyebrow" style="color:var(--gold)">Aponte a câmera</span>
+        <p class="lead" style="color:#eee;margin-top:12px;max-width:18ch">Veja a apresentação completa no seu celular.</p>
+        <p class="small" style="color:rgba(255,255,255,.6);margin-top:10px">minedigital.com.br/apresentacao-nexus</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="sp"></div>
+
+<section class="box dark sec film" data-stop data-notes="Feche com o filme do Nexus. Dê play e deixe rodar com som (1 min 51). Depois abra para perguntas.">
+  <div class="between">
+    <h2 class="h-l" data-split>Veja o Nexus <em class="hl">em movimento.</em></h2>
+    <span class="eyebrow rv">O filme</span>
+  </div>
+  <div class="fwrap rv">
+    <video id="iv" src="video/filme.mp4" muted playsinline preload="auto" poster="img/voo.jpg"></video>
+  </div>
+  <p class="legal" style="margin-top:18px">Imagens meramente ilustrativas.</p>
+</section>
+
+<div class="sp"></div>
+</main>
+
+<footer data-stop data-notes="Encerramento. Apresente quem fez o projeto: AAJ Construtora na realização, B&amp;CO no projeto arquitetônico e Mine no marketing e comunicação. Agradeça. Última frase: “Alguns esperam a cidade mudar. Vocês acabaram de ver o momento exato em que ela muda.”">
+  <div class="top">
+    <img src="img/logo-nexus-w.png" alt="Nexus Studios" style="width:clamp(180px,16vw,300px)">
+    <p class="h-m" style="max-width:22ch">Alguns esperam a cidade mudar. <span style="color:var(--gold)">Outros escolhem o momento exato em que ela muda.</span></p>
+  </div>
+  <div class="credits">
+    <div class="cr rv"><span>Realização</span><img src="img/logo-aaj-w.png" alt="AAJ Construtora" style="height:64px"></div>
+    <div class="cr sec2 rv d1"><span>Projeto arquitetônico</span><img src="img/logo-bco-w.png" alt="B&amp;CO Marco Baraldi &amp; Company" style="height:32px"></div>
+    <div class="cr sec2 rv d2"><span>Marketing e comunicação</span><img src="img/logo-mine-w.png" alt="Mine Comunicação" style="height:32px"></div>
+  </div>
+  <div class="bot">
+    <span class="small" style="color:rgba(255,255,255,.5)">Nexus Studios · Salto del Guairá · Paraguai</span>
+    <p class="legal" style="max-width:70ch">Calle Defensores del Chaco, centro · Salto del Guairá · Paraguai. Imagens meramente ilustrativas. Metragens e informações sujeitas a confirmação e a alterações do projeto legal aprovado. As possibilidades de uso apresentadas não constituem promessa ou garantia de rentabilidade.</p>
+  </div>
+</footer>
+
+<div id="qrmini"><img src="img/qr-apresentacao.svg" alt=""><span>Veja no<br>celular<b>Aponte a câmera</b></span></div>
+<div id="qrend">
+  <div class="qrcard"><img src="img/qr-apresentacao.svg" alt="QR Code da apresentação"></div>
+  <div><img class="lg" src="img/logo-nexus-w.png" alt="Nexus Studios">
+  <h2>Leve o Nexus <em>no seu celular.</em></h2>
+  <p>Aponte a câmera para o QR Code · minedigital.com.br/apresentacao-nexus</p></div>
+</div>
+<div id="notes"><h6><span>Roteiro de fala</span><span id="nc"></span></h6><div id="nt"></div></div>
+<div id="hint">← → navegar · N roteiro · F tela cheia</div>
+
+<script>
+(function(){
+'use strict';
+const $=(s,c=document)=>c.querySelector(s), $$=(s,c=document)=>[...c.querySelectorAll(s)];
+const clamp=(v,a=0,b=1)=>Math.min(b,Math.max(a,v));
+const vh=()=>innerHeight;
+
+/* --- quebra títulos em palavras (animação de entrada) --- */
+$$('[data-split]').forEach(el=>{
+  const walk=(node)=>{
+    [...node.childNodes].forEach(n=>{
+      if(n.nodeType===3){
+        const parts=n.textContent.split(/(\s+)/); const f=document.createDocumentFragment();
+        parts.forEach(p=>{ if(!p) return; if(/^\s+$/.test(p)){f.appendChild(document.createTextNode(' '));return;}
+          const ln=document.createElement('span'); ln.className='ln'; ln.style.display='inline-block';
+          const w=document.createElement('span'); w.className='wd'; w.textContent=p; ln.appendChild(w); f.appendChild(ln); });
+        n.replaceWith(f);
+      } else if(n.nodeType===1 && n.tagName!=='BR'){ walk(n); }
+    });
+  };
+  walk(el);
+  $$('.wd',el).forEach((w,i)=>w.style.transitionDelay=(i*0.055)+'s');
+});
+
+/* --- texto que trava (scrub) --- */
+$$('[data-scrub]').forEach(sec=>{
+  const p=$('.txt',sec);
+  const wrap=(node,gold)=>{
+    [...node.childNodes].forEach(n=>{
+      if(n.nodeType===3){ const f=document.createDocumentFragment();
+        let prev=null;
+        n.textContent.split(/(\s+)/).forEach(t=>{ if(!t) return;
+          if(/^\s+$/.test(t)){ if(gold&&prev) prev.textContent+=' '; else f.appendChild(document.createTextNode(' ')); return; }
+          const s=document.createElement('span'); s.className='w'+(gold?' g':''); s.textContent=t; f.appendChild(s); prev=s;});
+        n.replaceWith(f);
+      } else if(n.nodeType===1){ wrap(n, gold || n.hasAttribute('data-g')); }
+    });
+  };
+  wrap(p,false);
+  sec._w=$$('.w',p);
+});
+
+/* --- entradas ao aparecer --- */
+const io=new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} }),{threshold:.18,rootMargin:'0px 0px -6% 0px'});
+$$('.rv,[data-split],.mask,em.hl,.orb').filter(el=>!el.closest('[data-intro]')).forEach(el=>io.observe(el));
+
+/* --- abertura: vídeo + vidro --- */
+const intros=$$('[data-intro]').map(s=>({s,els:$$('[data-split],em.hl',s)}));
+const iv=$('#iv'); const pl=()=>{};
+
+/* --- contadores --- */
+const fmt=(v,d)=>v.toLocaleString('pt-BR',{minimumFractionDigits:d,maximumFractionDigits:d});
+const cio=new IntersectionObserver(es=>es.forEach(e=>{
+  if(!e.isIntersecting) return; cio.unobserve(e.target);
+  const el=e.target, to=parseFloat(el.dataset.count), d=parseInt(el.dataset.dec||0), t0=performance.now(), dur=1800;
+  const step=t=>{ const k=clamp((t-t0)/dur); const ez=1-Math.pow(1-k,4); el.textContent=fmt(to*ez,d); if(k<1) requestAnimationFrame(step); };
+  requestAnimationFrame(step);
+}),{threshold:.5});
+$$('[data-count]').forEach(el=>cio.observe(el));
+
+/* --- fachada fixa com troca --- */
+$$('[data-stk]').forEach(sec=>{
+  const imgs=$$('.stick .sl',sec);
+  const so=new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ const i=+e.target.dataset.i; imgs.forEach((im,k)=>im.classList.toggle('on',k===i)); } }),{rootMargin:'-45% 0px -45% 0px'});
+  $$('.st',sec).forEach(s=>so.observe(s));
+});
+
+/* --- tipologias --- */
+const TP=[
+  {m:'28',h:'Um só espaço. Infinitas possibilidades.',d:'Cozinha linear, bancada de refeição, estar e dormitório integrados, e área de trabalho junto à janela.',i:'img/planta28.jpg'},
+  {m:'31',h:'Um espaço que acompanha o seu jeito de viver.',d:'Mesa de jantar, sofá, cama de casal e escritório, com mais respiro entre os ambientes.',i:'img/planta31.jpg'}
+];
+const tpi=$('#tpi'), tpv=$('#tpv');
+let tpCur=0;
+function setTp(n){ if(n===tpCur) return; tpCur=n;
+  $$('#tabs button').forEach(b=>b.classList.toggle('on',+b.dataset.t===n));
+  tpi.classList.add('out'); tpv.classList.add('out');
+  setTimeout(()=>{ const t=TP[n]; tpi.src=window.__IMG?(window.__IMG[t.i]||t.i):t.i; $('#tpm').textContent=t.m; $('#tph').textContent=t.h; $('#tpd').textContent=t.d; tpi.classList.remove('out'); tpv.classList.remove('out'); },380);
+}
+$$('#tabs button').forEach(b=>b.addEventListener('click',e=>{e.stopPropagation();setTp(+b.dataset.t);}));
+
+/* --- motor de scroll --- */
+const grows=$$('[data-grow]'), scrubs=$$('[data-scrub]'), hzs=$$('[data-hz]'), asks=$$('[data-ask]'), tls=$$('[data-tl]'), pars=$$('[data-par]');
+const prog=$('#prog');
+let lastY=scrollY;
+function secP(el){ const r=el.getBoundingClientRect(); const span=r.height-vh(); return span>0?clamp(-r.top/span):clamp((vh()-r.top)/(vh()+r.height)); }
+function frame(){
+  const y=scrollY, H=document.documentElement.scrollHeight-vh();
+  prog.style.transform='scaleX('+(H>0?y/H:0)+')';
+  lastY=y;
+
+  intros.forEach(({s,els})=>{ const p=secP(s); const gi=clamp((p-0.05)/0.32);
+    s.style.setProperty('--gi',gi.toFixed(3)); s.style.setProperty('--ip',p.toFixed(3));
+    const on=p>0.08; els.forEach(el=>el.classList.toggle('in',on)); });
+
+  grows.forEach(s=>{ const p=secP(s); const k=clamp(p/0.6); const e=1-Math.pow(1-k,3);
+    s.style.setProperty('--i',(16*(1-e))+'%'); s.style.setProperty('--j',(22*(1-e))+'%'); s.style.setProperty('--rr',(34*(1-e))+'px');
+    s.style.setProperty('--sc',(1.18-0.18*e)); s.style.setProperty('--ov',clamp((p-0.35)/0.3)); s.style.setProperty('--co',clamp((p-0.5)/0.25)); });
+
+  scrubs.forEach(s=>{ const p=secP(s); const w=s._w; const n=w.length; const on=Math.round(clamp((p-0.08)/0.72)*n);
+    for(let i=0;i<n;i++) w[i].classList.toggle('on',i<on); });
+
+  hzs.forEach(s=>{ const p=secP(s); const tr=$('.track',s); const max=tr.scrollWidth-innerWidth; tr.style.transform='translate3d('+(-max*p)+'px,0,0)'; });
+
+  asks.forEach(s=>{ const p=secP(s); s.style.setProperty('--s',(0.72+0.28*clamp(p/0.45)).toFixed(3)); s.style.setProperty('--f',(clamp((p-0.2)/0.5)*100).toFixed(1)+'%'); s.style.setProperty('--o',clamp((p-0.7)/0.15)); });
+
+  tls.forEach(s=>{ const r=s.getBoundingClientRect(); const p=clamp((vh()*0.85-r.top)/(r.height)); $('.bar i',s).style.setProperty('--p',p); });
+
+  pars.forEach(el=>{ const r=el.parentElement.getBoundingClientRect(); const c=(r.top+r.height/2-vh()/2); el.style.transform='translate3d(0,'+(c*parseFloat(el.dataset.par))+'px,0) scale(1.15)'; });
+
+  updNotes();
+}
+let ticking=false;
+addEventListener('scroll',()=>{ if(!ticking){ticking=true;requestAnimationFrame(()=>{frame();ticking=false;});} },{passive:true});
+addEventListener('resize',frame);
+
+/* --- paradas do apresentador (clicker / setas) --- */
+const stops=$$('[data-stop]');
+function stopY(el){
+  // dentro do trilho horizontal: calcula a posição de rolagem do painel
+  const hz=el.closest('[data-hz]');
+  if(hz){ const panels=$$('.panel',hz); const i=panels.indexOf(el); const top=hz.getBoundingClientRect().top+scrollY; const span=hz.offsetHeight-vh(); return top+span*(panels.length>1?i/(panels.length-1):0); }
+  const top=el.getBoundingClientRect().top+scrollY;
+  if(el.matches('[data-scrub],[data-ask]')) return top+(el.offsetHeight-vh())*0.86;
+  if(el.matches('[data-grow]')) return top+(el.offsetHeight-vh())*0.8;
+  if(el.matches('.st')) return top+el.offsetHeight/2-vh()/2;
+  if(el.classList.contains('mk')) return top;
+  if(el.offsetHeight<vh()) return top-Math.max(0,(vh()-el.offsetHeight)/2);
+  return top;
+}
+function curStop(){ const y=scrollY+2; let idx=0; stops.forEach((s,i)=>{ if(stopY(s)<=y+vh()*0.25) idx=i; }); return idx; }
+let anim=null;
+function smoothTo(Y){ cancelAnimationFrame(anim); const y0=scrollY, d=Y-y0, t0=performance.now(), dur=Math.min(1600,Math.max(700,Math.abs(d)*0.6));
+  const st=t=>{ const k=clamp((t-t0)/dur); const e=k<.5?4*k*k*k:1-Math.pow(-2*k+2,3)/2; scrollTo(0,y0+d*e); if(k<1) anim=requestAnimationFrame(st); };
+  anim=requestAnimationFrame(st); }
+function go(dir){ const i=curStop(); let n=i+dir; const yi=stopY(stops[i]);
+  if(dir>0 && scrollY < yi-8) n=i; n=clamp(n,0,stops.length-1); smoothTo(Math.max(0,stopY(stops[n]))); }
+addEventListener('keydown',e=>{
+  if(['ArrowRight','ArrowDown','PageDown',' '].includes(e.key)){e.preventDefault();go(1);}
+  else if(['ArrowLeft','ArrowUp','PageUp'].includes(e.key)){e.preventDefault();go(-1);}
+  else if(e.key==='Home'){e.preventDefault();smoothTo(0);}
+  else if(e.key==='End'){e.preventDefault();smoothTo(document.documentElement.scrollHeight);}
+  else if(e.key==='n'||e.key==='N'){$('#notes').classList.toggle('show');updNotes(true);}
+  else if(e.key==='f'||e.key==='F'){document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen();}
+});
+$$('[data-go]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();const t=$(a.getAttribute('href'));if(t)smoothTo(stopY(t));}));
+
+/* --- roteiro --- */
+let lastN=-1;
+function updNotes(force){ const nb=$('#notes'); if(!nb.classList.contains('show')&&!force) return;
+  const i=curStop(); if(i===lastN&&!force) return; lastN=i;
+  $('#nt').textContent=stops[i].dataset.notes||''; $('#nc').textContent=String(i+1).padStart(2,'0')+' / '+stops.length; }
+
+
+/* --- piloto automático: percorre a apresentação sozinha e recomeça --- */
+const SP=/fast/.test(location.search)?8:1;
+const wait=ms=>new Promise(r=>setTimeout(r,ms/SP));
+function glide(Y,dur){ return new Promise(res=>{ const y0=scrollY,d=Y-y0,t0=performance.now();
+  dur/=SP; const st=t=>{ const k=clamp((t-t0)/dur); const e=k<.5?2*k*k:1-Math.pow(-2*k+2,2)/2; scrollTo(0,y0+d*e); if(k<1) requestAnimationFrame(st); else res(); };
+  requestAnimationFrame(st); }); }
+function holdFor(el){
+  if(el.matches('[data-scrub],[data-ask]')) return 4000;
+  if(el.matches('[data-grow]')) return 3500;
+  if(el.matches('.tp')) return 12000;
+  if(el.tagName==='FOOTER') return 7000;
+  if(el.matches('#contato')) return 12000;
+  return 7000; }
+async function playFilm(){ const v=$('#iv'); if(!v) return; document.body.classList.add('qr-off');
+  try{ v.muted=true; v.currentTime=0; await v.play(); }catch(e){ await wait(4000); document.body.classList.remove('qr-off'); return; }
+  await Promise.race([new Promise(r=>v.addEventListener('ended',r,{once:true})), wait(130000)]);
+  document.body.classList.remove('qr-off'); }
+async function autopilot(){
+  scrollTo(0,0); await wait(6000);
+  for(let i=1;i<stops.length;i++){ const el=stops[i]; const Y=Math.max(0,stopY(el)); const d=Math.abs(Y-scrollY);
+    await glide(Y, Math.min(9000, Math.max(1800, d/0.32)));
+    if(el.matches('.film')){ await wait(1500); await playFilm(); continue; }
+    if(el.matches('.tp')){ await wait(5500); const b=$('#tabs [data-t="1"]'); if(b) b.click(); await wait(6500); continue; }
+    await wait(holdFor(el)); }
+  document.body.classList.add('qr-off'); $('#qrend').classList.add('on');
+  await wait(15000); location.reload(); }
+addEventListener('click',()=>{ if(!document.fullscreenElement && document.documentElement.requestFullscreen) document.documentElement.requestFullscreen().catch(()=>{}); });
+addEventListener('load',()=>{ if(!/stop/.test(location.search)) autopilot(); });
+
+if('scrollRestoration' in history) history.scrollRestoration='manual';
+frame();
+})();
+</script>
+<!-- ampliar fotos das áreas comuns -->
+<style>
+.lz .img,.mq .img{cursor:zoom-in}
+.lz .img::after,.mq .img::after{content:"";position:absolute;right:16px;bottom:16px;width:40px;height:40px;border-radius:50%;z-index:2;
+  background:rgba(247,246,243,.92) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23191919' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7'/%3E%3C/svg%3E") center/18px no-repeat;
+  transition:transform .3s}
+.lz .img:hover::after,.mq .img:hover::after{transform:scale(1.1)}
+.lbx{position:fixed;inset:0;z-index:9999;background:rgba(12,12,12,.97);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);display:flex;align-items:center;justify-content:center;
+  opacity:0;visibility:hidden;transition:opacity .35s,visibility .35s;padding:clamp(16px,4vw,64px)}
+.lbx.on{opacity:1;visibility:visible}
+.lbx img{max-width:100%;max-height:100%;object-fit:contain;border-radius:18px;transform:scale(.96);transition:transform .45s cubic-bezier(.2,.8,.2,1);box-shadow:0 30px 90px rgba(0,0,0,.5)}
+.lbx.on img{transform:none}
+.lbx .lbt:empty{display:none}
+.lbx .lbt{position:absolute;left:50%;bottom:clamp(14px,3vh,32px);transform:translateX(-50%);background:rgba(247,246,243,.92);color:#191919;
+  border-radius:999px;padding:8px 16px;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap}
+.lbx button{position:absolute;border:0;cursor:pointer;border-radius:50%;display:grid;place-items:center;font:inherit}
+.lbx .lbc{top:clamp(14px,3vh,28px);right:clamp(14px,3vw,28px);width:52px;height:52px;background:#FFCE00;color:#191919}
+.lbx .lbp,.lbx .lbn{top:50%;transform:translateY(-50%);width:48px;height:48px;background:rgba(247,246,243,.16);color:#fff}
+.lbx .lbp{left:clamp(10px,2vw,28px)}.lbx .lbn{right:clamp(10px,2vw,28px)}
+.lbx button:hover{filter:brightness(1.1)}
+.lbx svg{width:22px;height:22px}
+@media (max-width:700px){.lbx{padding:12px}.lbx img{border-radius:12px}.lbx .lbp,.lbx .lbn{top:auto;bottom:16px;transform:none;width:44px;height:44px}.lbx .lbt{bottom:22px}}
+</style>
+<div class="lbx" id="lbx" role="dialog" aria-modal="true" aria-label="Foto ampliada">
+  <img alt="">
+  <span class="lbt"></span>
+  <button class="lbp" aria-label="Foto anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+  <button class="lbn" aria-label="Próxima foto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg></button>
+  <button class="lbc" aria-label="Fechar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+</div>
+<script>
+(function(){
+  var box=document.getElementById('lbx'), im=box.querySelector('img'), tg=box.querySelector('.lbt');
+  var items=[], cur=0;
+  function show(i){ cur=(i+items.length)%items.length; var s=items[cur].querySelector('img'), t=items[cur].querySelector('.tag');
+    im.src=s.currentSrc||s.src; tg.textContent=t?t.textContent:''; im.alt=tg.textContent; }
+  function grupo(sel){ var all=[].slice.call(document.querySelectorAll(sel)), uni=[], seen={};
+    all.forEach(function(el){ var k=el.querySelector('img').getAttribute('data-i')||el.querySelector('img').getAttribute('src');
+      if(!(k in seen)){ seen[k]=uni.length; uni.push(el); } });
+    all.forEach(function(el){ var k=el.querySelector('img').getAttribute('data-i')||el.querySelector('img').getAttribute('src');
+      el.addEventListener('click',function(){ items=uni; open(seen[k]); }); }); }
+  grupo('.lz .img'); grupo('.mq .img');
+  function open(i){ show(i); box.classList.add('on'); document.documentElement.style.overflow='hidden'; }
+  function close(){ box.classList.remove('on'); document.documentElement.style.overflow=''; }
+  box.querySelector('.lbc').addEventListener('click',close);
+  box.querySelector('.lbp').addEventListener('click',function(e){ e.stopPropagation(); show(cur-1); });
+  box.querySelector('.lbn').addEventListener('click',function(e){ e.stopPropagation(); show(cur+1); });
+  box.addEventListener('click',function(e){ if(e.target===box) close(); });
+  var x0=null; box.addEventListener('touchstart',function(e){ x0=e.touches[0].clientX; },{passive:true});
+  box.addEventListener('touchend',function(e){ if(x0===null) return; var d=e.changedTouches[0].clientX-x0; x0=null;
+    if(Math.abs(d)>50) show(cur+(d<0?1:-1)); },{passive:true});
+  window.addEventListener('keydown',function(e){ if(!box.classList.contains('on')) return;
+    e.stopImmediatePropagation(); e.preventDefault();
+    if(e.key==='Escape') close(); else if(e.key==='ArrowRight'||e.key==='ArrowDown'||e.key==='PageDown') show(cur+1);
+    else if(e.key==='ArrowLeft'||e.key==='ArrowUp'||e.key==='PageUp') show(cur-1); },true);
+})();
+</script>
+</body>
+</html>

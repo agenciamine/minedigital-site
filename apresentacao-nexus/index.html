@@ -378,7 +378,10 @@ em.hl .wd{background:none}
 .cond-ban b{color:var(--gold);font-weight:700}
 .cond-ban i{flex:0 0 10px;height:10px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 6px rgba(255,206,0,.18)}
 @media(max-width:700px){.cond-ban{border-radius:var(--r2);align-items:flex-start}.cond-ban i{margin-top:6px}}
-@media(max-width:900px){.cond{grid-template-columns:1fr 1fr}}
+.cond.c5{grid-template-columns:repeat(5,1fr)}
+.cond.c5 .v{font-size:clamp(26px,2.1vw,46px);white-space:nowrap}
+@media(max-width:1200px){.cond.c5{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:900px){.cond,.cond.c5{grid-template-columns:1fr 1fr}}
 
 /* ---------- CTA / rodapé ---------- */
 .cta{border-radius:var(--r);overflow:hidden;position:relative;min-height:92vh;display:flex;align-items:flex-end;color:#fff}
@@ -511,7 +514,7 @@ footer .bot{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;p
   .cta .between{flex-wrap:wrap}
   .pr dl{grid-template-columns:1fr;row-gap:6px}
   .pr dd{margin-bottom:12px}
-  .cond{grid-template-columns:1fr}
+  .cond,.cond.c5{grid-template-columns:1fr}
   .cond>div{min-height:130px}
   footer .top .h-m{font-size:24px}
 }
@@ -599,7 +602,7 @@ footer .bot{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;p
     </div>
   </div>
   <div class="g4c">
-    <div class="rv"><div class="img"><img src="img/comercio.jpg" alt=""></div><h4>Comércio</h4><p class="small">Fronteira comercial consolidada, com fluxo constante de compradores do Brasil.</p></div>
+    <div class="rv"><div class="img"><img src="img/comercio-loja.jpg" alt=""></div><h4>Comércio</h4><p class="small">Fronteira comercial consolidada, com fluxo constante de compradores do Brasil.</p></div>
     <div class="rv d1"><div class="img"><img src="img/costanera.jpg" alt=""></div><h4>Turismo</h4><p class="small">Rio Paraná, natureza e mais de 3 km de Costanera.</p></div>
     <div class="rv d2"><div class="img"><img src="img/ponte.jpg" alt=""></div><h4>Fronteira</h4><p class="small">Ligação direta com o Paraná e o Mato Grosso do Sul.</p></div>
     <div class="rv d3"><div class="img"><img src="img/faculdade.jpg" alt=""></div><h4>Educação</h4><p class="small">Faculdades de Medicina que atraem estudantes de fora.</p></div>
@@ -611,7 +614,7 @@ footer .bot{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;p
   <div class="pin">
     <div class="track">
       <article class="panel" data-stop data-notes="Comércio e fronteira. Lojas, shoppings e filas de carros nos fins de semana. Muita gente volta várias vezes por ano e hoje se hospeda em hotel ou faz bate e volta. (1 min 30)">
-        <div class="img"><img src="img/comercio.jpg" alt="" data-par="-.06"></div>
+        <div class="img"><img src="img/comercio-loja.jpg" alt="" data-par="-.06"></div>
         <div class="tx">
           <span class="count">01 / 03 · Comércio e fronteira</span>
           <div><h3 class="h-l">Gente chega <em class="hl">todos os dias.</em></h3>
@@ -1044,16 +1047,17 @@ footer .bot{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;p
 
 <div class="sp"></div>
 
-<section class="box sec" data-stop data-notes="Apresente as condições com clareza: a partir de US$ 60 mil, US$ 10 mil de entrada, 36 parcelas de US$ 815 durante a obra a partir de março e US$ 20 mil na entrega. Reforce que é condição exclusiva do evento, para negócios fechados até 01/12. Convide para a conversa com o plantão de vendas. (2 min)">
+<section class="box sec" data-stop data-notes="Apresente as condições com clareza: a partir de US$ 72 mil, US$ 10 mil de entrada, 36 parcelas de US$ 815 a partir de março de 2027, US$ 12 mil em novembro de 2028 e US$ 20 mil na entrega, em novembro de 2029. Reforce que é condição exclusiva do evento, para negócios fechados até 01/12. Convide para a conversa com o plantão de vendas. (2 min)">
   <div class="between">
     <h2 class="h-l" data-split>Condições para quem <em class="hl">decide hoje.</em></h2>
     <span class="eyebrow rv">Condições de lançamento</span>
   </div>
-  <div class="cond">
-    <div class="rv"><span class="num-k">A partir de</span><span class="v"><small>US$</small> 60 mil</span><span class="cd">Valor da unidade</span></div>
+  <div class="cond c5">
+    <div class="rv"><span class="num-k">A partir de</span><span class="v"><small>US$</small> 72 mil</span><span class="cd">Valor da unidade</span></div>
     <div class="rv d1"><span class="num-k">Entrada</span><span class="v"><small>US$</small> 10 mil</span><span class="cd">No fechamento do negócio</span></div>
-    <div class="rv d2"><span class="num-k">Durante a obra</span><span class="v">36x <small>US$</small> 815</span><span class="cd">Parcelas mensais a partir de março</span></div>
-    <div class="rv d3"><span class="num-k">Na entrega</span><span class="v"><small>US$</small> 20 mil</span><span class="cd">Na entrega das chaves</span></div>
+    <div class="rv d2"><span class="num-k">Durante a obra</span><span class="v">36x <small>US$</small> 815</span><span class="cd">Parcelas mensais a partir de março de 2027</span></div>
+    <div class="rv d3"><span class="num-k">Novembro de 2028</span><span class="v"><small>US$</small> 12 mil</span><span class="cd">Parcela única em novembro de 2028</span></div>
+    <div class="rv d4"><span class="num-k">Na entrega</span><span class="v"><small>US$</small> 20 mil</span><span class="cd">Na entrega das chaves, em novembro de 2029</span></div>
   </div>
   <div class="cond-ban rv"><i></i><span><b>Condição exclusiva do evento.</b> Válida para negócios fechados até 01/12.</span></div>
   <p class="legal" style="margin-top:18px">Valores em dólares americanos. Condições sujeitas à disponibilidade de unidades e à confirmação da construtora.</p>
@@ -1068,11 +1072,6 @@ footer .bot{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;p
       <div>
         <span class="eyebrow" style="color:rgba(255,255,255,.7)">Próximo passo</span>
         <h2 class="h-xl" data-split style="margin-top:24px;max-width:13ch">O endereço de quem <em class="hl" style="color:var(--gold)">chega antes.</em></h2>
-      </div>
-      <div class="rv" style="border-left:2px solid var(--gold);padding-left:28px">
-        <span class="eyebrow" style="color:var(--gold)">Plantão de vendas</span>
-        <div class="phone">47 99169 6794</div>
-        <div class="lead" style="color:#ddd;margin-top:10px">Antônio Pito</div>
       </div>
     </div>
   </div>
