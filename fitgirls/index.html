@@ -107,10 +107,10 @@ button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
 .hero-media .slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transform:scale(1.12);transition:opacity 1.6s ease}
 .hero-media .slide.on{opacity:1;animation:kb 7s linear forwards}
 @keyframes kb{to{transform:scale(1)}}
-.hero-media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(35,12,48,.35) 0%,rgba(50,18,70,.15) 40%,rgba(35,10,50,.65) 100%),linear-gradient(90deg,rgba(144,60,191,.18),rgba(255,159,195,.08))}
-.hero-title{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:#fff;z-index:2;padding:0 var(--gut)}
-.hero-title .script{display:block;color:var(--pink);font-size:clamp(56px,min(10vw,15vh),170px);line-height:.9;letter-spacing:0;text-transform:none;font-weight:400;position:relative;z-index:2;margin-top:-.32em;text-shadow:0 10px 40px rgba(80,20,110,.35)}
-.hero-title h1{font-size:clamp(50px,min(11vw,17vh),200px);font-weight:200;letter-spacing:-.035em;line-height:.86}
+.hero-media::after{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;background:linear-gradient(180deg,rgba(35,12,48,.35) 0%,rgba(50,18,70,.15) 40%,rgba(35,10,50,.65) 100%),linear-gradient(90deg,rgba(144,60,191,.18),rgba(255,159,195,.08))}
+.hero-title{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:#fff;z-index:2;padding:80px var(--gut) var(--railH,170px)}
+.hero-title .script{display:block;color:var(--pink);font-size:clamp(52px,min(10vw,13vh),170px);line-height:.9;letter-spacing:0;text-transform:none;font-weight:400;position:relative;z-index:2;margin-top:-.32em;text-shadow:0 10px 40px rgba(80,20,110,.35)}
+.hero-title h1{font-size:clamp(48px,min(11vw,14.5vh),200px);font-weight:200;letter-spacing:-.035em;line-height:.86}
 .hero-sub{font-size:clamp(15px,1.3vw,18px);max-width:560px;line-height:1.6;margin-top:28px;color:rgba(255,255,255,.88)}
 .hero-ctas{display:flex;gap:12px;margin-top:34px;flex-wrap:wrap;justify-content:center}
 .hero-kicker{color:#fff;margin-bottom:34px}
@@ -170,9 +170,10 @@ button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
 .manifesto{padding-bottom:clamp(40px,5vw,70px)!important}
 #experiencia{padding-top:clamp(40px,4.25vw,63px)}
 .numbers .num-foot{margin-top:clamp(32px,3.5vw,48px)}
+.numbers .wrap{position:relative;z-index:2}
 .num-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;position:relative;z-index:2}
 .clock{position:relative;z-index:2;padding:0 var(--gut);margin:0 0 clamp(28px,3.5vw,48px);text-align:center;overflow:hidden}
-.clock-live{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--magenta);margin-bottom:6px}
+.clock-live{display:flex;width:fit-content;margin-left:auto;margin-right:auto;align-items:center;gap:10px;font-size:12px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--magenta);margin-bottom:6px}
 .clock-live i{width:9px;height:9px;border-radius:50%;background:var(--magenta);box-shadow:0 0 0 0 rgba(144,60,191,.6);animation:pulse 1.6s infinite}
 @keyframes pulse{70%{box-shadow:0 0 0 12px rgba(144,60,191,0)}100%{box-shadow:0 0 0 0 rgba(144,60,191,0)}}
 .clock-num{display:inline-flex;align-items:flex-start;justify-content:center;font-family:var(--display);font-weight:200;line-height:.86;letter-spacing:-.045em;font-variant-numeric:tabular-nums;white-space:nowrap;font-size:16vw}
@@ -198,7 +199,8 @@ button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
 .num p{font-size:14px;line-height:1.5;color:var(--ink-2);max-width:200px}
 .num .top{display:flex;justify-content:space-between;align-items:center;margin-bottom:30px}
 .num .idx{font-size:11px;font-weight:700;letter-spacing:.14em;color:var(--mute)}
-.num.feature{background:var(--ink);color:#fff;border-color:transparent}
+.num.feature{background:linear-gradient(160deg,#A653D1 0%,var(--magenta) 55%,#6E2A99 100%);color:#fff;border-color:transparent;box-shadow:0 34px 70px -26px rgba(144,60,191,.55)}
+.num.feature .pill-tag{background:rgba(255,255,255,.9);color:var(--magenta)}
 .num.feature p{color:rgba(255,255,255,.7)}
 .num.feature .idx{color:rgba(255,255,255,.5)}
 .num-foot{text-align:center;margin-top:44px;font-family:var(--display);font-size:clamp(20px,2vw,28px);font-weight:300;position:relative;z-index:2}
@@ -263,7 +265,7 @@ button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
 .care p{font-size:14.5px;line-height:1.6;color:var(--ink-2)}
 
 /* ---------- cartão black ---------- */
-.black{background:var(--ink);color:#fff;border-radius:var(--r-xl);margin:clamp(80px,9vw,130px) 0 0;padding:clamp(40px,6vw,80px);display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;overflow:hidden;position:relative}
+.black{background:radial-gradient(120% 140% at 85% 20%,#A653D1 0%,var(--magenta) 40%,#6E2A99 100%);color:#fff;border-radius:var(--r-xl);margin:clamp(70px,8vw,110px) 0 0;box-shadow:0 50px 90px -40px rgba(110,42,153,.6);padding:clamp(40px,6vw,80px);display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;overflow:hidden;position:relative}
 .black .script{color:var(--pink);font-size:1.3em}
 .black .h2{font-size:clamp(34px,4.4vw,60px)}
 .black p{color:rgba(255,255,255,.72);line-height:1.7;margin-top:20px;max-width:440px}
@@ -301,12 +303,13 @@ button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
 .plan.best .price small{color:rgba(255,255,255,.75)}
 .plan.best ul li::before{background-color:rgba(255,255,255,.95)}
 .plan .badge{position:absolute;top:26px;right:26px;background:#fff;color:var(--magenta);font-size:10.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:7px 12px;border-radius:100px}
-.plan.best .sphere{width:220px;height:220px;right:-80px;bottom:-90px;opacity:.55}
+.plan.best .sphere{width:220px;height:220px;right:-80px;bottom:-90px;opacity:.55;z-index:0}
+.plan>:not(.sphere):not(.badge){position:relative;z-index:1}
 .note{font-size:12px;color:var(--mute);margin-top:18px}
 
 /* ---------- depoimentos ---------- */
 .testi{overflow:hidden}
-.t-row{display:flex;gap:16px;padding:0 var(--gut);overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;cursor:grab}
+.t-row{display:flex;gap:16px;padding:0 var(--gut);scroll-padding:0 var(--gut);overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;cursor:grab}
 .t-row::-webkit-scrollbar{display:none}
 .t{flex:0 0 clamp(230px,22vw,290px);aspect-ratio:9/15;border-radius:26px;position:relative;overflow:hidden;scroll-snap-align:start;background:var(--blush)}
 .t .bg{position:absolute;inset:0;background-size:cover;background-position:center;filter:saturate(.9)}
@@ -502,6 +505,166 @@ footer{background:var(--graphite);color:rgba(255,255,255,.7);padding:70px 0 34px
 .rv{opacity:0;transform:translateY(40px)}
 .no-js .rv,.reduced .rv{opacity:1;transform:none}
 
+/* ---------- capa: carrossel "Acontecendo na Fit" ---------- */
+.hero{--railH:178px}
+.hs{position:absolute;inset:0;opacity:0;transition:opacity 1.2s ease;z-index:0}
+.hs.on{opacity:1;z-index:1}
+.hs .ph{position:absolute;inset:0;background-size:cover;background-repeat:no-repeat;background-position:var(--pos,center);transform:scale(1.1);transition:transform 8s cubic-bezier(.2,.6,.3,1)}
+.hs.on .ph{transform:scale(1)}
+.hs.camp{background:#2A1038}
+.hs .ph.mt{transform-origin:center bottom;-webkit-mask-image:linear-gradient(180deg,transparent var(--mt),#000 calc(var(--mt) + 45px));mask-image:linear-gradient(180deg,transparent var(--mt),#000 calc(var(--mt) + 45px))}
+.hs.retrato .ph{filter:blur(28px) saturate(1.15) brightness(.75);transform:scale(1.25)}
+.hero-title{align-items:flex-start;text-align:left;padding-left:max(var(--gut),calc((100% - var(--max)) / 2 + var(--gut)));padding-right:var(--gut)}
+.hero-title .hero-ctas{justify-content:flex-start}
+.hero-title .hero-sub{max-width:520px}
+.hs.camp::after,.hs.vid::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(40,12,58,.82) 0%,rgba(55,18,80,.45) 45%,rgba(55,18,80,0) 75%)}
+.hero-stage{position:absolute;inset:0;z-index:2}
+.hs-txt{visibility:hidden;pointer-events:none;transition:visibility 0s .9s}
+.hs-txt.on{visibility:visible;pointer-events:auto;transition:none}
+.hs-txt .ani{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .9s cubic-bezier(.2,.8,.2,1)}
+.hs-txt.on .ani{opacity:1;transform:none}
+.hs-txt.on .ani:nth-child(2){transition-delay:.08s}.hs-txt.on .ani:nth-child(3){transition-delay:.16s}.hs-txt.on .ani:nth-child(4){transition-delay:.24s}.hs-txt.on .ani:nth-child(5){transition-delay:.32s}
+.camp-l{position:absolute;inset:0;max-width:var(--max);margin:0 auto;padding:96px var(--gut) var(--railH);display:flex;align-items:center;justify-content:space-between;gap:clamp(30px,5vw,80px);color:#fff}
+.camp-in{max-width:620px;display:flex;flex-direction:column;align-items:flex-start;gap:20px}
+.camp-meta{display:flex;gap:8px;flex-wrap:wrap}
+.camp-meta span{font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;padding:8px 13px;border-radius:100px;background:rgba(255,255,255,.16);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.3)}
+.camp-meta span:first-child{background:var(--pink);color:var(--ink);border-color:transparent}
+.camp-h{font-family:var(--display);font-weight:200;text-transform:uppercase;font-size:clamp(50px,min(8vw,13vh),132px);line-height:.86;letter-spacing:-.035em}
+.camp-h .script{display:block;text-transform:none;color:var(--pink);font-size:1.02em;line-height:.85;margin-top:-.06em;text-shadow:0 10px 40px rgba(80,20,110,.35)}
+.camp-in p{font-size:clamp(15px,1.25vw,18px);line-height:1.6;color:rgba(255,255,255,.88);max-width:480px}
+.camp-frame{flex:0 0 auto;width:clamp(240px,24vw,360px);aspect-ratio:3/4;border-radius:var(--r-xl);background-size:cover;background-position:center;box-shadow:0 50px 90px -30px rgba(20,5,35,.7);border:1px solid rgba(255,255,255,.25);transform:rotate(2.5deg)}
+.hero-rail{position:absolute;left:0;right:0;bottom:22px;z-index:4;max-width:var(--max);margin:0 auto;padding:0 var(--gut);color:#fff}
+.rail-head{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.rail-head .kicker{color:#fff;font-size:11px}
+.rail-head .kicker::before{background:#fff}
+.rail-mes{font-size:10.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;padding:6px 11px;border-radius:100px;background:rgba(255,255,255,.88);color:var(--magenta)}
+.rail-nav{margin-left:auto;display:flex;gap:8px}
+.rail-nav button{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.14);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.3);transition:background .3s,color .3s}
+.rail-nav button:hover{background:#fff;color:var(--magenta)}
+.rail-track{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);gap:10px}
+.tab{position:relative;display:flex;align-items:center;gap:12px;padding:8px 14px 10px 8px;border-radius:18px;text-align:left;background:rgba(255,255,255,.1);backdrop-filter:blur(18px) saturate(1.3);-webkit-backdrop-filter:blur(18px) saturate(1.3);border:1px solid rgba(255,255,255,.18);overflow:hidden;transition:background .4s,border-color .4s,transform .4s cubic-bezier(.2,.8,.2,1);min-width:0}
+.tab:hover{background:rgba(255,255,255,.18);transform:translateY(-2px)}
+.tab.on{background:rgba(144,60,191,.55);border-color:rgba(255,159,195,.6)}
+.tb-img{flex:0 0 52px;height:52px;border-radius:12px;background-size:cover;background-position:center}
+.tb-tx{display:flex;flex-direction:column;gap:3px;min-width:0}
+.tb-tx small{font-size:9.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--pink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tb-tx b{font-family:var(--display);font-weight:500;font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tb-bar{position:absolute;left:14px;right:14px;bottom:5px;height:2px;border-radius:2px;background:rgba(255,255,255,.18);overflow:hidden}
+.tb-bar i{display:block;height:100%;background:var(--pink);transform:scaleX(0);transform-origin:left}
+.tab.on .tb-bar i{animation:railBar var(--d,6s) linear forwards}
+.hero.paused .tab.on .tb-bar i{animation-play-state:paused}
+@keyframes railBar{to{transform:scaleX(1)}}
+
+/* ---------- depoimento em vídeo + player ---------- */
+.t.has-video{cursor:pointer}
+.t-dur{position:absolute;top:16px;right:16px;z-index:2;font-size:11px;font-weight:800;letter-spacing:.08em;color:#fff;padding:6px 10px;border-radius:100px;background:rgba(31,20,39,.45);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.t.has-video:focus-visible{outline:3px solid var(--magenta);outline-offset:3px}
+.vmodal{position:fixed;inset:0;z-index:200;display:grid;place-items:center;padding:24px;visibility:hidden;opacity:0;transition:opacity .45s ease,visibility 0s .45s}
+.vmodal.on{visibility:visible;opacity:1;transition:opacity .45s ease}
+.vm-back{position:absolute;inset:0;background:rgba(25,10,35,.78);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.vm-box{position:relative;height:min(88vh,860px);aspect-ratio:9/16;max-width:100%;border-radius:26px;overflow:hidden;background:#000;box-shadow:0 60px 120px -30px rgba(0,0,0,.7);transform:translateY(30px) scale(.94);transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.vmodal.on .vm-box{transform:none}
+.vm-box video{width:100%;height:100%;object-fit:contain;display:block;background:#000}
+.vm-close{position:absolute;top:14px;right:14px;z-index:2;width:42px;height:42px;border-radius:50%;display:grid;place-items:center;color:#fff;background:rgba(255,255,255,.18);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.35);transition:background .3s}
+.vm-close:hover{background:var(--magenta)}
+@media (max-width:520px){.vmodal{padding:0}.vm-box{height:100svh;width:100%;border-radius:0;aspect-ratio:auto}}
+
+/* ---------- modalidades (seção própria) ---------- */
+.mods-sec .disc-head{margin-bottom:clamp(32px,4vw,48px)}
+.mods-sec .mods{grid-template-columns:repeat(3,1fr);gap:18px}
+.mods-sec .mod .img{aspect-ratio:4/4.7}
+.mod .av{background-color:var(--blush);background-size:420%;border:2px solid #fff;box-shadow:0 4px 12px -4px rgba(110,50,140,.35);width:36px;height:36px}
+
+/* ---------- manifesto em citação ---------- */
+.manifesto .wrap{display:flex;flex-direction:column;align-items:center}
+.mf-q{font-family:var(--script);font-size:clamp(120px,14vw,220px);line-height:.5;color:var(--pink);height:.42em;margin-bottom:-8px;user-select:none}
+.manifesto .mf{text-transform:none;font-size:clamp(30px,4.6vw,68px);line-height:1.08;letter-spacing:-.025em;text-align:center}
+.manifesto .mf .ln.c{justify-content:center}
+.ig-sign{display:inline-flex;align-items:center;gap:14px;margin-top:clamp(34px,4vw,52px);padding:8px 8px 8px 8px;border-radius:100px;transition:transform .4s cubic-bezier(.2,.8,.2,1),box-shadow .4s}
+.ig-sign:hover{transform:translateY(-3px)}
+.ig-av{width:62px;height:62px;border-radius:50%;padding:3px;background:conic-gradient(from 200deg,var(--pink),var(--magenta),#6E2A99,var(--pink));flex-shrink:0}
+.ig-av i{display:block;width:100%;height:100%;border-radius:50%;background:url(assets/alana-retrato-1.jpg) 46% 12%/250% auto no-repeat #eee;border:3px solid var(--cream)}
+.ig-tx{display:flex;flex-direction:column;gap:3px;text-align:left}
+.ig-tx b{font-family:var(--display);font-weight:500;font-size:18px}
+.ig-tx small{font-size:12.5px;color:var(--ink-2)}
+.ig-btn{display:inline-flex;align-items:center;gap:7px;margin-left:8px;padding:10px 16px;border-radius:100px;background:var(--magenta);color:#fff;font-size:12.5px;font-weight:700;transition:background .3s}
+.ig-sign:hover .ig-btn{background:#6E2A99}
+.manifesto .mf-foot{width:100%}
+
+/* ---------- menu: franquia em destaque ---------- */
+.nav-links a.fr{font-weight:800;display:inline-flex;align-items:center;gap:8px}
+.nav-links a.fr::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor;animation:frDot 2.4s infinite}
+@keyframes frDot{0%,100%{box-shadow:0 0 0 0 rgba(255,159,195,.7)}60%{box-shadow:0 0 0 7px rgba(255,159,195,0)}}
+
+/* ---------- botão flutuante: seja franqueada ---------- */
+.fr-fab{position:fixed;right:22px;bottom:22px;z-index:90;display:flex;align-items:center;gap:0;color:var(--ink);transform:translateY(30px) scale(.6);opacity:0;pointer-events:none;transition:transform .7s cubic-bezier(.34,1.56,.64,1),opacity .5s}
+.fr-fab.show{transform:none;opacity:1;pointer-events:auto}
+.fab-badge{position:relative;width:96px;height:96px;flex-shrink:0;display:grid;place-items:center;transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+.fab-badge::before{content:"";position:absolute;inset:4px;border-radius:50%;background:rgba(255,248,251,.72);backdrop-filter:blur(16px) saturate(1.4);-webkit-backdrop-filter:blur(16px) saturate(1.4);border:1px solid rgba(255,255,255,.8);box-shadow:0 20px 44px -14px rgba(110,42,153,.55)}
+.fab-badge::after{content:"";position:absolute;inset:4px;border-radius:50%;border:2px solid var(--pink);opacity:0;animation:fabHalo 7s cubic-bezier(.2,.8,.2,1) 1.5s infinite}
+@keyframes fabHalo{0%{transform:scale(1);opacity:.85}22%{transform:scale(1.45);opacity:0}100%{opacity:0}}
+.fab-ring{position:absolute;inset:0;width:100%;height:100%;animation:fabSpin 16s linear infinite;overflow:visible}
+.fab-ring text{font-family:var(--body);font-size:9.4px;font-weight:800;letter-spacing:.1em;fill:var(--magenta)}
+@keyframes fabSpin{to{transform:rotate(360deg)}}
+.fab-core{position:relative;width:54px;height:54px;border-radius:50%;display:grid;place-items:center;color:#fff;background:radial-gradient(circle at 30% 25%,#C77BC9 0%,var(--magenta) 45%,#6E2A99 100%);box-shadow:inset 0 2px 6px rgba(255,255,255,.35),0 10px 24px -8px rgba(110,42,153,.7);transition:transform .5s cubic-bezier(.34,1.56,.64,1)}
+.fab-pill{display:flex;flex-direction:column;justify-content:center;line-height:1.15;height:58px;max-width:0;opacity:0;overflow:hidden;white-space:nowrap;padding:0;margin-right:-30px;border-radius:100px 0 0 100px;background:linear-gradient(145deg,rgba(255,255,255,.9),rgba(252,224,237,.82));backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.85);border-right:0;box-shadow:0 20px 44px -18px rgba(110,42,153,.5);transition:max-width .7s cubic-bezier(.2,.8,.2,1),opacity .4s,padding .7s cubic-bezier(.2,.8,.2,1)}
+.fab-pill small{font-size:9.5px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--magenta)}
+.fab-pill b{font-family:var(--display);font-weight:500;font-size:17px;letter-spacing:-.01em;background:linear-gradient(100deg,var(--ink) 0%,var(--ink) 40%,var(--magenta) 50%,var(--ink) 60%,var(--ink) 100%);background-size:250% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:fabShine 3.2s ease-in-out infinite}
+@keyframes fabShine{0%{background-position:100% 0}60%,100%{background-position:-50% 0}}
+.fr-fab:hover .fab-pill,.fr-fab.peek .fab-pill{max-width:240px;opacity:1;padding:0 46px 0 24px}
+.fr-fab:hover .fab-core{transform:scale(1.08) rotate(-8deg)}
+.fr-fab:hover .fab-ring{animation-duration:6s}
+@media (max-width:1080px){
+  .mods-sec .mods{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:820px){
+  .hero{--railH:150px}
+  .hs .ph{background-position:var(--posm,var(--pos,center));background-size:var(--zm,cover)}
+  .hs .ph.mt{-webkit-mask-image:linear-gradient(180deg,transparent var(--mtm),#000 calc(var(--mtm) + 26px));mask-image:linear-gradient(180deg,transparent var(--mtm),#000 calc(var(--mtm) + 26px))}
+  .hero-video{object-position:50% 0%}
+  .rail-track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin:0 calc(var(--gut) * -1);padding:0 var(--gut);scroll-padding:0 var(--gut)}
+  .rail-track::-webkit-scrollbar{display:none}
+  .tab{flex:0 0 min(64vw,240px);scroll-snap-align:start}
+  .rail-nav{display:none}
+  .camp-frame{display:none}
+  .hs.retrato .ph{filter:saturate(1.1) brightness(.85);transform:scale(1.05)}
+  .hs.retrato.on .ph{transform:scale(1)}
+  .hs.camp::after{background:linear-gradient(180deg,rgba(40,12,58,.2) 0%,rgba(40,12,58,.35) 40%,rgba(40,12,58,.88) 85%)}
+  .camp-l{align-items:flex-end;padding-bottom:calc(var(--railH) + 8px)}
+  .camp-in{gap:14px}
+  .camp-h{font-size:clamp(44px,14vw,80px)}
+  .ig-sign{flex-wrap:wrap;justify-content:center;text-align:center}
+  .ig-btn{margin-left:0}
+}
+@media (max-width:820px){
+  .final .script{font-size:clamp(30px,10vw,52px);line-height:1.15;white-space:nowrap;margin-bottom:.12em}
+  .turn .sphere:not(.s2){top:2vh;right:-9vw;width:150px;height:150px}
+  .turn .sphere.s2{bottom:6vh;width:86px;height:86px}
+  .bcard{padding:18px;border-radius:18px}
+  .bcard .tag{right:18px;top:18px;font-size:9px}
+  .bcard .chip{width:36px;height:27px;border-radius:6px;margin-top:12px}
+  .bcard .num{font-size:13px;letter-spacing:.12em;margin-top:12px}
+  .bcard .brand{left:18px;bottom:15px}
+  .bcard .brand img{height:22px}
+  .bcard .mc{right:18px;bottom:16px}
+  .bcard .mc i{width:22px;height:22px}
+  .bcard .mc i+i{margin-left:-9px}
+}
+@media (max-width:520px){
+  .mods-sec .mods{grid-template-columns:1fr 1fr;gap:10px}
+  .mods-sec .mod .img{aspect-ratio:3/4.2}
+  .ig-sign{flex-direction:column;gap:10px}
+  .ig-tx{text-align:center;align-items:center}
+}
+@media (max-width:820px){
+  .fr-fab{right:14px;bottom:calc(14px + env(safe-area-inset-bottom))}
+  .fab-badge{width:80px;height:80px}
+  .fab-core{width:46px;height:46px}
+  .fab-core svg{width:22px;height:22px}
+  .fab-pill{height:50px}
+  .fab-pill b{font-size:15px}
+}
+
 /* ---------- responsive ---------- */
 @media (max-width:1080px){
   .nav-links{display:none}
@@ -572,7 +735,7 @@ footer{background:var(--graphite);color:rgba(255,255,255,.7);padding:70px 0 34px
     <a href="#franquia" class="fr">Seja franqueada</a>
   </nav>
   <div class="nav-cta">
-    <a href="#planos" class="btn btn-dark b1"><span class="lbl-long">Quero conhecer a Fit</span><span class="lbl-short">Conhecer</span><span class="arr"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4l-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+    <a href="https://wa.me/554491383555?text=Ol%C3%A1!%20Quero%20conhecer%20a%20Fit%20Girls." target="_blank" rel="noopener" class="btn btn-dark b1"><span class="lbl-long">Quero conhecer a Fit</span><span class="lbl-short">Conhecer</span><span class="arr"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4l-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
     <a href="#candidatura" class="btn btn-pink b2"><span class="lbl-long">Quero ser franqueada</span><span class="lbl-short">Franquia</span><span class="arr"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4l-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
   </div>
 </header>
@@ -582,70 +745,100 @@ footer{background:var(--graphite);color:rgba(255,255,255,.7);padding:70px 0 34px
 <!-- ================= ATO 1 · HERO ================= -->
 <section class="hero" id="hero">
   <div class="hero-media" id="heroMedia">
-    <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="assets/hero-poster.jpg"><source src="assets/hero.mp4" type="video/mp4"></video>
+    <div class="hs vid on" data-i="0"><video class="hero-video" autoplay muted loop playsinline preload="auto" poster="assets/hero-poster.jpg"><source src="assets/hero.mp4" type="video/mp4"></video></div>
   </div>
-  <div class="hero-title" id="heroTitle">
-    <span class="kicker hero-kicker">Academia 100% feminina</span>
-    <h1 class="h-display">Força<br>feminina <span class="script">que transforma</span></h1>
-    <p class="hero-sub">Treino, acolhimento e uma comunidade que te impulsiona a continuar. Há 6 anos transformando corpo, autoestima e a vida de mulheres.</p>
-    <div class="hero-ctas">
-      <a href="#planos" class="btn btn-pink">Quero conhecer a Fit<span class="arr"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4m0 0H6m6 0v6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
-      <a href="#modalidades" class="btn btn-ghost">Ver modalidades<span class="arr"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 3v10m0 0l-4-4m4 4l4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+  <div class="hero-stage" id="heroStage">
+    <div class="hero-title hs-txt on" id="heroTitle" data-i="0">
+      <span class="kicker hero-kicker ani">Academia 100% feminina</span>
+      <h1 class="h-display ani">Força<br>feminina <span class="script">que transforma</span></h1>
+      <p class="hero-sub ani">Treino, acolhimento e uma comunidade que te impulsiona a continuar. Há 6 anos transformando corpo, autoestima e a vida de mulheres.</p>
+      <div class="hero-ctas ani">
+        <a href="https://wa.me/554491383555?text=Ol%C3%A1!%20Quero%20conhecer%20a%20Fit%20Girls." target="_blank" rel="noopener" class="btn btn-pink">Quero conhecer a Fit<span class="arr"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4m0 0H6m6 0v6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+      </div>
     </div>
   </div>
-  <div class="hero-foot">
-    <button class="sound" type="button"><span class="ico"><svg viewBox="0 0 24 24" fill="none"><path d="M4 9v6h4l5 4V5L8 9H4z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M17 9l4 6m0-6l-4 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>Assista com som</button>
-    <span class="scroll-cue" aria-hidden="true"></span>
-    <a href="#franquia" class="fr-link">Quer ter uma Fit Girls na sua cidade? <b>Seja franqueada →</b></a>
+  <div class="hero-rail" id="heroRail">
+    <div class="rail-head">
+      <span class="kicker">Acontecendo na Fit</span>
+      <span class="rail-mes" id="railMes">Novembro</span>
+      <div class="rail-nav">
+        <button type="button" id="railPrev" aria-label="Destaque anterior"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13 8H3m0 0l4-4M3 8l4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <button type="button" id="railNext" aria-label="Próximo destaque"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4l-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      </div>
+    </div>
+    <div class="rail-track" id="railTrack">
+      <button type="button" class="tab on" data-i="0" style="--d:9s"><span class="tb-img" style="background-image:url(assets/hero-poster.jpg)"></span><span class="tb-tx"><small>Conheça a Fit</small><b>Força feminina</b></span><span class="tb-bar"><i></i></span></button>
+    </div>
   </div>
 </section>
 
-<!-- ================= DESTAQUES ================= -->
-<section class="highlights">
+<!-- ================= MODALIDADES ================= -->
+<section class="sec mods-sec" id="modalidades">
   <div class="wrap">
-    <div class="hl-head">
-      <span class="kicker">Acontecendo na Fit</span>
-      <span class="pill-tag" style="background:var(--blush)">Novembro</span>
+    <div class="disc-head">
+      <div class="sec-head" style="margin:0">
+        <span class="kicker">Modalidades</span>
+        <h2 class="h2">Modalidades que fazem<br>você <span class="script">querer voltar.</span></h2>
+        <p class="lead">No plano anual, <b>todas as modalidades estão inclusas</b>, sem pagar nada a mais por isso.</p>
+      </div>
+      <div class="filters" role="tablist">
+        <button class="on" data-f="all">Todas</button>
+        <button data-f="forca">Força</button>
+        <button data-f="cardio">Cardio</button>
+        <button data-f="corpo">Corpo & mente</button>
+      </div>
     </div>
-    <div class="hl-row">
-      <a href="#planos" class="hl glass dark rv">
-        <div class="hl-img"><div class="bg" style="background-image:url(assets/stock/passaporte.jpg);background-position:center 35%"></div><span class="hl-tag">Campanha do mês</span><span class="ico"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="3" width="16" height="18" rx="3" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="1.6"/><path d="M8 17h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></div>
-        <div class="hl-body">
-          <h3>Passaporte Fit Girls</h3>
-          <p>Cada treino é um carimbo. A aluna mais presente ganha um fim de semana em Foz do Iguaçu.</p>
-          <div class="row"><span class="tagline">Quero participar</span><span class="round"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4l-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span></div>
-        </div>
-      </a>
-      <a href="#modalidades" class="hl glass  rv">
-        <div class="hl-img"><div class="bg" style="background-image:url(assets/stock/pilates.jpg);background-position:center 30%"></div><span class="hl-tag">Plano anual</span><span class="ico"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3l2.5 5.5L20 9l-4 4 1 6-5-3-5 3 1-6-4-4 5.5-.5L12 3z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span></div>
-        <div class="hl-body">
-          <h3>Modalidades inclusas</h3>
-          <p>No plano anual: pilates, corrida, kangoo e muito mais, sem pagar nada a mais por isso.</p>
-          <div class="row"><span class="tagline">Ver modalidades</span><span class="round"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4l-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span></div>
-        </div>
-      </a>
-      <a href="#black" class="hl glass  rv">
-        <div class="hl-img"><div class="bg" style="background-image:url(assets/stock/cartao.jpg);background-position:right 30%"></div><span class="hl-tag">Exclusivo</span><span class="ico"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="6" width="18" height="12" rx="2.5" stroke="currentColor" stroke-width="1.6"/><path d="M3 10h18" stroke="currentColor" stroke-width="1.6"/></svg></span></div>
-        <div class="hl-body">
-          <h3>Cartão Black Fit Girls</h3>
-          <p>Descontos exclusivos em parceiros da cidade para quem é aluna do plano anual.</p>
-          <div class="row"><span class="tagline">Saber mais</span><span class="round"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4l-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span></div>
-        </div>
-      </a>
+    <div class="mods">
+      <article class="mod rv" data-c="forca">
+        <div class="img"><div class="bg" style="background-image:url(assets/equipe/musculacao.jpg);background-position:center 40%"></div><span class="bm"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M4 2h8v12l-4-3-4 3V2z" stroke="currentColor" stroke-width="1.4"/></svg></span>
+          <div class="meta"><span class="pill-tag">Personalizado</span><h4>Musculação orientada</h4><p>Treinos personalizados com professoras capacitadas.</p></div></div>
+        <div class="under"><div><b>Todos os níveis</b><span>Força</span></div></div>
+      </article>
+      <article class="mod rv" data-c="corpo">
+        <div class="img"><div class="bg" style="background-image:url(assets/equipe/pilates.jpg);background-position:center 30%"></div><span class="bm"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M4 2h8v12l-4-3-4 3V2z" stroke="currentColor" stroke-width="1.4"/></svg></span>
+          <div class="meta"><span class="pill-tag">Turmas lotadas</span><h4>Pilates Solo</h4><p>Força, postura e consciência corporal.</p></div></div>
+        <div class="under"><div><b>Todos os níveis</b><span>Corpo & mente</span></div></div>
+      </article>
+      <article class="mod rv" data-c="cardio">
+        <div class="img"><div class="bg" style="background-image:url(assets/equipe/kangoo.jpg);background-position:center 35%"></div><span class="bm"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M4 2h8v12l-4-3-4 3V2z" stroke="currentColor" stroke-width="1.4"/></svg></span>
+          <div class="meta"><span class="pill-tag">Alta energia</span><h4>Kangoo Jumps</h4><p>Muita energia, pouco impacto nas articulações.</p></div></div>
+        <div class="under"><div><b>Todos os níveis</b><span>Cardio</span></div></div>
+      </article>
+      <article class="mod rv" data-c="cardio">
+        <div class="img"><div class="bg" style="background-image:url(assets/equipe/jump.jpg);background-position:center 30%"></div><span class="bm"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M4 2h8v12l-4-3-4 3V2z" stroke="currentColor" stroke-width="1.4"/></svg></span>
+          <div class="meta"><span class="pill-tag">Queima calórica</span><h4>Jump</h4><p>Aula ritmada no mini trampolim, divertida e intensa.</p></div></div>
+        <div class="under"><div><b>Todos os níveis</b><span>Cardio</span></div></div>
+      </article>
+      <article class="mod rv" data-c="forca">
+        <div class="img"><div class="bg" style="background-image:url(assets/equipe/boxe.jpg);background-position:center 30%"></div><span class="bm"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M4 2h8v12l-4-3-4 3V2z" stroke="currentColor" stroke-width="1.4"/></svg></span>
+          <div class="meta"><span class="pill-tag">Força e foco</span><h4>Boxe</h4><p>Técnica, condicionamento e muita confiança.</p></div></div>
+        <div class="under"><div><b>Todos os níveis</b><span>Força</span></div></div>
+      </article>
+      <article class="mod rv" data-c="cardio">
+        <div class="img"><div class="bg" style="background-image:url(assets/equipe/corrida.jpg?v=2);background-position:center 25%"></div><span class="bm"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M4 2h8v12l-4-3-4 3V2z" stroke="currentColor" stroke-width="1.4"/></svg></span>
+          <div class="meta"><span class="pill-tag">2x por semana</span><h4>Treino de Corrida</h4><p>Preparação física e corrida de rua em grupo.</p></div></div>
+        <div class="under"><div><b>Iniciante</b><span>Cardio</span></div></div>
+      </article>
     </div>
+    <div class="mods-cta"><a href="#planos" class="btn btn-dark">Quero experimentar uma aula<span class="arr"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4m0 0H6m6 0v6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span></a></div>
   </div>
 </section>
 
 <!-- ================= MANIFESTO ================= -->
 <section class="manifesto">
   <div class="wrap">
-    <p class="script mf-script">Leve, forte e feminina</p>
-    <div class="mf" id="manifesto">
-      <div class="ln c">Aqui a gente <span class="orb"></span> não vende treino.</div>
-      <div class="ln">A gente vende <b>transformação,</b></div>
-      <div class="ln r"><span class="obj" style="background-image:url(assets/stock/kangoo.jpg)"></span> autoestima, força</div>
-      <div class="ln c">e pertencimento. <span class="obj" style="background-image:url(assets/stock/pilates.jpg)"></span></div>
-    </div>
+    <span class="mf-q" aria-hidden="true">“</span>
+    <blockquote class="mf" id="manifesto">
+      <div class="ln c">Aqui a gente não vende treino.</div>
+      <div class="ln c">A gente vende <b>transformação,</b></div>
+      <div class="ln c">autoestima, força</div>
+      <div class="ln c">e pertencimento.”</div>
+    </blockquote>
+    <a class="ig-sign rv" href="https://www.instagram.com/alanacarolini/" target="_blank" rel="noopener" aria-label="Instagram da Alana, fundadora da Fit Girls">
+      <span class="ig-av"><i role="img" aria-label="Alana"></i></span>
+      <span class="ig-tx"><b>Alana</b><small>@alanacarolini · Fundadora da Fit Girls</small></span>
+      <span class="ig-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor"/></svg>Seguir</span>
+    </a>
     <div class="mf-foot">
       <p class="rv">A Fit Girls nasceu para ser o lugar onde você se sente <b>segura</b>, acolhida e <b>confiante</b> para evoluir. Onde você é <b>ouvida de verdade</b>. Onde treinar deixa de ser obrigação e passa a ser parte de <b>quem você é</b>.</p>
       <p class="mf-sign rv">Uma academia feita por mulheres,<br><span class="script">para mulheres.</span></p>
@@ -692,7 +885,7 @@ footer{background:var(--graphite);color:rgba(255,255,255,.7);padding:70px 0 34px
 
     <div class="who">
       <article class="who-card glass rv">
-        <div class="ph" style="background-image:url(assets/stock/iniciante.jpg)"></div>
+        <div class="ph" style="background-image:url(assets/equipe/iniciante.jpg);background-position:center 45%"></div>
         <div class="tx">
           <span class="pill-tag" style="align-self:flex-start;background:var(--blush)">Iniciante</span>
           <h3>Está começando <span class="script">agora?</span></h3>
@@ -700,48 +893,13 @@ footer{background:var(--graphite);color:rgba(255,255,255,.7);padding:70px 0 34px
         </div>
       </article>
       <article class="who-card glass rv">
-        <div class="ph" style="background-image:url(assets/stock/ativa.jpg)"></div>
+        <div class="ph" style="background-image:url(assets/equipe/ativa.jpg);background-position:center 30%"></div>
         <div class="tx">
           <span class="pill-tag" style="align-self:flex-start;background:var(--ink);color:#fff">Ativa</span>
           <h3>Já <span class="script">treina?</span></h3>
           <p>Se você quer um ambiente <b>feminino, acolhedor e com estrutura completa</b>, a Fit é o lugar para você <b>evoluir de verdade</b>.</p>
         </div>
       </article>
-    </div>
-
-    <div id="modalidades">
-      <div class="disc-head">
-        <h3>Modalidades que fazem você <span class="script" style="font-size:1.25em">querer voltar</span></h3>
-        <div class="filters" role="tablist">
-          <button class="on" data-f="all">Todas</button>
-          <button data-f="forca">Força</button>
-          <button data-f="cardio">Cardio</button>
-          <button data-f="corpo">Corpo & mente</button>
-        </div>
-      </div>
-      <div class="mods">
-        <article class="mod rv" data-c="corpo">
-          <div class="img"><div class="bg" style="background-image:url(assets/stock/pilates.jpg)"></div><span class="bm"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M4 2h8v12l-4-3-4 3V2z" stroke="currentColor" stroke-width="1.4"/></svg></span>
-            <div class="meta"><span class="pill-tag">Turmas lotadas</span><h4>Pilates Solo</h4><p>Força, postura e consciência corporal.</p></div></div>
-          <div class="under"><div><b>com profa. Karina</b><span>Solo · todos os níveis</span></div><span class="av">KA</span></div>
-        </article>
-        <article class="mod rv" data-c="cardio">
-          <div class="img"><div class="bg" style="background-image:url(assets/stock/corrida.jpg)"></div><span class="bm"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M4 2h8v12l-4-3-4 3V2z" stroke="currentColor" stroke-width="1.4"/></svg></span>
-            <div class="meta"><span class="pill-tag">2x por semana</span><h4>Treino de Corrida</h4><p>Preparação física e corrida de rua em grupo.</p></div></div>
-          <div class="under"><div><b>com profa. Iasa</b><span>Corrida · iniciante</span></div><span class="av">IA</span></div>
-        </article>
-        <article class="mod rv" data-c="cardio">
-          <div class="img"><div class="bg" style="background-image:url(assets/stock/kangoo.jpg)"></div><span class="bm"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M4 2h8v12l-4-3-4 3V2z" stroke="currentColor" stroke-width="1.4"/></svg></span>
-            <div class="meta"><span class="pill-tag">Alta energia</span><h4>Kangoo Jumps</h4><p>Muita energia, pouco impacto nas articulações.</p></div></div>
-          <div class="under"><div><b>com profa. Carol</b><span>Cardio · todos os níveis</span></div><span class="av">CA</span></div>
-        </article>
-        <article class="mod rv" data-c="forca">
-          <div class="img"><div class="bg" style="background-image:url(assets/stock/musculacao.jpg)"></div><span class="bm"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M4 2h8v12l-4-3-4 3V2z" stroke="currentColor" stroke-width="1.4"/></svg></span>
-            <div class="meta"><span class="pill-tag">Personalizado</span><h4>Musculação orientada</h4><p>Treinos personalizados com professoras capacitadas.</p></div></div>
-          <div class="under"><div><b>Equipe Fit Girls</b><span>Força · todos os níveis</span></div><span class="av">FG</span></div>
-        </article>
-      </div>
-      <div class="mods-cta"><a href="#planos" class="btn btn-dark">Quero experimentar uma aula<span class="arr"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4m0 0H6m6 0v6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span></a></div>
     </div>
 
     <div class="struct">
@@ -772,27 +930,6 @@ footer{background:var(--graphite);color:rgba(255,255,255,.7);padding:70px 0 34px
       <div class="glass rv"><span class="ico"><svg viewBox="0 0 24 24" fill="none"><rect x="7" y="2.5" width="10" height="19" rx="2.5" stroke="currentColor" stroke-width="1.6"/><path d="M11 18h2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span><h4>Tudo na palma da mão</h4><p>Pelo app você vê a grade, agenda suas aulas e entra na fila de espera quando a turma está cheia.</p><a class="app-btn" href="https://apps.apple.com/br/app/hubfit-aluno/id1314939003" target="_blank" rel="noopener" data-app-link aria-label="Baixe o aplicativo Hub Fit"><img src="assets/app-hubfit-icon.jpg" alt=""><span><small>Baixe o app</small><b>Hub Fit</b></span><i><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4m0 0H6m6 0v6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></i></a></div>
       <div class="glass rv"><span class="ico"><svg viewBox="0 0 24 24" fill="none"><path d="M4 5h16v11H9l-5 4V5z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span><h4>Aqui você tem voz</h4><p>Ouvimos você na chegada, aos três meses e sempre que quiser, pela nossa caixa de sugestões. A Fit muda com as alunas.</p></div>
       <div class="glass rv"><span class="ico"><svg viewBox="0 0 24 24" fill="none"><path d="M12 20s-7-4.4-7-10a4 4 0 017-2.6A4 4 0 0119 10c0 5.6-7 10-7 10z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span><h4>Uma equipe que veste a camisa</h4><p>Professoras e equipe treinadas e reconhecidas por cuidar bem de você.</p></div>
-    </div>
-
-    <div class="black" id="black">
-      <div>
-        <span class="kicker" style="color:var(--pink)">Exclusivo para alunas do plano anual</span>
-        <h2 class="h2" style="margin-top:20px">Cartão Black<br><span class="script">Fit Girls</span></h2>
-        <p>A Fit continua com você fora da academia. Aluna do plano anual tem acesso exclusivo a descontos em parceiros selecionados da cidade.</p>
-      </div>
-      <div class="card-stage" id="cardStage">
-        <div class="bcard" id="bcard">
-          <span class="tag">BLACK</span>
-          <div class="chip"></div>
-          <span class="num">5123 4567 8901 2345</span>
-          <span class="brand"><img src="assets/logo/logo-claro.svg" alt="Fit Girls"></span>
-          <span class="mc"><i></i><i></i></span>
-        </div>
-      </div>
-      <div class="marquee"><div class="track">
-        <span>Alecrim Dourado</span><span>Nutri Life Suplementos</span><span>Yázigi</span><span>Vizzo Moda Fitness</span><span>Educação Adventista</span><span>Suco Way</span><span>Fonte Nova Postos</span><span>Paloma Casagrande</span>
-        <span>Alecrim Dourado</span><span>Nutri Life Suplementos</span><span>Yázigi</span><span>Vizzo Moda Fitness</span><span>Educação Adventista</span><span>Suco Way</span><span>Fonte Nova Postos</span><span>Paloma Casagrande</span>
-      </div></div>
     </div>
   </div>
 </section>
@@ -829,6 +966,27 @@ footer{background:var(--graphite);color:rgba(255,255,255,.7);padding:70px 0 34px
         <a href="https://wa.me/554491383555?text=Ol%C3%A1!%20Me%20interessei%20pelo%20plano%20Anual%20da%20Fit%20Girls%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" class="btn btn-light" style="align-self:flex-start">Quero o plano anual<span class="arr"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4l-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span></a>
       </article>
     </div>
+
+    <div class="black" id="black">
+      <div>
+        <span class="kicker" style="color:var(--pink)">Incluso no plano anual</span>
+        <h2 class="h2" style="margin-top:20px">Cartão Black<br><span class="script">Fit Girls</span></h2>
+        <p>A Fit continua com você fora da academia. Aluna do plano anual tem acesso exclusivo a descontos em parceiros selecionados da cidade.</p>
+      </div>
+      <div class="card-stage" id="cardStage">
+        <div class="bcard" id="bcard">
+          <span class="tag">BLACK</span>
+          <div class="chip"></div>
+          <span class="num">5123 4567 8901 2345</span>
+          <span class="brand"><img src="assets/logo/logo-claro.svg" alt="Fit Girls"></span>
+          <span class="mc"><i></i><i></i></span>
+        </div>
+      </div>
+      <div class="marquee"><div class="track">
+        <span>Alecrim Dourado</span><span>Nutri Life Suplementos</span><span>Yázigi</span><span>Vizzo Moda Fitness</span><span>Educação Adventista</span><span>Suco Way</span><span>Fonte Nova Postos</span><span>Paloma Casagrande</span>
+        <span>Alecrim Dourado</span><span>Nutri Life Suplementos</span><span>Yázigi</span><span>Vizzo Moda Fitness</span><span>Educação Adventista</span><span>Suco Way</span><span>Fonte Nova Postos</span><span>Paloma Casagrande</span>
+      </div></div>
+    </div>
   </div>
 </section>
 
@@ -842,6 +1000,8 @@ footer{background:var(--graphite);color:rgba(255,255,255,.7);padding:70px 0 34px
     </div>
   </div>
   <div class="t-row" id="tRow">
+    <article class="t has-video" data-video="assets/videos/professoras.mp4" data-poster="assets/videos/professoras-thumb.jpg" role="button" tabindex="0" aria-label="Assistir: professoras da Fit Girls falam sobre a profissão"><div class="bg" style="background-image:url(assets/videos/professoras-thumb.jpg);background-position:center 20%"></div><span class="t-dur">3:37</span><span class="play"><svg width="20" height="20" viewBox="0 0 20 20"><path d="M7 5l8 5-8 5z" fill="currentColor"/></svg></span><div class="cap"><q>"A gente é mulher, então a gente sabe o que a mulher sente."</q><b>Professoras Fit Girls</b><span>A educação física como profissão</span></div></article>
+    <article class="t has-video" data-video="assets/videos/evento-pilates.mp4" data-poster="assets/videos/evento-pilates-thumb.jpg" role="button" tabindex="0" aria-label="Assistir: evento de pilates ao ar livre da Fit Girls"><div class="bg" style="background-image:url(assets/videos/evento-pilates-thumb.jpg);background-position:center 30%"></div><span class="t-dur">1:52</span><span class="play"><svg width="20" height="20" viewBox="0 0 20 20"><path d="M7 5l8 5-8 5z" fill="currentColor"/></svg></span><div class="cap"><q>"Cheguei super travada e estou saindo daqui super alongada."</q><b>Pilates ao ar livre</b><span>Evento Fit Girls</span></div></article>
     <article class="t"><div class="bg" style="background-image:url(assets/stock/grupo.jpg)"></div><span class="play"><svg width="20" height="20" viewBox="0 0 20 20"><path d="M7 5l8 5-8 5z" fill="currentColor"/></svg></span><div class="cap"><q>"Aqui eu aprendi a gostar de mim de novo."</q><b>Fran</b><span>Aluna das modalidades</span></div></article>
     <article class="t"><div class="bg" style="background-image:url(assets/stock/dep3.jpg)"></div><span class="play"><svg width="20" height="20" viewBox="0 0 20 20"><path d="M7 5l8 5-8 5z" fill="currentColor"/></svg></span><div class="cap"><q>"Seis anos e não troco a Fit por nada."</q><b>Aluna desde 2020</b><span>Depoimento a gravar</span></div></article>
     <article class="t"><div class="bg" style="background-image:url(assets/stock/dep2.jpg)"></div><span class="play"><svg width="20" height="20" viewBox="0 0 20 20"><path d="M7 5l8 5-8 5z" fill="currentColor"/></svg></span><div class="cap"><q>"Comecei sem saber nada. Hoje eu corro 5 km."</q><b>Aluna da corrida</b><span>Depoimento a gravar</span></div></article>
@@ -997,7 +1157,7 @@ footer{background:var(--graphite);color:rgba(255,255,255,.7);padding:70px 0 34px
           <p><b>No mínimo 15 dias de imersão na unidade-modelo.</b> Você vive a rotina da Fit por dentro. A nossa equipe treina cada função, e a Alana treina pessoalmente a gestora.</p>
           <div class="chips"><span>15+ dias presenciais</span><span>Todas as funções</span><span>Com a fundadora</span></div>
         </div>
-        <div class="visual" style="background-image:url(assets/stock/comunidade.jpg)"></div>
+        <div class="visual" style="background-image:url(assets/equipe/time.jpg);background-position:center 55%"></div>
       </article>
       <article class="stk">
         <div>
@@ -1006,7 +1166,7 @@ footer{background:var(--graphite);color:rgba(255,255,255,.7);padding:70px 0 34px
           <p>Você não fica sozinha depois da inauguração. Supervisão, acompanhamento e campanhas da rede durante toda a operação.</p>
           <div class="chips"><span>Supervisão de campo</span><span>Campanhas mensais</span><span>Marketing da rede</span></div>
         </div>
-        <div class="visual" style="background-image:url(assets/stock/suporte.jpg)"></div>
+        <div class="visual" style="background-image:url(assets/equipe/suporte.jpg);background-position:center 25%"></div>
       </article>
     </div>
 
@@ -1150,8 +1310,8 @@ footer{background:var(--graphite);color:rgba(255,255,255,.7);padding:70px 0 34px
   <div class="wrap">
     <div class="f-grid">
       <div><a href="#top" class="logo logo-foot" aria-label="Fit Girls"><img src="assets/logo/logo-claro.svg" alt="Fit Girls"></a><p class="f-sign">Força feminina que transforma.</p></div>
-      <div><h5>Academia Fit Girls</h5><ul><li>Endereço da unidade</li><li>WhatsApp da academia</li><li>@fitgirlsacademia</li><li>Horários de funcionamento</li></ul></div>
-      <div><h5>Franquia Fit Girls</h5><ul><li><a href="#franquia">Seja franqueada</a></li><li><a href="#candidatura">Formulário de candidatura</a></li><li>Contato de expansão</li></ul></div>
+      <div><h5>Academia Fit Girls</h5><ul><li>Endereço da unidade</li><li><a href="https://wa.me/554491383555?text=Ol%C3%A1!%20Quero%20conhecer%20a%20Fit%20Girls." target="_blank" rel="noopener">WhatsApp da academia</a></li><li>@fitgirlsacademia</li><li>Horários de funcionamento</li></ul></div>
+      <div><h5>Franquia Fit Girls</h5><ul><li><a href="#franquia">Seja franqueada</a></li><li><a href="#candidatura">Formulário de candidatura</a></li><li><a href="https://wa.me/554491295263?text=Ol%C3%A1%2C%20quero%20me%20tornar%20franqueado%20Fit%20Girls." target="_blank" rel="noopener">WhatsApp da expansão</a></li></ul></div>
     </div>
     <div class="f-bottom"><span>© 2026 Fit Girls · Política de Privacidade</span><span>Desenvolvido por Agência Mine</span></div>
   </div>
@@ -1159,6 +1319,24 @@ footer{background:var(--graphite);color:rgba(255,255,255,.7);padding:70px 0 34px
 
 </div><!-- /ato2 -->
 </main>
+
+<!-- ================= PLAYER DE DEPOIMENTOS ================= -->
+<div class="vmodal" id="vModal" aria-hidden="true">
+  <div class="vm-back" data-close></div>
+  <div class="vm-box" role="dialog" aria-modal="true" aria-label="Vídeo de depoimento">
+    <button type="button" class="vm-close" data-close aria-label="Fechar vídeo"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M4 4l10 10M14 4L4 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+    <video id="vmVideo" controls playsinline preload="none"></video>
+  </div>
+</div>
+
+<!-- ================= BOTÃO FLUTUANTE · FRANQUIA ================= -->
+<a class="fr-fab" id="frFab" href="https://wa.me/554491295263?text=Ol%C3%A1%2C%20quero%20me%20tornar%20franqueado%20Fit%20Girls." target="_blank" rel="noopener" aria-label="Seja franqueada Fit Girls: fale com a expansão pelo WhatsApp">
+  <span class="fab-pill"><small id="fabSmall">Franquia Fit Girls</small><b>Seja franqueada</b></span>
+  <span class="fab-badge">
+    <svg class="fab-ring" viewBox="0 0 100 100" aria-hidden="true"><defs><path id="fabCircle" d="M50,50 m-39,0 a39,39 0 1,1 78,0 a39,39 0 1,1 -78,0"/></defs><text><textPath href="#fabCircle" id="fabTxt" textLength="242" lengthAdjust="spacing">SEJA FRANQUEADA · FIT GIRLS ·</textPath></text></svg>
+    <span class="fab-core"><svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 01-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 4.54 0 8.24 3.7 8.24 8.24 0 4.55-3.7 8.24-8.24 8.24zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.16.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28z"/></svg></span>
+  </span>
+</a>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
@@ -1184,7 +1362,9 @@ footer{background:var(--graphite);color:rgba(255,255,255,.7);padding:70px 0 34px
   }));
 
   /* ---- hero slideshow (placeholder do vídeo) ---- */
-  const hv=document.querySelector('.hero-video'); if(hv&&reduced){hv.removeAttribute('autoplay');hv.pause()}
+  const hv=document.querySelector('.hero-video');
+  if(hv&&window.matchMedia('(max-width:820px)').matches){hv.poster='assets/hero-m-poster.jpg';hv.querySelector('source').src='assets/hero-m.mp4';hv.load();if(!reduced){const p=hv.play();if(p&&p.catch)p.catch(()=>{})}}
+  if(hv&&reduced){hv.removeAttribute('autoplay');hv.pause()}
 
   /* ---- nav state ---- */
   const nav=document.getElementById('nav'), hero=document.getElementById('hero'), ato2=document.getElementById('ato2'), story=document.getElementById('historia');
@@ -1196,6 +1376,73 @@ footer{background:var(--graphite);color:rgba(255,255,255,.7);padding:70px 0 34px
     nav.classList.toggle('dark',a2);
   }
   window.addEventListener('scroll',navState,{passive:true}); navState();
+
+  /* ---- capa: carrossel "Acontecendo na Fit" (conteúdo vem de data/destaques.json) ---- */
+  (function(){
+    const heroEl=document.getElementById('hero'), media=document.getElementById('heroMedia'), stage=document.getElementById('heroStage'), track=document.getElementById('railTrack');
+    const esc=s=>String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+    const safeUrl=u=>/^(https?:|#|assets\/|data\/)/i.test(String(u||''))?String(u):'#';
+    const arrow='<span class="arr"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4m0 0H6m6 0v6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>';
+    let cur=0, n=1;
+    function go(i){
+      n=track.children.length; cur=(i+n)%n;
+      media.querySelectorAll('.hs').forEach(s=>s.classList.toggle('on',+s.dataset.i===cur));
+      stage.querySelectorAll('.hs-txt').forEach(s=>s.classList.toggle('on',+s.dataset.i===cur));
+      [...track.children].forEach(t=>{t.classList.remove('on');if(+t.dataset.i===cur){void t.offsetWidth;t.classList.add('on')}});
+      const t=track.children[cur]; if(t&&track.scrollWidth>track.clientWidth){const pl=parseFloat(getComputedStyle(track).paddingLeft)||0;track.scrollBy({left:t.getBoundingClientRect().left-track.getBoundingClientRect().left-pl,behavior:'smooth'})}
+    }
+    track.addEventListener('click',e=>{const t=e.target.closest('.tab');if(t)go(+t.dataset.i)});
+    track.addEventListener('animationend',e=>{if(e.target.closest('.tab.on'))go(cur+1)});
+    document.getElementById('railPrev').addEventListener('click',()=>go(cur-1));
+    document.getElementById('railNext').addEventListener('click',()=>go(cur+1));
+    const rail=document.getElementById('heroRail');
+    rail.addEventListener('pointerenter',e=>{if(e.pointerType==='mouse')heroEl.classList.add('paused')});
+    rail.addEventListener('pointerleave',()=>heroEl.classList.remove('paused'));
+    new IntersectionObserver(es=>heroEl.classList.toggle('paused',!es[0].isIntersecting),{threshold:.25}).observe(heroEl);
+    fetch('data/destaques.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null).then(d=>{
+      if(!d||!Array.isArray(d.itens))return;
+      if(d.mes) document.getElementById('railMes').textContent=d.mes;
+      const wa=String(d.whatsapp||'').replace(/\D/g,'');
+      d.itens.forEach((it,k)=>{
+        const i=k+1, ret=it.formato==='retrato', img=safeUrl(it.imagem), pos=esc(it.posicao||'center');
+        const href=it.whatsapp&&wa?'https://wa.me/'+wa+'?text='+encodeURIComponent(it.whatsapp):safeUrl(it.link||'#planos');
+        const ext=/^https?:/i.test(href);
+        const posm=it.posicao_mobile?`;--posm:${esc(it.posicao_mobile)}`:'', zm=+it.zoom_mobile?`;--zm:auto ${+it.zoom_mobile}%`:'';
+        const mt=Math.max(0,+it.respiro||0), mtm=Math.max(0,+it.respiro_mobile||0), hasMt=mt||mtm;
+        const mts=hasMt?`;--mt:${mt}px;--mtm:${mtm}px`:'';
+        media.insertAdjacentHTML('beforeend',`<div class="hs camp${ret?' retrato':''}" data-i="${i}"><div class="ph${hasMt?' mt':''}" style="background-image:url('${esc(img)}');--pos:${pos}${posm}${zm}${mts}"></div></div>`);
+        stage.insertAdjacentHTML('beforeend',`<div class="hs-txt camp-l" data-i="${i}"><div class="camp-in">
+          <div class="camp-meta ani"><span>${esc(it.tag)}</span>${it.data?`<span>${esc(it.data)}</span>`:''}</div>
+          <h2 class="camp-h ani">${esc(it.titulo)}${it.destaque?` <span class="script">${esc(it.destaque)}</span>`:''}</h2>
+          <p class="ani">${esc(it.texto)}</p>
+          <a class="btn btn-pink ani" href="${esc(href)}"${ext?' target="_blank" rel="noopener"':''}>${esc(it.botao||'Saiba mais')}${arrow}</a>
+        </div>${ret?`<div class="camp-frame ani" style="background-image:url('${esc(img)}');background-position:${pos}"></div>`:''}</div>`);
+        track.insertAdjacentHTML('beforeend',`<button type="button" class="tab" data-i="${i}" style="--d:${+it.duracao||6.5}s"><span class="tb-img" style="background-image:url('${esc(img)}');background-position:${pos}"></span><span class="tb-tx"><small>${esc(it.tag)}</small><b>${esc(it.aba||it.titulo)}</b></span><span class="tb-bar"><i></i></span></button>`);
+      });
+    }).catch(()=>{});
+  })();
+
+  /* ---- botão flutuante: seja franqueada ---- */
+  (function(){
+    const fab=document.getElementById('frFab'), txt=document.getElementById('fabTxt'), small=document.getElementById('fabSmall');
+    const apply=document.getElementById('candidatura'), turn=document.getElementById('turn');
+    let nearForm=false, act2=false, peeked=false, peekT=null;
+    function peek(ms){fab.classList.add('peek');clearTimeout(peekT);peekT=setTimeout(()=>fab.classList.remove('peek'),ms||3200)}
+    function update(){
+      const ar=apply.getBoundingClientRect(); nearForm=ar.top<window.innerHeight*.7&&ar.bottom>window.innerHeight*.3;
+      const show=window.scrollY>window.innerHeight*.55&&!nearForm;
+      if(show&&!fab.classList.contains('show')){fab.classList.add('show');if(!peeked){peeked=true;setTimeout(()=>peek(3400),700)}}
+      else if(!show) fab.classList.remove('show');
+      const a2=turn.getBoundingClientRect().top<window.innerHeight*.5;
+      if(a2!==act2){act2=a2;txt.textContent=a2?'FALE COM A EXPANSÃO · FIT GIRLS ·':'SEJA FRANQUEADA · FIT GIRLS ·';small.textContent=a2?'Fale com a expansão':'Franquia Fit Girls';if(a2&&fab.classList.contains('show'))peek(3000)}
+    }
+    window.addEventListener('scroll',update,{passive:true}); update();
+    if(!reduced&&window.matchMedia('(hover:hover)').matches){
+      const badge=fab.querySelector('.fab-badge');
+      fab.addEventListener('pointermove',e=>{const r=badge.getBoundingClientRect();badge.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.18}px,${(e.clientY-r.top-r.height/2)*.18}px)`});
+      fab.addEventListener('pointerleave',()=>badge.style.transform='');
+    }
+  })();
 
   /* ---- manifesto split ---- */
   const mf=document.getElementById('manifesto');
@@ -1254,10 +1501,19 @@ footer{background:var(--graphite);color:rgba(255,255,255,.7);padding:70px 0 34px
   stage.addEventListener('pointerleave',()=>{card.style.transform='';card.style.setProperty('--sh','-30%')});
 
   /* ---- testimonials drag ---- */
-  const tr=document.getElementById('tRow'); let down=false,sx=0,sl=0;
-  tr.addEventListener('pointerdown',e=>{if(e.pointerType!=='mouse')return;down=true;sx=e.clientX;sl=tr.scrollLeft;tr.style.scrollSnapType='none'});
+  const tr=document.getElementById('tRow'); let down=false,sx=0,sl=0,moved=0;
+  tr.addEventListener('pointerdown',e=>{moved=0;if(e.pointerType!=='mouse')return;down=true;sx=e.clientX;sl=tr.scrollLeft;tr.style.scrollSnapType='none'});
   window.addEventListener('pointerup',()=>{down=false;tr.style.scrollSnapType=''});
-  tr.addEventListener('pointermove',e=>{if(down)tr.scrollLeft=sl-(e.clientX-sx)});
+  tr.addEventListener('pointermove',e=>{if(down){moved=Math.max(moved,Math.abs(e.clientX-sx));tr.scrollLeft=sl-(e.clientX-sx)}});
+
+  /* ---- player dos depoimentos em vídeo ---- */
+  const vm=document.getElementById('vModal'), vv=document.getElementById('vmVideo'); let lastCard=null;
+  function openVideo(card){lastCard=card;vv.poster=card.dataset.poster||'';vv.src=card.dataset.video;vm.classList.add('on');vm.setAttribute('aria-hidden','false');if(window.__lenis)window.__lenis.stop();const p=vv.play();if(p&&p.catch)p.catch(()=>{});vm.querySelector('.vm-close').focus({preventScroll:true})}
+  function closeVideo(){vm.classList.remove('on');vm.setAttribute('aria-hidden','true');vv.pause();setTimeout(()=>{if(!vm.classList.contains('on')){vv.removeAttribute('src');vv.load()}},500);if(window.__lenis)window.__lenis.start();if(lastCard)lastCard.focus({preventScroll:true})}
+  tr.addEventListener('click',e=>{const c=e.target.closest('.t[data-video]');if(c&&moved<8)openVideo(c)});
+  tr.addEventListener('keydown',e=>{const c=e.target.closest('.t[data-video]');if(c&&(e.key==='Enter'||e.key===' ')){e.preventDefault();openVideo(c)}});
+  vm.addEventListener('click',e=>{if(e.target.closest('[data-close]'))closeVideo()});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&vm.classList.contains('on'))closeVideo()});
 
   /* ---- FAQ ---- */
   document.querySelectorAll('.qa button').forEach(b=>b.addEventListener('click',()=>{const q=b.parentElement,on=q.classList.contains('on');document.querySelectorAll('.qa').forEach(x=>x.classList.remove('on'));if(!on)q.classList.add('on')}));
@@ -1306,16 +1562,19 @@ footer{background:var(--graphite);color:rgba(255,255,255,.7);padding:70px 0 34px
   gsap.registerPlugin(ScrollTrigger);
 
   /* ---- hero: tela cheia que encaixa (estilo Smart Fit) ---- */
-  const hm=document.getElementById('heroMedia'), ht=document.getElementById('heroTitle');
+  const hm=document.getElementById('heroMedia'), ht=document.getElementById('heroStage');
   const mm=gsap.matchMedia();
   mm.add('(min-width:821px)',()=>{
     gsap.timeline({scrollTrigger:{trigger:'#hero',start:'top top',end:'+=90%',scrub:1,pin:true,anticipatePin:1}})
       .to(hm,{clipPath:'inset(9% 4% 6% 4% round 36px)',ease:'none'},0)
       .to(ht,{scale:.86,yPercent:-4,ease:'none'},0)
-      .to('.hero-foot',{opacity:0,y:20,ease:'none'},0);
+      .to('#heroRail',{opacity:0,y:30,ease:'none'},0);
   });
   mm.add('(max-width:820px)',()=>{
     gsap.to(hm,{clipPath:'inset(4% 3% 4% 3% round 24px)',scrollTrigger:{trigger:'#hero',start:'top top',end:'bottom top',scrub:1}});
+    /* bolinhas da virada para a franquia: flutuam com o scroll */
+    gsap.fromTo('.turn .sphere:not(.s2)',{y:30,x:0,scale:.94},{y:-70,x:-18,scale:1.06,ease:'none',scrollTrigger:{trigger:'#turn',start:'top bottom',end:'bottom top',scrub:1.2}});
+    gsap.fromTo('.turn .sphere.s2',{y:-30,x:0,scale:1.05},{y:60,x:22,scale:.92,ease:'none',scrollTrigger:{trigger:'#turn',start:'top bottom',end:'bottom top',scrub:1.2}});
   });
 
   /* ---- reveals ---- */

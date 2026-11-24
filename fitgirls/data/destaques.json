@@ -1,0 +1,64 @@
+{
+  "_sobre": "Carrossel 'Acontecendo na Fit' da capa. Este arquivo é o que o painel de administração vai editar. formato: 'cheia' (foto horizontal ocupando a tela) ou 'retrato' (foto vertical em moldura ao lado do texto). whatsapp: mensagem que abre no WhatsApp das alunas; ou use 'link' para um endereço.",
+  "mes": "Novembro",
+  "whatsapp": "554491383555",
+  "itens": [
+    {
+      "aba": "Passaporte Fit Girls",
+      "tag": "Campanha do mês",
+      "data": "Até 30/11",
+      "titulo": "Passaporte",
+      "destaque": "Fit Girls",
+      "texto": "Cada treino é um carimbo. A aluna mais presente do mês ganha um fim de semana em Foz do Iguaçu.",
+      "imagem": "assets/destaques/passaporte.jpg",
+      "posicao": "68% 100%",
+      "posicao_mobile": "67% 100%",
+      "zoom_mobile": 160,
+      "formato": "cheia",
+      "botao": "Quero participar",
+      "whatsapp": "Olá! Quero participar do Passaporte Fit Girls."
+    },
+    {
+      "aba": "Black November",
+      "tag": "Promoção de novembro",
+      "data": "Só em novembro",
+      "titulo": "Black",
+      "destaque": "November",
+      "texto": "Condição especial no plano anual durante todo o mês: todas as modalidades inclusas e o Cartão Black Fit Girls. Vagas limitadas.",
+      "imagem": "assets/destaques/promo-novembro.jpg",
+      "posicao": "70% 30%",
+      "formato": "cheia",
+      "botao": "Quero aproveitar",
+      "whatsapp": "Olá! Quero aproveitar a promoção de novembro da Fit Girls."
+    },
+    {
+      "aba": "Aulão de Jump",
+      "tag": "Evento",
+      "data": "Sáb · 28/11 · 9h",
+      "titulo": "Aulão de",
+      "destaque": "Jump",
+      "texto": "Música alta, energia lá em cima e muito suor no mini trampolim. Aberto para alunas e convidadas: traga uma amiga.",
+      "imagem": "assets/destaques/aulao-jump.jpg",
+      "posicao": "center 6%",
+      "formato": "cheia",
+      "botao": "Quero meu lugar",
+      "whatsapp": "Olá! Quero participar do Aulão de Jump da Fit Girls."
+    },
+    {
+      "aba": "Corrida Fit Girls",
+      "tag": "Evento",
+      "data": "Dom · 29/11 · 7h",
+      "titulo": "Corrida",
+      "destaque": "Fit Girls",
+      "texto": "Treino de corrida em grupo, no ritmo de cada uma, com acompanhamento das professoras. Iniciantes são bem-vindas.",
+      "imagem": "assets/destaques/corrida-girls-run.jpg",
+      "posicao": "center 40px",
+      "posicao_mobile": "54% 95px",
+      "respiro": 40,
+      "respiro_mobile": 95,
+      "formato": "cheia",
+      "botao": "Quero correr junto",
+      "whatsapp": "Olá! Quero participar da Corrida Fit Girls."
+    }
+  ]
+}
