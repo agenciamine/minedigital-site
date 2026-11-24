@@ -53,9 +53,8 @@
       "texto": "Treino de corrida em grupo, no ritmo de cada uma, com acompanhamento das professoras. Iniciantes são bem-vindas.",
       "imagem": "assets/destaques/corrida-girls-run.jpg",
       "posicao": "center 40px",
-      "posicao_mobile": "54% 95px",
+      "posicao_mobile": "54% 0%",
       "respiro": 40,
-      "respiro_mobile": 95,
       "formato": "cheia",
       "botao": "Quero correr junto",
       "whatsapp": "Olá! Quero participar da Corrida Fit Girls."
