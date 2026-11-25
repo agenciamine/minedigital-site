@@ -569,6 +569,32 @@ footer{background:var(--graphite);color:rgba(255,255,255,.7);padding:70px 0 34px
 .vm-close:hover{background:var(--magenta)}
 @media (max-width:520px){.vmodal{padding:0}.vm-box{height:100svh;width:100%;border-radius:0;aspect-ratio:auto}}
 
+/* ---------- planta do modelo (card "O espaço") ---------- */
+.plan-view{background:#fff;position:relative;min-height:440px;box-shadow:inset 0 0 0 1px rgba(31,20,39,.06)}
+.pv-tabs{position:absolute;top:14px;left:50%;transform:translateX(-50%);z-index:2;display:flex;gap:4px;padding:4px;border-radius:100px;background:var(--blush);white-space:nowrap}
+.pv-tabs button{padding:8px 14px;border-radius:100px;font-size:12px;font-weight:700;color:var(--ink-2);transition:background .3s,color .3s}
+.pv-tabs button small{font-weight:600;opacity:.7;margin-left:4px}
+.pv-tabs button.on{background:var(--magenta);color:#fff}
+.pv-img{position:absolute;left:18px;right:18px;top:64px;bottom:18px;display:block;opacity:0;transform:scale(.97);transition:opacity .6s ease,transform .8s cubic-bezier(.2,.8,.2,1);pointer-events:none}
+.pv-img.on{opacity:1;transform:none;pointer-events:auto;cursor:zoom-in}
+.pv-img img{width:100%;height:100%;object-fit:contain;display:block}
+@media (min-width:821px){
+  .stk.has-plan{grid-template-columns:.8fr 1.45fr}
+  .stk .visual.plan-view{min-height:420px}
+  .pv-img{top:62px;bottom:62px}
+}
+.pm-box.wide{width:min(94vw,1500px);height:auto;max-height:92vh}
+.pm-box.wide .pm-scroll{padding:68px 28px 28px}
+.pv-zoom{position:absolute;right:14px;bottom:14px;z-index:2;display:inline-flex;align-items:center;gap:7px;padding:9px 14px;border-radius:100px;background:var(--ink);color:#fff;font-size:12px;font-weight:700;box-shadow:0 10px 24px -10px rgba(31,20,39,.5);transition:transform .35s cubic-bezier(.2,.8,.2,1),background .3s}
+.pv-zoom:hover{transform:translateY(-2px);background:var(--magenta)}
+.pm-box{aspect-ratio:auto;width:min(92vw,760px);height:min(92vh,1200px);background:#fff;display:flex;flex-direction:column}
+.pm-title{position:absolute;top:18px;left:20px;z-index:2;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--magenta);background:var(--blush);padding:8px 13px;border-radius:100px}
+.pm-box .vm-close{background:var(--ink);border-color:transparent}
+.pm-scroll{flex:1;overflow:auto;padding:64px 20px 20px;-webkit-overflow-scrolling:touch}
+.pm-scroll img{width:100%;height:auto;display:block}
+@media (max-width:820px){.stk .visual.plan-view{min-height:500px}.stk.has-plan{position:relative;top:auto}}
+@media (max-width:520px){.pm-box{width:100%;height:100svh;border-radius:0}}
+
 /* ---------- modalidades (seção própria) ---------- */
 .mods-sec .disc-head{margin-bottom:clamp(32px,4vw,48px)}
 .mods-sec .mods{display:flex;flex-wrap:wrap;justify-content:center;gap:18px}
@@ -1036,9 +1062,10 @@ footer{background:var(--graphite);color:rgba(255,255,255,.7);padding:70px 0 34px
       <div class="sm-frame">
         <div class="img on" style="background-image:url(assets/danca-bale.jpg)"></div>
         <div class="img" style="background-image:url(assets/formatura.jpg)"></div>
+        <div class="img" style="background-image:url(assets/alana-retrato-1.jpg);background-position:center 20%"></div>
         <div class="img" style="background-image:url(assets/fachada.jpg)"></div>
         <div class="img" style="background-image:url(assets/interior.jpg)"></div>
-        <div class="img" style="background-image:url(assets/alana-retrato-1.jpg);background-position:center 20%"></div>
+        <div class="img" style="background-image:url(assets/alana-familia.jpg);background-position:center 25%"></div>
         <span class="pill-tag chap-n" id="chapN">Capítulo 01</span>
         <span class="year" id="chapY">Início</span>
       </div>
@@ -1056,21 +1083,29 @@ footer{background:var(--graphite);color:rgba(255,255,255,.7);padding:70px 0 34px
         <h3>Conhecimento dedicado <span class="script">às mulheres.</span></h3>
         <p>Na Educação Física, se apaixonou pela fisiologia e pela biomecânica. Pós-graduação em Bodybuilding Coach, mestrado e anos como personal, atendendo <b>só mulheres</b>, das 6h da manhã às 10h da noite.</p>
       </article>
-      <article class="chap" data-i="2" data-y="2020">
-        <div class="chap-img" style="background-image:url(assets/fachada.jpg)"></div>
-        <span class="n">03 · A coragem</span>
-        <h3>Quando todos recuavam, <span class="script">ela foi.</span></h3>
-        <p>Em 2020, em plena pandemia, ela <b>vendeu o próprio carro</b>, juntou R$ 35 mil e abriu a Fit Girls numa portinha, com <b>três aparelhos e 30 alunas</b>.</p>
+      <article class="chap" data-i="2" data-y="Família">
+        <div class="chap-img" style="background-image:url(assets/alana-retrato-1.jpg);background-position:center 20%"></div>
+        <span class="n">03 · O apoio</span>
+        <h3>Quem acreditou <span class="script">desde o começo.</span></h3>
+        <p>Antes de existir a Fit, já existia quem acreditasse nela. Os pais da Alana <b>sempre apostaram no sonho dela</b> e nela como profissional. Quando ainda havia dúvida sobre qual carreira seguir, a mãe repetia:</p>
+        <blockquote>"Filha, você pode escolher ser arquiteta ou manicure, mas se empenhe e seja a melhor no que você faz."</blockquote>
+        <cite>Mãe da Alana</cite>
       </article>
-      <article class="chap" data-i="3" data-y="650">
+      <article class="chap" data-i="3" data-y="2020">
+        <div class="chap-img" style="background-image:url(assets/fachada.jpg)"></div>
+        <span class="n">04 · A coragem</span>
+        <h3>Quando todos recuavam, <span class="script">ela foi.</span></h3>
+        <p>Em 2020, em plena pandemia, ela <b>vendeu o próprio carro</b>, juntou R$ 35 mil e abriu a Fit Girls numa portinha, com <b>três aparelhos e 30 alunas</b>. E não foi sozinha: ao longo do primeiro ano, <b>os pais ajudaram a comprar mais aparelhos</b>, acreditando junto com ela.</p>
+      </article>
+      <article class="chap" data-i="4" data-y="650">
         <div class="chap-img" style="background-image:url(assets/interior.jpg)"></div>
-        <span class="n">04 · O crescimento</span>
+        <span class="n">05 · O crescimento</span>
         <h3>De 30 para <span class="script">650 mulheres.</span></h3>
         <p>Em três meses, eram 100 alunas. Em um ano, 200. Hoje, são <b>650 mulheres</b> e uma equipe com histórias parecidas com a dela, unidas pelo mesmo propósito: <b>transformar vidas.</b></p>
       </article>
-      <article class="chap" data-i="4" data-y="Legado">
-        <div class="chap-img" style="background-image:url(assets/alana-retrato-1.jpg);background-position:center 20%"></div>
-        <span class="n">05 · O legado</span>
+      <article class="chap" data-i="5" data-y="Legado">
+        <div class="chap-img" style="background-image:url(assets/alana-familia.jpg);background-position:center 25%"></div>
+        <span class="n">06 · O legado</span>
         <h3>Uma transformação <span class="script">que passa adiante.</span></h3>
         <p>Mãe da Aurora, a Alana leva a filha para o trabalho todos os dias.</p>
         <blockquote>"Quando eu falo de transformação, eu falo de uma transformação que eu espero passar pra minha filha, e que ela passe para a geração dela."</blockquote>
@@ -1135,28 +1170,21 @@ footer{background:var(--graphite);color:rgba(255,255,255,.7);padding:70px 0 34px
       <h2 class="h2">Uma unidade pensada para<br><b>até 1.000 alunas.</b></h2>
     </div>
     <div class="stack">
-      <article class="stk">
+      <article class="stk has-plan">
         <div>
           <span class="n">01</span>
           <h3>O espaço</h3>
           <p>Salão de <b>2 pisos</b>, com projeto arquitetônico padrão já desenhado. Tudo pensado para receber modalidades, musculação e a experiência completa.</p>
           <div class="chips"><span>Musculação</span><span>Salas de modalidades</span><span>Sala de glúteo</span><span>Loft nutricional</span><span>Garagem</span></div>
         </div>
-        <div class="visual plan-art">
-          <svg viewBox="0 0 400 300" fill="none" stroke="#1F1427" stroke-width="1.4">
-            <rect x="20" y="20" width="360" height="260" rx="10"/>
-            <path d="M20 150h200M220 20v260M300 150h80M220 210h80"/>
-            <rect x="40" y="40" width="160" height="90" rx="6" fill="#FCE0ED" stroke="none"/>
-            <text x="120" y="90" text-anchor="middle" font-family="Manrope" font-size="12" fill="#1F1427" stroke="none" font-weight="700">MUSCULAÇÃO</text>
-            <rect x="40" y="170" width="160" height="90" rx="6" fill="#FF9FC3" stroke="none"/>
-            <text x="120" y="220" text-anchor="middle" font-family="Manrope" font-size="12" fill="#1F1427" stroke="none" font-weight="700">MODALIDADES</text>
-            <rect x="240" y="40" width="120" height="90" rx="6" fill="#903CBF" stroke="none"/>
-            <text x="300" y="90" text-anchor="middle" font-family="Manrope" font-size="11" fill="#fff" stroke="none" font-weight="700">GLÚTEO</text>
-            <text x="260" y="186" text-anchor="middle" font-family="Manrope" font-size="10" fill="#1F1427" stroke="none">LOFT</text>
-            <text x="340" y="186" text-anchor="middle" font-family="Manrope" font-size="10" fill="#1F1427" stroke="none">KIDS</text>
-            <text x="260" y="250" text-anchor="middle" font-family="Manrope" font-size="10" fill="#1F1427" stroke="none">RECEPÇÃO</text>
-            <text x="340" y="250" text-anchor="middle" font-family="Manrope" font-size="10" fill="#1F1427" stroke="none">VESTIÁRIOS</text>
-          </svg>
+        <div class="visual plan-view" id="planView">
+          <div class="pv-tabs" role="tablist" aria-label="Pavimentos">
+            <button type="button" class="on" data-p="0" role="tab" aria-selected="true">Térreo <small>323 m²</small></button>
+            <button type="button" data-p="1" role="tab" aria-selected="false">1º piso <small>210 m²</small></button>
+          </div>
+          <picture class="pv-img on"><source media="(min-width:821px)" srcset="assets/planta/terreo-h.png"><img src="assets/planta/terreo.png" alt="Planta do térreo: academia, recepção, hall, espaço kids, sala de avaliação, vestiários e garagem" data-title="Térreo · 323 m²"></picture>
+          <picture class="pv-img"><source media="(min-width:821px)" srcset="assets/planta/piso1-h.png"><img src="assets/planta/piso1.png" alt="Planta do 1º piso: sala de luta, sala de dança e glúteo, nutricionista e sala de descanso" data-title="1º piso · 210 m²" loading="lazy"></picture>
+          <button type="button" class="pv-zoom" aria-label="Ampliar planta"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 2h4v4M6 14H2v-4M14 2L9.5 6.5M2 14l4.5-4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Ampliar</button>
         </div>
       </article>
       <article class="stk">
@@ -1335,6 +1363,16 @@ footer{background:var(--graphite);color:rgba(255,255,255,.7);padding:70px 0 34px
   <div class="vm-box" role="dialog" aria-modal="true" aria-label="Vídeo de depoimento">
     <button type="button" class="vm-close" data-close aria-label="Fechar vídeo"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M4 4l10 10M14 4L4 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
     <video id="vmVideo" controls playsinline preload="none"></video>
+  </div>
+</div>
+
+<!-- ================= PLANTA AMPLIADA ================= -->
+<div class="vmodal" id="pModal" aria-hidden="true">
+  <div class="vm-back" data-close></div>
+  <div class="vm-box pm-box" role="dialog" aria-modal="true" aria-label="Planta ampliada">
+    <span class="pm-title" id="pmTitle"></span>
+    <button type="button" class="vm-close" data-close aria-label="Fechar planta"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M4 4l10 10M14 4L4 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+    <div class="pm-scroll"><img id="pmImg" alt=""></div>
   </div>
 </div>
 
@@ -1523,6 +1561,21 @@ footer{background:var(--graphite);color:rgba(255,255,255,.7);padding:70px 0 34px
   tr.addEventListener('keydown',e=>{const c=e.target.closest('.t[data-video]');if(c&&(e.key==='Enter'||e.key===' ')){e.preventDefault();openVideo(c)}});
   vm.addEventListener('click',e=>{if(e.target.closest('[data-close]'))closeVideo()});
   document.addEventListener('keydown',e=>{if(e.key==='Escape'&&vm.classList.contains('on'))closeVideo()});
+
+  /* ---- planta do modelo: alternar pavimento e ampliar ---- */
+  (function(){
+    const pv=document.getElementById('planView'); if(!pv)return;
+    const tabs=[...pv.querySelectorAll('.pv-tabs button')], imgs=[...pv.querySelectorAll('.pv-img')];
+    let cur=0;
+    tabs.forEach(b=>b.addEventListener('click',()=>{cur=+b.dataset.p;tabs.forEach(t=>{const on=t===b;t.classList.toggle('on',on);t.setAttribute('aria-selected',on)});imgs.forEach((im,k)=>im.classList.toggle('on',k===cur))}));
+    const pm=document.getElementById('pModal'), pmImg=document.getElementById('pmImg'), pmTitle=document.getElementById('pmTitle'), zoom=pv.querySelector('.pv-zoom');
+    function openPlan(){const im=imgs[cur].querySelector('img'), src=im.currentSrc||im.src;pmImg.src=src;pmImg.alt=im.alt;pmTitle.textContent=im.dataset.title||'';pm.querySelector('.pm-box').classList.toggle('wide',/-h\.png/.test(src));pm.querySelector('.pm-scroll').scrollTop=0;pm.classList.add('on');pm.setAttribute('aria-hidden','false');if(window.__lenis)window.__lenis.stop();pm.querySelector('.vm-close').focus({preventScroll:true})}
+    function closePlan(){pm.classList.remove('on');pm.setAttribute('aria-hidden','true');if(window.__lenis)window.__lenis.start();zoom.focus({preventScroll:true})}
+    zoom.addEventListener('click',openPlan);
+    imgs.forEach(im=>im.addEventListener('click',openPlan));
+    pm.addEventListener('click',e=>{if(e.target.closest('[data-close]'))closePlan()});
+    document.addEventListener('keydown',e=>{if(e.key==='Escape'&&pm.classList.contains('on'))closePlan()});
+  })();
 
   /* ---- FAQ ---- */
   document.querySelectorAll('.qa button').forEach(b=>b.addEventListener('click',()=>{const q=b.parentElement,on=q.classList.contains('on');document.querySelectorAll('.qa').forEach(x=>x.classList.remove('on'));if(!on)q.classList.add('on')}));
