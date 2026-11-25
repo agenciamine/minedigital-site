@@ -569,6 +569,11 @@ footer{background:var(--graphite);color:rgba(255,255,255,.7);padding:70px 0 34px
 .vm-close:hover{background:var(--magenta)}
 @media (max-width:520px){.vmodal{padding:0}.vm-box{height:100svh;width:100%;border-radius:0;aspect-ratio:auto}}
 
+/* ---------- vídeos em loop tipo GIF (história) ---------- */
+.loop-media{overflow:hidden;background-size:cover;background-position:center}
+.loop-media video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%;pointer-events:none;display:block}
+.chap-img.loop-media{position:relative}
+
 /* ---------- planta do modelo (card "O espaço") ---------- */
 .plan-view{background:#fff;position:relative;min-height:440px;box-shadow:inset 0 0 0 1px rgba(31,20,39,.06)}
 .pv-tabs{position:absolute;top:14px;left:50%;transform:translateX(-50%);z-index:2;display:flex;gap:4px;padding:4px;border-radius:100px;background:var(--blush);white-space:nowrap}
@@ -1055,14 +1060,14 @@ footer{background:var(--graphite);color:rgba(255,255,255,.7);padding:70px 0 34px
 <section class="story" id="historia">
   <div class="wrap story-intro">
     <span class="kicker">Quem está por trás de tudo isso</span>
-    <h2 class="h2" style="margin-top:22px">Três aparelhos,<br><b>um carro vendido</b> <span class="script">e um sonho.</span></h2>
+    <h2 class="h2" style="margin-top:22px">Três aparelhos,<br><b>o apoio do pai</b> <span class="script">e um sonho.</span></h2>
   </div>
   <div class="wrap story-grid">
     <div class="story-media">
       <div class="sm-frame">
         <div class="img on" style="background-image:url(assets/danca-bale.jpg)"></div>
         <div class="img" style="background-image:url(assets/formatura.jpg)"></div>
-        <div class="img" style="background-image:url(assets/alana-retrato-1.jpg);background-position:center 20%"></div>
+        <div class="img loop-media" style="background-image:url(assets/alana-apoio-pc-poster.jpg)"><video data-loop muted loop playsinline preload="none" poster="assets/alana-apoio-pc-poster.jpg" aria-hidden="true" style="object-position:center"><source src="assets/alana-apoio-pc.mp4" type="video/mp4"></video></div>
         <div class="img" style="background-image:url(assets/fachada.jpg)"></div>
         <div class="img" style="background-image:url(assets/interior.jpg)"></div>
         <div class="img" style="background-image:url(assets/alana-familia.jpg);background-position:center 25%"></div>
@@ -1072,7 +1077,7 @@ footer{background:var(--graphite);color:rgba(255,255,255,.7);padding:70px 0 34px
     </div>
     <div class="chapters">
       <article class="chap on" data-i="0" data-y="Início">
-        <div class="chap-img" style="background-image:url(assets/danca-bale.jpg)"></div>
+        <div class="chap-img" style="background-image:url(assets/danca-bale.jpg);background-position:center 0%"></div>
         <span class="n">01 · O movimento</span>
         <h3>Antes da academia, <span class="script">veio a dança.</span></h3>
         <p>Balé clássico, contemporâneo, hip-hop. Ainda menina, a Alana já sabia que o corpo em movimento era o caminho dela.</p>
@@ -1084,10 +1089,10 @@ footer{background:var(--graphite);color:rgba(255,255,255,.7);padding:70px 0 34px
         <p>Na Educação Física, se apaixonou pela fisiologia e pela biomecânica. Pós-graduação em Bodybuilding Coach, mestrado e anos como personal, atendendo <b>só mulheres</b>, das 6h da manhã às 10h da noite.</p>
       </article>
       <article class="chap" data-i="2" data-y="Família">
-        <div class="chap-img" style="background-image:url(assets/alana-retrato-1.jpg);background-position:center 20%"></div>
+        <div class="chap-img loop-media" style="background-image:url(assets/alana-apoio-poster.jpg)"><video data-loop muted loop playsinline preload="none" poster="assets/alana-apoio-poster.jpg" aria-hidden="true"><source src="assets/alana-apoio.mp4" type="video/mp4"></video></div>
         <span class="n">03 · O apoio</span>
         <h3>Quem acreditou <span class="script">desde o começo.</span></h3>
-        <p>Antes de existir a Fit, já existia quem acreditasse nela. Os pais da Alana <b>sempre apostaram no sonho dela</b> e nela como profissional. Quando ainda havia dúvida sobre qual carreira seguir, a mãe repetia:</p>
+        <p>Antes de existir a Fit, já existia quem acreditasse nela. Os pais da Alana <b>sempre apostaram no sonho dela</b> e nela como profissional, e foi o pai quem <b>deu o dinheiro para ela começar</b>. Já a mãe, quando ainda havia dúvida sobre qual carreira seguir, repetia:</p>
         <blockquote>"Filha, você pode escolher ser arquiteta ou manicure, mas se empenhe e seja a melhor no que você faz."</blockquote>
         <cite>Mãe da Alana</cite>
       </article>
@@ -1095,7 +1100,7 @@ footer{background:var(--graphite);color:rgba(255,255,255,.7);padding:70px 0 34px
         <div class="chap-img" style="background-image:url(assets/fachada.jpg)"></div>
         <span class="n">04 · A coragem</span>
         <h3>Quando todos recuavam, <span class="script">ela foi.</span></h3>
-        <p>Em 2020, em plena pandemia, ela <b>vendeu o próprio carro</b>, juntou R$ 35 mil e abriu a Fit Girls numa portinha, com <b>três aparelhos e 30 alunas</b>. E não foi sozinha: ao longo do primeiro ano, <b>os pais ajudaram a comprar mais aparelhos</b>, acreditando junto com ela.</p>
+        <p>Em 2020, em plena pandemia, com <b>R$ 35 mil que recebeu do pai</b>, ela abriu a Fit Girls numa portinha: <b>três aparelhos, alguns colchonetes e 30 alunas</b>. E não parou por aí: ao longo do primeiro ano, <b>os pais ajudaram a comprar mais aparelhos</b>, acreditando junto com ela.</p>
       </article>
       <article class="chap" data-i="4" data-y="650">
         <div class="chap-img" style="background-image:url(assets/interior.jpg)"></div>
@@ -1561,6 +1566,14 @@ footer{background:var(--graphite);color:rgba(255,255,255,.7);padding:70px 0 34px
   tr.addEventListener('keydown',e=>{const c=e.target.closest('.t[data-video]');if(c&&(e.key==='Enter'||e.key===' ')){e.preventDefault();openVideo(c)}});
   vm.addEventListener('click',e=>{if(e.target.closest('[data-close]'))closeVideo()});
   document.addEventListener('keydown',e=>{if(e.key==='Escape'&&vm.classList.contains('on'))closeVideo()});
+
+  /* ---- vídeos em loop (tipo GIF): só tocam quando estão na tela ---- */
+  (function(){
+    const vids=[...document.querySelectorAll('video[data-loop]')]; if(!vids.length)return;
+    const io=new IntersectionObserver(es=>es.forEach(e=>{const v=e.target;
+      if(e.isIntersecting&&!reduced){if(v.preload==='none'){v.preload='auto'}const p=v.play();if(p&&p.catch)p.catch(()=>{})}else v.pause()}),{threshold:.15});
+    vids.forEach(v=>{v.muted=true;io.observe(v)});
+  })();
 
   /* ---- planta do modelo: alternar pavimento e ampliar ---- */
   (function(){
