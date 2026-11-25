@@ -571,7 +571,8 @@ footer{background:var(--graphite);color:rgba(255,255,255,.7);padding:70px 0 34px
 
 /* ---------- modalidades (seção própria) ---------- */
 .mods-sec .disc-head{margin-bottom:clamp(32px,4vw,48px)}
-.mods-sec .mods{grid-template-columns:repeat(3,1fr);gap:18px}
+.mods-sec .mods{display:flex;flex-wrap:wrap;justify-content:center;gap:18px}
+.mods-sec .mod{flex:0 0 calc((100% - 54px) / 4);min-width:0}
 .mods-sec .mod .img{aspect-ratio:4/4.7}
 .mod .av{background-color:var(--blush);background-size:420%;border:2px solid #fff;box-shadow:0 4px 12px -4px rgba(110,50,140,.35);width:36px;height:36px}
 
@@ -615,7 +616,7 @@ footer{background:var(--graphite);color:rgba(255,255,255,.7);padding:70px 0 34px
 .fr-fab:hover .fab-core{transform:scale(1.08) rotate(-8deg)}
 .fr-fab:hover .fab-ring{animation-duration:6s}
 @media (max-width:1080px){
-  .mods-sec .mods{grid-template-columns:repeat(2,1fr)}
+  .mods-sec .mod{flex-basis:calc((100% - 18px) / 2)}
 }
 @media (max-width:820px){
   .hero{--railH:150px}
@@ -652,7 +653,8 @@ footer{background:var(--graphite);color:rgba(255,255,255,.7);padding:70px 0 34px
   .bcard .mc i+i{margin-left:-9px}
 }
 @media (max-width:520px){
-  .mods-sec .mods{grid-template-columns:1fr 1fr;gap:10px}
+  .mods-sec .mods{gap:10px}
+  .mods-sec .mod{flex-basis:calc((100% - 10px) / 2)}
   .mods-sec .mod .img{aspect-ratio:3/4.2}
   .ig-sign{flex-direction:column;gap:10px}
   .ig-tx{text-align:center;align-items:center}
@@ -810,9 +812,14 @@ footer{background:var(--graphite);color:rgba(255,255,255,.7);padding:70px 0 34px
           <div class="meta"><span class="pill-tag">Queima calórica</span><h4>Jump</h4><p>Aula ritmada no mini trampolim, divertida e intensa.</p></div></div>
         <div class="under"><div><b>Todos os níveis</b><span>Cardio</span></div></div>
       </article>
+      <article class="mod rv" data-c="cardio">
+        <div class="img"><div class="bg" style="background-image:url(assets/equipe/danca.jpg);background-position:center 30%"></div><span class="bm"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M4 2h8v12l-4-3-4 3V2z" stroke="currentColor" stroke-width="1.4"/></svg></span>
+          <div class="meta"><span class="pill-tag">Muita diversão</span><h4>Dança</h4><p>Coreografias animadas para suar, se soltar e se divertir.</p></div></div>
+        <div class="under"><div><b>Todos os níveis</b><span>Cardio</span></div></div>
+      </article>
       <article class="mod rv" data-c="forca">
         <div class="img"><div class="bg" style="background-image:url(assets/equipe/boxe.jpg);background-position:center 30%"></div><span class="bm"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M4 2h8v12l-4-3-4 3V2z" stroke="currentColor" stroke-width="1.4"/></svg></span>
-          <div class="meta"><span class="pill-tag">Força e foco</span><h4>Boxe</h4><p>Técnica, condicionamento e muita confiança.</p></div></div>
+          <div class="meta"><span class="pill-tag">Força e foco</span><h4>Muay Thai e defesa pessoal feminina</h4><p>Técnica de luta, condicionamento e defesa pessoal pensada para mulheres.</p></div></div>
         <div class="under"><div><b>Todos os níveis</b><span>Força</span></div></div>
       </article>
       <article class="mod rv" data-c="cardio">
@@ -1003,6 +1010,7 @@ footer{background:var(--graphite);color:rgba(255,255,255,.7);padding:70px 0 34px
   <div class="t-row" id="tRow">
     <article class="t has-video" data-video="assets/videos/professoras.mp4" data-poster="assets/videos/professoras-thumb.jpg" role="button" tabindex="0" aria-label="Assistir: professoras da Fit Girls falam sobre a profissão"><div class="bg" style="background-image:url(assets/videos/professoras-thumb.jpg);background-position:center 20%"></div><span class="t-dur">3:37</span><span class="play"><svg width="20" height="20" viewBox="0 0 20 20"><path d="M7 5l8 5-8 5z" fill="currentColor"/></svg></span><div class="cap"><q>"A gente é mulher, então a gente sabe o que a mulher sente."</q><b>Professoras Fit Girls</b><span>A educação física como profissão</span></div></article>
     <article class="t has-video" data-video="assets/videos/evento-pilates.mp4" data-poster="assets/videos/evento-pilates-thumb.jpg" role="button" tabindex="0" aria-label="Assistir: evento de pilates ao ar livre da Fit Girls"><div class="bg" style="background-image:url(assets/videos/evento-pilates-thumb.jpg);background-position:center 30%"></div><span class="t-dur">1:52</span><span class="play"><svg width="20" height="20" viewBox="0 0 20 20"><path d="M7 5l8 5-8 5z" fill="currentColor"/></svg></span><div class="cap"><q>"Cheguei super travada e estou saindo daqui super alongada."</q><b>Pilates ao ar livre</b><span>Evento Fit Girls</span></div></article>
+    <article class="t has-video" data-video="assets/videos/aula-danca.mp4" data-poster="assets/videos/aula-danca-thumb.jpg" role="button" tabindex="0" aria-label="Assistir: aula de dança na Fit Girls"><div class="bg" style="background-image:url(assets/videos/aula-danca-thumb.jpg);background-position:center 30%"></div><span class="t-dur">1:09</span><span class="play"><svg width="20" height="20" viewBox="0 0 20 20"><path d="M7 5l8 5-8 5z" fill="currentColor"/></svg></span><div class="cap"><q>"Dançar é se soltar, se divertir e se sentir livre no próprio corpo."</q><b>Aula de Dança</b><span>Por dentro da Fit Girls</span></div></article>
     <article class="t"><div class="bg" style="background-image:url(assets/stock/grupo.jpg)"></div><span class="play"><svg width="20" height="20" viewBox="0 0 20 20"><path d="M7 5l8 5-8 5z" fill="currentColor"/></svg></span><div class="cap"><q>"Aqui eu aprendi a gostar de mim de novo."</q><b>Fran</b><span>Aluna das modalidades</span></div></article>
     <article class="t"><div class="bg" style="background-image:url(assets/stock/dep3.jpg)"></div><span class="play"><svg width="20" height="20" viewBox="0 0 20 20"><path d="M7 5l8 5-8 5z" fill="currentColor"/></svg></span><div class="cap"><q>"Seis anos e não troco a Fit por nada."</q><b>Aluna desde 2020</b><span>Depoimento a gravar</span></div></article>
     <article class="t"><div class="bg" style="background-image:url(assets/stock/dep2.jpg)"></div><span class="play"><svg width="20" height="20" viewBox="0 0 20 20"><path d="M7 5l8 5-8 5z" fill="currentColor"/></svg></span><div class="cap"><q>"Comecei sem saber nada. Hoje eu corro 5 km."</q><b>Aluna da corrida</b><span>Depoimento a gravar</span></div></article>
