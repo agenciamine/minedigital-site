@@ -104,6 +104,7 @@ input{font:inherit}
 .section-title{font-family:var(--serif);font-size:clamp(42px,6.5vw,60px);font-weight:500;margin:8px 0 10px;text-align:center;letter-spacing:-.01em;line-height:1.05}
 .section-sub{color:var(--muted);text-align:center;margin:0 auto 30px;max-width:520px;line-height:1.55}
 .grid-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:20px;padding-bottom:20px}
+.grid-cards.single{grid-template-columns:minmax(0,420px);justify-content:center}
 .card{background:var(--card);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;border:1px solid var(--line)}
 .card .ph{position:relative;margin:16px 16px 0;aspect-ratio:1/1.02;overflow:hidden;border-radius:999px 999px 18px 18px;background:var(--rose-l)}
 .card .ph img{width:100%;height:100%;object-fit:cover;display:block}
@@ -410,7 +411,9 @@ function telaInicio(manterScroll){
   var y = window.scrollY;
   if (!manterScroll) window.scrollTo(0,0);
   var e = PUB.estado;
-  var cards = RIFAS.map(function(r){
+  /* No site público aparecem só as rifas à venda; as outras ficam ocultas até serem liberadas. */
+  var visiveis = e.carregando ? [] : RIFAS.filter(function(r){ return !e.ativas || e.ativas.indexOf(r.id)>=0; });
+  var cards = visiveis.map(function(r){
     var st = e.rifas[r.id]||{}, vend = (st.vendidos||[]).length, resv = (st.reservados||[]).length;
     var pct = Math.round(vend/QTD*100);
     var ativa = e.carregando || !e.ativas || e.ativas.indexOf(r.id)>=0;
@@ -466,8 +469,9 @@ function telaInicio(manterScroll){
     '<main class="wrap" id="rifas">'+
       '<div class="eyebrow">Os prêmios</div>'+
       '<h2 class="section-title">Escolha sua rifa</h2>'+
-      '<p class="section-sub">Cada rifa tem 100 números e você pode escolher quantos quiser. As rifas abrem uma de cada vez.</p>'+
-      '<div class="grid-cards">'+cards+'</div>'+
+      '<p class="section-sub">São 100 números e você pode escolher quantos quiser.</p>'+
+      (e.carregando ? '<div class="loading"><div class="spin"></div>Carregando o prêmio…</div>'
+        : '<div class="grid-cards'+(visiveis.length===1?' single':'')+'">'+cards+'</div>')+
     '</main>'+
     '<footer class="footer">'+
       '<b>Como funciona:</b> escolha os números, informe nome e WhatsApp, faça o Pix e envie o comprovante para a Ivânia.<br>'+
