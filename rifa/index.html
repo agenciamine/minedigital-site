@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Rifa Solidária | Juntos pelo pai da Ivânia</title>
-<meta name="description" content="Rifa beneficente em prol do pai da Ivânia, para auxiliar nas despesas hospitalares e nos cuidados durante a internação. Escolha seu prêmio e seus números. Sorteio 30/12 às 10h, ao vivo no Instagram.">
+<meta name="description" content="Rifa beneficente em prol do pai da Ivânia, para auxiliar nas despesas hospitalares e nos cuidados durante a internação. Escolha seu prêmio e seus números. Sorteio 10/01 às 10h, ao vivo no Instagram.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:url" content="https://minedigital.com.br/rifa/">
 <meta property="og:title" content="Rifa Solidária | Juntos pelo pai da Ivânia">
-<meta property="og:description" content="Escolha seu prêmio e seus números. Sorteio 30/12 às 10h, ao vivo no Instagram.">
+<meta property="og:description" content="Escolha seu prêmio e seus números. Sorteio 10/01 às 10h, ao vivo no Instagram.">
 <meta property="og:image" content="https://minedigital.com.br/rifa/img/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -118,6 +118,7 @@ input{font:inherit}
 .itens{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:7px}
 .itens li{display:flex;gap:9px;align-items:flex-start;font-size:15px;line-height:1.4}
 .itens li::before{content:"";flex:0 0 18px;height:18px;margin-top:1px;border-radius:50%;background:var(--rose-l) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%239E4A5A' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E") center/11px no-repeat}
+.obs{margin:0;font-size:13px;line-height:1.45;font-style:italic;color:var(--muted)}
 .pros{display:flex;flex-direction:column;gap:8px;border-top:1px dashed var(--line);padding-top:12px}
 .pro{font-size:13.5px;line-height:1.4;color:var(--muted)}
 .pro b{color:var(--ink);font-weight:600}
@@ -290,15 +291,16 @@ var CFG = {
   pixMostrar: '(44) 99883-0676',
   pixNome: 'IVANIA DO NASCIMENTO SANTANA',
   whatsComprovante: '5544998709467',
-  sorteioTexto: '30/12 às 10h',
+  sorteioTexto: '10/01 às 10h',
   instagramLive: '__unhasperfeitas',
-  fimVendas: '2026-12-30T10:00:00-03:00'
+  fimVendas: '2027-01-10T10:00:00-03:00'
 };
 var RIFAS = [
   { id:'kate', valor:40, img:'/rifa/img/kate.jpg', tag:'Estética facial',
     titulo:'Sessão de Botox e Preenchimento',
     itens:['1 sessão de Botox e Preenchimento'],
-    pros:[{nome:'Kate Vieira', desc:'Esteticista renomada, com mais de 17 anos de carreira.', ig:'clinica_kate_vieira'}] },
+    obs:'O agendamento será feito conforme a disponibilidade da profissional.',
+    pros:[{nome:'Kate Vieira', desc:'Especialista em harmonização facial, com mais de 17 anos de carreira.', ig:'clinica_kate_vieira'}] },
   { id:'flavia', valor:20, img:'/rifa/img/flavia.jpg', tag:'Autocuidado completo',
     titulo:'Papada, Pé e Mão + Tábua de Frios',
     itens:['2 sessões de Redução de Papada com a Flávia','1 Pé e Mão com a Ivânia','1 Tábua de Frios para curtir seu momento'],
@@ -397,7 +399,7 @@ function fmtWhats(w){ w=String(w).replace(/\D/g,''); if(w.length===11) return '(
 function maskWhats(el){ var v=el.value.replace(/\D/g,'').slice(0,11); var o=v; if(v.length>2) o='('+v.slice(0,2)+') '+v.slice(2); if(v.length>7) o='('+v.slice(0,2)+') '+v.slice(2,7)+'-'+v.slice(7); el.value=o; }
 function waLink(num, msg){ return 'https://wa.me/'+num+'?text='+encodeURIComponent(msg); }
 function igLink(u){ return '<a href="https://www.instagram.com/'+esc(u)+'/" target="_blank" rel="noopener">@'+esc(u)+'</a>'; }
-function itensHtml(r){ return '<ul class="itens">'+r.itens.map(function(i){return '<li>'+esc(i)+'</li>';}).join('')+'</ul>'; }
+function itensHtml(r){ return '<ul class="itens">'+r.itens.map(function(i){return '<li>'+esc(i)+'</li>';}).join('')+'</ul>'+(r.obs?'<p class="obs">'+esc(r.obs)+'</p>':''); }
 function loading(){ $app.innerHTML='<div class="loading"><div class="spin"></div>Carregando…</div>'; }
 
 /* ======================= PÚBLICO ======================= */
@@ -448,7 +450,7 @@ function telaInicio(manterScroll){
       '<div class="wrap hero2-in">'+
       '<div class="glass">'+
       '<span class="pill glass-pill">Unidos por uma causa 🤍</span>'+
-      '<h1>Juntos pelo <em>pai da Ivânia</em></h1>'+
+      '<h1>Juntos pelo <em>meu pai</em></h1>'+
       '<div class="letter">'+
         '<p>Rifa beneficente em prol do meu pai, para auxiliar nas despesas hospitalares e nos cuidados necessários durante sua internação.</p>'+
         '<p>Cada participação é um gesto de carinho e generosidade.</p>'+
