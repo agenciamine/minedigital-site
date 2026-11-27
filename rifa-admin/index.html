@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rifa Solidária | Juntos pelo pai da Ivânia</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F6EFE7; --card:#FFFCF8; --ink:#2B211B; --muted:#8B7A6C; --line:#EADCCD;
+  --rose:#C49A72; --rose-d:#A87A52; --rose-l:#F2E5D7; --gold:#B88E66; --gold-l:#F5EBDF;
+  --ok:#5E8A5A; --ok-l:#E3EEDD; --warn:#C7811E; --warn-l:#FBEBD2; --sold:#DDD3C9;
+  --r:22px; --shadow:0 14px 34px -16px rgba(110,78,50,.32);
+  --serif:'Cormorant Garamond',Georgia,serif;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:Jost,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+body{min-height:100vh}
+a{color:inherit}
+button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+input{font:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+.serif{font-family:var(--serif)}
+.hidden{display:none!important}
+
+/* preview banner */
+.preview-bar{background:#2A1E22;color:#fff;font-size:12px;text-align:center;padding:6px 10px;letter-spacing:.02em}
+.preview-bar a{color:#FFD7DE;font-weight:600}
+
+/* HERO */
+.hero{padding:40px 0 18px;text-align:center}
+.pill{display:inline-flex;align-items:center;gap:8px;background:var(--rose-l);color:var(--rose-d);font-weight:600;font-size:13px;padding:7px 14px;border-radius:99px}
+.pill .dot{width:7px;height:7px;border-radius:50%;background:var(--rose)}
+.hero h1{font-family:var(--serif);font-weight:600;font-size:clamp(34px,7vw,58px);line-height:1.04;margin:18px auto 14px;max-width:760px;letter-spacing:-.01em}
+.hero h1 em{font-style:italic;color:var(--rose-d)}
+.hero p.lead{max-width:640px;margin:0 auto;color:var(--muted);font-size:17px;line-height:1.6}
+/* HERO 2 */
+.hero2{position:relative;overflow:hidden;min-height:680px;display:flex;align-items:center;padding:56px 0}
+.hero2-bg{position:absolute;inset:0;background:url(/rifa/img/hero.jpg) 70% center/cover no-repeat}
+.hero2-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(70,48,30,.22) 0%,rgba(70,48,30,.06) 55%,rgba(0,0,0,0) 100%),linear-gradient(0deg,rgba(246,239,231,1) 0%,rgba(246,239,231,0) 22%)}
+.hero2-in{position:relative;width:100%}
+.glass{max-width:560px;padding:34px 34px 30px;border-radius:28px;background:rgba(255,251,246,.4);border:1px solid rgba(255,255,255,.65);
+  -webkit-backdrop-filter:blur(22px) saturate(140%);backdrop-filter:blur(22px) saturate(140%);
+  box-shadow:0 30px 60px -25px rgba(80,55,35,.45),inset 0 1px 0 rgba(255,255,255,.7)}
+.glass-pill{background:rgba(255,255,255,.6);color:var(--rose-d)}
+.glass h1{font-family:var(--serif);font-weight:500;font-size:clamp(46px,7.4vw,76px);line-height:.98;margin:16px 0 18px;letter-spacing:-.015em;color:#2A1A1E}
+.glass h1 em{font-style:italic;color:var(--rose-d);font-weight:500}
+.letter{font-size:15.5px;line-height:1.65;color:#3D2C31}
+.letter p{margin:0 0 10px}
+.letter blockquote{margin:16px 0 12px;padding:2px 0 2px 16px;border-left:2px solid var(--gold);font-family:var(--serif);font-style:italic;font-size:21px;line-height:1.45;color:var(--rose-d)}
+.letter cite{display:block;font-family:Jost,sans-serif;font-style:normal;font-size:11.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;margin-top:6px;color:#8B7A6C}
+.letter .sign{font-size:14px;color:#6E5A5F}
+.letter .sign b{color:var(--ink);font-family:var(--serif);font-style:italic;font-size:20px;font-weight:600}
+.hero-cta{margin-top:22px;padding:15px 30px;border-radius:99px;box-shadow:0 12px 24px -10px rgba(140,98,62,.7)}
+.hero-cta::after{content:"→";font-size:18px;line-height:1}
+@media (max-width:720px){
+  .hero2{min-height:0;padding:0 0 10px;display:block}
+  .hero2-bg{position:relative;height:300px;background-position:72% center}
+  .hero2-bg::after{background:linear-gradient(0deg,rgba(246,239,231,1) 0%,rgba(246,239,231,0) 45%)}
+  .hero2-in{margin-top:-130px}
+  .glass{padding:26px 20px 22px;border-radius:24px;background:rgba(255,251,246,.62)}
+}
+/* INFOBAR */
+.infobar{position:relative;z-index:2;margin-top:-8px}
+.infobar-in{display:grid;grid-template-columns:repeat(4,1fr);background:#fff;border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow);padding:6px}
+.inf{display:flex;align-items:center;gap:13px;padding:16px 18px;border-left:1px solid var(--line)}
+.inf:first-child{border-left:0}
+.inf i{flex:0 0 44px;height:44px;border-radius:14px;background:linear-gradient(140deg,var(--rose-l),var(--gold-l));color:var(--rose-d);display:flex;align-items:center;justify-content:center}
+.inf i svg{width:22px;height:22px}
+.inf small{display:block;font-size:11.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;font-weight:600}
+.inf b{font-size:15px;font-weight:600}
+.inf b a{color:var(--rose-d);text-decoration:none}
+@media (max-width:860px){.infobar-in{grid-template-columns:1fr 1fr}.inf:nth-child(3){border-left:0}.inf:nth-child(n+3){border-top:1px solid var(--line)}}
+@media (max-width:420px){.inf{padding:13px 10px;gap:10px}.inf i{flex-basis:38px;height:38px}.inf b{font-size:13.5px}}
+.eyebrow{text-align:center;margin-top:56px;font-size:12.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+/* SOON */
+.live-badge,.soon-badge{position:absolute;top:14px;right:14px;border-radius:99px;padding:7px 12px;font-size:12.5px;font-weight:700;display:inline-flex;align-items:center;gap:7px}
+.live-badge{background:var(--rose-d);color:#fff}
+.live-badge span{width:7px;height:7px;border-radius:50%;background:#fff;animation:pulse 1.6s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,255,255,.8)}100%{box-shadow:0 0 0 8px rgba(255,255,255,0)}}
+.soon-badge{background:rgba(42,30,34,.82);color:#fff;letter-spacing:.04em}
+.card.soon .ph img{filter:grayscale(.55) brightness(.92)}
+.soon-txt{font-size:13.5px;color:var(--muted);background:var(--bg);border-radius:12px;padding:11px 13px;line-height:1.45}
+.btn-soon{background:#EFE6E3;color:#9C8E8B;cursor:not-allowed}
+.facts{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:26px 0 6px}
+.fact{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 16px;text-align:left;min-width:180px}
+.fact small{display:block;color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.06em;font-weight:600}
+.fact b{font-size:15px}
+
+/* CARDS */
+.section-title{font-family:var(--serif);font-size:clamp(42px,6.5vw,60px);font-weight:500;margin:8px 0 10px;text-align:center;letter-spacing:-.01em;line-height:1.05}
+.section-sub{color:var(--muted);text-align:center;margin:0 auto 30px;max-width:520px;line-height:1.55}
+.grid-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:20px;padding-bottom:20px}
+.card{background:var(--card);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;border:1px solid var(--line)}
+.card .ph{position:relative;margin:16px 16px 0;aspect-ratio:1/1.02;overflow:hidden;border-radius:999px 999px 18px 18px;background:var(--rose-l)}
+.card .ph img{width:100%;height:100%;object-fit:cover;display:block}
+.card .ph .price{top:auto;bottom:14px;left:14px}
+.card .ph .live-badge,.card .ph .soon-badge{top:auto;bottom:14px;right:14px}
+.price{position:absolute;top:14px;left:14px;background:rgba(255,255,255,.94);border-radius:99px;padding:7px 13px;font-weight:700;font-size:14px;color:var(--rose-d)}
+.price span{font-weight:500;color:var(--muted);font-size:12px}
+.card .bd{padding:20px 20px 22px;display:flex;flex-direction:column;gap:12px;flex:1}
+.tag{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--gold)}
+.card h3{font-family:var(--serif);font-size:30px;line-height:1.08;margin:0;font-weight:500}
+.itens{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:7px}
+.itens li{display:flex;gap:9px;align-items:flex-start;font-size:15px;line-height:1.4}
+.itens li::before{content:"";flex:0 0 18px;height:18px;margin-top:1px;border-radius:50%;background:var(--rose-l) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%239E4A5A' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E") center/11px no-repeat}
+.pros{display:flex;flex-direction:column;gap:8px;border-top:1px dashed var(--line);padding-top:12px}
+.pro{font-size:13.5px;line-height:1.4;color:var(--muted)}
+.pro b{color:var(--ink);font-weight:600}
+.pro a{color:var(--rose-d);font-weight:600;text-decoration:none;white-space:nowrap}
+.bar{height:8px;border-radius:99px;background:var(--rose-l);overflow:hidden}
+.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--rose),var(--rose-d));border-radius:99px;transition:width .6s}
+.bar-lbl{display:flex;justify-content:space-between;font-size:13px;color:var(--muted);margin-bottom:6px}
+.bar-lbl b{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;text-align:center;padding:14px 22px;border-radius:99px;font-weight:500;font-size:15.5px;letter-spacing:.02em;transition:transform .1s,background .2s}
+.btn:active{transform:scale(.98)}
+.btn-pri{background:var(--rose-d);color:#fff}
+.btn-pri:hover{background:#946843}
+.btn-pri:disabled{background:#C9B5B9;cursor:not-allowed}
+.btn-ghost{background:var(--rose-l);color:var(--rose-d)}
+.btn-ok{background:#25D366;color:#073B1E}
+.btn-block{width:100%}
+.mt-auto{margin-top:auto}
+
+.footer{text-align:center;color:var(--muted);font-size:13px;line-height:1.6;padding:30px 16px 50px}
+.footer b{color:var(--ink)}
+
+/* RIFA VIEW */
+.topbar{position:sticky;top:0;z-index:20;background:rgba(246,239,231,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.topbar .wrap{display:flex;align-items:center;gap:12px;height:58px}
+.back{display:inline-flex;align-items:center;gap:6px;font-weight:600;color:var(--rose-d);padding:8px 4px}
+.rifa-head{display:grid;grid-template-columns:150px 1fr;gap:18px;align-items:center;padding:22px 0 8px}
+.rifa-head img{width:150px;aspect-ratio:1;object-fit:cover;border-radius:16px}
+.rifa-head h2{font-family:var(--serif);font-size:28px;margin:4px 0 8px;line-height:1.1}
+.rifa-head .itens li{font-size:14px}
+@media (max-width:560px){.rifa-head{grid-template-columns:92px 1fr;gap:14px}.rifa-head img{width:92px}.rifa-head h2{font-size:21px}.rifa-head .itens{display:none}}
+.legend{display:flex;flex-wrap:wrap;gap:14px;font-size:13px;color:var(--muted);margin:14px 0}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend i{width:16px;height:16px;border-radius:5px;display:inline-block;border:1px solid var(--line);background:#fff}
+.legend i.sel{background:var(--rose-d);border-color:var(--rose-d)}
+.legend i.sold{background:var(--sold);border-color:var(--sold)}
+.nums{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:7px;padding-bottom:120px}
+@media (max-width:420px){.nums{gap:5px}}
+.n{aspect-ratio:1;min-width:0;padding:0;border-radius:10px;background:#fff;border:1px solid var(--line);font-weight:600;font-size:clamp(12px,3.3vw,16px);display:flex;align-items:center;justify-content:center;transition:background .15s,transform .1s;font-variant-numeric:tabular-nums}
+.n:hover{border-color:var(--rose)}
+.n.sel{background:var(--rose-d);border-color:var(--rose-d);color:#fff;transform:scale(1.04)}
+.n.sold{background:var(--sold);border-color:var(--sold);color:#9C8E8B;cursor:not-allowed;text-decoration:line-through}
+.n.resv{background:var(--warn-l);border:1.5px dashed #E2B467;color:#A9844A;cursor:not-allowed}
+.legend i.resv{background:var(--warn-l);border:1.5px dashed #E2B467}
+.cart{position:fixed;left:0;right:0;bottom:0;z-index:30;background:#fff;border-top:1px solid var(--line);box-shadow:0 -10px 30px -15px rgba(110,78,50,.3);transform:translateY(110%);transition:transform .25s}
+.cart.show{transform:none}
+.cart .wrap{display:flex;align-items:center;gap:14px;padding-top:12px;padding-bottom:calc(12px + env(safe-area-inset-bottom))}
+.cart .info{flex:1;min-width:0}
+.cart .info small{color:var(--muted);display:block;font-size:12.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cart .info b{font-size:19px}
+
+/* MODAL */
+.ov{position:fixed;inset:0;z-index:50;background:rgba(42,30,34,.55);display:flex;align-items:flex-end;justify-content:center}
+@media (min-width:640px){.ov{align-items:center}}
+.modal{background:#fff;width:100%;max-width:480px;border-radius:22px 22px 0 0;padding:24px 20px calc(24px + env(safe-area-inset-bottom));max-height:94vh;overflow:auto}
+@media (min-width:640px){.modal{border-radius:22px}}
+.modal h3{font-family:var(--serif);font-size:25px;margin:0 0 6px}
+.modal p.sub{color:var(--muted);margin:0 0 18px;font-size:14.5px;line-height:1.5}
+.field{display:flex;flex-direction:column;gap:6px;margin-bottom:14px}
+.field label{font-size:13.5px;font-weight:600}
+.field input{border:1.5px solid var(--line);border-radius:12px;padding:13px 14px;font-size:16px;outline:none;background:#fff}
+.field input:focus{border-color:var(--rose)}
+.check{display:flex;gap:10px;align-items:flex-start;font-size:13px;color:var(--muted);line-height:1.45;margin:4px 0 18px}
+.check input{margin-top:2px;accent-color:var(--rose-d);width:17px;height:17px;flex:0 0 17px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 16px}
+.chip{background:var(--rose-l);color:var(--rose-d);font-weight:700;border-radius:8px;padding:5px 9px;font-size:13.5px;font-variant-numeric:tabular-nums}
+.err{background:#FDE4E4;color:#9B1C1C;border-radius:10px;padding:10px 12px;font-size:13.5px;margin-bottom:12px}
+.row-btns{display:flex;gap:10px}
+.row-btns .btn{flex:1}
+
+/* SUCCESS */
+.ok-ic{width:58px;height:58px;border-radius:50%;background:var(--ok-l);display:flex;align-items:center;justify-content:center;margin-bottom:12px}
+.step{display:flex;gap:12px;margin:16px 0}
+.step .k{flex:0 0 28px;height:28px;border-radius:50%;background:var(--rose-d);color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:14px}
+.step .c{flex:1;min-width:0}
+.step .c b{display:block;margin-bottom:6px}
+.pix{background:var(--bg);border:1.5px dashed var(--rose);border-radius:14px;padding:12px 14px}
+.pix .key{font-size:19px;font-weight:700;letter-spacing:.02em}
+.pix small{color:var(--muted);display:block;font-size:12.5px;margin-top:2px}
+.total-big{font-family:var(--serif);font-size:32px;font-weight:700;color:var(--rose-d)}
+.note{background:var(--gold-l);color:#6E4F1E;border-radius:12px;padding:11px 13px;font-size:13px;line-height:1.5}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--ink);color:#fff;padding:10px 16px;border-radius:12px;font-size:14px;z-index:90;opacity:0;transition:opacity .2s;pointer-events:none}
+.toast.show{opacity:1}
+
+.loading{display:flex;align-items:center;justify-content:center;gap:10px;color:var(--muted);padding:60px 0}
+.spin{width:20px;height:20px;border:3px solid var(--rose-l);border-top-color:var(--rose-d);border-radius:50%;animation:sp .8s linear infinite}
+@keyframes sp{to{transform:rotate(360deg)}}
+
+/* ADMIN */
+.adm-login{max-width:380px;margin:70px auto;background:#fff;border-radius:20px;padding:28px 24px;box-shadow:var(--shadow)}
+.adm-login h2{font-family:var(--serif);margin:0 0 4px}
+.tabs{display:flex;gap:8px;overflow-x:auto;padding:16px 0 4px}
+.tab{white-space:nowrap;padding:10px 16px;border-radius:99px;background:#fff;border:1px solid var(--line);font-weight:600;font-size:14px}
+.tab.on{background:var(--rose-d);color:#fff;border-color:var(--rose-d)}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:14px 0}
+.kpi{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px}
+.kpi small{color:var(--muted);font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.05em}
+.kpi b{display:block;font-size:24px;margin-top:4px;font-variant-numeric:tabular-nums}
+.adm-cols{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start;padding-bottom:60px}
+@media (max-width:860px){.adm-cols{grid-template-columns:1fr}}
+.panel{background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px}
+.panel h4{margin:0 0 12px;font-size:15px}
+.anums{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:5px}
+.an{aspect-ratio:1;min-width:0;padding:0;border-radius:8px;border:1px solid var(--line);background:#fff;font-size:12px;font-weight:600;display:flex;align-items:center;justify-content:center;position:relative;font-variant-numeric:tabular-nums}
+.an.pend{background:var(--warn-l);border-color:#EFC98A;color:#7A4A06}
+.an.pend.multi::after{content:"";position:absolute;top:3px;right:3px;width:6px;height:6px;border-radius:50%;background:#D14343}
+.an.lock{background:var(--ok);border-color:var(--ok);color:#fff}
+.an.cur{outline:3px solid var(--rose-d);outline-offset:1px}
+.legend.adm i.pend{background:var(--warn-l);border-color:#EFC98A}
+.legend.adm i.lock{background:var(--ok);border-color:var(--ok)}
+.ped{display:flex;align-items:center;gap:10px;padding:11px 0;border-top:1px solid var(--line)}
+.ped:first-of-type{border-top:0}
+.ped .num{flex:0 0 46px;height:46px;border-radius:12px;background:var(--warn-l);color:#7A4A06;font-weight:700;display:flex;align-items:center;justify-content:center;font-variant-numeric:tabular-nums}
+.ped .num.lock{background:var(--ok);color:#fff}
+.ped .who{flex:1;min-width:0}
+.ped .who b{display:block;font-size:14.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ped .who small{color:var(--muted);font-size:12.5px}
+.ped .who a{color:var(--ok);font-weight:600;text-decoration:none}
+.sbtn{padding:9px 12px;border-radius:10px;font-weight:600;font-size:13px;white-space:nowrap}
+.sbtn.ok{background:var(--ok);color:#fff}
+.sbtn.undo{background:#F1E9E7;color:var(--ink)}
+.sbtn.no{background:#FBE3E3;color:#A12C2C}
+.pbtns{display:flex;flex-direction:column;gap:6px}
+.status{display:inline-block;font-size:11.5px;font-weight:700;padding:3px 8px;border-radius:99px;text-transform:uppercase;letter-spacing:.04em}
+.status.ativo{background:var(--warn-l);color:#7A4A06}
+.status.desat{background:var(--ok-l);color:var(--ok)}
+.empty{color:var(--muted);font-size:14px;padding:12px 0}
+.adm-actions{display:flex;gap:8px;flex-wrap:wrap}
+.search{border:1.5px solid var(--line);border-radius:10px;padding:9px 12px;width:100%;margin-bottom:8px;font-size:14px}
+
+/* PRINT */
+#print{display:none}
+@media print{
+  body *{visibility:hidden}
+  #print,#print *{visibility:visible}
+  #print{display:block;position:absolute;left:0;top:0;width:100%}
+  .no-print{display:none!important}
+}
+#print h2{font-family:var(--serif);margin:0 0 10px;font-size:18px}
+.slips{display:grid;grid-template-columns:repeat(4,1fr)}
+.slip{border:1px dashed #999;padding:10px 8px;text-align:center;height:2.6cm;display:flex;flex-direction:column;justify-content:center;page-break-inside:avoid}
+.slip b{font-size:26px;font-family:var(--serif)}
+.slip span{font-size:11px;line-height:1.25}
+</style>
+</head>
+<body>
+<div id="previewBar" class="preview-bar hidden">PREVIEW com dados de teste. <a href="#" id="toggleMode"></a></div>
+<div id="app"><div class="loading"><div class="spin"></div>Carregando…</div></div>
+<div id="print"></div>
+<div id="toast" class="toast"></div>
+
+<script>
+/* ======================= CONFIGURAÇÃO ======================= */
+var CFG = {
+  pixChave: '44998830676',
+  pixMostrar: '(44) 99883-0676',
+  pixNome: 'IVANIA DO NASCIMENTO SANTANA',
+  whatsComprovante: '5544998709467',
+  sorteioTexto: '30/12 às 10h',
+  instagramLive: '__unhasperfeitas',
+  fimVendas: '2026-12-30T10:00:00-03:00'
+};
+var RIFAS = [
+  { id:'kate', valor:40, img:'/rifa/img/kate.jpg', tag:'Estética facial',
+    titulo:'Sessão de Botox e Preenchimento',
+    itens:['1 sessão de Botox e Preenchimento'],
+    pros:[{nome:'Kate Vieira', desc:'Esteticista renomada, com mais de 17 anos de carreira.', ig:'clinica_kate_vieira'}] },
+  { id:'flavia', valor:20, img:'/rifa/img/flavia.jpg', tag:'Autocuidado completo',
+    titulo:'Papada, Pé e Mão + Tábua de Frios',
+    itens:['2 sessões de Redução de Papada com a Flávia','1 Pé e Mão com a Ivânia','1 Tábua de Frios para curtir seu momento'],
+    pros:[{nome:'Flávia Diniz', desc:'Esteticista e modelo, com grande experiência em fitness e saúde.', ig:'flavia_diniiz'},
+          {nome:'Ivânia Nascimento', desc:'Manicure com mais de 15 anos de experiência.', ig:'__unhasperfeitas'}] },
+  { id:'matilde', valor:20, img:'/rifa/img/matilde.jpg', tag:'Cabelo',
+    titulo:'Tratamento Capilar + Creme O Boticário',
+    itens:['1 Tratamento Selante ou Progressiva','1 Creme O Boticário'],
+    pros:[{nome:'Matilde Rabelo', desc:'Cabeleireira especialista em beleza feminina, com mais de 20 anos de experiência.', ig:'centromatilderabelo'}] }
+];
+var QTD = 100;
+
+/* ======================= BACKEND ======================= */
+var API_URL = 'https://script.google.com/macros/s/AKfycbzTBtrouVApdEgbfNtoxaYslwqDTMSZmalspPcWVACPSaSCydaBIRzmEki0yKBKrVg/exec';
+var MODO = 'admin';
+var IS_GAS = API_URL.indexOf('https://') === 0;
+function call(fn){
+  var args = Array.prototype.slice.call(arguments,1);
+  return new Promise(function(res, rej){
+    if (IS_GAS){
+      fetch(API_URL, { method:'POST', headers:{'Content-Type':'text/plain;charset=utf-8'}, body: JSON.stringify({fn:fn, args:args}) })
+        .then(function(r){ return r.json(); })
+        .then(function(j){ if (j.ok) res(j.data); else rej(new Error(j.error || 'Erro')); })
+        .catch(function(){ rej(new Error('Falha de conexão. Verifique sua internet e tente de novo.')); });
+    } else {
+      setTimeout(function(){ try { res(JSON.parse(JSON.stringify(MOCK[fn].apply(null,args)))); } catch(e){ rej(e); } }, 350);
+    }
+  });
+}
+
+/* Mock local (somente preview fora do Google) */
+var MOCK = (function(){
+  var K = 'rifa_ivania_mock_v3', db = null;
+  try { db = JSON.parse(localStorage.getItem(K)); } catch(e){}
+  function save(){ try { localStorage.setItem(K, JSON.stringify(db)); } catch(e){} }
+  function id(){ return 'P' + Date.now().toString(36) + Math.random().toString(36).slice(2,6); }
+  function agora(){ var d=new Date(); return ('0'+d.getDate()).slice(-2)+'/'+('0'+(d.getMonth()+1)).slice(-2)+' '+('0'+d.getHours()).slice(-2)+':'+('0'+d.getMinutes()).slice(-2); }
+  if (!db){
+    db = { travados:{kate:{},flavia:{},matilde:{}}, pedidos:[] };
+    var demo = [['kate',7,'Ana Paula Souza','44991112233'],['kate',13,'Juliana Lima','44992223344'],['kate',21,'Carla Mendes','44993334455'],
+      ['flavia',1,'Marina Rocha','44994445566'],['flavia',2,'Marina Rocha','44994445566'],['flavia',50,'Patrícia Alves','44995556677'],
+      ['matilde',10,'Fernanda Dias','44996667788'],['matilde',33,'Luciana Prado','44997778899']];
+    demo.forEach(function(d){ var p={id:id(),data:'25/11 14:10',rifa:d[0],numero:d[1],nome:d[2],whatsapp:d[3],status:'Confirmado'}; db.pedidos.push(p); db.travados[d[0]][d[1]]={nome:d[2],whatsapp:d[3],pedidoId:p.id,em:'25/11 15:02'}; });
+    [['kate',5,'Bruna Costa','44981112233'],['kate',18,'Rafaela Nunes','44982223344'],['kate',42,'Bruna Costa','44981112233'],['flavia',8,'Simone Reis','44983334455'],['matilde',77,'Tatiane Melo','44984445566']]
+      .forEach(function(d){ db.pedidos.push({id:id(),data:'26/11 09:3'+Math.floor(Math.random()*9),rifa:d[0],numero:d[1],nome:d[2],whatsapp:d[3],status:'Pendente'}); });
+    save();
+  }
+  function auth(s){ if (s !== 'teste') throw new Error('Senha incorreta. (No preview a senha é: teste)'); }
+  function dados(){ var r={}; ['kate','flavia','matilde'].forEach(function(k){ r[k]={travados:db.travados[k]}; }); return {rifas:r, pedidos:db.pedidos}; }
+  return {
+    getPublico: function(){ var r={}; Object.keys(db.travados).forEach(function(k){
+        var t=db.travados[k], res={};
+        db.pedidos.forEach(function(p){ if(p.rifa===k && p.status==='Pendente' && !t[p.numero]) res[p.numero]=1; });
+        r[k]={vendidos:Object.keys(t).map(Number), reservados:Object.keys(res).map(Number)}; });
+      return {abertas:new Date()<new Date(CFG.fimVendas), ativas:['kate'], rifas:r}; },
+    reservar: function(d){
+      if (d.rifa!=='kate') throw new Error('Esta rifa ainda não está à venda. Em breve!');
+      var t = db.travados[d.rifa];
+      var occ = d.numeros.filter(function(n){ return t[n] || db.pedidos.some(function(p){ return p.rifa===d.rifa && p.numero===n && p.status==='Pendente'; }); });
+      if (occ.length) throw new Error('Estes números acabaram de ser reservados por outra pessoa: '+occ.join(', ')+'. Escolha outros.');
+      d.numeros.forEach(function(n){ db.pedidos.push({id:id(),data:agora(),rifa:d.rifa,numero:n,nome:d.nome,whatsapp:d.whatsapp.replace(/\D/g,''),status:'Pendente'}); });
+      save(); var v = RIFAS.filter(function(x){return x.id===d.rifa;})[0].valor;
+      return {ok:true, numeros:d.numeros, total:d.numeros.length*v};
+    },
+    adminDados: function(s){ auth(s); return dados(); },
+    adminTravar: function(s, pid){ auth(s);
+      var p = db.pedidos.filter(function(x){return x.id===pid;})[0]; if(!p) throw new Error('Pedido não encontrado.');
+      var t = db.travados[p.rifa]; if (t[p.numero]) throw new Error('Este número já está desativado (pago) por '+t[p.numero].nome+'.');
+      t[p.numero] = {nome:p.nome, whatsapp:p.whatsapp, pedidoId:p.id, em:agora()};
+      db.pedidos.forEach(function(x){ if(x.rifa===p.rifa && x.numero===p.numero && x.status==='Pendente') x.status = (x.id===pid?'Confirmado':'Não confirmado'); });
+      save(); return dados(); },
+    adminDestravar: function(s, rifa, n){ auth(s);
+      var pid = db.travados[rifa][n] && db.travados[rifa][n].pedidoId;
+      delete db.travados[rifa][n];
+      db.pedidos.forEach(function(x){ if(x.id===pid) x.status='Pendente'; });
+      save(); return dados(); },
+    adminLiberar: function(s, pid){ auth(s);
+      var p = db.pedidos.filter(function(x){return x.id===pid;})[0]; if(!p) throw new Error('Pedido não encontrado.');
+      if (p.status!=='Pendente') throw new Error('Este pedido não está mais aguardando comprovante.');
+      p.status='Não pago'; save(); return dados(); }
+  };
+})();
+
+/* ======================= UTIL ======================= */
+var $app = document.getElementById('app');
+function esc(s){ return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];}); }
+function pad(n){ return n<10 ? '0'+n : String(n); }
+function brl(v){ return 'R$ ' + v.toFixed(2).replace('.',','); }
+function rifaById(id){ return RIFAS.filter(function(r){return r.id===id;})[0]; }
+function toast(t){ var el=document.getElementById('toast'); el.textContent=t; el.classList.add('show'); clearTimeout(toast._t); toast._t=setTimeout(function(){el.classList.remove('show');},2200); }
+function copiar(txt){
+  function fallback(){ var ta=document.createElement('textarea'); ta.value=txt; ta.setAttribute('readonly',''); ta.style.position='fixed'; ta.style.opacity='0'; document.body.appendChild(ta); ta.select(); ta.setSelectionRange(0,99999); var ok=false; try{ ok=document.execCommand('copy'); }catch(e){} document.body.removeChild(ta); toast(ok?'Chave Pix copiada!':'Copie a chave manualmente: '+txt); }
+  if (navigator.clipboard && window.isSecureContext){ navigator.clipboard.writeText(txt).then(function(){toast('Chave Pix copiada!');}, fallback); } else fallback();
+}
+function fmtWhats(w){ w=String(w).replace(/\D/g,''); if(w.length===11) return '('+w.slice(0,2)+') '+w.slice(2,7)+'-'+w.slice(7); if(w.length===10) return '('+w.slice(0,2)+') '+w.slice(2,6)+'-'+w.slice(6); return w; }
+function maskWhats(el){ var v=el.value.replace(/\D/g,'').slice(0,11); var o=v; if(v.length>2) o='('+v.slice(0,2)+') '+v.slice(2); if(v.length>7) o='('+v.slice(0,2)+') '+v.slice(2,7)+'-'+v.slice(7); el.value=o; }
+function waLink(num, msg){ return 'https://wa.me/'+num+'?text='+encodeURIComponent(msg); }
+function igLink(u){ return '<a href="https://www.instagram.com/'+esc(u)+'/" target="_blank" rel="noopener">@'+esc(u)+'</a>'; }
+function itensHtml(r){ return '<ul class="itens">'+r.itens.map(function(i){return '<li>'+esc(i)+'</li>';}).join('')+'</ul>'; }
+function loading(){ $app.innerHTML='<div class="loading"><div class="spin"></div>Carregando…</div>'; }
+
+/* ======================= PÚBLICO ======================= */
+var PUB = { estado:null, rifa:null, sel:[] };
+
+function carregarPublico(){
+  return call('getPublico').then(function(e){ PUB.estado=e; return e; });
+}
+
+function telaInicio(){
+  window.scrollTo(0,0);
+  var e = PUB.estado;
+  var cards = RIFAS.map(function(r){
+    var st = e.rifas[r.id]||{}, vend = (st.vendidos||[]).length, resv = (st.reservados||[]).length;
+    var pct = Math.round(vend/QTD*100);
+    var ativa = !e.ativas || e.ativas.indexOf(r.id)>=0;
+    var botao = !ativa ? '<button class="btn btn-soon btn-block" disabled>Em breve</button>'
+      : e.abertas ? '<button class="btn btn-pri btn-block" data-rifa="'+r.id+'">Escolher meus números</button>'
+      : '<button class="btn btn-pri btn-block" disabled>Vendas encerradas</button>';
+    return '<article class="card'+(ativa?'':' soon')+'">'+
+      '<div class="ph"><img src="'+r.img+'" alt="'+esc(r.titulo)+'" loading="lazy"><div class="price">'+brl(r.valor)+' <span>por número</span></div>'+
+        (ativa?'<div class="live-badge"><span></span>À venda agora</div>':'<div class="soon-badge">Em breve</div>')+'</div>'+
+      '<div class="bd">'+
+        '<div class="tag">'+esc(r.tag)+'</div>'+
+        '<h3>'+esc(r.titulo)+'</h3>'+
+        itensHtml(r)+
+        '<div class="pros">'+r.pros.map(function(p){return '<div class="pro"><b>'+esc(p.nome)+'</b> '+igLink(p.ig)+'<br>'+esc(p.desc)+'</div>';}).join('')+'</div>'+
+        (ativa ? '<div class="mt-auto"><div class="bar-lbl"><span><b>'+vend+'</b> de '+QTD+' vendidos</span><span>'+(QTD-vend-resv)+' disponíveis</span></div><div class="bar"><i style="width:'+pct+'%"></i></div></div>'
+               : '<div class="mt-auto soon-txt">Esta rifa abre assim que a anterior for concluída. Fique de olho!</div>')+
+        botao+
+      '</div></article>';
+  }).join('');
+
+  var ic = {
+    cal:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16" rx="3"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/><circle cx="12" cy="15" r="1.4" fill="currentColor"/></svg>',
+    ig:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor"/></svg>',
+    bowl:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11h18a9 9 0 0 1-18 0Z"/><path d="M7.5 8.5 9 5M12 8V4M16.5 8.5 15 5"/><path d="M8 21h8"/></svg>',
+    heart:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7.5-4.4-7.5-10.1A4.4 4.4 0 0 1 12 7.4a4.4 4.4 0 0 1 7.5 2.5C19.5 15.6 12 20 12 20Z"/></svg>'
+  };
+
+  $app.innerHTML =
+    '<header class="hero2">'+
+      '<div class="hero2-bg"></div>'+
+      '<div class="wrap hero2-in">'+
+      '<div class="glass">'+
+      '<span class="pill glass-pill"><span class="dot"></span>Rifa solidária · Ação entre amigos</span>'+
+      '<h1>Juntos pelo <em>pai da Ivânia</em></h1>'+
+      '<div class="letter">'+
+        '<p>Rifa solidária em prol do meu pai, que permanece internado em estado paliativo e necessita de uma cuidadora.</p>'+
+        '<p>Uma corrente de generosidade para ajudar a custear esse cuidado tão necessário.</p>'+
+        '<p>Minha gratidão à Kate Vieira, à Matilde Rabelo e à Flávia Diniz, por esse gesto tão nobre de amor e solidariedade. Que Deus retribua cada coração generoso!</p>'+
+        '<blockquote>“Tudo o que fizestes a um destes meus irmãos mais pequeninos, foi a mim que o fizestes.”<cite>Mateus 25,40</cite></blockquote>'+
+        '<div class="sign">Com carinho, <b>Ivânia Nascimento</b></div>'+
+      '</div>'+
+      '<a href="#rifas" class="btn btn-pri hero-cta" id="irRifas">Quero ajudar</a>'+
+      '</div></div>'+
+    '</header>'+
+    '<section class="infobar"><div class="wrap infobar-in">'+
+      '<div class="inf"><i>'+ic.cal+'</i><div><small>Sorteio</small><b>'+esc(CFG.sorteioTexto)+'</b></div></div>'+
+      '<div class="inf"><i>'+ic.ig+'</i><div><small>Ao vivo no Instagram</small><b>'+igLink(CFG.instagramLive)+'</b></div></div>'+
+      '<div class="inf"><i>'+ic.bowl+'</i><div><small>Como</small><b>Sorteio por cumbuca</b></div></div>'+
+      '<div class="inf"><i>'+ic.heart+'</i><div><small>Destino</small><b>100% para os cuidados</b></div></div>'+
+    '</div></section>'+
+    '<main class="wrap" id="rifas">'+
+      '<div class="eyebrow">Os prêmios</div>'+
+      '<h2 class="section-title">Escolha sua rifa</h2>'+
+      '<p class="section-sub">Cada rifa tem 100 números e você pode escolher quantos quiser. As rifas abrem uma de cada vez.</p>'+
+      '<div class="grid-cards">'+cards+'</div>'+
+    '</main>'+
+    '<footer class="footer">'+
+      '<b>Como funciona:</b> escolha os números, informe nome e WhatsApp, faça o Pix e envie o comprovante para a Ivânia.<br>'+
+      'Seu número é confirmado assim que o pagamento for conferido.<br><br>'+
+      'Ação entre amigas, sem fins lucrativos. Todo o valor arrecadado vai para os cuidados com o pai da Ivânia.'+
+    '</footer>';
+
+  $app.querySelectorAll('[data-rifa]').forEach(function(b){ b.onclick=function(){ abrirRifa(b.getAttribute('data-rifa')); }; });
+  document.getElementById('irRifas').onclick=function(ev){ ev.preventDefault(); document.getElementById('rifas').scrollIntoView({behavior:'smooth'}); };
+}
+
+function abrirRifa(id){
+  PUB.rifa = rifaById(id); PUB.sel = [];
+  renderRifa();
+  carregarPublico().then(function(){ renderGrid(); }).catch(function(){});
+}
+
+function renderRifa(){
+  window.scrollTo(0,0);
+  var r = PUB.rifa;
+  $app.innerHTML =
+    '<div class="topbar"><div class="wrap"><button class="back" id="voltar">&larr; Voltar às rifas</button></div></div>'+
+    '<div class="wrap">'+
+      '<div class="rifa-head"><img src="'+r.img+'" alt=""><div><div class="tag">'+brl(r.valor)+' por número</div><h2>'+esc(r.titulo)+'</h2>'+itensHtml(r)+'</div></div>'+
+      '<div class="legend"><span><i></i>Disponível</span><span><i class="sel"></i>Seu número</span><span><i class="resv"></i>Reservado</span><span><i class="sold"></i>Vendido</span></div>'+
+      '<div class="nums" id="nums"></div>'+
+    '</div>'+
+    '<div class="cart" id="cart"><div class="wrap"><div class="info"><small id="cartNums"></small><b id="cartTotal"></b></div><button class="btn btn-pri" id="continuar">Continuar</button></div></div>';
+  document.getElementById('voltar').onclick = function(){ telaInicio(); };
+  document.getElementById('continuar').onclick = abrirForm;
+  renderGrid();
+}
+
+function renderGrid(){
+  var box = document.getElementById('nums'); if(!box) return;
+  var st = PUB.estado.rifas[PUB.rifa.id]||{}, vend = {}, resv = {};
+  (st.vendidos||[]).forEach(function(n){ vend[n]=1; });
+  (st.reservados||[]).forEach(function(n){ resv[n]=1; });
+  PUB.sel = PUB.sel.filter(function(n){ return !vend[n] && !resv[n]; });
+  var h=''; for (var i=1;i<=QTD;i++){
+    var c = vend[i] ? 'n sold' : resv[i] ? 'n resv' : (PUB.sel.indexOf(i)>=0 ? 'n sel' : 'n');
+    var off = vend[i] ? ' disabled aria-label="Número '+i+' vendido"' : resv[i] ? ' disabled aria-label="Número '+i+' reservado"' : '';
+    h += '<button class="'+c+'" data-n="'+i+'"'+off+'>'+pad(i)+'</button>';
+  }
+  box.innerHTML = h;
+  box.onclick = function(ev){
+    var b = ev.target.closest('[data-n]'); if(!b || b.disabled) return;
+    var n = Number(b.getAttribute('data-n')); var ix = PUB.sel.indexOf(n);
+    if (ix>=0){ PUB.sel.splice(ix,1); b.classList.remove('sel'); } else { PUB.sel.push(n); b.classList.add('sel'); }
+    atualizarCart();
+  };
+  atualizarCart();
+}
+
+function atualizarCart(){
+  var c = document.getElementById('cart'); if(!c) return;
+  var s = PUB.sel.slice().sort(function(a,b){return a-b;});
+  c.classList.toggle('show', s.length>0);
+  document.getElementById('cartNums').textContent = s.length+(s.length===1?' número: ':' números: ')+s.map(pad).join(', ');
+  document.getElementById('cartTotal').textContent = brl(s.length*PUB.rifa.valor);
+}
+
+function fecharModal(){ var o=document.getElementById('ov'); if(o) o.remove(); }
+function abrirModal(html){ fecharModal(); var o=document.createElement('div'); o.className='ov'; o.id='ov'; o.innerHTML='<div class="modal">'+html+'</div>'; document.body.appendChild(o); return o; }
+
+function abrirForm(){
+  var r = PUB.rifa, s = PUB.sel.slice().sort(function(a,b){return a-b;});
+  var o = abrirModal(
+    '<h3>Quase lá!</h3>'+
+    '<p class="sub">'+esc(r.titulo)+'<br>Total: <b>'+brl(s.length*r.valor)+'</b></p>'+
+    '<div class="chips">'+s.map(function(n){return '<span class="chip">'+pad(n)+'</span>';}).join('')+'</div>'+
+    '<div id="ferr"></div>'+
+    '<div class="field"><label for="fnome">Nome completo</label><input id="fnome" autocomplete="name" maxlength="80" placeholder="Seu nome"></div>'+
+    '<div class="field"><label for="fwhats">WhatsApp</label><input id="fwhats" type="tel" inputmode="numeric" autocomplete="tel" placeholder="(44) 99999-9999"></div>'+
+    '<label class="check"><input type="checkbox" id="fok"><span>Autorizo o uso do meu nome e WhatsApp apenas para a organização e o sorteio desta rifa.</span></label>'+
+    '<div class="row-btns"><button class="btn btn-ghost" id="fcancel">Voltar</button><button class="btn btn-pri" id="fenviar">Reservar números</button></div>'
+  );
+  var w = o.querySelector('#fwhats'); w.oninput = function(){ maskWhats(w); };
+  o.querySelector('#fcancel').onclick = fecharModal;
+  o.onclick = function(ev){ if(ev.target===o) fecharModal(); };
+  o.querySelector('#fenviar').onclick = function(){
+    var nome = o.querySelector('#fnome').value.trim().replace(/\s+/g,' ');
+    var whats = w.value.replace(/\D/g,'');
+    var err = '';
+    if (nome.length<3 || nome.indexOf(' ')<0) err='Informe seu nome completo.';
+    else if (whats.length<10 || whats.length>11) err='Informe um WhatsApp válido com DDD.';
+    else if (!o.querySelector('#fok').checked) err='Marque a autorização para continuar.';
+    var fe = o.querySelector('#ferr');
+    if (err){ fe.innerHTML='<div class="err">'+esc(err)+'</div>'; return; }
+    var btn = o.querySelector('#fenviar'); btn.disabled=true; btn.textContent='Enviando…';
+    call('reservar', {rifa:r.id, numeros:s, nome:nome, whatsapp:whats}).then(function(res){
+      telaSucesso(res, nome);
+    }).catch(function(e){
+      fe.innerHTML='<div class="err">'+esc(e.message)+'</div>'; btn.disabled=false; btn.textContent='Reservar números';
+      carregarPublico().then(renderGrid).catch(function(){});
+    });
+  };
+  setTimeout(function(){ o.querySelector('#fnome').focus(); }, 50);
+}
+
+function telaSucesso(res, nome){
+  var r = PUB.rifa;
+  var nums = res.numeros.map(pad).join(', ');
+  var msg = 'Olá, Ivânia! Segue o comprovante do Pix da rifa solidária.\n\n'+
+            'Rifa: '+r.titulo+'\nNúmeros: '+nums+'\nNome: '+nome+'\nValor: '+brl(res.total);
+  var o = abrirModal(
+    '<div class="ok-ic"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#2F8A5B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>'+
+    '<h3>Números reservados!</h3>'+
+    '<p class="sub">'+esc(r.titulo)+'</p>'+
+    '<div class="chips">'+res.numeros.map(function(n){return '<span class="chip">'+pad(n)+'</span>';}).join('')+'</div>'+
+    '<div class="step"><div class="k">1</div><div class="c"><b>Faça o Pix de</b><div class="total-big">'+brl(res.total)+'</div>'+
+      '<div class="pix" style="margin-top:10px"><small>Chave Pix · no app do banco, escolha o tipo <b>Celular</b></small><div class="key">'+esc(CFG.pixMostrar)+'</div><small>'+esc(CFG.pixNome)+'</small>'+
+      '<button class="btn btn-pri btn-block" id="copiar" style="margin-top:10px">Copiar chave Pix</button></div></div></div>'+
+    '<div class="step"><div class="k">2</div><div class="c"><b>Envie o comprovante para a Ivânia</b>'+
+      '<a class="btn btn-ok btn-block" target="_blank" rel="noopener" href="'+waLink(CFG.whatsComprovante, msg)+'">'+
+      '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.7.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg>'+
+      'Enviar comprovante no WhatsApp</a></div></div>'+
+    '<div class="note">Seus números já estão reservados no seu nome e ficam garantidos assim que a Ivânia conferir o pagamento. O sorteio será dia '+esc(CFG.sorteioTexto)+', ao vivo no Instagram @'+esc(CFG.instagramLive)+'.</div>'+
+    '<button class="btn btn-ghost btn-block" id="fim" style="margin-top:14px">Voltar às rifas</button>'
+  );
+  o.querySelector('#copiar').onclick = function(){ copiar(CFG.pixChave); };
+  o.querySelector('#fim').onclick = function(){ fecharModal(); loading(); carregarPublico().then(telaInicio); };
+}
+
+/* ======================= ADMIN ======================= */
+var ADM = { senha:null, dados:null, rifa:'kate', num:null, filtro:'' };
+function lerSenha(){ try { return sessionStorage.getItem('rifa_adm'); } catch(e){ return null; } }
+function gravarSenha(s){ try { if(s) sessionStorage.setItem('rifa_adm', s); else sessionStorage.removeItem('rifa_adm'); } catch(e){} }
+
+function adminInicio(){
+  var s = lerSenha();
+  if (s){ ADM.senha=s; loading(); call('adminDados', s).then(function(d){ ADM.dados=d; renderAdmin(); }).catch(function(){ gravarSenha(null); adminLogin(); }); }
+  else adminLogin();
+}
+
+function adminLogin(msg){
+  $app.innerHTML = '<div class="wrap"><div class="adm-login"><h2>Painel da rifa</h2><p class="sub" style="color:var(--muted);margin:0 0 18px">Acesso restrito à organização.</p>'+
+    (msg?'<div class="err">'+esc(msg)+'</div>':'')+
+    '<div class="field"><label for="asenha">Senha</label><input id="asenha" type="password" autocomplete="current-password"></div>'+
+    '<button class="btn btn-pri btn-block" id="aentrar">Entrar</button></div></div>';
+  var inp=document.getElementById('asenha'), b=document.getElementById('aentrar');
+  function go(){ var s=inp.value; if(!s) return; b.disabled=true; b.textContent='Entrando…';
+    call('adminDados', s).then(function(d){ ADM.senha=s; gravarSenha(s); ADM.dados=d; renderAdmin(); }).catch(function(e){ adminLogin(e.message); }); }
+  b.onclick=go; inp.onkeydown=function(e){ if(e.key==='Enter') go(); }; inp.focus();
+}
+
+function pedidosDe(rifa, n){ return ADM.dados.pedidos.filter(function(p){ return p.rifa===rifa && (n==null || p.numero===n); }); }
+
+function renderAdmin(){
+  var d = ADM.dados, R = rifaById(ADM.rifa), trav = d.rifas[ADM.rifa].travados;
+  var nTrav = Object.keys(trav).length;
+  var pend = pedidosDe(ADM.rifa).filter(function(p){ return p.status==='Pendente' && !trav[p.numero]; });
+  var pendNums = {}; pend.forEach(function(p){ pendNums[p.numero]=(pendNums[p.numero]||0)+1; });
+  var totalGeral = RIFAS.reduce(function(a,r){ return a + Object.keys(d.rifas[r.id].travados).length*r.valor; },0);
+
+  var grid=''; for (var i=1;i<=QTD;i++){
+    var c='an'; if (trav[i]) c+=' lock'; else if (pendNums[i]) c+=' pend'+(pendNums[i]>1?' multi':'');
+    if (ADM.num===i) c+=' cur';
+    grid += '<button class="'+c+'" data-an="'+i+'">'+pad(i)+'</button>';
+  }
+
+  var f = ADM.filtro.toLowerCase();
+  var pendF = pend.filter(function(p){ return !f || p.nome.toLowerCase().indexOf(f)>=0 || String(p.numero)===f || pad(p.numero)===f; })
+                  .sort(function(a,b){ return a.numero-b.numero; });
+
+  $app.innerHTML =
+    '<div class="topbar no-print"><div class="wrap" style="justify-content:space-between"><b class="serif" style="font-size:19px">Painel da rifa</b>'+
+      '<div class="adm-actions"><button class="sbtn undo" id="aref">Atualizar</button><button class="sbtn undo" id="asair">Sair</button></div></div></div>'+
+    '<div class="wrap no-print">'+
+      '<div class="tabs">'+RIFAS.map(function(r){ return '<button class="tab'+(r.id===ADM.rifa?' on':'')+'" data-tab="'+r.id+'">'+esc(r.pros.map(function(p){return p.nome.split(' ')[0];}).join(' & '))+' · '+brl(r.valor)+'</button>'; }).join('')+'</div>'+
+      '<div class="kpis">'+
+        '<div class="kpi"><small>Pagos (desativados)</small><b>'+nTrav+' / '+QTD+'</b></div>'+
+        '<div class="kpi"><small>Arrecadado nesta rifa</small><b>'+brl(nTrav*R.valor)+'</b></div>'+
+        '<div class="kpi"><small>Pedidos aguardando</small><b>'+pend.length+'</b></div>'+
+        '<div class="kpi"><small>Total das 3 rifas</small><b>'+brl(totalGeral)+'</b></div>'+
+      '</div>'+
+      '<div class="adm-cols">'+
+        '<div>'+
+          '<div class="panel">'+
+            '<h4>Números · '+esc(R.titulo)+'</h4>'+
+            '<div class="legend adm" style="margin:0 0 12px"><span><i></i>Livre no site</span><span><i class="pend"></i>Ativo, com pedido (reservado)</span><span><i class="lock"></i>Desativado (pago)</span></div>'+
+            '<div class="anums" id="agrid">'+grid+'</div>'+
+            '<p style="font-size:12.5px;color:var(--muted);margin:10px 0 0">Toque em um número para ver quem reservou e o histórico.</p>'+
+          '</div>'+
+          '<div class="panel" style="margin-top:16px" id="detalhe">'+detalheNumero()+'</div>'+
+          '<button class="btn btn-ghost btn-block" id="aprint" style="margin-top:16px">Imprimir papeizinhos do sorteio ('+nTrav+')</button>'+
+        '</div>'+
+        '<div class="panel">'+
+          '<h4>Aguardando comprovante ('+pend.length+')</h4>'+
+          '<input class="search" id="abusca" placeholder="Buscar por nome ou número" value="'+esc(ADM.filtro)+'">'+
+          (pendF.length ? pendF.map(pedidoRow).join('') : '<div class="empty">Nenhum pedido aguardando.</div>')+
+        '</div>'+
+      '</div>'+
+    '</div>';
+
+  bindAdmin();
+}
+
+function pedidoRow(p){
+  return '<div class="ped"><div class="num">'+pad(p.numero)+'</div><div class="who"><b>'+esc(p.nome)+'</b>'+
+    '<small><a href="https://wa.me/55'+esc(p.whatsapp)+'" target="_blank" rel="noopener">'+esc(fmtWhats(p.whatsapp))+'</a> · '+esc(p.data)+'</small></div>'+
+    botoesPedido(p.id)+'</div>';
+}
+function botoesPedido(id){
+  return '<div class="pbtns"><button class="sbtn ok" data-travar="'+esc(id)+'">Pago: desativar</button>'+
+         '<button class="sbtn no" data-liberar="'+esc(id)+'">Não pago: liberar</button></div>';
+}
+
+function detalheNumero(){
+  if (!ADM.num) return '<h4>Detalhe do número</h4><div class="empty">Toque em um número para ver quem pediu e confirmar o pagamento.</div>';
+  var n = ADM.num, t = ADM.dados.rifas[ADM.rifa].travados[n];
+  var ps = pedidosDe(ADM.rifa, n).slice().reverse();
+  var h = '<h4>Número '+pad(n)+' <span class="status '+(t?'desat':'ativo')+'">'+(t?'Desativado (pago)':'Ativo')+'</span></h4>';
+  if (t){
+    h += '<div class="ped"><div class="num lock">'+pad(n)+'</div><div class="who"><b>'+esc(t.nome)+'</b><small><a href="https://wa.me/55'+esc(t.whatsapp)+'" target="_blank" rel="noopener">'+esc(fmtWhats(t.whatsapp))+'</a> · confirmado '+esc(t.em)+'</small></div>'+
+         '<button class="sbtn undo" data-destravar="'+n+'">Reativar</button></div>';
+    return h;
+  }
+  var pend = ps.filter(function(p){ return p.status==='Pendente'; });
+  var hist = ps.filter(function(p){ return p.status!=='Pendente'; });
+  if (!pend.length) h += '<div class="empty">Disponível no site. Ninguém reservou este número no momento.</div>';
+  h += pend.map(pedidoRow).join('');
+  if (hist.length) h += '<div style="margin-top:12px;font-size:12.5px;color:var(--muted)"><b>Histórico:</b> '+
+    hist.map(function(p){ return esc(p.nome)+' ('+esc(p.status.toLowerCase())+', '+esc(p.data)+')'; }).join(' · ')+'</div>';
+  return h;
+}
+
+function acao(promise){
+  document.body.style.cursor='progress';
+  promise.then(function(d){ ADM.dados=d; renderAdmin(); toast('Salvo na planilha'); })
+    .catch(function(e){ alert(e.message); })
+    .then(function(){ document.body.style.cursor=''; });
+}
+
+function bindAdmin(){
+  document.querySelectorAll('[data-tab]').forEach(function(b){ b.onclick=function(){ ADM.rifa=b.getAttribute('data-tab'); ADM.num=null; ADM.filtro=''; renderAdmin(); }; });
+  document.getElementById('agrid').onclick=function(e){ var b=e.target.closest('[data-an]'); if(!b) return; ADM.num=Number(b.getAttribute('data-an')); renderAdmin(); document.getElementById('detalhe').scrollIntoView({behavior:'smooth',block:'nearest'}); };
+  document.getElementById('aref').onclick=function(){ acao(call('adminDados', ADM.senha)); };
+  document.getElementById('asair').onclick=function(){ gravarSenha(null); ADM.senha=null; adminLogin(); };
+  document.getElementById('aprint').onclick=imprimir;
+  var bs=document.getElementById('abusca'); bs.oninput=function(){ ADM.filtro=bs.value; var pos=bs.selectionStart; renderAdmin(); var nb=document.getElementById('abusca'); nb.focus(); nb.setSelectionRange(pos,pos); };
+  $app.onclick=function(e){
+    var t=e.target.closest('[data-travar]');
+    if (t){ var p=ADM.dados.pedidos.filter(function(x){return x.id===t.getAttribute('data-travar');})[0];
+      if (confirm('Confirmar pagamento e DESATIVAR o número '+pad(p.numero)+' para '+p.nome+'?')) acao(call('adminTravar', ADM.senha, p.id)); return; }
+    var l=e.target.closest('[data-liberar]');
+    if (l){ var q=ADM.dados.pedidos.filter(function(x){return x.id===l.getAttribute('data-liberar');})[0];
+      if (confirm('Marcar como NÃO PAGO e liberar o número '+pad(q.numero)+' ('+q.nome+')? Ele volta a ficar disponível no site.')) acao(call('adminLiberar', ADM.senha, q.id)); return; }
+    var u=e.target.closest('[data-destravar]');
+    if (u){ var n=Number(u.getAttribute('data-destravar'));
+      if (confirm('Reativar o número '+pad(n)+'? Ele volta a aguardar comprovante, ainda reservado para a mesma pessoa.')) acao(call('adminDestravar', ADM.senha, ADM.rifa, n)); }
+  };
+}
+
+function imprimir(){
+  var R=rifaById(ADM.rifa), t=ADM.dados.rifas[ADM.rifa].travados;
+  var ns=Object.keys(t).map(Number).sort(function(a,b){return a-b;});
+  if(!ns.length){ alert('Nenhum número pago nesta rifa ainda.'); return; }
+  document.getElementById('print').innerHTML='<h2>'+esc(R.titulo)+' · '+ns.length+' números</h2><div class="slips">'+
+    ns.map(function(n){ return '<div class="slip"><b>'+pad(n)+'</b><span>'+esc(t[n].nome)+'</span></div>'; }).join('')+'</div>';
+  window.print();
+}
+
+/* ======================= INÍCIO ======================= */
+function detectarModo(){
+  return Promise.resolve(MODO === 'admin' ? 'admin' : 'public');
+}
+detectarModo().then(function(modo){
+  if (!IS_GAS){
+    var bar=document.getElementById('previewBar'), lk=document.getElementById('toggleMode');
+    bar.classList.remove('hidden');
+    lk.textContent = modo==='admin' ? 'Ver página pública' : 'Ver painel admin (senha: teste)';
+    lk.href = modo==='admin' ? '/rifa/' : '/rifa-admin/';
+  }
+  if (modo==='admin') adminInicio();
+  else carregarPublico().then(telaInicio).catch(function(e){ $app.innerHTML='<div class="wrap"><div class="err" style="margin-top:40px">Não foi possível carregar. Atualize a página. ('+esc(e.message)+')</div></div>'; });
+});
+</script>
+</body>
+</html>
