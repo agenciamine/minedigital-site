@@ -400,25 +400,27 @@ function carregarPublico(){
   return call('getPublico').then(function(e){ PUB.estado=e; return e; });
 }
 
-function telaInicio(){
-  window.scrollTo(0,0);
+function telaInicio(manterScroll){
+  var y = window.scrollY;
+  if (!manterScroll) window.scrollTo(0,0);
   var e = PUB.estado;
   var cards = RIFAS.map(function(r){
     var st = e.rifas[r.id]||{}, vend = (st.vendidos||[]).length, resv = (st.reservados||[]).length;
     var pct = Math.round(vend/QTD*100);
-    var ativa = !e.ativas || e.ativas.indexOf(r.id)>=0;
-    var botao = !ativa ? '<button class="btn btn-soon btn-block" disabled>Em breve</button>'
+    var ativa = e.carregando || !e.ativas || e.ativas.indexOf(r.id)>=0;
+    var botao = e.carregando ? '<button class="btn btn-soon btn-block" disabled>Carregando…</button>'
+      : !ativa ? '<button class="btn btn-soon btn-block" disabled>Em breve</button>'
       : e.abertas ? '<button class="btn btn-pri btn-block" data-rifa="'+r.id+'">Escolher meus números</button>'
       : '<button class="btn btn-pri btn-block" disabled>Vendas encerradas</button>';
     return '<article class="card'+(ativa?'':' soon')+'">'+
       '<div class="ph"><img src="'+r.img+'" alt="'+esc(r.titulo)+'" loading="lazy"><div class="price">'+brl(r.valor)+' <span>por número</span></div>'+
-        (ativa?'<div class="live-badge"><span></span>À venda agora</div>':'<div class="soon-badge">Em breve</div>')+'</div>'+
+        (e.carregando?'':ativa?'<div class="live-badge"><span></span>À venda agora</div>':'<div class="soon-badge">Em breve</div>')+'</div>'+
       '<div class="bd">'+
         '<div class="tag">'+esc(r.tag)+'</div>'+
         '<h3>'+esc(r.titulo)+'</h3>'+
         itensHtml(r)+
         '<div class="pros">'+r.pros.map(function(p){return '<div class="pro"><b>'+esc(p.nome)+'</b> '+igLink(p.ig)+'<br>'+esc(p.desc)+'</div>';}).join('')+'</div>'+
-        (ativa ? '<div class="mt-auto"><div class="bar-lbl"><span><b>'+vend+'</b> de '+QTD+' vendidos</span><span>'+(QTD-vend-resv)+' disponíveis</span></div><div class="bar"><i style="width:'+pct+'%"></i></div></div>'
+        (e.carregando ? '<div class="mt-auto"><div class="bar-lbl"><span>Consultando números…</span></div><div class="bar"><i style="width:0"></i></div></div>' : ativa ? '<div class="mt-auto"><div class="bar-lbl"><span><b>'+vend+'</b> de '+QTD+' vendidos</span><span>'+(QTD-vend-resv)+' disponíveis</span></div><div class="bar"><i style="width:'+pct+'%"></i></div></div>'
                : '<div class="mt-auto soon-txt">Esta rifa abre assim que a anterior for concluída. Fique de olho!</div>')+
         botao+
       '</div></article>';
@@ -436,13 +438,14 @@ function telaInicio(){
       '<div class="hero2-bg"></div>'+
       '<div class="wrap hero2-in">'+
       '<div class="glass">'+
-      '<span class="pill glass-pill"><span class="dot"></span>Rifa solidária · Ação entre amigos</span>'+
+      '<span class="pill glass-pill">Unidos por uma causa 🤍</span>'+
       '<h1>Juntos pelo <em>pai da Ivânia</em></h1>'+
       '<div class="letter">'+
-        '<p>Rifa solidária em prol do meu pai, que permanece internado em estado paliativo e necessita de uma cuidadora.</p>'+
-        '<p>Uma corrente de generosidade para ajudar a custear esse cuidado tão necessário.</p>'+
-        '<p>Minha gratidão à Kate Vieira, à Matilde Rabelo e à Flávia Diniz, por esse gesto tão nobre de amor e solidariedade. Que Deus retribua cada coração generoso!</p>'+
+        '<p>Rifa beneficente em prol do meu pai, para auxiliar nas despesas hospitalares e nos cuidados necessários durante sua internação.</p>'+
+        '<p>Cada participação é um gesto de carinho e generosidade.</p>'+
+        '<p>Nossa gratidão à Kate Vieira por se unir a essa causa com tanta disponibilidade e amor.</p>'+
         '<blockquote>“Tudo o que fizestes a um destes meus irmãos mais pequeninos, foi a mim que o fizestes.”<cite>Mateus 25,40</cite></blockquote>'+
+        '<p>Que Deus abençoe cada gesto de amor!</p>'+
         '<div class="sign">Com carinho, <b>Ivânia Nascimento</b></div>'+
       '</div>'+
       '<a href="#rifas" class="btn btn-pri hero-cta" id="irRifas">Quero ajudar</a>'+
@@ -468,6 +471,7 @@ function telaInicio(){
 
   $app.querySelectorAll('[data-rifa]').forEach(function(b){ b.onclick=function(){ abrirRifa(b.getAttribute('data-rifa')); }; });
   document.getElementById('irRifas').onclick=function(ev){ ev.preventDefault(); document.getElementById('rifas').scrollIntoView({behavior:'smooth'}); };
+  if (manterScroll) window.scrollTo(0,y);
 }
 
 function abrirRifa(id){
@@ -734,7 +738,15 @@ detectarModo().then(function(modo){
     lk.href = modo==='admin' ? '/rifa/' : '/rifa-admin/';
   }
   if (modo==='admin') adminInicio();
-  else carregarPublico().then(telaInicio).catch(function(e){ $app.innerHTML='<div class="wrap"><div class="err" style="margin-top:40px">Não foi possível carregar. Atualize a página. ('+esc(e.message)+')</div></div>'; });
+  else {
+    PUB.estado = {carregando:true, abertas:true, rifas:{}};
+    telaInicio();
+    var tentar = function(n){
+      carregarPublico().then(function(){ if (!PUB.rifa) telaInicio(true); })
+        .catch(function(){ if (n<3) setTimeout(function(){ tentar(n+1); }, 1500); else toast('Não foi possível carregar. Atualize a página.'); });
+    };
+    tentar(1);
+  }
 });
 </script>
 </body>
